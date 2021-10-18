@@ -30,4 +30,4 @@ jobs:
     - run: yarn run test
     
     - name: Run ESLint
-      run: eslint . --ext .js
+      run: yarn run eslint . --ext .js
