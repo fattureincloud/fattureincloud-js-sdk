@@ -1,0 +1,9 @@
+# @FattureincloudFattureincloudJsSdk.VerifyEInvoiceXmlErrorResponseExtra
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**errors** | **[String]** |  | [optional] 
+
+
