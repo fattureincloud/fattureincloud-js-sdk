@@ -1,6 +1,6 @@
 /**
  * Fatture in Cloud API v2 - API Reference
- * Connect your software with Fatture in Cloud, the invoicing platform chosen by more than 400.000 businesses in Italy.   The Fatture in Cloud API is based on REST, and makes possible to interact with the user related data prior authorization via OAuth2 protocol.  For more information, please visit https://www.fattureincloud.it.
+ * ## Request informations In every request description you will be able to find some additional informations about context, permissions and supported functionality:  | Parameter | Description | |-----------|-------------| | 👥 Context | Indicate the subject of the request. Can be `company`, `user` or `accountant`.  | | 🔒 Required scope | If present, indicates the required scope to fulfill the request. | | 🔍 Filtering | If present, indicates which fields support the filtering feature. | | ↕️ Sorting | If present, indicates which fields support the sorting feature. | | 📄 Paginated results | If present, indicate that the results are paginated. | | 🎩 Customized responses supported | If present, indicate that you can use `field` or `fieldset` to customize the response body. |  For example the request `GET /entities/{entityRole}` have tis informations: \\ 👥 Company context \\ 🔒 Required scope: `entity.clients:r` or `entity.suppliers:r` (depending on `entityRole`) \\ 🔍 Filtering: `id`, `name` \\ ↕️ Sorting: `id`, `name` \\ 📄 Paginated results \\ 🎩 Customized responses supported  Keep in mind that if you are making **company realted requests**, you will need to specify the company id in the requests: ``` GET /c/{company_id}/issued_documents ```
  *
  * The version of the OpenAPI document: 2.0.1
  * Contact: info@fattureincloud.it
@@ -11,6 +11,17 @@
  *
  */
 
+ import CreatePaymentAccountRequest from '../../src/model/CreatePaymentAccountRequest';
+ import CreatePaymentAccountResponse from '../../src/model/CreatePaymentAccountResponse';
+ import CreatePaymentMethodRequest from '../../src/model/CreatePaymentMethodRequest';
+ import CreatePaymentMethodResponse from '../../src/model/CreatePaymentMethodResponse';
+ import GetPaymentAccountResponse from '../../src//model/GetPaymentAccountResponse';
+ import GetPaymentMethodResponse from '../../src/model/GetPaymentMethodResponse';
+ import ModifyPaymentAccountRequest from '../../src/model/ModifyPaymentAccountRequest';
+ import ModifyPaymentAccountResponse from '../../src/model/ModifyPaymentAccountResponse';
+ import ModifyPaymentMethodRequest from '../../src/model/ModifyPaymentMethodRequest';
+ import ModifyPaymentMethodResponse from '../../src/model/ModifyPaymentMethodResponse';
+
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
@@ -20,15 +31,41 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.FattureInCloudApiV2ApiReference);
   }
-}(this, function(expect, fattureInCloudSdk) {
+}(this, function(expect, FattureInCloudApiV2ApiReference) {
   'use strict';
 
-  var instance;
+  var sandbox = require("sinon").createSandbox();
 
+  var instance = new FattureInCloudApiV2ApiReference.SettingsApi();
+
+  var createPaymentAccountResponseObj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}};
+  var createPaymentAccountStub = sandbox.stub(instance, "createPaymentAccount").returns(createPaymentAccountResponseObj);
+  
+  var createPaymentMethodResponseObj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}};
+  var createPaymentMethodStub = sandbox.stub(instance, "createPaymentMethod").returns(createPaymentMethodResponseObj);
+ 
+  var deletePaymentAccountResponseObj = {};
+  sandbox.stub(instance, "deletePaymentAccount").returns(deletePaymentAccountResponseObj);
+  
+  var deletePaymentMethodResponseObj = {};
+  sandbox.stub(instance, "deletePaymentMethod").returns(deletePaymentMethodResponseObj);
+  
+  var getPaymentAccountResponseObj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}};
+  sandbox.stub(instance, "getPaymentAccount").returns(getPaymentAccountResponseObj);
+  
+  var getPaymentMethodResponseObj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}};
+  sandbox.stub(instance, "getPaymentMethod").returns(getPaymentMethodResponseObj);
+
+  var modifyPaymentAccountResponseObj = {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}};
+  var modifyPaymentAccountStub = sandbox.stub(instance, "modifyPaymentAccount").returns(modifyPaymentAccountResponseObj);
+  
+  var modifyPaymentMethodResponseObj = {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}};
+  var modifyPaymentMethodStub = sandbox.stub(instance, "modifyPaymentMethod").returns(modifyPaymentMethodResponseObj);
+ 
   beforeEach(function() {
-    instance = new fattureInCloudSdk.SettingsApi();
+
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,81 +87,89 @@
   describe('SettingsApi', function() {
     describe('createPaymentAccount', function() {
       it('should call createPaymentAccount successfully', function(done) {
-        //uncomment below and update the code to test createPaymentAccount
-        //instance.createPaymentAccount(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var opts = { "createPaymentAccountRequest":
+        {"data":{"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}}
+        };
+        var response = instance.createPaymentAccount(2, opts);
+        var responseObj = Object.assign(new CreatePaymentAccountResponse(), response);
+        var expectedJson = JSON.stringify(createPaymentAccountResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
+        expect(createPaymentAccountStub.getCall(0).args[1]).to.equal(opts);
         done();
       });
     });
     describe('createPaymentMethod', function() {
       it('should call createPaymentMethod successfully', function(done) {
-        //uncomment below and update the code to test createPaymentMethod
-        //instance.createPaymentMethod(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var opts = { "createPaymentMethodRequest":
+          {"data":{"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}}
+        };
+        var response = instance.createPaymentMethod(2, opts);
+        var responseObj = Object.assign(new CreatePaymentMethodResponse(), response);
+        var expectedJson = JSON.stringify(createPaymentMethodResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
+        expect(createPaymentMethodStub.getCall(0).args[1]).to.equal(opts);
         done();
       });
     });
     describe('deletePaymentAccount', function() {
       it('should call deletePaymentAccount successfully', function(done) {
-        //uncomment below and update the code to test deletePaymentAccount
-        //instance.deletePaymentAccount(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        expect(1).to.equal(1);
         done();
       });
     });
     describe('deletePaymentMethod', function() {
       it('should call deletePaymentMethod successfully', function(done) {
-        //uncomment below and update the code to test deletePaymentMethod
-        //instance.deletePaymentMethod(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        expect(1).to.equal(1);
         done();
       });
     });
     describe('getPaymentAccount', function() {
       it('should call getPaymentAccount successfully', function(done) {
-        //uncomment below and update the code to test getPaymentAccount
-        //instance.getPaymentAccount(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var response = instance.getPaymentAccount();
+        var responseObj = Object.assign(new GetPaymentAccountResponse(), response);
+        var expectedJson = JSON.stringify(getPaymentAccountResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
         done();
       });
     });
     describe('getPaymentMethod', function() {
       it('should call getPaymentMethod successfully', function(done) {
-        //uncomment below and update the code to test getPaymentMethod
-        //instance.getPaymentMethod(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var response = instance.getPaymentMethod();
+        var responseObj = Object.assign(new GetPaymentMethodResponse(), response);
+        var expectedJson = JSON.stringify(getPaymentMethodResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
         done();
       });
     });
     describe('modifyPaymentAccount', function() {
       it('should call modifyPaymentAccount successfully', function(done) {
-        //uncomment below and update the code to test modifyPaymentAccount
-        //instance.modifyPaymentAccount(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var opts = { "modifyPaymentAccountRequest":
+          {"data":{"name":"Indessa"}}
+        };
+        var response = instance.modifyPaymentAccount(2, 12345,  opts);
+        var responseObj = Object.assign(new ModifyPaymentAccountResponse(), response);
+        var expectedJson = JSON.stringify(modifyPaymentAccountResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
+        expect(modifyPaymentAccountStub.getCall(0).args[2]).to.equal(opts);
         done();
       });
     });
     describe('modifyPaymentMethod', function() {
       it('should call modifyPaymentMethod successfully', function(done) {
-        //uncomment below and update the code to test modifyPaymentMethod
-        //instance.modifyPaymentMethod(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
+        var opts = { "modifyPaymentMethodRequest":
+          {"data":{"name":"Bonifico bancariolo"}}
+        };
+        var response = instance.modifyPaymentMethod(2, 12345,  opts);
+        var responseObj = Object.assign(new ModifyPaymentMethodResponse(), response);
+        var expectedJson = JSON.stringify(modifyPaymentMethodResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
+        expect(modifyPaymentMethodStub.getCall(0).args[2]).to.equal(opts);
         done();
       });
     });
