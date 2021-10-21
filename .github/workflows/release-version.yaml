@@ -15,6 +15,8 @@ jobs:
       - id: setup-node
         name: Setup Node.js
         uses: actions/setup-node@v2
+        with:
+          registry-url: 'https://registry.npmjs.org'
 
       - id: setup-libraries
         name: Install libraries
@@ -49,5 +51,7 @@ jobs:
 
       - id: publish-to-npm
         name: Publish JavaScript SDK to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
           yarn publish --access public --new-version "v${{ env.sdk_version }}"
