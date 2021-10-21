@@ -54,4 +54,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
-          yarn publish --access public --new-version v${{ env.sdk_version }}
+          yarn publish --access public --new-version ${{ env.sdk_version }}
