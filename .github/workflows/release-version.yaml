@@ -19,9 +19,11 @@ jobs:
       - id: setup-libraries
         name: Install libraries
         run: |
+          npm install -g yarn
           sudo add-apt-repository ppa:rmescandon/yq -y
           sudo apt update
           sudo apt install yq -y
+          yarn
 
       # We read the version from the sdk-version.yaml file and create the tag
       # If it is needed to bump version, launch the related workflow
@@ -48,4 +50,4 @@ jobs:
       - id: publish-to-npm
         name: Publish JavaScript SDK to NPM
         run: |
-          npm publish --access public
+          yarn publish --access public --new-version "v${{ env.sdk_version }}"
