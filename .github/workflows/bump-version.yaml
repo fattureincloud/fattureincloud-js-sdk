@@ -1,0 +1,47 @@
+name: Bump JavaScript SDK version
+on: [workflow_dispatch]
+    
+jobs:
+  
+  bump-version:
+    runs-on: ubuntu-latest
+    env:
+      GIT_OPENAPI_REPO_ID: openapi-fattureincloud
+      GIT_USER_ID: fattureincloud
+    steps: 
+
+      - id: checkout-openapi
+        name: Checkout OpenAPI repo
+        env:
+          GIT_OPENAPI_REPO_PATH: '${{ env.GIT_USER_ID }}/${{ env.GIT_OPENAPI_REPO_ID }}'
+        uses: actions/checkout@v2
+        with:
+          path: ./openapi
+          ref: master
+          repository: ${{ env.GIT_OPENAPI_REPO_PATH }}
+          token: ${{ secrets.FATTUREINCLOUD_BOT_TOKEN }}
+
+      - id: setup-libraries
+        name: Install libraries
+        run: |
+          sudo add-apt-repository ppa:rmescandon/yq -y
+          sudo apt update
+          sudo apt install yq -y
+
+      - id: read-openapi-version
+        name: Read OpenAPI Version
+        run: |
+          OPENAPI_VERSION=$(yq e '.info.version' ./openapi/openapi.yaml)
+          echo "openapi_version=$OPENAPI_VERSION" >> $GITHUB_ENV
+
+      # We trigger the SDK generation from OpenAPI repo to bump version also in the generated code
+      - id: trigger-event
+        name: Trigger Event
+        env:
+          GIT_OPENAPI_REPO_PATH: '${{ env.GIT_USER_ID }}/${{ env.GIT_OPENAPI_REPO_ID }}'
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.FATTUREINCLOUD_BOT_TOKEN }}
+          repository: ${{ env.GIT_OPENAPI_REPO_PATH }}
+          event-type: generate-javascript
+          client-payload: '{"version": "${{ env.openapi_version }}", "from-openapi": false}'
