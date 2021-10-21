@@ -17,7 +17,7 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The ModifyReceivedDocumentResponse model module.
  * @module model/ModifyReceivedDocumentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyReceivedDocumentResponse {
     /**

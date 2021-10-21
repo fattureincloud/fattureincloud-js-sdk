@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IssuedDocumentExtraData model module.
  * @module model/IssuedDocumentExtraData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentExtraData {
     /**

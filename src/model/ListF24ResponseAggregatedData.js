@@ -17,7 +17,7 @@ import ListF24ResponseAggregatedDataAggregatedData from './ListF24ResponseAggreg
 /**
  * The ListF24ResponseAggregatedData model module.
  * @module model/ListF24ResponseAggregatedData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListF24ResponseAggregatedData {
     /**

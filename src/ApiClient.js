@@ -17,7 +17,7 @@ import querystring from "querystring";
 
 /**
 * @module ApiClient
-* @version 2.0.1
+* @version 2.0.2
 */
 
 /**
@@ -50,7 +50,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'FattureInCloud/2.0.1/JavaScript-SDK'
+            'User-Agent': 'FattureInCloud/2.0.2/JavaScript-SDK'
         };
 
         /**

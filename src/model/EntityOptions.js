@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EntityOptions model module.
  * @module model/EntityOptions
- * @version 2.0.1
+ * @version 2.0.2
  */
 class EntityOptions {
     /**

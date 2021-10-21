@@ -27,7 +27,7 @@ import PaymentMethod from './PaymentMethod';
 /**
  * The IssuedDocument model module.
  * @module model/IssuedDocument
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocument {
     /**

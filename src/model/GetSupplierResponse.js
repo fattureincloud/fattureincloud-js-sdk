@@ -17,7 +17,7 @@ import Supplier from './Supplier';
 /**
  * The GetSupplierResponse model module.
  * @module model/GetSupplierResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetSupplierResponse {
     /**

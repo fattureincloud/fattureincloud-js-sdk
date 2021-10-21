@@ -17,7 +17,7 @@ import IssuedDocument from './IssuedDocument';
 /**
  * The ListIssuedDocumentsResponsePage model module.
  * @module model/ListIssuedDocumentsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListIssuedDocumentsResponsePage {
     /**

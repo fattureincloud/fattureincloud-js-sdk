@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListUnitsOfMeasureResponse model module.
  * @module model/ListUnitsOfMeasureResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListUnitsOfMeasureResponse {
     /**

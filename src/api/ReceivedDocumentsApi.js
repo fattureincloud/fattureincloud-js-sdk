@@ -29,7 +29,7 @@ import UploadReceivedDocumentAttachmentResponse from '../model/UploadReceivedDoc
 /**
 * ReceivedDocuments service.
 * @module api/ReceivedDocumentsApi
-* @version 2.0.1
+* @version 2.0.2
 */
 export default class ReceivedDocumentsApi {
 

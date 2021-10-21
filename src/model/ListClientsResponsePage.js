@@ -17,7 +17,7 @@ import Client from './Client';
 /**
  * The ListClientsResponsePage model module.
  * @module model/ListClientsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListClientsResponsePage {
     /**

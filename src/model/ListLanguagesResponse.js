@@ -17,7 +17,7 @@ import Language from './Language';
 /**
  * The ListLanguagesResponse model module.
  * @module model/ListLanguagesResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListLanguagesResponse {
     /**

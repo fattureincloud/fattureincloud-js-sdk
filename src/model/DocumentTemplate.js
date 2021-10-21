@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DocumentTemplate model module.
  * @module model/DocumentTemplate
- * @version 2.0.1
+ * @version 2.0.2
  */
 class DocumentTemplate {
     /**

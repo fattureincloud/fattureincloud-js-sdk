@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MonthlyTotal model module.
  * @module model/MonthlyTotal
- * @version 2.0.1
+ * @version 2.0.2
  */
 class MonthlyTotal {
     /**

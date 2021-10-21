@@ -19,7 +19,7 @@ import Pagination from './Pagination';
 /**
  * The ListArchiveDocumentsResponse model module.
  * @module model/ListArchiveDocumentsResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListArchiveDocumentsResponse {
     /**

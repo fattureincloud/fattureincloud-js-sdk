@@ -19,7 +19,7 @@ import CompanyInfoPlanInfoLimits from './CompanyInfoPlanInfoLimits';
 /**
  * The CompanyInfoPlanInfo model module.
  * @module model/CompanyInfoPlanInfo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfoPlanInfo {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentMethodDetails model module.
  * @module model/PaymentMethodDetails
- * @version 2.0.1
+ * @version 2.0.2
  */
 class PaymentMethodDetails {
     /**

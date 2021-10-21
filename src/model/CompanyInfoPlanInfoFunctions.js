@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CompanyInfoPlanInfoFunctions model module.
  * @module model/CompanyInfoPlanInfoFunctions
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfoPlanInfoFunctions {
     /**

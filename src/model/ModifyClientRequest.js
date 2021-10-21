@@ -17,7 +17,7 @@ import Client from './Client';
 /**
  * The ModifyClientRequest model module.
  * @module model/ModifyClientRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyClientRequest {
     /**

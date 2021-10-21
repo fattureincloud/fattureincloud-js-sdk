@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReceivedDocumentEntity model module.
  * @module model/ReceivedDocumentEntity
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ReceivedDocumentEntity {
     /**

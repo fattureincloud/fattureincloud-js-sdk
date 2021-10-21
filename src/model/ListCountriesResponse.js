@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListCountriesResponse model module.
  * @module model/ListCountriesResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListCountriesResponse {
     /**

@@ -17,7 +17,7 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The ListReceivedDocumentsResponsePage model module.
  * @module model/ListReceivedDocumentsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListReceivedDocumentsResponsePage {
     /**

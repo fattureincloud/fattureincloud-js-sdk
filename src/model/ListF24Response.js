@@ -21,7 +21,7 @@ import Pagination from './Pagination';
 /**
  * The ListF24Response model module.
  * @module model/ListF24Response
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListF24Response {
     /**

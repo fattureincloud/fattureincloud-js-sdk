@@ -20,7 +20,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The CashbookEntry model module.
  * @module model/CashbookEntry
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CashbookEntry {
     /**

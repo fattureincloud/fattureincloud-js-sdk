@@ -17,7 +17,7 @@ import IssuedDocument from './IssuedDocument';
 /**
  * The GetIssuedDocumentResponse model module.
  * @module model/GetIssuedDocumentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetIssuedDocumentResponse {
     /**

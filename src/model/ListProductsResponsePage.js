@@ -17,7 +17,7 @@ import Product from './Product';
 /**
  * The ListProductsResponsePage model module.
  * @module model/ListProductsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListProductsResponsePage {
     /**

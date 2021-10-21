@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The VerifyEInvoiceXmlErrorResponseExtra model module.
  * @module model/VerifyEInvoiceXmlErrorResponseExtra
- * @version 2.0.1
+ * @version 2.0.2
  */
 class VerifyEInvoiceXmlErrorResponseExtra {
     /**

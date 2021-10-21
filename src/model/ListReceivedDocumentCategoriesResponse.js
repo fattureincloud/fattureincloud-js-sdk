@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListReceivedDocumentCategoriesResponse model module.
  * @module model/ListReceivedDocumentCategoriesResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListReceivedDocumentCategoriesResponse {
     /**

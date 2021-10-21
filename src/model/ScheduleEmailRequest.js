@@ -17,7 +17,7 @@ import EmailSchedule from './EmailSchedule';
 /**
  * The ScheduleEmailRequest model module.
  * @module model/ScheduleEmailRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ScheduleEmailRequest {
     /**

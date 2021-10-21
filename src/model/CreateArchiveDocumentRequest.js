@@ -17,7 +17,7 @@ import ArchiveDocument from './ArchiveDocument';
 /**
  * The CreateArchiveDocumentRequest model module.
  * @module model/CreateArchiveDocumentRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CreateArchiveDocumentRequest {
     /**

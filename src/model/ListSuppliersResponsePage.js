@@ -17,7 +17,7 @@ import Supplier from './Supplier';
 /**
  * The ListSuppliersResponsePage model module.
  * @module model/ListSuppliersResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListSuppliersResponsePage {
     /**

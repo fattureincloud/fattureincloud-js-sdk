@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The VerifyEInvoiceXmlSuccessResponseData model module.
  * @module model/VerifyEInvoiceXmlSuccessResponseData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class VerifyEInvoiceXmlSuccessResponseData {
     /**

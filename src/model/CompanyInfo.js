@@ -18,7 +18,7 @@ import CompanyInfoPlanInfo from './CompanyInfoPlanInfo';
 /**
  * The CompanyInfo model module.
  * @module model/CompanyInfo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfo {
     /**

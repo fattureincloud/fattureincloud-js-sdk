@@ -19,7 +19,7 @@ import Pagination from './Pagination';
 /**
  * The ListClientsResponse model module.
  * @module model/ListClientsResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListClientsResponse {
     /**

@@ -17,7 +17,7 @@ import UploadIssuedDocumentAttachmentResponseData from './UploadIssuedDocumentAt
 /**
  * The UploadF24AttachmentResponse model module.
  * @module model/UploadF24AttachmentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class UploadF24AttachmentResponse {
     /**

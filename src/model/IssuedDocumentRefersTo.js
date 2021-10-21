@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IssuedDocumentRefersTo model module.
  * @module model/IssuedDocumentRefersTo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentRefersTo {
     /**

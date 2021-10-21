@@ -19,7 +19,7 @@ import Receipt from './Receipt';
 /**
  * The ListReceiptsResponse model module.
  * @module model/ListReceiptsResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListReceiptsResponse {
     /**

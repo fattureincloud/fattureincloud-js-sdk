@@ -24,7 +24,7 @@ import VatType from './VatType';
 /**
  * The IssuedDocumentPreCreateInfo model module.
  * @module model/IssuedDocumentPreCreateInfo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentPreCreateInfo {
     /**

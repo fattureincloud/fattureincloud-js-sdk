@@ -18,7 +18,7 @@ import EmailDataSenderEmailsList from './EmailDataSenderEmailsList';
 /**
  * The EmailData model module.
  * @module model/EmailData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class EmailData {
     /**

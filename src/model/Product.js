@@ -17,7 +17,7 @@ import VatType from './VatType';
 /**
  * The Product model module.
  * @module model/Product
- * @version 2.0.1
+ * @version 2.0.2
  */
 class Product {
     /**

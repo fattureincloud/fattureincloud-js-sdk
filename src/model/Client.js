@@ -18,7 +18,7 @@ import VatType from './VatType';
 /**
  * The Client model module.
  * @module model/Client
- * @version 2.0.1
+ * @version 2.0.2
  */
 class Client {
     /**

@@ -17,7 +17,7 @@ import Product from './Product';
 /**
  * The ModifyProductRequest model module.
  * @module model/ModifyProductRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyProductRequest {
     /**

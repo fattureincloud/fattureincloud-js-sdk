@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FunctionStatus model module.
  * @module model/FunctionStatus
- * @version 2.0.1
+ * @version 2.0.2
  */
 class FunctionStatus {
     /**

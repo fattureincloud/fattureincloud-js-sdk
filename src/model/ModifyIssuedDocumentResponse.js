@@ -17,7 +17,7 @@ import IssuedDocument from './IssuedDocument';
 /**
  * The ModifyIssuedDocumentResponse model module.
  * @module model/ModifyIssuedDocumentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyIssuedDocumentResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UploadReceivedDocumentAttachmentResponseData model module.
  * @module model/UploadReceivedDocumentAttachmentResponseData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class UploadReceivedDocumentAttachmentResponseData {
     /**

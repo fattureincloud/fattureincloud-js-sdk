@@ -17,7 +17,7 @@ import ArchiveDocument from './ArchiveDocument';
 /**
  * The ListArchiveDocumentsResponsePage model module.
  * @module model/ListArchiveDocumentsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListArchiveDocumentsResponsePage {
     /**

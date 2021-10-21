@@ -17,7 +17,7 @@ import Permissions from './Permissions';
 /**
  * The CompanyInfoAccessInfo model module.
  * @module model/CompanyInfoAccessInfo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfoAccessInfo {
     /**

@@ -21,7 +21,7 @@ import VatType from './VatType';
 /**
  * The ReceivedDocumentInfo model module.
  * @module model/ReceivedDocumentInfo
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ReceivedDocumentInfo {
     /**

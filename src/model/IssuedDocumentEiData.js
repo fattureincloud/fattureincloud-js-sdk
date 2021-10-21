@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IssuedDocumentEiData model module.
  * @module model/IssuedDocumentEiData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentEiData {
     /**

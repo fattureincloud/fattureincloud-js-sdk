@@ -19,7 +19,7 @@ import ListUserCompaniesResponse from '../model/ListUserCompaniesResponse';
 /**
 * User service.
 * @module api/UserApi
-* @version 2.0.1
+* @version 2.0.2
 */
 export default class UserApi {
 

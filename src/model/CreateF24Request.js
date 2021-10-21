@@ -17,7 +17,7 @@ import F24 from './F24';
 /**
  * The CreateF24Request model module.
  * @module model/CreateF24Request
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CreateF24Request {
     /**

@@ -18,7 +18,7 @@ import GetCompanyInfoResponse from '../model/GetCompanyInfoResponse';
 /**
 * Companies service.
 * @module api/CompaniesApi
-* @version 2.0.1
+* @version 2.0.2
 */
 export default class CompaniesApi {
 

@@ -18,7 +18,7 @@ import PaymentMethodDetails from './PaymentMethodDetails';
 /**
  * The PaymentMethod model module.
  * @module model/PaymentMethod
- * @version 2.0.1
+ * @version 2.0.2
  */
 class PaymentMethod {
     /**

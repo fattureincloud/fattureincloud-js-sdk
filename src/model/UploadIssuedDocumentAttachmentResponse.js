@@ -17,7 +17,7 @@ import UploadIssuedDocumentAttachmentResponseData from './UploadIssuedDocumentAt
 /**
  * The UploadIssuedDocumentAttachmentResponse model module.
  * @module model/UploadIssuedDocumentAttachmentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class UploadIssuedDocumentAttachmentResponse {
     /**

@@ -19,7 +19,7 @@ import Product from './Product';
 /**
  * The ListProductsResponse model module.
  * @module model/ListProductsResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListProductsResponse {
     /**

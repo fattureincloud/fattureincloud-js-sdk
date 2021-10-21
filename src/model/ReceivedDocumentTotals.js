@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReceivedDocumentTotals model module.
  * @module model/ReceivedDocumentTotals
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ReceivedDocumentTotals {
     /**

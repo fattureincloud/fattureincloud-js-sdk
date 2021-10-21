@@ -17,7 +17,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The CashbookEntryInData model module.
  * @module model/CashbookEntryInData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CashbookEntryInData {
     /**

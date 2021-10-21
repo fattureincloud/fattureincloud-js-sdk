@@ -17,7 +17,7 @@ import CompanyInfo from './CompanyInfo';
 /**
  * The GetCompanyInfoResponse model module.
  * @module model/GetCompanyInfoResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetCompanyInfoResponse {
     /**

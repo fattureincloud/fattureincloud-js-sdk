@@ -17,7 +17,7 @@ import ReceiptPreCreateInfo from './ReceiptPreCreateInfo';
 /**
  * The GetReceiptPreCreateInfoResponse model module.
  * @module model/GetReceiptPreCreateInfoResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetReceiptPreCreateInfoResponse {
     /**

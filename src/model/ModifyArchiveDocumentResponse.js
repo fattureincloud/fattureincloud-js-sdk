@@ -17,7 +17,7 @@ import ArchiveDocument from './ArchiveDocument';
 /**
  * The ModifyArchiveDocumentResponse model module.
  * @module model/ModifyArchiveDocumentResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyArchiveDocumentResponse {
     /**

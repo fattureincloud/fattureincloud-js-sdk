@@ -17,7 +17,7 @@ import Permissions from './Permissions';
 /**
  * The Company model module.
  * @module model/Company
- * @version 2.0.1
+ * @version 2.0.2
  */
 class Company {
     /**

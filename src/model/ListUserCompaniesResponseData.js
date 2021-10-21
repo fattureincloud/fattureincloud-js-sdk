@@ -17,7 +17,7 @@ import Company from './Company';
 /**
  * The ListUserCompaniesResponseData model module.
  * @module model/ListUserCompaniesResponseData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListUserCompaniesResponseData {
     /**

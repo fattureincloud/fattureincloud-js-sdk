@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReceivedDocumentPaymentTerms model module.
  * @module model/ReceivedDocumentPaymentTerms
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ReceivedDocumentPaymentTerms {
     /**

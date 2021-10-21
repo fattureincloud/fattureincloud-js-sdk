@@ -17,7 +17,7 @@ import City from './City';
 /**
  * The ListCitiesResponse model module.
  * @module model/ListCitiesResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListCitiesResponse {
     /**

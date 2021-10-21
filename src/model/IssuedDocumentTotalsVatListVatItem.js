@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IssuedDocumentTotalsVatListVatItem model module.
  * @module model/IssuedDocumentTotalsVatListVatItem
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentTotalsVatListVatItem {
     /**

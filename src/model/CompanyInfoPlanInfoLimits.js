@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CompanyInfoPlanInfoLimits model module.
  * @module model/CompanyInfoPlanInfoLimits
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfoPlanInfoLimits {
     /**

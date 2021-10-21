@@ -18,7 +18,7 @@ import PaymentMethod from './PaymentMethod';
 /**
  * The IssuedDocumentPreCreateInfoDefaultValues model module.
  * @module model/IssuedDocumentPreCreateInfoDefaultValues
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentPreCreateInfoDefaultValues {
     /**

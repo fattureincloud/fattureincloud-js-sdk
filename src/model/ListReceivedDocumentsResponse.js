@@ -19,7 +19,7 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The ListReceivedDocumentsResponse model module.
  * @module model/ListReceivedDocumentsResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListReceivedDocumentsResponse {
     /**

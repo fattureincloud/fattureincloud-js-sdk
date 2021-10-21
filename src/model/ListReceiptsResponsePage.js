@@ -17,7 +17,7 @@ import Receipt from './Receipt';
 /**
  * The ListReceiptsResponsePage model module.
  * @module model/ListReceiptsResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListReceiptsResponsePage {
     /**

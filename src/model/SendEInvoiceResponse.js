@@ -17,7 +17,7 @@ import SendEInvoiceResponseData from './SendEInvoiceResponseData';
 /**
  * The SendEInvoiceResponse model module.
  * @module model/SendEInvoiceResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class SendEInvoiceResponse {
     /**

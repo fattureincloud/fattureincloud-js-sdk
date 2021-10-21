@@ -17,7 +17,7 @@ import Supplier from './Supplier';
 /**
  * The ModifySupplierResponse model module.
  * @module model/ModifySupplierResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifySupplierResponse {
     /**

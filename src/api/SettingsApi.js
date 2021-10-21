@@ -27,7 +27,7 @@ import ModifyPaymentMethodResponse from '../model/ModifyPaymentMethodResponse';
 /**
 * Settings service.
 * @module api/SettingsApi
-* @version 2.0.1
+* @version 2.0.2
 */
 export default class SettingsApi {
 

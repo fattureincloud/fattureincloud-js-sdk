@@ -17,7 +17,7 @@ import CashbookEntry from './CashbookEntry';
 /**
  * The ModifyCashbookEntryRequest model module.
  * @module model/ModifyCashbookEntryRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyCashbookEntryRequest {
     /**

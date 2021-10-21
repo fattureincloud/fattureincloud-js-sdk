@@ -17,7 +17,7 @@ import F24 from './F24';
 /**
  * The ListF24ResponsePage model module.
  * @module model/ListF24ResponsePage
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ListF24ResponsePage {
     /**

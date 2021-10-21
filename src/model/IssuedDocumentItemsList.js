@@ -17,7 +17,7 @@ import VatType from './VatType';
 /**
  * The IssuedDocumentItemsList model module.
  * @module model/IssuedDocumentItemsList
- * @version 2.0.1
+ * @version 2.0.2
  */
 class IssuedDocumentItemsList {
     /**

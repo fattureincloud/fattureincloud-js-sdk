@@ -17,7 +17,7 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The CreateReceivedDocumentRequest model module.
  * @module model/CreateReceivedDocumentRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CreateReceivedDocumentRequest {
     /**

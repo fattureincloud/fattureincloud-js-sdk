@@ -17,7 +17,7 @@ import CashbookEntry from './CashbookEntry';
 /**
  * The GetCashbookEntryResponse model module.
  * @module model/GetCashbookEntryResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetCashbookEntryResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Language model module.
  * @module model/Language
- * @version 2.0.1
+ * @version 2.0.2
  */
 class Language {
     /**

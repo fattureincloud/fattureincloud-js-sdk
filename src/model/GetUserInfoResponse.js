@@ -19,7 +19,7 @@ import User from './User';
 /**
  * The GetUserInfoResponse model module.
  * @module model/GetUserInfoResponse
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetUserInfoResponse {
     /**

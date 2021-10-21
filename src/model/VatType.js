@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The VatType model module.
  * @module model/VatType
- * @version 2.0.1
+ * @version 2.0.2
  */
 class VatType {
     /**

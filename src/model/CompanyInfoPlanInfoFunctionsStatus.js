@@ -17,7 +17,7 @@ import FunctionStatus from './FunctionStatus';
 /**
  * The CompanyInfoPlanInfoFunctionsStatus model module.
  * @module model/CompanyInfoPlanInfoFunctionsStatus
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CompanyInfoPlanInfoFunctionsStatus {
     /**

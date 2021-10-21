@@ -17,7 +17,7 @@ import EmailScheduleInclude from './EmailScheduleInclude';
 /**
  * The EmailSchedule model module.
  * @module model/EmailSchedule
- * @version 2.0.1
+ * @version 2.0.2
  */
 class EmailSchedule {
     /**

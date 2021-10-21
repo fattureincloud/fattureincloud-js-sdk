@@ -17,7 +17,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The CashbookEntryOutData model module.
  * @module model/CashbookEntryOutData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CashbookEntryOutData {
     /**

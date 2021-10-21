@@ -17,7 +17,7 @@ import F24 from './F24';
 /**
  * The GetF24Response model module.
  * @module model/GetF24Response
- * @version 2.0.1
+ * @version 2.0.2
  */
 class GetF24Response {
     /**

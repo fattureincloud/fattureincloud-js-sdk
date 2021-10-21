@@ -19,7 +19,7 @@ import ReceiptType from './ReceiptType';
 /**
  * The Receipt model module.
  * @module model/Receipt
- * @version 2.0.1
+ * @version 2.0.2
  */
 class Receipt {
     /**

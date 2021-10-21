@@ -17,7 +17,7 @@ import PaymentMethod from './PaymentMethod';
 /**
  * The ModifyPaymentMethodRequest model module.
  * @module model/ModifyPaymentMethodRequest
- * @version 2.0.1
+ * @version 2.0.2
  */
 class ModifyPaymentMethodRequest {
     /**

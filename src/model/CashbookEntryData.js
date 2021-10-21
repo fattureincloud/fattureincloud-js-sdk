@@ -17,7 +17,7 @@ import CashbookEntryDataDocument from './CashbookEntryDataDocument';
 /**
  * The CashbookEntryData model module.
  * @module model/CashbookEntryData
- * @version 2.0.1
+ * @version 2.0.2
  */
 class CashbookEntryData {
     /**
