@@ -84,15 +84,11 @@
 
   describe('ModifyClientResponse', function() {
     it('should create an instance of ModifyClientResponse', function() {
-      // uncomment below and update the code to test ModifyClientResponse
-      //var instane = new fattureInCloudSdk.ModifyClientResponse();
-      //expect(instance).to.be.a(fattureInCloudSdk.ModifyClientResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.ModifyClientResponse);
     });
 
     it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new fattureInCloudSdk.ModifyClientResponse();
-      //expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     });
 
   });
