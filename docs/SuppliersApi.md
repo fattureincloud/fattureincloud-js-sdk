@@ -23,7 +23,7 @@ Creates a new supplier.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -76,7 +76,7 @@ Deletes the specified supplier.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -127,7 +127,7 @@ Gets the specified supplier.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -184,7 +184,7 @@ Lists the suppliers.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -245,7 +245,7 @@ Modifies the specified supplier.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];

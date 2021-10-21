@@ -24,7 +24,7 @@ Creates a new archive document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -77,7 +77,7 @@ Deletes the specified archive document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -128,7 +128,7 @@ Gets the specified archive document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -185,7 +185,7 @@ Lists the archive documents.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -246,7 +246,7 @@ Modifies the specified archive document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -301,7 +301,7 @@ Uploads an attachment destined to an archive document. The actual association be
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];

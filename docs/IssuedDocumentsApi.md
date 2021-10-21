@@ -30,7 +30,7 @@ Creates a new document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -83,7 +83,7 @@ Deletes the specified document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -134,7 +134,7 @@ Removes the attachment of the specified document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -185,7 +185,7 @@ Gets the pre-compiled email details.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -236,7 +236,7 @@ Returns the totals for a specified document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -291,7 +291,7 @@ Gets the specified document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -348,7 +348,7 @@ Retrieves the information useful while creating a new document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -399,7 +399,7 @@ Returns the totals for a new document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -452,7 +452,7 @@ Lists the issued documents.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -515,7 +515,7 @@ Modifies the specified document.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -570,7 +570,7 @@ Schedules the sending of a document by email.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -625,7 +625,7 @@ Uploads an attachment destined to an issued document. The actual association bet
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];

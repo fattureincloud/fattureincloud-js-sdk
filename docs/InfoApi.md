@@ -33,7 +33,7 @@ Lists the archive categories.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -82,7 +82,7 @@ Lists the Italian cities.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -135,7 +135,7 @@ Lists the cost centers.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -184,7 +184,7 @@ Lists the supported countries.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -229,7 +229,7 @@ Lists the supported currencies.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -274,7 +274,7 @@ Lists the delivery note default causals.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -319,7 +319,7 @@ Lists the supported languages.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -364,7 +364,7 @@ Lists the available payment accounts.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -421,7 +421,7 @@ Lists the available payment methods.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -478,7 +478,7 @@ Lists the product categories.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -529,7 +529,7 @@ Lists the received document categories.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -578,7 +578,7 @@ Lists the revenue centers.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -627,7 +627,7 @@ Lists the available templates.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -680,7 +680,7 @@ Lists the units of measure.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -725,7 +725,7 @@ Lists the available vat types.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];

@@ -20,7 +20,7 @@ Gets the current user&#39;s info.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
@@ -65,7 +65,7 @@ Lists the companies controlled by the current user.
 ### Example
 
 ```javascript
-import fattureInCloudSdk from 'fatture_in_cloud_api_v2_api_reference';
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
 let defaultClient = fattureInCloudSdk.ApiClient.instance;
 // Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
 let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
