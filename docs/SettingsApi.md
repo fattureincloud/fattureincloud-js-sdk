@@ -246,7 +246,7 @@ let paymentAccountId = 1; // String | The Referred Payment Account Id.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
 apiInstance.getPaymentAccount(companyId, paymentAccountId, opts, (error, data, response) => {
   if (error) {
