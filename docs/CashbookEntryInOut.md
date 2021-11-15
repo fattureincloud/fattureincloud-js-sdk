@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **description** | **String** | Cashbook description. | 
 **kind** | **String** | Cashbook kind. | 
 **type** | **String** | Cashbook type. | 
-**entityName** | **String** | Entity name. | [optional] 
+**entity_name** | **String** | Entity name. | [optional] 
 **document** | [**CashbookEntryDataDocument**](CashbookEntryDataDocument.md) |  | [optional] 
-**amountOut** | **Number** | Total amount out. | [optional] 
-**paymentAccountOut** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
-**amountIn** | **Number** | Total amount in. | [optional] 
-**paymentAccountIn** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
+**amount_out** | **Number** | Total amount out. | [optional] 
+**payment_account_out** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
+**amount_in** | **Number** | Total amount in. | [optional] 
+**payment_account_in** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
 
 
 

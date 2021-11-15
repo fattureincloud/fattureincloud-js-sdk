@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **proformas** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
 **invoices** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
 **receipts** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
-**deliveryNotes** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
-**creditNotes** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
+**delivery_notes** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
+**credit_notes** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
 **orders** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
-**workReports** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
-**supplierOrders** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
-**selfInvoices** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
+**work_reports** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
+**supplier_orders** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
+**self_invoices** | [**PermissionLevel**](PermissionLevel.md) |  | [optional] 
 
 

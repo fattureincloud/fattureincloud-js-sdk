@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## sendEInvoice
 
-> SendEInvoiceResponse sendEInvoice(companyId, documentId, opts)
+> SendEInvoiceResponse sendEInvoice(company_id, document_id, opts)
 
 Send the e-invoice
 
@@ -27,18 +27,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.IssuedEInvoicesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'sendEInvoiceRequest': {"data":{"withholding_tax_causal":"causale"}} // SendEInvoiceRequest | 
+  'SendEInvoiceRequest': {"data":{"withholding_tax_causal":"causale"}} // SendEInvoiceRequest | 
 };
-apiInstance.sendEInvoice(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.sendEInvoice(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -46,9 +45,9 @@ apiInstance.sendEInvoice(companyId, documentId, opts, (error, data, response) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **sendEInvoiceRequest** | [**SendEInvoiceRequest**](SendEInvoiceRequest.md)|  | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **SendEInvoiceRequest** | [**SendEInvoiceRequest**](SendEInvoiceRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -66,7 +65,7 @@ Name | Type | Description  | Notes
 
 ## verifyEInvoiceXml
 
-> VerifyEInvoiceXmlResponse verifyEInvoiceXml(companyId, documentId)
+> VerifyEInvoiceXmlResponse verifyEInvoiceXml(company_id, document_id)
 
 Verify e-invoice xml
 
@@ -82,15 +81,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.IssuedEInvoicesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.verifyEInvoiceXml(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.verifyEInvoiceXml(company_id, document_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -98,8 +96,8 @@ apiInstance.verifyEInvoiceXml(companyId, documentId, (error, data, response) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 

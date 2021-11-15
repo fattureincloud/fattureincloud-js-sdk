@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createProduct
 
-> CreateProductResponse createProduct(companyId, opts)
+> CreateProductResponse createProduct(company_id, opts)
 
 Create Product
 
@@ -30,17 +30,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ProductsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // CreateProductRequest | 
+  'CreateProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // CreateProductRequest | 
 };
-apiInstance.createProduct(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createProduct(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -48,8 +47,8 @@ apiInstance.createProduct(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)|  | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateProductRequest** | [**CreateProductRequest**](CreateProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -67,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## deleteProduct
 
-> deleteProduct(companyId, productId)
+> deleteProduct(company_id, product_id)
 
 Delete Product
 
@@ -83,15 +82,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ProductsApi();
-let companyId = 12345; // Number | The ID of the company.
-let productId = 56; // Number | The ID of the product.
-apiInstance.deleteProduct(companyId, productId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let product_id = 56; // Number | The ID of the product.
+apiInstance.deleteProduct(company_id, product_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -99,8 +97,8 @@ apiInstance.deleteProduct(companyId, productId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **productId** | **Number**| The ID of the product. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **product_id** | **Number**| The ID of the product. | 
 
 ### Return type
 
@@ -118,7 +116,7 @@ null (empty response body)
 
 ## getProduct
 
-> GetProductResponse getProduct(companyId, productId, opts)
+> GetProductResponse getProduct(company_id, product_id, opts)
 
 Get Product
 
@@ -134,19 +132,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ProductsApi();
-let companyId = 12345; // Number | The ID of the company.
-let productId = 56; // Number | The ID of the product.
+let company_id = 12345; // Number | The ID of the company.
+let product_id = 56; // Number | The ID of the product.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getProduct(companyId, productId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getProduct(company_id, product_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -154,8 +151,8 @@ apiInstance.getProduct(companyId, productId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **productId** | **Number**| The ID of the product. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **product_id** | **Number**| The ID of the product. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -175,7 +172,7 @@ Name | Type | Description  | Notes
 
 ## listProducts
 
-> ListProductsResponse listProducts(companyId, opts)
+> ListProductsResponse listProducts(company_id, opts)
 
 List Products
 
@@ -191,21 +188,20 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ProductsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5 // Number | The size of the page.
+  'per_page': 5 // Number | The size of the page.
 };
-apiInstance.listProducts(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listProducts(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -213,12 +209,12 @@ apiInstance.listProducts(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
 
 ### Return type
 
@@ -236,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## modifyProduct
 
-> ModifyProductResponse modifyProduct(companyId, productId, opts)
+> ModifyProductResponse modifyProduct(company_id, product_id, opts)
 
 Modify Product
 
@@ -252,18 +248,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ProductsApi();
-let companyId = 12345; // Number | The ID of the company.
-let productId = 56; // Number | The ID of the product.
+let company_id = 12345; // Number | The ID of the company.
+let product_id = 56; // Number | The ID of the product.
 let opts = {
-  'modifyProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // ModifyProductRequest | Modified product details.
+  'ModifyProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // ModifyProductRequest | Modified product details.
 };
-apiInstance.modifyProduct(companyId, productId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyProduct(company_id, product_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -271,9 +266,9 @@ apiInstance.modifyProduct(companyId, productId, opts, (error, data, response) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **productId** | **Number**| The ID of the product. | 
- **modifyProductRequest** | [**ModifyProductRequest**](ModifyProductRequest.md)| Modified product details. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **product_id** | **Number**| The ID of the product. | 
+ **ModifyProductRequest** | [**ModifyProductRequest**](ModifyProductRequest.md)| Modified product details. | [optional] 
 
 ### Return type
 

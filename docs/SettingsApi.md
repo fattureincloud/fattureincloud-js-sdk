@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## createPaymentAccount
 
-> CreatePaymentAccountResponse createPaymentAccount(companyId, opts)
+> CreatePaymentAccountResponse createPaymentAccount(company_id, opts)
 
 Create Payment Account
 
@@ -33,17 +33,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createPaymentAccountRequest': {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}} // CreatePaymentAccountRequest | 
+  'CreatePaymentAccountRequest': {"data":{"id":12345,"name":"Indesa","type":"bank","iban":"IT17Q0051343200000003497636","sia":"T1234","virtual":false}} // CreatePaymentAccountRequest | 
 };
-apiInstance.createPaymentAccount(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createPaymentAccount(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -51,8 +50,8 @@ apiInstance.createPaymentAccount(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createPaymentAccountRequest** | [**CreatePaymentAccountRequest**](CreatePaymentAccountRequest.md)|  | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreatePaymentAccountRequest** | [**CreatePaymentAccountRequest**](CreatePaymentAccountRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -70,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## createPaymentMethod
 
-> CreatePaymentMethodResponse createPaymentMethod(companyId, opts)
+> CreatePaymentMethodResponse createPaymentMethod(company_id, opts)
 
 Create Payment Method
 
@@ -86,17 +85,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createPaymentMethodRequest': {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}} // CreatePaymentMethodRequest | 
+  'CreatePaymentMethodRequest': {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}} // CreatePaymentMethodRequest | 
 };
-apiInstance.createPaymentMethod(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createPaymentMethod(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -104,8 +102,8 @@ apiInstance.createPaymentMethod(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createPaymentMethodRequest** | [**CreatePaymentMethodRequest**](CreatePaymentMethodRequest.md)|  | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreatePaymentMethodRequest** | [**CreatePaymentMethodRequest**](CreatePaymentMethodRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -123,7 +121,7 @@ Name | Type | Description  | Notes
 
 ## deletePaymentAccount
 
-> deletePaymentAccount(companyId, paymentAccountId)
+> deletePaymentAccount(company_id, paymentAccountId)
 
 Delete Payment Account
 
@@ -139,15 +137,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentAccountId = 1; // String | The Referred Payment Account Id.
-apiInstance.deletePaymentAccount(companyId, paymentAccountId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deletePaymentAccount(company_id, paymentAccountId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -155,7 +152,7 @@ apiInstance.deletePaymentAccount(companyId, paymentAccountId, (error, data, resp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentAccountId** | **String**| The Referred Payment Account Id. | 
 
 ### Return type
@@ -174,7 +171,7 @@ null (empty response body)
 
 ## deletePaymentMethod
 
-> deletePaymentMethod(companyId, paymentMethodId)
+> deletePaymentMethod(company_id, paymentMethodId)
 
 Delete Payment Method
 
@@ -190,15 +187,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentMethodId = 1; // Number | The Referred Payment Method Id.
-apiInstance.deletePaymentMethod(companyId, paymentMethodId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deletePaymentMethod(company_id, paymentMethodId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -206,7 +202,7 @@ apiInstance.deletePaymentMethod(companyId, paymentMethodId, (error, data, respon
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentMethodId** | **Number**| The Referred Payment Method Id. | 
 
 ### Return type
@@ -225,7 +221,7 @@ null (empty response body)
 
 ## getPaymentAccount
 
-> GetPaymentAccountResponse getPaymentAccount(companyId, paymentAccountId, opts)
+> GetPaymentAccountResponse getPaymentAccount(company_id, paymentAccountId, opts)
 
 Get Payment Account
 
@@ -241,20 +237,19 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentAccountId = 1; // String | The Referred Payment Account Id.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
-  'body': null // Object | 
+  'body': {key: null} // Object | 
 };
-apiInstance.getPaymentAccount(companyId, paymentAccountId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getPaymentAccount(company_id, paymentAccountId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -262,7 +257,7 @@ apiInstance.getPaymentAccount(companyId, paymentAccountId, opts, (error, data, r
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentAccountId** | **String**| The Referred Payment Account Id. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
@@ -284,7 +279,7 @@ Name | Type | Description  | Notes
 
 ## getPaymentMethod
 
-> GetPaymentMethodResponse getPaymentMethod(companyId, paymentMethodId, opts)
+> GetPaymentMethodResponse getPaymentMethod(company_id, paymentMethodId, opts)
 
 Get Payment Method
 
@@ -300,19 +295,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentMethodId = 1; // Number | The Referred Payment Method Id.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getPaymentMethod(companyId, paymentMethodId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getPaymentMethod(company_id, paymentMethodId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -320,7 +314,7 @@ apiInstance.getPaymentMethod(companyId, paymentMethodId, opts, (error, data, res
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentMethodId** | **Number**| The Referred Payment Method Id. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
@@ -341,7 +335,7 @@ Name | Type | Description  | Notes
 
 ## modifyPaymentAccount
 
-> ModifyPaymentAccountResponse modifyPaymentAccount(companyId, paymentAccountId, opts)
+> ModifyPaymentAccountResponse modifyPaymentAccount(company_id, paymentAccountId, opts)
 
 Modify Payment Account
 
@@ -357,18 +351,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentAccountId = 1; // String | The Referred Payment Account Id.
 let opts = {
-  'modifyPaymentAccountRequest': {"data":{"id":0,"name":"Conto Banca Intesa","type":"standard","iban":"string","sia":"string","cuc":"string","virtual":true}} // ModifyPaymentAccountRequest | 
+  'ModifyPaymentAccountRequest': {"data":{"id":0,"name":"Conto Banca Intesa","type":"standard","iban":"string","sia":"string","cuc":"string","virtual":true}} // ModifyPaymentAccountRequest | 
 };
-apiInstance.modifyPaymentAccount(companyId, paymentAccountId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyPaymentAccount(company_id, paymentAccountId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -376,9 +369,9 @@ apiInstance.modifyPaymentAccount(companyId, paymentAccountId, opts, (error, data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentAccountId** | **String**| The Referred Payment Account Id. | 
- **modifyPaymentAccountRequest** | [**ModifyPaymentAccountRequest**](ModifyPaymentAccountRequest.md)|  | [optional] 
+ **ModifyPaymentAccountRequest** | [**ModifyPaymentAccountRequest**](ModifyPaymentAccountRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -396,7 +389,7 @@ Name | Type | Description  | Notes
 
 ## modifyPaymentMethod
 
-> ModifyPaymentMethodResponse modifyPaymentMethod(companyId, paymentMethodId, opts)
+> ModifyPaymentMethodResponse modifyPaymentMethod(company_id, paymentMethodId, opts)
 
 Modify Payment Method
 
@@ -412,18 +405,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let paymentMethodId = 1; // Number | The Referred Payment Method Id.
 let opts = {
-  'modifyPaymentMethodRequest': {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}} // ModifyPaymentMethodRequest | 
+  'ModifyPaymentMethodRequest': {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}} // ModifyPaymentMethodRequest | 
 };
-apiInstance.modifyPaymentMethod(companyId, paymentMethodId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyPaymentMethod(company_id, paymentMethodId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -431,9 +423,9 @@ apiInstance.modifyPaymentMethod(companyId, paymentMethodId, opts, (error, data, 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **paymentMethodId** | **Number**| The Referred Payment Method Id. | 
- **modifyPaymentMethodRequest** | [**ModifyPaymentMethodRequest**](ModifyPaymentMethodRequest.md)|  | [optional] 
+ **ModifyPaymentMethodRequest** | [**ModifyPaymentMethodRequest**](ModifyPaymentMethodRequest.md)|  | [optional] 
 
 ### Return type
 

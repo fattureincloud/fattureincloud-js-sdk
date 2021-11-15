@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entitySearchFields** | **String** |  | [optional] 
-**entityAutocomplete** | **Boolean** |  | [optional] 
-**entityCreate** | **Boolean** |  | [optional] 
-**entityUpdate** | **String** |  | [optional] 
+**entity_search_fields** | **String** |  | [optional] 
+**entity_autocomplete** | **Boolean** |  | [optional] 
+**entity_create** | **Boolean** |  | [optional] 
+**entity_update** | **String** |  | [optional] 
 
 

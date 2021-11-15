@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**needConfirmation** | **Boolean** |  | [optional] 
+**need_confirmation** | **Boolean** |  | [optional] 
 
 

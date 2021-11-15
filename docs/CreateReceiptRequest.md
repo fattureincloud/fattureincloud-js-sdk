@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**Receipt**](Receipt.md) |  | [optional] 
-**autocompleteNumber** | **Boolean** | If true, the number is autocompleted progressively. | [optional] 
+**autocomplete_number** | **Boolean** | If true, the number is autocompleted progressively. | [optional] 
 
 

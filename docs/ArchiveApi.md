@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createArchiveDocument
 
-> CreateArchiveDocumentResponse createArchiveDocument(companyId, opts)
+> CreateArchiveDocumentResponse createArchiveDocument(company_id, opts)
 
 Create Archive Document
 
@@ -31,17 +31,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createArchiveDocumentRequest': {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 1","attachment_token":"ibfjdbf94ey9w94g3w894qbasrga"}} // CreateArchiveDocumentRequest | The Archive Document.
+  'CreateArchiveDocumentRequest': {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 1","attachment_token":"ibfjdbf94ey9w94g3w894qbasrga"}} // CreateArchiveDocumentRequest | The Archive Document.
 };
-apiInstance.createArchiveDocument(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createArchiveDocument(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -49,8 +48,8 @@ apiInstance.createArchiveDocument(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createArchiveDocumentRequest** | [**CreateArchiveDocumentRequest**](CreateArchiveDocumentRequest.md)| The Archive Document. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateArchiveDocumentRequest** | [**CreateArchiveDocumentRequest**](CreateArchiveDocumentRequest.md)| The Archive Document. | [optional] 
 
 ### Return type
 
@@ -68,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## deleteArchiveDocument
 
-> deleteArchiveDocument(companyId, documentId)
+> deleteArchiveDocument(company_id, document_id)
 
 Delete Archive Document
 
@@ -84,15 +83,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteArchiveDocument(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteArchiveDocument(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -100,8 +98,8 @@ apiInstance.deleteArchiveDocument(companyId, documentId, (error, data, response)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -119,7 +117,7 @@ null (empty response body)
 
 ## getArchiveDocument
 
-> GetArchiveDocumentResponse getArchiveDocument(companyId, documentId, opts)
+> GetArchiveDocumentResponse getArchiveDocument(company_id, document_id, opts)
 
 Get Archive Document
 
@@ -135,19 +133,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getArchiveDocument(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getArchiveDocument(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -155,8 +152,8 @@ apiInstance.getArchiveDocument(companyId, documentId, opts, (error, data, respon
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -176,7 +173,7 @@ Name | Type | Description  | Notes
 
 ## listArchiveDocuments
 
-> ListArchiveDocumentsResponse listArchiveDocuments(companyId, opts)
+> ListArchiveDocumentsResponse listArchiveDocuments(company_id, opts)
 
 List Archive Documents
 
@@ -192,21 +189,20 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5 // Number | The size of the page.
+  'per_page': 5 // Number | The size of the page.
 };
-apiInstance.listArchiveDocuments(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listArchiveDocuments(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -214,12 +210,12 @@ apiInstance.listArchiveDocuments(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
 
 ### Return type
 
@@ -237,7 +233,7 @@ Name | Type | Description  | Notes
 
 ## modifyArchiveDocument
 
-> ModifyArchiveDocumentResponse modifyArchiveDocument(companyId, documentId, opts)
+> ModifyArchiveDocumentResponse modifyArchiveDocument(company_id, document_id, opts)
 
 Modify Archive Document
 
@@ -253,18 +249,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'modifyArchiveDocumentRequest': {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 2"}} // ModifyArchiveDocumentRequest | Modified Archive Document
+  'ModifyArchiveDocumentRequest': {"data":{"date":"2021-08-20","category":"Altri documenti","description":"spesa 2"}} // ModifyArchiveDocumentRequest | Modified Archive Document
 };
-apiInstance.modifyArchiveDocument(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyArchiveDocument(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -272,9 +267,9 @@ apiInstance.modifyArchiveDocument(companyId, documentId, opts, (error, data, res
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **modifyArchiveDocumentRequest** | [**ModifyArchiveDocumentRequest**](ModifyArchiveDocumentRequest.md)| Modified Archive Document | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **ModifyArchiveDocumentRequest** | [**ModifyArchiveDocumentRequest**](ModifyArchiveDocumentRequest.md)| Modified Archive Document | [optional] 
 
 ### Return type
 
@@ -292,7 +287,7 @@ Name | Type | Description  | Notes
 
 ## uploadArchiveDocumentAttachment
 
-> UploadArchiveAttachmentResponse uploadArchiveDocumentAttachment(companyId, opts)
+> UploadArchiveAttachmentResponse uploadArchiveDocumentAttachment(company_id, opts)
 
 Upload Archive Document Attachment
 
@@ -308,18 +303,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'filename': "filename_example", // String | Name of the file.
   'attachment': "/path/to/file" // File | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
 };
-apiInstance.uploadArchiveDocumentAttachment(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.uploadArchiveDocumentAttachment(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -327,7 +321,7 @@ apiInstance.uploadArchiveDocumentAttachment(companyId, opts, (error, data, respo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **filename** | **String**| Name of the file. | [optional] 
  **attachment** | **File**| Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx | [optional] 
 

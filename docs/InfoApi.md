@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## listArchiveCategories
 
-> ListArchiveCategoriesResponse listArchiveCategories(companyId)
+> ListArchiveCategoriesResponse listArchiveCategories(company_id)
 
 List Archive Categories
 
@@ -40,14 +40,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.listArchiveCategories(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.listArchiveCategories(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -55,7 +54,7 @@ apiInstance.listArchiveCategories(companyId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 
@@ -90,16 +89,15 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
 let opts = {
-  'postalCode': "postalCode_example", // String | Postal code for filtering.
+  'postal_code': "postal_code_example", // String | Postal code for filtering.
   'city': "city_example" // String | City for filtering (ignored if postal_code is passed).
 };
-apiInstance.listCities(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listCities(opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -107,7 +105,7 @@ apiInstance.listCities(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postalCode** | **String**| Postal code for filtering. | [optional] 
+ **postal_code** | **String**| Postal code for filtering. | [optional] 
  **city** | **String**| City for filtering (ignored if postal_code is passed). | [optional] 
 
 ### Return type
@@ -126,7 +124,7 @@ Name | Type | Description  | Notes
 
 ## listCostCenters
 
-> ListCostCentersResponse listCostCenters(companyId)
+> ListCostCentersResponse listCostCenters(company_id)
 
 List Cost Centers
 
@@ -142,14 +140,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.listCostCenters(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.listCostCenters(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -157,7 +154,7 @@ apiInstance.listCostCenters(companyId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 
@@ -191,13 +188,12 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-apiInstance.listCountries((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listCountries().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -236,13 +232,12 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-apiInstance.listCurrencies((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listCurrencies().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -281,13 +276,12 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-apiInstance.listDeliveryNotesDefaultCausals((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listDeliveryNotesDefaultCausals().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -326,13 +320,12 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-apiInstance.listLanguages((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listLanguages().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -355,7 +348,7 @@ This endpoint does not need any parameter.
 
 ## listPaymentAccounts
 
-> ListPaymentAccountsResponse listPaymentAccounts(companyId, opts)
+> ListPaymentAccountsResponse listPaymentAccounts(company_id, opts)
 
 List Payment Accounts
 
@@ -371,19 +364,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example" // String | List of comma-separated fields for result sorting (minus for desc sorting).
 };
-apiInstance.listPaymentAccounts(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listPaymentAccounts(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -391,7 +383,7 @@ apiInstance.listPaymentAccounts(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
@@ -412,7 +404,7 @@ Name | Type | Description  | Notes
 
 ## listPaymentMethods
 
-> ListPaymentMethodsResponse listPaymentMethods(companyId, opts)
+> ListPaymentMethodsResponse listPaymentMethods(company_id, opts)
 
 List Payment Methods
 
@@ -428,19 +420,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example" // String | List of comma-separated fields for result sorting (minus for desc sorting).
 };
-apiInstance.listPaymentMethods(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listPaymentMethods(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -448,7 +439,7 @@ apiInstance.listPaymentMethods(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
@@ -469,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## listProductCategories
 
-> ListProductCategoriesResponse listProductCategories(companyId, context)
+> ListProductCategoriesResponse listProductCategories(company_id, context)
 
 List Product Categories
 
@@ -485,15 +476,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let context = "context_example"; // String | 
-apiInstance.listProductCategories(companyId, context, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listProductCategories(company_id, context).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -501,7 +491,7 @@ apiInstance.listProductCategories(companyId, context, (error, data, response) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **context** | **String**|  | 
 
 ### Return type
@@ -520,7 +510,7 @@ Name | Type | Description  | Notes
 
 ## listReceivedDocumentCategories
 
-> ListReceivedDocumentCategoriesResponse listReceivedDocumentCategories(companyId)
+> ListReceivedDocumentCategoriesResponse listReceivedDocumentCategories(company_id)
 
 List Received Document Categories
 
@@ -536,14 +526,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.listReceivedDocumentCategories(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.listReceivedDocumentCategories(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -551,7 +540,7 @@ apiInstance.listReceivedDocumentCategories(companyId, (error, data, response) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 
@@ -569,7 +558,7 @@ Name | Type | Description  | Notes
 
 ## listRevenueCenters
 
-> ListRevenueCentersResponse listRevenueCenters(companyId)
+> ListRevenueCentersResponse listRevenueCenters(company_id)
 
 List Revenue Centers
 
@@ -585,14 +574,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.listRevenueCenters(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.listRevenueCenters(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -600,7 +588,7 @@ apiInstance.listRevenueCenters(companyId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 
@@ -636,15 +624,14 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.InfoApi();
 let opts = {
   'type': "'all'", // String | Type of the templates.
-  'byType': false // Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
+  'by_type': false // Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
 };
-apiInstance.listTemplates(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listTemplates(opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -653,7 +640,7 @@ apiInstance.listTemplates(opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **String**| Type of the templates. | [optional] [default to &#39;all&#39;]
- **byType** | **Boolean**| [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional] [default to false]
+ **by_type** | **Boolean**| [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional] [default to false]
 
 ### Return type
 
@@ -687,13 +674,12 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-apiInstance.listUnitsOfMeasure((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listUnitsOfMeasure().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -716,7 +702,7 @@ This endpoint does not need any parameter.
 
 ## listVatTypes
 
-> ListVatTypesResponse listVatTypes(companyId, opts)
+> ListVatTypesResponse listVatTypes(company_id, opts)
 
 List Vat Types
 
@@ -732,17 +718,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.InfoApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.listVatTypes(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listVatTypes(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -750,7 +735,7 @@ apiInstance.listVatTypes(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
 ### Return type

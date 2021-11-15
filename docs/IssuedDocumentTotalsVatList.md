@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vatItem** | [**IssuedDocumentTotalsVatListVatItem**](IssuedDocumentTotalsVatListVatItem.md) |  | [optional] 
+**vat_item** | [**IssuedDocumentTotalsVatListVatItem**](IssuedDocumentTotalsVatListVatItem.md) |  | [optional] 
 
 

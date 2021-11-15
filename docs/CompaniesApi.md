@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getCompanyInfo
 
-> GetCompanyInfoResponse getCompanyInfo(companyId)
+> GetCompanyInfoResponse getCompanyInfo(company_id)
 
 Get Company Info
 
@@ -26,14 +26,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.CompaniesApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.getCompanyInfo(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.getCompanyInfo(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -41,7 +40,7 @@ apiInstance.getCompanyInfo(companyId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 

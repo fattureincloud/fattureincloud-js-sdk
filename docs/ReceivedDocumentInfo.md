@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**defaultValues** | [**ReceivedDocumentInfoDefaultValues**](ReceivedDocumentInfoDefaultValues.md) |  | [optional] 
-**itemsDefaultValues** | [**ReceivedDocumentInfoItemsDefaultValues**](ReceivedDocumentInfoItemsDefaultValues.md) |  | [optional] 
-**countriesList** | **[String]** |  | [optional] 
-**currenciesList** | [**[Currency]**](Currency.md) |  | [optional] 
-**categoriesList** | **[String]** |  | [optional] 
-**paymentAccountsList** | [**[PaymentAccount]**](PaymentAccount.md) |  | [optional] 
-**vatTypesList** | [**[VatType]**](VatType.md) |  | [optional] 
+**default_values** | [**ReceivedDocumentInfoDefaultValues**](ReceivedDocumentInfoDefaultValues.md) |  | [optional] 
+**items_default_values** | [**ReceivedDocumentInfoItemsDefaultValues**](ReceivedDocumentInfoItemsDefaultValues.md) |  | [optional] 
+**countries_list** | **[String]** |  | [optional] 
+**currencies_list** | [**[Currency]**](Currency.md) |  | [optional] 
+**categories_list** | **[String]** |  | [optional] 
+**payment_accounts_list** | [**[PaymentAccount]**](PaymentAccount.md) |  | [optional] 
+**vat_types_list** | [**[VatType]**](VatType.md) |  | [optional] 
 
 

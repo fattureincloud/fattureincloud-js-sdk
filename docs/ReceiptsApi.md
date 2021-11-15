@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createReceipt
 
-> CreateReceiptResponse createReceipt(companyId, opts)
+> CreateReceiptResponse createReceipt(company_id, opts)
 
 Create Receipt
 
@@ -32,17 +32,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // CreateReceiptRequest | The Receipt to create.
+  'CreateReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // CreateReceiptRequest | The Receipt to create.
 };
-apiInstance.createReceipt(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createReceipt(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -50,8 +49,8 @@ apiInstance.createReceipt(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createReceiptRequest** | [**CreateReceiptRequest**](CreateReceiptRequest.md)| The Receipt to create. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateReceiptRequest** | [**CreateReceiptRequest**](CreateReceiptRequest.md)| The Receipt to create. | [optional] 
 
 ### Return type
 
@@ -69,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## deleteReceipt
 
-> deleteReceipt(companyId, documentId)
+> deleteReceipt(company_id, document_id)
 
 Delete Receipt
 
@@ -85,15 +84,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteReceipt(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteReceipt(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -101,8 +99,8 @@ apiInstance.deleteReceipt(companyId, documentId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -120,7 +118,7 @@ null (empty response body)
 
 ## getReceipt
 
-> GetReceiptResponse getReceipt(companyId, documentId, opts)
+> GetReceiptResponse getReceipt(company_id, document_id, opts)
 
 Get Receipt
 
@@ -136,19 +134,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getReceipt(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getReceipt(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -156,8 +153,8 @@ apiInstance.getReceipt(companyId, documentId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -177,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## getReceiptPreCreateInfo
 
-> GetReceiptPreCreateInfoResponse getReceiptPreCreateInfo(companyId)
+> GetReceiptPreCreateInfoResponse getReceiptPreCreateInfo(company_id)
 
 Get Receipt Pre-Create Info
 
@@ -193,14 +190,13 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
-apiInstance.getReceiptPreCreateInfo(companyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let company_id = 12345; // Number | The ID of the company.
+apiInstance.getReceiptPreCreateInfo(company_id).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -208,7 +204,7 @@ apiInstance.getReceiptPreCreateInfo(companyId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
 
 ### Return type
 
@@ -226,7 +222,7 @@ Name | Type | Description  | Notes
 
 ## getReceiptsMonthlyTotals
 
-> GetReceiptsMonthlyTotalsResponse getReceiptsMonthlyTotals(companyId, type, year)
+> GetReceiptsMonthlyTotalsResponse getReceiptsMonthlyTotals(company_id, type, year)
 
 Get Receipts Monthly Totals
 
@@ -242,16 +238,15 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let type = "type_example"; // String | Receipt Type
 let year = "year_example"; // String | Year for which you want monthly totals
-apiInstance.getReceiptsMonthlyTotals(companyId, type, year, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getReceiptsMonthlyTotals(company_id, type, year).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -259,7 +254,7 @@ apiInstance.getReceiptsMonthlyTotals(companyId, type, year, (error, data, respon
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **type** | **String**| Receipt Type | 
  **year** | **String**| Year for which you want monthly totals | 
 
@@ -279,7 +274,7 @@ Name | Type | Description  | Notes
 
 ## listReceipts
 
-> ListReceiptsResponse listReceipts(companyId, opts)
+> ListReceiptsResponse listReceipts(company_id, opts)
 
 List Receipts
 
@@ -295,21 +290,20 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5, // Number | The size of the page.
+  'per_page': 5, // Number | The size of the page.
   'sort': "sort_example" // String | List of comma-separated fields for result sorting (minus for desc sorting).
 };
-apiInstance.listReceipts(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReceipts(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -317,11 +311,11 @@ apiInstance.listReceipts(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
 
 ### Return type
@@ -340,7 +334,7 @@ Name | Type | Description  | Notes
 
 ## modifyReceipt
 
-> ModifyReceiptResponse modifyReceipt(companyId, documentId, opts)
+> ModifyReceiptResponse modifyReceipt(company_id, document_id, opts)
 
 Modify Receipt
 
@@ -356,18 +350,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'modifyReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // ModifyReceiptRequest | Modified receipt.
+  'ModifyReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // ModifyReceiptRequest | Modified receipt.
 };
-apiInstance.modifyReceipt(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyReceipt(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -375,9 +368,9 @@ apiInstance.modifyReceipt(companyId, documentId, opts, (error, data, response) =
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **modifyReceiptRequest** | [**ModifyReceiptRequest**](ModifyReceiptRequest.md)| Modified receipt. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **ModifyReceiptRequest** | [**ModifyReceiptRequest**](ModifyReceiptRequest.md)| Modified receipt. | [optional] 
 
 ### Return type
 

@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amountNet** | **Number** | Total net amount. | 
-**amountVat** | **Number** | Total vat amount. | 
-**amountGross** | **Number** | Total gross amount. | 
-**amountWithholdingTax** | **Number** | Total withholding tax amount. | [optional] 
-**amountOtherWithholdingTax** | **Number** | Total other withholding tax amount. | [optional] 
-**amountDue** | **Number** | Total amount due. | 
-**paymentsSum** | **Number** | Payments sum. | 
+**amount_net** | **Number** | Total net amount. | 
+**amount_vat** | **Number** | Total vat amount. | 
+**amount_gross** | **Number** | Total gross amount. | 
+**amount_withholding_tax** | **Number** | Total withholding tax amount. | [optional] 
+**amount_other_withholding_tax** | **Number** | Total other withholding tax amount. | [optional] 
+**amount_due** | **Number** | Total amount due. | 
+**payments_sum** | **Number** | Payments sum. | 
 
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**postalCode** | **String** | City postal code. | 
+**postal_code** | **String** | City postal code. | 
 **city** | **String** | City name. | 
 **province** | **String** | Province. | 
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tsDigital** | [**FunctionStatus**](FunctionStatus.md) |  | [optional] 
-**tsPay** | [**FunctionStatus**](FunctionStatus.md) |  | [optional] 
+**ts_digital** | [**FunctionStatus**](FunctionStatus.md) |  | [optional] 
+**ts_pay** | [**FunctionStatus**](FunctionStatus.md) |  | [optional] 
 
 

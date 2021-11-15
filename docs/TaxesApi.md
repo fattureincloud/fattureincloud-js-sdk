@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createF24
 
-> CreateF24Response createF24(companyId, opts)
+> CreateF24Response createF24(company_id, opts)
 
 Create F24
 
@@ -32,17 +32,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createF24Request': {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111},"attachment_token":"b19c01da9b1688fb73d0d9e8ad"}} // CreateF24Request | The F24 to create
+  'CreateF24Request': {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111},"attachment_token":"b19c01da9b1688fb73d0d9e8ad"}} // CreateF24Request | The F24 to create
 };
-apiInstance.createF24(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createF24(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -50,8 +49,8 @@ apiInstance.createF24(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createF24Request** | [**CreateF24Request**](CreateF24Request.md)| The F24 to create | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateF24Request** | [**CreateF24Request**](CreateF24Request.md)| The F24 to create | [optional] 
 
 ### Return type
 
@@ -69,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## deleteF24
 
-> deleteF24(companyId, documentId)
+> deleteF24(company_id, document_id)
 
 Delete F24
 
@@ -85,15 +84,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteF24(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteF24(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -101,8 +99,8 @@ apiInstance.deleteF24(companyId, documentId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -120,7 +118,7 @@ null (empty response body)
 
 ## deleteF24Attachment
 
-> deleteF24Attachment(companyId, documentId)
+> deleteF24Attachment(company_id, document_id)
 
 Delete F24 Attachment
 
@@ -136,15 +134,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteF24Attachment(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteF24Attachment(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -152,8 +149,8 @@ apiInstance.deleteF24Attachment(companyId, documentId, (error, data, response) =
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -171,7 +168,7 @@ null (empty response body)
 
 ## getF24
 
-> GetF24Response getF24(companyId, documentId, opts)
+> GetF24Response getF24(company_id, document_id, opts)
 
 Get F24
 
@@ -187,19 +184,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getF24(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getF24(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -207,8 +203,8 @@ apiInstance.getF24(companyId, documentId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -228,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## listF24
 
-> ListF24Response listF24(companyId, opts)
+> ListF24Response listF24(company_id, opts)
 
 List F24
 
@@ -244,21 +240,20 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5 // Number | The size of the page.
+  'per_page': 5 // Number | The size of the page.
 };
-apiInstance.listF24(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listF24(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -266,12 +261,12 @@ apiInstance.listF24(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
 
 ### Return type
 
@@ -289,7 +284,7 @@ Name | Type | Description  | Notes
 
 ## modifyF24
 
-> ModifyF24Response modifyF24(companyId, documentId, opts)
+> ModifyF24Response modifyF24(company_id, document_id, opts)
 
 Modify F24
 
@@ -305,18 +300,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'modifyF24Request': {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111}}} // ModifyF24Request | The F24
+  'ModifyF24Request': {"data":{"amount":840.36,"description":"PAGAMENTO IVA 2021","due_date":"2021-12-31","status":"paid","payment_account":{"id":111}}} // ModifyF24Request | The F24
 };
-apiInstance.modifyF24(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyF24(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -324,9 +318,9 @@ apiInstance.modifyF24(companyId, documentId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **modifyF24Request** | [**ModifyF24Request**](ModifyF24Request.md)| The F24 | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **ModifyF24Request** | [**ModifyF24Request**](ModifyF24Request.md)| The F24 | [optional] 
 
 ### Return type
 
@@ -344,7 +338,7 @@ Name | Type | Description  | Notes
 
 ## uploadF24Attachment
 
-> UploadF24AttachmentResponse uploadF24Attachment(companyId, opts)
+> UploadF24AttachmentResponse uploadF24Attachment(company_id, opts)
 
 Upload F24 Attachment
 
@@ -360,18 +354,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.TaxesApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'filename': "filename_example", // String | Name of the file.
   'attachment': "/path/to/file" // File | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
 };
-apiInstance.uploadF24Attachment(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.uploadF24Attachment(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -379,7 +372,7 @@ apiInstance.uploadF24Attachment(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **filename** | **String**| Name of the file. | [optional] 
  **attachment** | **File**| Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx | [optional] 
 

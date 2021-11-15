@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amountNet** | **Number** |  | [optional] 
-**amountVat** | **Number** |  | [optional] 
+**amount_net** | **Number** |  | [optional] 
+**amount_vat** | **Number** |  | [optional] 
 
 

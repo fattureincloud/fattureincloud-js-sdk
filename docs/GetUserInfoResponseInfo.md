@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**needMarketingConsentsConfirmation** | **Boolean** |  | [optional] 
-**needPasswordChange** | **Boolean** |  | [optional] 
-**needTermsOfServiceConfirmation** | **Boolean** |  | [optional] 
+**need_marketing_consents_confirmation** | **Boolean** |  | [optional] 
+**need_password_change** | **Boolean** |  | [optional] 
+**need_terms_of_service_confirmation** | **Boolean** |  | [optional] 
 
 

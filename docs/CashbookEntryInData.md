@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amountIn** | **Number** | Total amount in. | [optional] 
-**paymentAccountIn** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
+**amount_in** | **Number** | Total amount in. | [optional] 
+**payment_account_in** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
 
 

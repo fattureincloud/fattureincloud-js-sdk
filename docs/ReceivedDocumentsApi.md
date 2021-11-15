@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## createReceivedDocument
 
-> CreateReceivedDocumentResponse createReceivedDocument(companyId, opts)
+> CreateReceivedDocumentResponse createReceivedDocument(company_id, opts)
 
 Create Received Document
 
@@ -35,17 +35,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createReceivedDocumentRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":0,"amount_gross":592,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid","payment_account":{"id":222,"name":"Contanti","virtual":false}}],"attachment_token":"bnopjao8gvydtgnewgiovs74yrfqwefEF"}} // CreateReceivedDocumentRequest | Document to create
+  'CreateReceivedDocumentRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":0,"amount_gross":592,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid","payment_account":{"id":222,"name":"Contanti","virtual":false}}],"attachment_token":"bnopjao8gvydtgnewgiovs74yrfqwefEF"}} // CreateReceivedDocumentRequest | Document to create
 };
-apiInstance.createReceivedDocument(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createReceivedDocument(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -53,8 +52,8 @@ apiInstance.createReceivedDocument(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createReceivedDocumentRequest** | [**CreateReceivedDocumentRequest**](CreateReceivedDocumentRequest.md)| Document to create | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateReceivedDocumentRequest** | [**CreateReceivedDocumentRequest**](CreateReceivedDocumentRequest.md)| Document to create | [optional] 
 
 ### Return type
 
@@ -72,7 +71,7 @@ Name | Type | Description  | Notes
 
 ## deleteReceivedDocument
 
-> deleteReceivedDocument(companyId, documentId)
+> deleteReceivedDocument(company_id, document_id)
 
 Delete Received Document
 
@@ -88,15 +87,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteReceivedDocument(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteReceivedDocument(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -104,8 +102,8 @@ apiInstance.deleteReceivedDocument(companyId, documentId, (error, data, response
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -123,7 +121,7 @@ null (empty response body)
 
 ## deleteReceivedDocumentAttachment
 
-> deleteReceivedDocumentAttachment(companyId, documentId)
+> deleteReceivedDocumentAttachment(company_id, document_id)
 
 Delete Received Document Attachment
 
@@ -139,15 +137,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
-apiInstance.deleteReceivedDocumentAttachment(companyId, documentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
+apiInstance.deleteReceivedDocumentAttachment(company_id, document_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -155,8 +152,8 @@ apiInstance.deleteReceivedDocumentAttachment(companyId, documentId, (error, data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
 
 ### Return type
 
@@ -174,7 +171,7 @@ null (empty response body)
 
 ## getExistingReceivedDocumentTotals
 
-> GetExistingReceivedDocumentTotalsResponse getExistingReceivedDocumentTotals(companyId, documentId, opts)
+> GetExistingReceivedDocumentTotalsResponse getExistingReceivedDocumentTotals(company_id, document_id, opts)
 
 Get Existing Received Document Totals
 
@@ -190,18 +187,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'getExistingReceivedDocumentTotalsRequest': {"data":{"amount_vat":20}} // GetExistingReceivedDocumentTotalsRequest | Received document.
+  'GetExistingReceivedDocumentTotalsRequest': {"data":{"amount_vat":20}} // GetExistingReceivedDocumentTotalsRequest | Received document.
 };
-apiInstance.getExistingReceivedDocumentTotals(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getExistingReceivedDocumentTotals(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -209,9 +205,9 @@ apiInstance.getExistingReceivedDocumentTotals(companyId, documentId, opts, (erro
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **getExistingReceivedDocumentTotalsRequest** | [**GetExistingReceivedDocumentTotalsRequest**](GetExistingReceivedDocumentTotalsRequest.md)| Received document. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **GetExistingReceivedDocumentTotalsRequest** | [**GetExistingReceivedDocumentTotalsRequest**](GetExistingReceivedDocumentTotalsRequest.md)| Received document. | [optional] 
 
 ### Return type
 
@@ -229,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## getNewReceivedDocumentTotals
 
-> GetNewReceivedDocumentTotalsResponse getNewReceivedDocumentTotals(companyId, opts)
+> GetNewReceivedDocumentTotalsResponse getNewReceivedDocumentTotals(company_id, opts)
 
 Get New Received Document Totals
 
@@ -245,17 +241,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'getNewReceivedDocumentTotalsRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"created_at":"2021-08-15 14:02:02","updated_at":"2021-08-15 14:02:02","entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":10,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid"}]}} // GetNewReceivedDocumentTotalsRequest | Received document.
+  'GetNewReceivedDocumentTotalsRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"created_at":"2021-08-15 14:02:02","updated_at":"2021-08-15 14:02:02","entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":10,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid"}]}} // GetNewReceivedDocumentTotalsRequest | Received document.
 };
-apiInstance.getNewReceivedDocumentTotals(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getNewReceivedDocumentTotals(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -263,8 +258,8 @@ apiInstance.getNewReceivedDocumentTotals(companyId, opts, (error, data, response
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **getNewReceivedDocumentTotalsRequest** | [**GetNewReceivedDocumentTotalsRequest**](GetNewReceivedDocumentTotalsRequest.md)| Received document. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **GetNewReceivedDocumentTotalsRequest** | [**GetNewReceivedDocumentTotalsRequest**](GetNewReceivedDocumentTotalsRequest.md)| Received document. | [optional] 
 
 ### Return type
 
@@ -282,7 +277,7 @@ Name | Type | Description  | Notes
 
 ## getReceivedDocument
 
-> GetReceivedDocumentResponse getReceivedDocument(companyId, documentId, opts)
+> GetReceivedDocumentResponse getReceivedDocument(company_id, document_id, opts)
 
 Get Received Document
 
@@ -298,19 +293,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getReceivedDocument(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getReceivedDocument(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -318,8 +312,8 @@ apiInstance.getReceivedDocument(companyId, documentId, opts, (error, data, respo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -339,7 +333,7 @@ Name | Type | Description  | Notes
 
 ## getReceivedDocumentPreCreateInfo
 
-> GetReceivedDocumentPreCreateInfoResponse getReceivedDocumentPreCreateInfo(companyId, type)
+> GetReceivedDocumentPreCreateInfoResponse getReceivedDocumentPreCreateInfo(company_id, type)
 
 Get Received Document Pre-Create Info
 
@@ -355,15 +349,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let type = "type_example"; // String | The type of the received document.
-apiInstance.getReceivedDocumentPreCreateInfo(companyId, type, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getReceivedDocumentPreCreateInfo(company_id, type).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -371,7 +364,7 @@ apiInstance.getReceivedDocumentPreCreateInfo(companyId, type, (error, data, resp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **type** | **String**| The type of the received document. | 
 
 ### Return type
@@ -390,7 +383,7 @@ Name | Type | Description  | Notes
 
 ## listReceivedDocuments
 
-> ListReceivedDocumentsResponse listReceivedDocuments(companyId, type, opts)
+> ListReceivedDocumentsResponse listReceivedDocuments(company_id, type, opts)
 
 List Received Documents
 
@@ -406,22 +399,21 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let type = "type_example"; // String | The type of the received document.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5 // Number | The size of the page.
+  'per_page': 5 // Number | The size of the page.
 };
-apiInstance.listReceivedDocuments(companyId, type, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listReceivedDocuments(company_id, type, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -429,13 +421,13 @@ apiInstance.listReceivedDocuments(companyId, type, opts, (error, data, response)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **type** | **String**| The type of the received document. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
 
 ### Return type
 
@@ -453,7 +445,7 @@ Name | Type | Description  | Notes
 
 ## modifyReceivedDocument
 
-> ModifyReceivedDocumentResponse modifyReceivedDocument(companyId, documentId, opts)
+> ModifyReceivedDocumentResponse modifyReceivedDocument(company_id, document_id, opts)
 
 Modify Received Document
 
@@ -469,18 +461,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
-let documentId = 56; // Number | The ID of the document.
+let company_id = 12345; // Number | The ID of the company.
+let document_id = 56; // Number | The ID of the document.
 let opts = {
-  'modifyReceivedDocumentRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":0,"amount_gross":592,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid","payment_account":{"id":222,"name":"Contanti","virtual":false}}]}} // ModifyReceivedDocumentRequest | Modified document.
+  'ModifyReceivedDocumentRequest': {"data":{"type":"expense","description":"Soggiorno di lavoro","amortization":1,"rc_center":"","invoice_number":"","is_marked":false,"is_detailed":false,"e_invoice":false,"entity":{"id":111,"name":"Hotel Rubino Palace"},"date":"2021-08-15","next_due_date":"2021-08-15","currency":{"id":"EUR","exchange_rate":"1.00000","symbol":"€"},"amount_net":592,"amount_vat":0,"amount_gross":592,"amount_withholding_tax":0,"amount_other_withholding_tax":0,"tax_deductibility":50,"vat_deductibility":100,"items_list":null,"payments_list":[{"amount":592,"due_date":"2021-08-15","paid_date":"2021-08-15","id":777,"payment_terms":{"days":0,"type":"standard"},"status":"paid","payment_account":{"id":222,"name":"Contanti","virtual":false}}]}} // ModifyReceivedDocumentRequest | Modified document.
 };
-apiInstance.modifyReceivedDocument(companyId, documentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifyReceivedDocument(company_id, document_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -488,9 +479,9 @@ apiInstance.modifyReceivedDocument(companyId, documentId, opts, (error, data, re
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **documentId** | **Number**| The ID of the document. | 
- **modifyReceivedDocumentRequest** | [**ModifyReceivedDocumentRequest**](ModifyReceivedDocumentRequest.md)| Modified document. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **document_id** | **Number**| The ID of the document. | 
+ **ModifyReceivedDocumentRequest** | [**ModifyReceivedDocumentRequest**](ModifyReceivedDocumentRequest.md)| Modified document. | [optional] 
 
 ### Return type
 
@@ -508,7 +499,7 @@ Name | Type | Description  | Notes
 
 ## uploadReceivedDocumentAttachment
 
-> UploadReceivedDocumentAttachmentResponse uploadReceivedDocumentAttachment(companyId, opts)
+> UploadReceivedDocumentAttachmentResponse uploadReceivedDocumentAttachment(company_id, opts)
 
 Upload Received Document Attachment
 
@@ -524,18 +515,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'filename': "filename_example", // String | Name of the file.
   'attachment': "/path/to/file" // File | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
 };
-apiInstance.uploadReceivedDocumentAttachment(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.uploadReceivedDocumentAttachment(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -543,7 +533,7 @@ apiInstance.uploadReceivedDocumentAttachment(companyId, opts, (error, data, resp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **filename** | **String**| Name of the file. | [optional] 
  **attachment** | **File**| Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx | [optional] 
 

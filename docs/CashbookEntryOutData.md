@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amountOut** | **Number** | Total amount out. | [optional] 
-**paymentAccountOut** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
+**amount_out** | **Number** | Total amount out. | [optional] 
+**payment_account_out** | [**PaymentAccount**](PaymentAccount.md) |  | [optional] 
 
 

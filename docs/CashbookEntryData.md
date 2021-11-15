@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **String** | Cashbook description. | 
 **kind** | **String** | Cashbook kind. | 
 **type** | **String** | Cashbook type. | 
-**entityName** | **String** | Entity name. | [optional] 
+**entity_name** | **String** | Entity name. | [optional] 
 **document** | [**CashbookEntryDataDocument**](CashbookEntryDataDocument.md) |  | [optional] 
 
 

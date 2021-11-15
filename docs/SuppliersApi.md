@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createSupplier
 
-> CreateSupplierResponse createSupplier(companyId, opts)
+> CreateSupplierResponse createSupplier(company_id, opts)
 
 Create Supplier
 
@@ -30,17 +30,16 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SuppliersApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
-  'createSupplierRequest': {"data":{"id":12345,"code":"AE86","name":"Mario Rossi S.R.L.","type":"company","first_name":"Mario","last_name":"Rossi","contact_person":"","vat_number":"111222333","tax_code":"111122233","address_street":"Corso Magellano, 46","address_postal_code":"20146","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"mario.rossi@example.com","certified_email":"mario.rossi@pec.example.com","phone":"1234567890","fax":"123456789","notes":""}} // CreateSupplierRequest | The supplier to create
+  'CreateSupplierRequest': {"data":{"id":12345,"code":"AE86","name":"Mario Rossi S.R.L.","type":"company","first_name":"Mario","last_name":"Rossi","contact_person":"","vat_number":"111222333","tax_code":"111122233","address_street":"Corso Magellano, 46","address_postal_code":"20146","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"mario.rossi@example.com","certified_email":"mario.rossi@pec.example.com","phone":"1234567890","fax":"123456789","notes":""}} // CreateSupplierRequest | The supplier to create
 };
-apiInstance.createSupplier(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createSupplier(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -48,8 +47,8 @@ apiInstance.createSupplier(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **createSupplierRequest** | [**CreateSupplierRequest**](CreateSupplierRequest.md)| The supplier to create | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **CreateSupplierRequest** | [**CreateSupplierRequest**](CreateSupplierRequest.md)| The supplier to create | [optional] 
 
 ### Return type
 
@@ -67,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## deleteSupplier
 
-> deleteSupplier(companyId, supplierId)
+> deleteSupplier(company_id, supplier_id)
 
 Delete Supplier
 
@@ -83,15 +82,14 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SuppliersApi();
-let companyId = 12345; // Number | The ID of the company.
-let supplierId = 56; // Number | The ID of the supplier.
-apiInstance.deleteSupplier(companyId, supplierId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let company_id = 12345; // Number | The ID of the company.
+let supplier_id = 56; // Number | The ID of the supplier.
+apiInstance.deleteSupplier(company_id, supplier_id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -99,8 +97,8 @@ apiInstance.deleteSupplier(companyId, supplierId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **supplierId** | **Number**| The ID of the supplier. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **supplier_id** | **Number**| The ID of the supplier. | 
 
 ### Return type
 
@@ -118,7 +116,7 @@ null (empty response body)
 
 ## getSupplier
 
-> GetSupplierResponse getSupplier(companyId, supplierId, opts)
+> GetSupplierResponse getSupplier(company_id, supplier_id, opts)
 
 Get Supplier
 
@@ -134,19 +132,18 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SuppliersApi();
-let companyId = 12345; // Number | The ID of the company.
-let supplierId = 56; // Number | The ID of the supplier.
+let company_id = 12345; // Number | The ID of the company.
+let supplier_id = 56; // Number | The ID of the supplier.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
-apiInstance.getSupplier(companyId, supplierId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getSupplier(company_id, supplier_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -154,8 +151,8 @@ apiInstance.getSupplier(companyId, supplierId, opts, (error, data, response) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **supplierId** | **Number**| The ID of the supplier. | 
+ **company_id** | **Number**| The ID of the company. | 
+ **supplier_id** | **Number**| The ID of the supplier. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
 
@@ -175,7 +172,7 @@ Name | Type | Description  | Notes
 
 ## listSuppliers
 
-> ListSuppliersResponse listSuppliers(companyId, opts)
+> ListSuppliersResponse listSuppliers(company_id, opts)
 
 List Suppliers
 
@@ -191,21 +188,20 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SuppliersApi();
-let companyId = 12345; // Number | The ID of the company.
+let company_id = 12345; // Number | The ID of the company.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example", // String | Name of the fieldset.
   'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
   'page': 1, // Number | The page to retrieve.
-  'perPage': 5 // Number | The size of the page.
+  'per_page': 5 // Number | The size of the page.
 };
-apiInstance.listSuppliers(companyId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.listSuppliers(company_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -213,12 +209,12 @@ apiInstance.listSuppliers(companyId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
+ **company_id** | **Number**| The ID of the company. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
  **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
  **page** | **Number**| The page to retrieve. | [optional] [default to 1]
- **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **per_page** | **Number**| The size of the page. | [optional] [default to 5]
 
 ### Return type
 
@@ -236,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## modifySupplier
 
-> ModifySupplierResponse modifySupplier(companyId, supplierId, opts)
+> ModifySupplierResponse modifySupplier(company_id, supplier_id, opts)
 
 Modify Supplier
 
@@ -252,18 +248,17 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SuppliersApi();
-let companyId = 12345; // Number | The ID of the company.
-let supplierId = 56; // Number | The ID of the supplier.
+let company_id = 12345; // Number | The ID of the company.
+let supplier_id = 56; // Number | The ID of the supplier.
 let opts = {
-  'modifySupplierRequest': {"data":{"id":12345,"code":"AE86","name":"Mario Rossi S.R.L.","type":"company","first_name":"Mario","last_name":"Rossi","contact_person":"","vat_number":"111222333","tax_code":"111122233","address_street":"Corso Magellano, 46","address_postal_code":"20146","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"mario.rossi@example.com","certified_email":"mario.rossi@pec.example.com","phone":"1234567890","fax":"123456789","notes":""}} // ModifySupplierRequest | The modified Supplier. First level parameters are managed in delta mode.
+  'ModifySupplierRequest': {"data":{"id":12345,"code":"AE86","name":"Mario Rossi S.R.L.","type":"company","first_name":"Mario","last_name":"Rossi","contact_person":"","vat_number":"111222333","tax_code":"111122233","address_street":"Corso Magellano, 46","address_postal_code":"20146","address_city":"Milano","address_province":"MI","address_extra":"","country":"Italia","email":"mario.rossi@example.com","certified_email":"mario.rossi@pec.example.com","phone":"1234567890","fax":"123456789","notes":""}} // ModifySupplierRequest | The modified Supplier. First level parameters are managed in delta mode.
 };
-apiInstance.modifySupplier(companyId, supplierId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.modifySupplier(company_id, supplier_id, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -271,9 +266,9 @@ apiInstance.modifySupplier(companyId, supplierId, opts, (error, data, response) 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **Number**| The ID of the company. | 
- **supplierId** | **Number**| The ID of the supplier. | 
- **modifySupplierRequest** | [**ModifySupplierRequest**](ModifySupplierRequest.md)| The modified Supplier. First level parameters are managed in delta mode. | [optional] 
+ **company_id** | **Number**| The ID of the company. | 
+ **supplier_id** | **Number**| The ID of the supplier. | 
+ **ModifySupplierRequest** | [**ModifySupplierRequest**](ModifySupplierRequest.md)| The modified Supplier. First level parameters are managed in delta mode. | [optional] 
 
 ### Return type
 

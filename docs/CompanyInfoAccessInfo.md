@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **role** | **String** | Role of the user in this company. | [optional] 
 **permissions** | [**Permissions**](Permissions.md) |  | [optional] 
-**throughAccountant** | **Boolean** |  | [optional] 
+**through_accountant** | **Boolean** |  | [optional] 
 
 
 
