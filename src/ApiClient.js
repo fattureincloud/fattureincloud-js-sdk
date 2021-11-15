@@ -55,7 +55,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'FattureInCloud/2.0.2/JavaScript-SDK'
+            'User-Agent': 'FattureInCloud/2.0.3/JavaScript-SDK'
         };
 
         /**
