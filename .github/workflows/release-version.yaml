@@ -27,6 +27,12 @@ jobs:
           sudo apt install yq -y
           yarn
 
+      - id: init-git
+        name: Init GIT
+        run: |
+          git config --global user.email "info@fattureincloud.it"
+          git config --global user.name "fattureincloud-bot"
+
       # We read the version from the sdk-version.yaml file and create the tag
       # If it is needed to bump version, launch the related workflow
       - id: read-javascript-sdk-version
