@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Supplier code. | [optional] 
 **name** | **String** | Supplier name. | 
-**type** | **String** | Supplier type. | [optional] 
+**type** | [**CompanyType**](CompanyType.md) |  | [optional] 
 **firstName** | **String** | Supplier first name. | [optional] 
 **lastName** | **String** | Supplier last name. | [optional] 
 **contactPerson** | **String** |  | [optional] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **notes** | **String** | Supplier extra notes. | [optional] 
 **defaultVat** | [**VatType**](VatType.md) |  | [optional] 
 **defaultPaymentTerms** | **Number** |  | [optional] 
-**defaultPaymentTermsType** | **String** |  | [optional] [default to &#39;standard&#39;]
+**defaultPaymentTermsType** | [**DefaultPaymentTermsType**](DefaultPaymentTermsType.md) |  | [optional] 
 **defaultPaymentMethod** | [**PaymentMethod**](PaymentMethod.md) |  | [optional] 
 **bankName** | **String** | Client bank name. | [optional] 
 **bankIban** | **String** | Client iban. | [optional] 
@@ -36,33 +36,5 @@ Name | Type | Description | Notes
 **eiCode** | **String** | E-invoice code | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
-
-
-
-## Enum: TypeEnum
-
-
-* `null` (value: `"null"`)
-
-* `company` (value: `"company"`)
-
-* `person` (value: `"person"`)
-
-* `pa` (value: `"pa"`)
-
-* `condo` (value: `"condo"`)
-
-
-
-
-
-## Enum: DefaultPaymentTermsTypeEnum
-
-
-* `standard` (value: `"standard"`)
-
-* `end_of_month` (value: `"end_of_month"`)
-
-
 
 

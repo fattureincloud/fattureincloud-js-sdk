@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **String** | Total amount. | [optional] 
+**amount** | **Number** | Total amount. | [optional] 
 
 

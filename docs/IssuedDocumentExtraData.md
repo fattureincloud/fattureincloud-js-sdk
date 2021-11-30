@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **tsOpposizione** | **Boolean** |  | [optional] 
 **tsStatus** | **Number** |  | [optional] 
 **tsFileId** | **String** |  | [optional] 
-**tsSentDate** | **String** |  | [optional] 
+**tsSentDate** | **Date** |  | [optional] 
 **tsFullAmount** | **Boolean** |  | [optional] 
 **importedBy** | **String** |  | [optional] 
 **tsSingleSending** | **Boolean** |  | [optional] 

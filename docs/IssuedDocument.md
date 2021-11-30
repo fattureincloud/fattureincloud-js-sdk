@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **hMargins** | **Number** | Horizontal margins. | [optional] 
 **showPayments** | **Boolean** | Shows the expiration dates of the payments on the document. | [optional] 
 **showPaymentMethod** | **Boolean** | Show the payment method details on the document. | [optional] 
-**showTotals** | **String** | Totals mode. | [optional] [default to &#39;all&#39;]
+**showTotals** | [**ShowTotalsMode**](ShowTotalsMode.md) |  | [optional] 
 **vMargins** | **Number** | Vertical margins. | [optional] 
 **showPaypalButton** | **Boolean** |  | [optional] [default to false]
 **showNotificationButton** | **Boolean** |  | [optional] [default to false]
@@ -81,18 +81,5 @@ Name | Type | Description | Notes
 **eiOtherWithholdingTaxType** | **String** |  | [optional] 
 **eiOtherWithholdingTaxCausal** | **String** |  | [optional] 
 **amountDueDiscount** | **Number** |  | [optional] 
-
-
-
-## Enum: ShowTotalsEnum
-
-
-* `none` (value: `"none"`)
-
-* `nets` (value: `"nets"`)
-
-* `all` (value: `"all"`)
-
-
 
 
