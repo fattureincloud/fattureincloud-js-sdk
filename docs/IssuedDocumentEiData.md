@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vatKind** | **String** | Vat kind (esigibilità IVA). | [optional] 
-**originalDocumentType** | **String** | Type of document followed by the the current invoice. | [optional] [default to &#39;ordine&#39;]
+**vatKind** | [**VatKind**](VatKind.md) |  | [optional] 
+**originalDocumentType** | [**OriginalDocumentType**](OriginalDocumentType.md) |  | [optional] 
 **odNumber** | **String** | Original document number. | [optional] 
 **odDate** | **Date** | Original document date. | [optional] 
 **cig** | **String** | CIG. | [optional] 
@@ -16,33 +16,5 @@ Name | Type | Description | Notes
 **bankBeneficiary** | **String** | Bank beneficiary. | [optional] 
 **invoiceNumber** | **String** | Invoice number. | [optional] 
 **invoiceDate** | **Date** | Invoice date. | [optional] 
-
-
-
-## Enum: VatKindEnum
-
-
-* `null` (value: `"null"`)
-
-* `I` (value: `"I"`)
-
-* `D` (value: `"D"`)
-
-* `S` (value: `"S"`)
-
-
-
-
-
-## Enum: OriginalDocumentTypeEnum
-
-
-* `ordine` (value: `"ordine"`)
-
-* `contratto` (value: `"contratto"`)
-
-* `convenzione` (value: `"convenzione"`)
-
-
 
 

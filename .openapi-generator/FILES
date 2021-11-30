@@ -11,10 +11,13 @@ docs/CashbookEntryDataDocument.md
 docs/CashbookEntryIn.md
 docs/CashbookEntryInData.md
 docs/CashbookEntryInOut.md
+docs/CashbookEntryKind.md
 docs/CashbookEntryOut.md
 docs/CashbookEntryOutData.md
+docs/CashbookEntryType.md
 docs/City.md
 docs/Client.md
+docs/ClientType.md
 docs/ClientsApi.md
 docs/CompaniesApi.md
 docs/Company.md
@@ -24,6 +27,7 @@ docs/CompanyInfoPlanInfo.md
 docs/CompanyInfoPlanInfoFunctions.md
 docs/CompanyInfoPlanInfoFunctionsStatus.md
 docs/CompanyInfoPlanInfoLimits.md
+docs/CompanyType.md
 docs/CreateArchiveDocumentRequest.md
 docs/CreateArchiveDocumentResponse.md
 docs/CreateCashbookEntryRequest.md
@@ -47,6 +51,7 @@ docs/CreateReceivedDocumentResponse.md
 docs/CreateSupplierRequest.md
 docs/CreateSupplierResponse.md
 docs/Currency.md
+docs/DefaultPaymentTermsType.md
 docs/DocumentTemplate.md
 docs/EmailData.md
 docs/EmailDataDefaultSenderEmail.md
@@ -56,6 +61,7 @@ docs/EmailScheduleInclude.md
 docs/Entity.md
 docs/EntityOptions.md
 docs/F24.md
+docs/F24Status.md
 docs/FunctionStatus.md
 docs/GetArchiveDocumentResponse.md
 docs/GetCashbookEntryResponse.md
@@ -96,6 +102,7 @@ docs/IssuedDocumentPreCreateInfoDefaultValues.md
 docs/IssuedDocumentPreCreateInfoExtraDataDefaultValues.md
 docs/IssuedDocumentPreCreateInfoItemsDefaultValues.md
 docs/IssuedDocumentRefersTo.md
+docs/IssuedDocumentStatus.md
 docs/IssuedDocumentTotals.md
 docs/IssuedDocumentTotalsVatList.md
 docs/IssuedDocumentTotalsVatListVatItem.md
@@ -162,10 +169,13 @@ docs/ModifyReceivedDocumentResponse.md
 docs/ModifySupplierRequest.md
 docs/ModifySupplierResponse.md
 docs/MonthlyTotal.md
+docs/OriginalDocumentType.md
 docs/Pagination.md
 docs/PaymentAccount.md
+docs/PaymentAccountType.md
 docs/PaymentMethod.md
 docs/PaymentMethodDetails.md
+docs/PaymentMethodType.md
 docs/PermissionLevel.md
 docs/Permissions.md
 docs/PermissionsFicIssuedDocumentsDetailed.md
@@ -193,6 +203,7 @@ docs/SendEInvoiceRequestData.md
 docs/SendEInvoiceResponse.md
 docs/SendEInvoiceResponseData.md
 docs/SettingsApi.md
+docs/ShowTotalsMode.md
 docs/Supplier.md
 docs/SuppliersApi.md
 docs/TaxesApi.md
@@ -204,6 +215,8 @@ docs/UploadReceivedDocumentAttachmentResponse.md
 docs/UploadReceivedDocumentAttachmentResponseData.md
 docs/User.md
 docs/UserApi.md
+docs/UserCompanyRole.md
+docs/VatKind.md
 docs/VatType.md
 docs/VerifyEInvoiceXmlErrorResponse.md
 docs/VerifyEInvoiceXmlErrorResponseError.md
@@ -236,10 +249,13 @@ src/model/CashbookEntryDataDocument.js
 src/model/CashbookEntryIn.js
 src/model/CashbookEntryInData.js
 src/model/CashbookEntryInOut.js
+src/model/CashbookEntryKind.js
 src/model/CashbookEntryOut.js
 src/model/CashbookEntryOutData.js
+src/model/CashbookEntryType.js
 src/model/City.js
 src/model/Client.js
+src/model/ClientType.js
 src/model/Company.js
 src/model/CompanyInfo.js
 src/model/CompanyInfoAccessInfo.js
@@ -247,6 +263,7 @@ src/model/CompanyInfoPlanInfo.js
 src/model/CompanyInfoPlanInfoFunctions.js
 src/model/CompanyInfoPlanInfoFunctionsStatus.js
 src/model/CompanyInfoPlanInfoLimits.js
+src/model/CompanyType.js
 src/model/CreateArchiveDocumentRequest.js
 src/model/CreateArchiveDocumentResponse.js
 src/model/CreateCashbookEntryRequest.js
@@ -270,6 +287,7 @@ src/model/CreateReceivedDocumentResponse.js
 src/model/CreateSupplierRequest.js
 src/model/CreateSupplierResponse.js
 src/model/Currency.js
+src/model/DefaultPaymentTermsType.js
 src/model/DocumentTemplate.js
 src/model/EmailData.js
 src/model/EmailDataDefaultSenderEmail.js
@@ -279,6 +297,7 @@ src/model/EmailScheduleInclude.js
 src/model/Entity.js
 src/model/EntityOptions.js
 src/model/F24.js
+src/model/F24Status.js
 src/model/FunctionStatus.js
 src/model/GetArchiveDocumentResponse.js
 src/model/GetCashbookEntryResponse.js
@@ -318,6 +337,7 @@ src/model/IssuedDocumentPreCreateInfoDefaultValues.js
 src/model/IssuedDocumentPreCreateInfoExtraDataDefaultValues.js
 src/model/IssuedDocumentPreCreateInfoItemsDefaultValues.js
 src/model/IssuedDocumentRefersTo.js
+src/model/IssuedDocumentStatus.js
 src/model/IssuedDocumentTotals.js
 src/model/IssuedDocumentTotalsVatList.js
 src/model/IssuedDocumentTotalsVatListVatItem.js
@@ -382,10 +402,13 @@ src/model/ModifyReceivedDocumentResponse.js
 src/model/ModifySupplierRequest.js
 src/model/ModifySupplierResponse.js
 src/model/MonthlyTotal.js
+src/model/OriginalDocumentType.js
 src/model/Pagination.js
 src/model/PaymentAccount.js
+src/model/PaymentAccountType.js
 src/model/PaymentMethod.js
 src/model/PaymentMethodDetails.js
+src/model/PaymentMethodType.js
 src/model/PermissionLevel.js
 src/model/Permissions.js
 src/model/PermissionsFicIssuedDocumentsDetailed.js
@@ -409,6 +432,7 @@ src/model/SendEInvoiceRequest.js
 src/model/SendEInvoiceRequestData.js
 src/model/SendEInvoiceResponse.js
 src/model/SendEInvoiceResponseData.js
+src/model/ShowTotalsMode.js
 src/model/Supplier.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
@@ -417,6 +441,8 @@ src/model/UploadIssuedDocumentAttachmentResponseData.js
 src/model/UploadReceivedDocumentAttachmentResponse.js
 src/model/UploadReceivedDocumentAttachmentResponseData.js
 src/model/User.js
+src/model/UserCompanyRole.js
+src/model/VatKind.js
 src/model/VatType.js
 src/model/VerifyEInvoiceXmlErrorResponse.js
 src/model/VerifyEInvoiceXmlErrorResponseError.js
@@ -424,3 +450,16 @@ src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponseData.js
+test/model/CashbookEntryKind.spec.js
+test/model/CashbookEntryType.spec.js
+test/model/ClientType.spec.js
+test/model/CompanyType.spec.js
+test/model/DefaultPaymentTermsType.spec.js
+test/model/F24Status.spec.js
+test/model/IssuedDocumentStatus.spec.js
+test/model/OriginalDocumentType.spec.js
+test/model/PaymentAccountType.spec.js
+test/model/PaymentMethodType.spec.js
+test/model/ShowTotalsMode.spec.js
+test/model/UserCompanyRole.spec.js
+test/model/VatKind.spec.js

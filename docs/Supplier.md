@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Supplier code. | [optional] 
 **name** | **String** | Supplier name. | 
-**type** | **String** | Supplier type. | [optional] 
+**type** | [**CompanyType**](CompanyType.md) |  | [optional] 
 **firstName** | **String** | Supplier first name. | [optional] 
 **lastName** | **String** | Supplier last name. | [optional] 
 **contactPerson** | **String** |  | [optional] 
@@ -26,22 +26,5 @@ Name | Type | Description | Notes
 **notes** | **String** | Supplier extra notes. | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
-
-
-
-## Enum: TypeEnum
-
-
-* `null` (value: `"null"`)
-
-* `company` (value: `"company"`)
-
-* `person` (value: `"person"`)
-
-* `pa` (value: `"pa"`)
-
-* `condo` (value: `"condo"`)
-
-
 
 
