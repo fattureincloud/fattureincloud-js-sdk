@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.IssuedDocumentEiData();
+    instance.vat_kind = "I";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('VatKind', function() {
     it('should create an instance of VatKind', function() {
-      // uncomment below and update the code to test VatKind
-      //var instance = new fattureInCloudSdk.VatKind();
-      //expect(instance).to.be.a(fattureInCloudSdk.VatKind);
+      expect(instance.vat_kind).to.be.a('string');
     });
 
   });

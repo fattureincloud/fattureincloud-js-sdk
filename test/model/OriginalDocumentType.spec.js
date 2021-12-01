@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.IssuedDocumentEiData();
+    instance.original_document_type = "ordine";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('OriginalDocumentType', function() {
     it('should create an instance of OriginalDocumentType', function() {
-      // uncomment below and update the code to test OriginalDocumentType
-      //var instance = new fattureInCloudSdk.OriginalDocumentType();
-      //expect(instance).to.be.a(fattureInCloudSdk.OriginalDocumentType);
+      expect(instance.original_document_type).to.be.a('string');
     });
 
   });

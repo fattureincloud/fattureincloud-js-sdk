@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.IssuedDocument();
+    instance.show_totals = "all";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('ShowTotalsMode', function() {
     it('should create an instance of ShowTotalsMode', function() {
-      // uncomment below and update the code to test ShowTotalsMode
-      //var instance = new fattureInCloudSdk.ShowTotalsMode();
-      //expect(instance).to.be.a(fattureInCloudSdk.ShowTotalsMode);
+      expect(instance.show_totals).to.be.a('string');
     });
 
   });

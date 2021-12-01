@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.CashbookEntry();
+    instance.kind = "cashbook";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('CashbookEntryKind', function() {
     it('should create an instance of CashbookEntryKind', function() {
-      // uncomment below and update the code to test CashbookEntryKind
-      //var instance = new fattureInCloudSdk.CashbookEntryKind();
-      //expect(instance).to.be.a(fattureInCloudSdk.CashbookEntryKind);
+      expect(typeof instance.kind).to.be('string');
     });
 
   });

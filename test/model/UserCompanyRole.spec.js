@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.CompanyInfoAccessInfo();
+    instance.role = "master";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('UserCompanyRole', function() {
     it('should create an instance of UserCompanyRole', function() {
-      // uncomment below and update the code to test UserCompanyRole
-      //var instance = new fattureInCloudSdk.UserCompanyRole();
-      //expect(instance).to.be.a(fattureInCloudSdk.UserCompanyRole);
+      expect(instance.role).to.be.a('string');
     });
 
   });

@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.F24();
+    instance.status = "paid";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('F24Status', function() {
     it('should create an instance of F24Status', function() {
-      // uncomment below and update the code to test F24Status
-      //var instance = new fattureInCloudSdk.F24Status();
-      //expect(instance).to.be.a(fattureInCloudSdk.F24Status);
+      expect(instance.status).to.be.a('string');
     });
 
   });
