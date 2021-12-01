@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.Client();
+    instance.default_payment_terms_type = "standard";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('DefaultPaymentTermsType', function() {
     it('should create an instance of DefaultPaymentTermsType', function() {
-      // uncomment below and update the code to test DefaultPaymentTermsType
-      //var instance = new fattureInCloudSdk.DefaultPaymentTermsType();
-      //expect(instance).to.be.a(fattureInCloudSdk.DefaultPaymentTermsType);
+      expect(instance.default_payment_terms_type).to.be.a('string');
     });
 
   });

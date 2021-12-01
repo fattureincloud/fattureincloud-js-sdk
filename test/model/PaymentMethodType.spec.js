@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.PaymentMethod();
+    instance.type = "standard";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('PaymentMethodType', function() {
     it('should create an instance of PaymentMethodType', function() {
-      // uncomment below and update the code to test PaymentMethodType
-      //var instance = new fattureInCloudSdk.PaymentMethodType();
-      //expect(instance).to.be.a(fattureInCloudSdk.PaymentMethodType);
+      expect(instance.type).to.be.a('string');
     });
 
   });

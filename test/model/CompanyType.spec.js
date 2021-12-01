@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.Company();
+    instance.type = "company";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('CompanyType', function() {
     it('should create an instance of CompanyType', function() {
-      // uncomment below and update the code to test CompanyType
-      //var instance = new fattureInCloudSdk.CompanyType();
-      //expect(instance).to.be.a(fattureInCloudSdk.CompanyType);
+      expect(instance.type).to.be.a('string');
     });
 
   });
