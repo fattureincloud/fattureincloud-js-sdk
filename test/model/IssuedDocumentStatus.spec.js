@@ -28,6 +28,8 @@
   var instance;
 
   beforeEach(function() {
+    instance = new fattureInCloudSdk.IssuedDocumentPaymentsList();
+    instance.status = "paid";
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,9 +50,7 @@
 
   describe('IssuedDocumentStatus', function() {
     it('should create an instance of IssuedDocumentStatus', function() {
-      // uncomment below and update the code to test IssuedDocumentStatus
-      //var instance = new fattureInCloudSdk.IssuedDocumentStatus();
-      //expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentStatus);
+      expect(instance.status).to.be.a('string');
     });
 
   });
