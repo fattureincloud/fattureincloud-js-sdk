@@ -13,80 +13,52 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class IssuedDocumentType.
+* Enum class SupplierType.
 * @enum {}
 * @readonly
 */
-export default class IssuedDocumentType {
+export default class SupplierType {
     
         /**
-         * value: "invoice"
+         * value: "null"
          * @const
          */
-        "invoice" = "invoice";
+        "null" = "null";
 
     
         /**
-         * value: "quote"
+         * value: "company"
          * @const
          */
-        "quote" = "quote";
+        "company" = "company";
 
     
         /**
-         * value: "proforma"
+         * value: "person"
          * @const
          */
-        "proforma" = "proforma";
+        "person" = "person";
 
     
         /**
-         * value: "receipt"
+         * value: "pa"
          * @const
          */
-        "receipt" = "receipt";
+        "pa" = "pa";
 
     
         /**
-         * value: "delivery_note"
+         * value: "condo"
          * @const
          */
-        "delivery_note" = "delivery_note";
-
-    
-        /**
-         * value: "credit_note"
-         * @const
-         */
-        "credit_note" = "credit_note";
-
-    
-        /**
-         * value: "order"
-         * @const
-         */
-        "order" = "order";
-
-    
-        /**
-         * value: "work_report"
-         * @const
-         */
-        "work_report" = "work_report";
-
-    
-        /**
-         * value: "supplier_order"
-         * @const
-         */
-        "supplier_order" = "supplier_order";
+        "condo" = "condo";
 
     
 
     /**
-    * Returns a <code>IssuedDocumentType</code> enum value from a Javascript object name.
+    * Returns a <code>SupplierType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/IssuedDocumentType} The enum <code>IssuedDocumentType</code> value.
+    * @return {module:model/SupplierType} The enum <code>SupplierType</code> value.
     */
     static constructFromObject(object) {
         return object;

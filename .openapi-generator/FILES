@@ -205,6 +205,7 @@ docs/SendEInvoiceResponseData.md
 docs/SettingsApi.md
 docs/ShowTotalsMode.md
 docs/Supplier.md
+docs/SupplierType.md
 docs/SuppliersApi.md
 docs/TaxesApi.md
 docs/UploadArchiveAttachmentResponse.md
@@ -434,6 +435,7 @@ src/model/SendEInvoiceResponse.js
 src/model/SendEInvoiceResponseData.js
 src/model/ShowTotalsMode.js
 src/model/Supplier.js
+src/model/SupplierType.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
 src/model/UploadIssuedDocumentAttachmentResponse.js
@@ -450,16 +452,4 @@ src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponseData.js
-test/model/CashbookEntryKind.spec.js
-test/model/CashbookEntryType.spec.js
-test/model/ClientType.spec.js
-test/model/CompanyType.spec.js
-test/model/DefaultPaymentTermsType.spec.js
-test/model/F24Status.spec.js
-test/model/IssuedDocumentStatus.spec.js
-test/model/OriginalDocumentType.spec.js
-test/model/PaymentAccountType.spec.js
-test/model/PaymentMethodType.spec.js
-test/model/ShowTotalsMode.spec.js
-test/model/UserCompanyRole.spec.js
-test/model/VatKind.spec.js
+test/model/SupplierType.spec.js

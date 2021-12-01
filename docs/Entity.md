@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Supplier code. | [optional] 
 **name** | **String** | Supplier name. | 
-**type** | [**CompanyType**](CompanyType.md) |  | [optional] 
+**type** | [**SupplierType**](SupplierType.md) |  | [optional] 
 **firstName** | **String** | Supplier first name. | [optional] 
 **lastName** | **String** | Supplier last name. | [optional] 
 **contactPerson** | **String** |  | [optional] 
