@@ -31,3 +31,12 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# PHP Storm
+.idea/*
+
+# macOS
+.DS_Store
+
+# VisualStudioCode
+.vscode/* 
