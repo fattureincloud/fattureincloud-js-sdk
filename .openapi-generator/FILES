@@ -59,7 +59,6 @@ docs/EmailDataSenderEmailsList.md
 docs/EmailSchedule.md
 docs/EmailScheduleInclude.md
 docs/Entity.md
-docs/EntityOptions.md
 docs/F24.md
 docs/F24Status.md
 docs/FunctionStatus.md
@@ -296,7 +295,6 @@ src/model/EmailDataSenderEmailsList.js
 src/model/EmailSchedule.js
 src/model/EmailScheduleInclude.js
 src/model/Entity.js
-src/model/EntityOptions.js
 src/model/F24.js
 src/model/F24Status.js
 src/model/FunctionStatus.js
@@ -452,4 +450,3 @@ src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponse.js
 src/model/VerifyEInvoiceXmlSuccessResponseData.js
-test/model/SupplierType.spec.js
