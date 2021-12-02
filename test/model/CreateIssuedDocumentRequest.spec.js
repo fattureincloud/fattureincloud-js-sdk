@@ -95,9 +95,6 @@
           payment_account : null
         }
       ]
-    },
-    instance.options = {
-      entity_create : true
     }
   });
 
@@ -124,10 +121,6 @@
 
     it('should have the property data (base name: "data")', function() {
       expect(typeof instance.data).to.be('object');
-    });
-
-    it('should have the property options (base name: "options")', function() {
-      expect(typeof instance.options).to.be('object');
     });
 
   });
