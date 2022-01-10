@@ -29,19 +29,8 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.VerifyEInvoiceXmlResponse();
-    instance.error = {
-      message : "errore",
-      validation_result : {
-          success : false
-      }
-    },
-    instance.extra = {
-          errors : [
-              "errore brutto"
-          ]
-    },
     instance.data = {
-          success : true
+      success : true
     };
   });
 
@@ -68,14 +57,6 @@
 
     it('should have the property data (base name: "data")', function() {
       expect(typeof instance.data).to.be('object');
-    });
-
-    it('should have the property error (base name: "error")', function() {
-      expect(typeof instance.error).to.be('object');
-    });
-
-    it('should have the property extra (base name: "extra")', function() {
-      expect(typeof instance.extra).to.be('object');
     });
 
   });

@@ -29,6 +29,17 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.CreateVatTypeResponse();
+    instance.data = {
+      id: 0,
+      value: 22,
+      description: "Non imponibile art. 123",
+      notes: "IVA non imponibile ai sensi dell'articolo 123, comma 2",
+      e_invoice: true,
+      ei_type: 2,
+      ei_description: "string",
+      editable: true,
+      is_disabled: true
+    }
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +60,11 @@
 
   describe('CreateVatTypeResponse', function() {
     it('should create an instance of CreateVatTypeResponse', function() {
-      // uncomment below and update the code to test CreateVatTypeResponse
-      //var instance = new fattureInCloudSdk.CreateVatTypeResponse();
-      //expect(instance).to.be.a(fattureInCloudSdk.CreateVatTypeResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.CreateVatTypeResponse);
     });
 
     it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new fattureInCloudSdk.CreateVatTypeResponse();
-      //expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     });
 
   });
