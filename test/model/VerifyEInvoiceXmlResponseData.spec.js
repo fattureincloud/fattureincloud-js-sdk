@@ -28,8 +28,8 @@
   var instance;
 
   beforeEach(function() {
-    instance = new fattureInCloudSdk.UploadIssuedDocumentAttachmentResponseData();
-    instance.attachment_token = "abcdefghilmnopqr123456789";
+    instance = new fattureInCloudSdk.VerifyEInvoiceXmlResponseData();
+    instance.success = true;
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,13 +48,13 @@
       object[property] = value;
   }
 
-  describe('UploadIssuedDocumentAttachmentResponseData', function() {
-    it('should create an instance of UploadIssuedDocumentAttachmentResponseData', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.UploadIssuedDocumentAttachmentResponseData);
+  describe('VerifyEInvoiceXmlResponseData', function() {
+    it('should create an instance of VerifyEInvoiceXmlResponseData', function() {
+      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlResponseData);
     });
 
-    it('should have the property attachmentToken (base name: "attachment_token")', function() {
-      expect(typeof instance.attachment_token).to.be('string');
+    it('should have the property success (base name: "success")', function() {
+      expect(typeof instance.success).to.be('boolean');
     });
 
   });

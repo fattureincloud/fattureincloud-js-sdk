@@ -1,9 +1,9 @@
 .babelrc
-.gitignore
 .travis.yml
 README.md
 docs/ArchiveApi.md
 docs/ArchiveDocument.md
+docs/AttachmentData.md
 docs/CashbookApi.md
 docs/CashbookEntry.md
 docs/CashbookEntryData.md
@@ -50,6 +50,8 @@ docs/CreateReceivedDocumentRequest.md
 docs/CreateReceivedDocumentResponse.md
 docs/CreateSupplierRequest.md
 docs/CreateSupplierResponse.md
+docs/CreateVatTypeRequest.md
+docs/CreateVatTypeResponse.md
 docs/Currency.md
 docs/DefaultPaymentTermsType.md
 docs/DocumentTemplate.md
@@ -90,6 +92,7 @@ docs/GetSupplierResponse.md
 docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
+docs/GetVatTypeResponse.md
 docs/InfoApi.md
 docs/IssuedDocument.md
 docs/IssuedDocumentEiData.md
@@ -167,6 +170,8 @@ docs/ModifyReceivedDocumentRequest.md
 docs/ModifyReceivedDocumentResponse.md
 docs/ModifySupplierRequest.md
 docs/ModifySupplierResponse.md
+docs/ModifyVatTypeRequest.md
+docs/ModifyVatTypeResponse.md
 docs/MonthlyTotal.md
 docs/OriginalDocumentType.md
 docs/Pagination.md
@@ -210,9 +215,7 @@ docs/TaxesApi.md
 docs/UploadArchiveAttachmentResponse.md
 docs/UploadF24AttachmentResponse.md
 docs/UploadIssuedDocumentAttachmentResponse.md
-docs/UploadIssuedDocumentAttachmentResponseData.md
 docs/UploadReceivedDocumentAttachmentResponse.md
-docs/UploadReceivedDocumentAttachmentResponseData.md
 docs/User.md
 docs/UserApi.md
 docs/UserCompanyRole.md
@@ -222,8 +225,7 @@ docs/VerifyEInvoiceXmlErrorResponse.md
 docs/VerifyEInvoiceXmlErrorResponseError.md
 docs/VerifyEInvoiceXmlErrorResponseExtra.md
 docs/VerifyEInvoiceXmlResponse.md
-docs/VerifyEInvoiceXmlSuccessResponse.md
-docs/VerifyEInvoiceXmlSuccessResponseData.md
+docs/VerifyEInvoiceXmlResponseData.md
 mocha.opts
 package.json
 src/ApiClient.js
@@ -243,6 +245,7 @@ src/api/TaxesApi.js
 src/api/UserApi.js
 src/index.js
 src/model/ArchiveDocument.js
+src/model/AttachmentData.js
 src/model/CashbookEntry.js
 src/model/CashbookEntryData.js
 src/model/CashbookEntryDataDocument.js
@@ -286,6 +289,8 @@ src/model/CreateReceivedDocumentRequest.js
 src/model/CreateReceivedDocumentResponse.js
 src/model/CreateSupplierRequest.js
 src/model/CreateSupplierResponse.js
+src/model/CreateVatTypeRequest.js
+src/model/CreateVatTypeResponse.js
 src/model/Currency.js
 src/model/DefaultPaymentTermsType.js
 src/model/DocumentTemplate.js
@@ -326,6 +331,7 @@ src/model/GetSupplierResponse.js
 src/model/GetUserInfoResponse.js
 src/model/GetUserInfoResponseEmailConfirmationState.js
 src/model/GetUserInfoResponseInfo.js
+src/model/GetVatTypeResponse.js
 src/model/IssuedDocument.js
 src/model/IssuedDocumentEiData.js
 src/model/IssuedDocumentExtraData.js
@@ -400,6 +406,8 @@ src/model/ModifyReceivedDocumentRequest.js
 src/model/ModifyReceivedDocumentResponse.js
 src/model/ModifySupplierRequest.js
 src/model/ModifySupplierResponse.js
+src/model/ModifyVatTypeRequest.js
+src/model/ModifyVatTypeResponse.js
 src/model/MonthlyTotal.js
 src/model/OriginalDocumentType.js
 src/model/Pagination.js
@@ -437,9 +445,7 @@ src/model/SupplierType.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
 src/model/UploadIssuedDocumentAttachmentResponse.js
-src/model/UploadIssuedDocumentAttachmentResponseData.js
 src/model/UploadReceivedDocumentAttachmentResponse.js
-src/model/UploadReceivedDocumentAttachmentResponseData.js
 src/model/User.js
 src/model/UserCompanyRole.js
 src/model/VatKind.js
@@ -448,5 +454,11 @@ src/model/VerifyEInvoiceXmlErrorResponse.js
 src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
-src/model/VerifyEInvoiceXmlSuccessResponse.js
-src/model/VerifyEInvoiceXmlSuccessResponseData.js
+src/model/VerifyEInvoiceXmlResponseData.js
+test/model/AttachmentData.spec.js
+test/model/CreateVatTypeRequest.spec.js
+test/model/CreateVatTypeResponse.spec.js
+test/model/GetVatTypeResponse.spec.js
+test/model/ModifyVatTypeRequest.spec.js
+test/model/ModifyVatTypeResponse.spec.js
+test/model/VerifyEInvoiceXmlResponseData.spec.js
