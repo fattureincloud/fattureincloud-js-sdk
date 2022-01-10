@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **date** | **Date** | Cashbook date. | 
 **description** | **String** | Cashbook description. | 
 **kind** | [**CashbookEntryKind**](CashbookEntryKind.md) |  | 
-**type** | [**CashbookEntryType**](CashbookEntryType.md) |  | 
+**type** | [**CashbookEntryType**](CashbookEntryType.md) |  | [optional] 
 **entityName** | **String** | Entity name. | [optional] 
 **document** | [**CashbookEntryDataDocument**](CashbookEntryDataDocument.md) |  | [optional] 
 

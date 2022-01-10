@@ -4,14 +4,18 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPaymentAccount**](SettingsApi.md#createPaymentAccount) | **POST** /c/{companyId}/settings/payment_accounts | Create Payment Account
-[**createPaymentMethod**](SettingsApi.md#createPaymentMethod) | **POST** /c/{companyId}/settings/payment_methods | Create Payment Method
-[**deletePaymentAccount**](SettingsApi.md#deletePaymentAccount) | **DELETE** /c/{companyId}/settings/payment_accounts/{paymentAccountId} | Delete Payment Account
-[**deletePaymentMethod**](SettingsApi.md#deletePaymentMethod) | **DELETE** /c/{companyId}/settings/payment_method/{paymentMethodId} | Delete Payment Method
-[**getPaymentAccount**](SettingsApi.md#getPaymentAccount) | **GET** /c/{companyId}/settings/payment_accounts/{paymentAccountId} | Get Payment Account
-[**getPaymentMethod**](SettingsApi.md#getPaymentMethod) | **GET** /c/{companyId}/settings/payment_method/{paymentMethodId} | Get Payment Method
-[**modifyPaymentAccount**](SettingsApi.md#modifyPaymentAccount) | **PUT** /c/{companyId}/settings/payment_accounts/{paymentAccountId} | Modify Payment Account
-[**modifyPaymentMethod**](SettingsApi.md#modifyPaymentMethod) | **PUT** /c/{companyId}/settings/payment_method/{paymentMethodId} | Modify Payment Method
+[**createPaymentAccount**](SettingsApi.md#createPaymentAccount) | **POST** /c/{company_id}/settings/payment_accounts | Create Payment Account
+[**createPaymentMethod**](SettingsApi.md#createPaymentMethod) | **POST** /c/{company_id}/settings/payment_methods | Create Payment Method
+[**createVatType**](SettingsApi.md#createVatType) | **POST** /c/{company_id}/settings/vat_types | Create Vat Type
+[**deletePaymentAccount**](SettingsApi.md#deletePaymentAccount) | **DELETE** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Delete Payment Account
+[**deletePaymentMethod**](SettingsApi.md#deletePaymentMethod) | **DELETE** /c/{company_id}/settings/payment_methods/{payment_method_id} | Delete Payment Method
+[**deleteVatType**](SettingsApi.md#deleteVatType) | **DELETE** /c/{company_id}/settings/vat_types/{vat_type_id} | Delete Vat Type
+[**getPaymentAccount**](SettingsApi.md#getPaymentAccount) | **GET** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Get Payment Account
+[**getPaymentMethod**](SettingsApi.md#getPaymentMethod) | **GET** /c/{company_id}/settings/payment_methods/{payment_method_id} | Get Payment Method
+[**getVatType**](SettingsApi.md#getVatType) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type
+[**modifyPaymentAccount**](SettingsApi.md#modifyPaymentAccount) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account
+[**modifyPaymentMethod**](SettingsApi.md#modifyPaymentMethod) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method
+[**modifyVatType**](SettingsApi.md#modifyVatType) | **PUT** /c/{company_id}/settings/vat_types/{vat_type_id} | Modify Vat Type
 
 
 
@@ -119,6 +123,58 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## createVatType
+
+> CreateVatTypeResponse createVatType(companyId, opts)
+
+Create Vat Type
+
+Creates a vat type.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let opts = {
+  'createVatTypeRequest': {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}} // CreateVatTypeRequest | 
+};
+apiInstance.createVatType(companyId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **createVatTypeRequest** | [**CreateVatTypeRequest**](CreateVatTypeRequest.md)|  | [optional] 
+
+### Return type
+
+[**CreateVatTypeResponse**](CreateVatTypeResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## deletePaymentAccount
 
 > deletePaymentAccount(companyId, paymentAccountId)
@@ -138,7 +194,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentAccountId = 1; // String | The Referred Payment Account Id.
+let paymentAccountId = 56; // Number | The Referred Payment Account Id.
 apiInstance.deletePaymentAccount(companyId, paymentAccountId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -153,7 +209,7 @@ apiInstance.deletePaymentAccount(companyId, paymentAccountId).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **paymentAccountId** | **String**| The Referred Payment Account Id. | 
+ **paymentAccountId** | **Number**| The Referred Payment Account Id. | 
 
 ### Return type
 
@@ -188,7 +244,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentMethodId = 1; // Number | The Referred Payment Method Id.
+let paymentMethodId = 56; // Number | The Referred Payment Method Id.
 apiInstance.deletePaymentMethod(companyId, paymentMethodId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -204,6 +260,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
  **paymentMethodId** | **Number**| The Referred Payment Method Id. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteVatType
+
+> deleteVatType(companyId, vatTypeId)
+
+Delete Vat Type
+
+Deletes the specified vat type.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let vatTypeId = 56; // Number | The Referred Vat Type Id.
+apiInstance.deleteVatType(companyId, vatTypeId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **vatTypeId** | **Number**| The Referred Vat Type Id. | 
 
 ### Return type
 
@@ -238,11 +344,10 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentAccountId = 1; // String | The Referred Payment Account Id.
+let paymentAccountId = 56; // Number | The Referred Payment Account Id.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
-  'fieldset': "fieldset_example", // String | Name of the fieldset.
-  'body': {key: null} // Object | 
+  'fieldset': "fieldset_example" // String | Name of the fieldset.
 };
 apiInstance.getPaymentAccount(companyId, paymentAccountId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -258,10 +363,9 @@ apiInstance.getPaymentAccount(companyId, paymentAccountId, opts).then((result) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **paymentAccountId** | **String**| The Referred Payment Account Id. | 
+ **paymentAccountId** | **Number**| The Referred Payment Account Id. | 
  **fields** | **String**| List of comma-separated fields. | [optional] 
  **fieldset** | **String**| Name of the fieldset. | [optional] 
- **body** | **Object**|  | [optional] 
 
 ### Return type
 
@@ -273,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -296,7 +400,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentMethodId = 1; // Number | The Referred Payment Method Id.
+let paymentMethodId = 56; // Number | The Referred Payment Method Id.
 let opts = {
   'fields': "fields_example", // String | List of comma-separated fields.
   'fieldset': "fieldset_example" // String | Name of the fieldset.
@@ -333,6 +437,56 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getVatType
+
+> GetVatTypeResponse getVatType(companyId, vatTypeId)
+
+Get Vat Type
+
+Gets the specified vat type.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let vatTypeId = 56; // Number | The Referred Vat Type Id.
+apiInstance.getVatType(companyId, vatTypeId).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **vatTypeId** | **Number**| The Referred Vat Type Id. | 
+
+### Return type
+
+[**GetVatTypeResponse**](GetVatTypeResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## modifyPaymentAccount
 
 > ModifyPaymentAccountResponse modifyPaymentAccount(companyId, paymentAccountId, opts)
@@ -352,7 +506,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentAccountId = 1; // String | The Referred Payment Account Id.
+let paymentAccountId = 56; // Number | The Referred Payment Account Id.
 let opts = {
   'modifyPaymentAccountRequest': {"data":{"id":0,"name":"Conto Banca Intesa","type":"standard","iban":"string","sia":"string","cuc":"string","virtual":true}} // ModifyPaymentAccountRequest | 
 };
@@ -370,7 +524,7 @@ apiInstance.modifyPaymentAccount(companyId, paymentAccountId, opts).then((result
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **paymentAccountId** | **String**| The Referred Payment Account Id. | 
+ **paymentAccountId** | **Number**| The Referred Payment Account Id. | 
  **modifyPaymentAccountRequest** | [**ModifyPaymentAccountRequest**](ModifyPaymentAccountRequest.md)|  | [optional] 
 
 ### Return type
@@ -406,7 +560,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.SettingsApi();
 let companyId = 12345; // Number | The ID of the company.
-let paymentMethodId = 1; // Number | The Referred Payment Method Id.
+let paymentMethodId = 56; // Number | The Referred Payment Method Id.
 let opts = {
   'modifyPaymentMethodRequest': {"data":{"id":386683,"name":"Bonifico bancario","is_default":true,"type":"standard","details":[{"title":"Banca","description":"Sao Paulo"}],"default_payment_account":{"id":12345,"name":"conto banca SP"}}} // ModifyPaymentMethodRequest | 
 };
@@ -430,6 +584,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModifyPaymentMethodResponse**](ModifyPaymentMethodResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## modifyVatType
+
+> ModifyVatTypeResponse modifyVatType(companyId, vatTypeId, opts)
+
+Modify Vat Type
+
+Modifies the specified vat type.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let vatTypeId = 56; // Number | The Referred Vat Type Id.
+let opts = {
+  'modifyVatTypeRequest': {"data":{"id":0,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","e_invoice":true,"ei_type":2,"ei_description":"string","editable":true,"is_disabled":true}} // ModifyVatTypeRequest | 
+};
+apiInstance.modifyVatType(companyId, vatTypeId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **vatTypeId** | **Number**| The Referred Vat Type Id. | 
+ **modifyVatTypeRequest** | [**ModifyVatTypeRequest**](ModifyVatTypeRequest.md)|  | [optional] 
+
+### Return type
+
+[**ModifyVatTypeResponse**](ModifyVatTypeResponse.md)
 
 ### Authorization
 
