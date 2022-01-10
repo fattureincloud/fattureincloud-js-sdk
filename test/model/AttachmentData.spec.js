@@ -29,6 +29,7 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.AttachmentData();
+    instance.attachment_token = "YmMyNWYxYzIwMTU3N2Y4ZGE3ZjZiMzg5OWY0ODNkZDQveXl5LmRvYw";
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +50,11 @@
 
   describe('AttachmentData', function() {
     it('should create an instance of AttachmentData', function() {
-      // uncomment below and update the code to test AttachmentData
-      //var instance = new fattureInCloudSdk.AttachmentData();
-      //expect(instance).to.be.a(fattureInCloudSdk.AttachmentData);
+      expect(instance).to.be.a(fattureInCloudSdk.AttachmentData);
     });
 
     it('should have the property attachmentToken (base name: "attachment_token")', function() {
-      // uncomment below and update the code to test the property attachmentToken
-      //var instance = new fattureInCloudSdk.AttachmentData();
-      //expect(instance).to.be();
+      expect(typeof instance.attachment_token).to.be('string');
     });
 
   });
