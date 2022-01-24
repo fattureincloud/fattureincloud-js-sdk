@@ -13,22 +13,21 @@
 
 import ApiClient from '../ApiClient';
 import CompanyType from './CompanyType';
-import ControlledCompany from './ControlledCompany';
 
 /**
- * The Company model module.
- * @module model/Company
+ * The ControlledCompany model module.
+ * @module model/ControlledCompany
  * @version 2.0.7
  */
-class Company {
+class ControlledCompany {
     /**
-     * Constructs a new <code>Company</code>.
+     * Constructs a new <code>ControlledCompany</code>.
      * 
-     * @alias module:model/Company
+     * @alias module:model/ControlledCompany
      */
     constructor() { 
         
-        Company.initialize(this);
+        ControlledCompany.initialize(this);
     }
 
     /**
@@ -40,15 +39,15 @@ class Company {
     }
 
     /**
-     * Constructs a <code>Company</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ControlledCompany</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Company} obj Optional instance to populate.
-     * @return {module:model/Company} The populated <code>Company</code> instance.
+     * @param {module:model/ControlledCompany} obj Optional instance to populate.
+     * @return {module:model/ControlledCompany} The populated <code>ControlledCompany</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Company();
+            obj = obj || new ControlledCompany();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
@@ -61,9 +60,6 @@ class Company {
             }
             if (data.hasOwnProperty('access_token')) {
                 obj['access_token'] = ApiClient.convertToType(data['access_token'], 'String');
-            }
-            if (data.hasOwnProperty('controlled_companies')) {
-                obj['controlled_companies'] = ApiClient.convertToType(data['controlled_companies'], [ControlledCompany]);
             }
             if (data.hasOwnProperty('connection_id')) {
                 obj['connection_id'] = ApiClient.convertToType(data['connection_id'], 'Number');
@@ -82,47 +78,41 @@ class Company {
  * Company unique identifier.
  * @member {Number} id
  */
-Company.prototype['id'] = undefined;
+ControlledCompany.prototype['id'] = undefined;
 
 /**
  * Company name.
  * @member {String} name
  */
-Company.prototype['name'] = undefined;
+ControlledCompany.prototype['name'] = undefined;
 
 /**
  * @member {module:model/CompanyType} type
  */
-Company.prototype['type'] = undefined;
+ControlledCompany.prototype['type'] = undefined;
 
 /**
  * CompanyAuthentication token for this company. [Only if type=company]
  * @member {String} access_token
  */
-Company.prototype['access_token'] = undefined;
-
-/**
- * List of controlled companies. [Only if type=accountant]
- * @member {Array.<module:model/ControlledCompany>} controlled_companies
- */
-Company.prototype['controlled_companies'] = undefined;
+ControlledCompany.prototype['access_token'] = undefined;
 
 /**
  * Company connection id.
  * @member {Number} connection_id
  */
-Company.prototype['connection_id'] = undefined;
+ControlledCompany.prototype['connection_id'] = undefined;
 
 /**
  * Tax code.
  * @member {String} tax_code
  */
-Company.prototype['tax_code'] = undefined;
+ControlledCompany.prototype['tax_code'] = undefined;
 
 
 
 
 
 
-export default Company;
+export default ControlledCompany;
 
