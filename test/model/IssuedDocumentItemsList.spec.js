@@ -33,6 +33,7 @@
     instance.code = "cod3";
     instance.name = "prod 1";
     instance.description = "product number uan";
+    instance.category = "cat5";
     instance.qty = 44;
     instance.measure = "very big";
     instance.net_price = 10;
@@ -86,6 +87,10 @@
 
     it('should have the property description (base name: "description")', function() {
       expect(typeof instance.description).to.be('string');
+    });
+
+    it('should have the property category (base name: "category")', function() {
+      expect(typeof instance.category).to.be('string');
     });
 
     it('should have the property qty (base name: "qty")', function() {
