@@ -35,30 +35,7 @@
     instance.type = "accountant";
     instance.access_token = "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95";
     instance.connection_id = 94566;
-    instance.fic = true;
-    instance.dic = true;
-    instance.fic_plan = "premium_plus";
-    instance.fic_license_expire = "2021-12-31";
     instance.access_token = "ergaegwergq53wh65je5j";
-    instance.permissions = {
-                    fic_situation : "write",
-                    fic_clients : "write",
-                    fic_suppliers : "write",
-                    fic_products : "write",
-                    fic_issued_documents : "write",
-                    fic_received_documents : "write",
-                    fic_receipts : "write",
-                    fic_calendar : "write",
-                    fic_archive : "write",
-                    fic_taxes : "write",
-                    fic_stock : "write",
-                    fic_cashbook : "write",
-                    fic_settings : "write",
-                    fic_emails : "write",
-                    dic_employees : "none",
-                    dic_timesheet : "none",
-                    dic_settings : "none"
-                  },
     instance.controlled_companies = [
                     {
                       id : 12246,
@@ -164,32 +141,12 @@
       expect(typeof instance.access_token).to.be('string');
     });
 
-    it('should have the property permissions (base name: "permissions")', function() {
-      expect(typeof instance.permissions).to.be('object');
-    });
-
     it('should have the property controlledCompanies (base name: "controlled_companies")', function() {
       expect(typeof instance.controlled_companies).to.be('object');
     });
 
     it('should have the property connectionId (base name: "connection_id")', function() {
       expect(typeof instance.connection_id).to.be('number');
-    });
-
-    it('should have the property dic (base name: "dic")', function() {
-      expect(typeof instance.dic).to.be('boolean');
-    });
-
-    it('should have the property fic (base name: "fic")', function() {
-      expect(typeof instance.fic).to.be('boolean');
-    });
-
-    it('should have the property ficLicenseExpire (base name: "fic_license_expire")', function() {
-      expect(typeof instance.fic_license_expire).to.be('string');
-    });
-
-    it('should have the property ficPlan (base name: "fic_plan")', function() {
-      expect(typeof instance.fic_plan).to.be('string');
     });
 
     it('should have the property taxCode (base name: "tax_code")', function() {

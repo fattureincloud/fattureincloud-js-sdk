@@ -28,6 +28,7 @@ docs/CompanyInfoPlanInfoFunctions.md
 docs/CompanyInfoPlanInfoFunctionsStatus.md
 docs/CompanyInfoPlanInfoLimits.md
 docs/CompanyType.md
+docs/ControlledCompany.md
 docs/CreateArchiveDocumentRequest.md
 docs/CreateArchiveDocumentResponse.md
 docs/CreateCashbookEntryRequest.md
@@ -267,6 +268,7 @@ src/model/CompanyInfoPlanInfoFunctions.js
 src/model/CompanyInfoPlanInfoFunctionsStatus.js
 src/model/CompanyInfoPlanInfoLimits.js
 src/model/CompanyType.js
+src/model/ControlledCompany.js
 src/model/CreateArchiveDocumentRequest.js
 src/model/CreateArchiveDocumentResponse.js
 src/model/CreateCashbookEntryRequest.js
@@ -455,10 +457,4 @@ src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/AttachmentData.spec.js
-test/model/CreateVatTypeRequest.spec.js
-test/model/CreateVatTypeResponse.spec.js
-test/model/GetVatTypeResponse.spec.js
-test/model/ModifyVatTypeRequest.spec.js
-test/model/ModifyVatTypeResponse.spec.js
-test/model/VerifyEInvoiceXmlResponseData.spec.js
+test/model/ControlledCompany.spec.js
