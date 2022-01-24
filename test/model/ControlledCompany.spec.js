@@ -29,6 +29,13 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ControlledCompany();
+    instance.id = 12345;
+    instance.name = "Studio Commercialista";
+    instance.tax_code = "ABCSFN94T17A794K";
+    instance.type = "accountant";
+    instance.access_token = "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95";
+    instance.connection_id = 94566;
+    instance.access_token = "ergaegwergq53wh65je5j";
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,45 +56,31 @@
 
   describe('ControlledCompany', function() {
     it('should create an instance of ControlledCompany', function() {
-      // uncomment below and update the code to test ControlledCompany
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be.a(fattureInCloudSdk.ControlledCompany);
+      expect(instance).to.be.a(fattureInCloudSdk.ControlledCompany);
     });
 
     it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.id).to.be('number');
     });
 
     it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.name).to.be('string');
     });
 
     it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.type).to.be('string');
     });
 
     it('should have the property accessToken (base name: "access_token")', function() {
-      // uncomment below and update the code to test the property accessToken
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.access_token).to.be('string');
     });
 
     it('should have the property connectionId (base name: "connection_id")', function() {
-      // uncomment below and update the code to test the property connectionId
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.connection_id).to.be('number');
     });
 
     it('should have the property taxCode (base name: "tax_code")', function() {
-      // uncomment below and update the code to test the property taxCode
-      //var instance = new fattureInCloudSdk.ControlledCompany();
-      //expect(instance).to.be();
+      expect(typeof instance.tax_code).to.be('string');
     });
 
   });
