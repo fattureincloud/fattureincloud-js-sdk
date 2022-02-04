@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.8 (2022-02-04)
+
+
+### Bug Fixes
+
+* added einvoice rejection reason endpoint ([3bde046](https://github.com/fattureincloud/fattureincloud-js-sdk/commit/3bde046e388f7d2bc5bf7e93b5445484b8bc949f))
+
 ### 2.0.7 (2022-01-24)
 
 
