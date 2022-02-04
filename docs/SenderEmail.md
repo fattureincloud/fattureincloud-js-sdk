@@ -1,4 +1,4 @@
-# fattureInCloudSdk.EmailDataSenderEmailsList
+# fattureInCloudSdk.SenderEmail
 
 ## Properties
 

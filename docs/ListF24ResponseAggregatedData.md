@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aggregatedData** | [**ListF24ResponseAggregatedDataAggregatedData**](ListF24ResponseAggregatedDataAggregatedData.md) |  | [optional] 
+**amount** | **Number** | Total amount. | [optional] 
 
 

@@ -4,10 +4,61 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getEInvoiceRejectionReason**](IssuedEInvoicesApi.md#getEInvoiceRejectionReason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get EInvoice rejection reason
 [**getEInvoiceXml**](IssuedEInvoicesApi.md#getEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml | Get e-invoice XML
 [**sendEInvoice**](IssuedEInvoicesApi.md#sendEInvoice) | **POST** /c/{company_id}/issued_documents/{document_id}/e_invoice/send | Send the e-invoice
 [**verifyEInvoiceXml**](IssuedEInvoicesApi.md#verifyEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify e-invoice xml
 
+
+
+## getEInvoiceRejectionReason
+
+> GetEInvoiceRejectionReasonResponse getEInvoiceRejectionReason(companyId, documentId)
+
+Get EInvoice rejection reason
+
+Get EInvoice rejection reason
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.IssuedEInvoicesApi();
+let companyId = 12345; // Number | The ID of the company.
+let documentId = 56; // Number | The ID of the document.
+apiInstance.getEInvoiceRejectionReason(companyId, documentId).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **documentId** | **Number**| The ID of the document. | 
+
+### Return type
+
+[**GetEInvoiceRejectionReasonResponse**](GetEInvoiceRejectionReasonResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## getEInvoiceXml

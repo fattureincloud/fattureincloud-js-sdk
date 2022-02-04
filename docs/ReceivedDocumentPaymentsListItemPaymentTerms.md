@@ -1,4 +1,4 @@
-# fattureInCloudSdk.ReceivedDocumentPaymentTerms
+# fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms
 
 ## Properties
 

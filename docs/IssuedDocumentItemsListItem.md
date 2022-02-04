@@ -1,9 +1,10 @@
-# fattureInCloudSdk.IssuedDocumentItemsList
+# fattureInCloudSdk.IssuedDocumentItemsListItem
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Number** | Unique identifier. | [optional] 
 **productId** | **Number** | Unique identifier of the product. | [optional] 
 **code** | **String** | Product code. | [optional] 
 **name** | **String** | Product name. | [optional] 

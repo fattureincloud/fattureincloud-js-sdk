@@ -1,9 +1,10 @@
-# fattureInCloudSdk.IssuedDocumentPaymentsList
+# fattureInCloudSdk.IssuedDocumentPaymentsListItem
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Number** | Unique identifier. | [optional] 
 **dueDate** | **Date** | Due date. | [optional] 
 **amount** | **Number** | Payment amount. | [optional] 
 **status** | [**IssuedDocumentStatus**](IssuedDocumentStatus.md) |  | [optional] 

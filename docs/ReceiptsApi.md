@@ -34,7 +34,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.ReceiptsApi();
 let companyId = 12345; // Number | The ID of the company.
 let opts = {
-  'createReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // CreateReceiptRequest | The Receipt to create.
+  'createReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // CreateReceiptRequest | The Receipt to create.
 };
 apiInstance.createReceipt(companyId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -353,7 +353,7 @@ let apiInstance = new fattureInCloudSdk.ReceiptsApi();
 let companyId = 12345; // Number | The ID of the company.
 let documentId = 56; // Number | The ID of the document.
 let opts = {
-  'modifyReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // ModifyReceiptRequest | Modified receipt.
+  'modifyReceiptRequest': {"data":{"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}} // ModifyReceiptRequest | Modified receipt.
 };
 apiInstance.modifyReceipt(companyId, documentId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
