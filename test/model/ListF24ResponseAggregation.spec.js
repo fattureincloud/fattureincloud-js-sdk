@@ -29,6 +29,9 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ListF24ResponseAggregation();
+    instance.aggregated_data = {
+      amount: 5
+    }
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +52,11 @@
 
   describe('ListF24ResponseAggregation', function() {
     it('should create an instance of ListF24ResponseAggregation', function() {
-      // uncomment below and update the code to test ListF24ResponseAggregation
-      //var instance = new fattureInCloudSdk.ListF24ResponseAggregation();
-      //expect(instance).to.be.a(fattureInCloudSdk.ListF24ResponseAggregation);
+      expect(instance).to.be.a(fattureInCloudSdk.ListF24ResponseAggregation);
     });
 
     it('should have the property aggregatedData (base name: "aggregated_data")', function() {
-      // uncomment below and update the code to test the property aggregatedData
-      //var instance = new fattureInCloudSdk.ListF24ResponseAggregation();
-      //expect(instance).to.be();
+      expect(typeof instance.aggregated_data).to.be('object');
     });
 
   });
