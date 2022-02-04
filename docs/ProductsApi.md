@@ -32,7 +32,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.ProductsApi();
 let companyId = 12345; // Number | The ID of the company.
 let opts = {
-  'createProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // CreateProductRequest | 
+  'createProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // CreateProductRequest | 
 };
 apiInstance.createProduct(companyId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -251,7 +251,7 @@ let apiInstance = new fattureInCloudSdk.ProductsApi();
 let companyId = 12345; // Number | The ID of the company.
 let productId = 56; // Number | The ID of the product.
 let opts = {
-  'modifyProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"gross_price":280,"use_gross_price":false,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // ModifyProductRequest | Modified product details.
+  'modifyProductRequest': {"data":{"name":"Tavolo di marmo","code":"TAVOLO003","net_price":240,"net_cost":0,"measure":"","description":"Tavolo in marmo pregiato","category":"arredamento","in_stock":true,"default_vat":{"id":3,"value":22,"description":"Non imponibile art. 123","notes":"IVA non imponibile ai sensi dell'articolo 123, comma 2","is_disabled":false}}} // ModifyProductRequest | Modified product details.
 };
 apiInstance.modifyProduct(companyId, productId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));

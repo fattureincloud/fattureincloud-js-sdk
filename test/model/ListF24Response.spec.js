@@ -89,87 +89,55 @@
 
   describe('ListF24Response', function() {
     it('should create an instance of ListF24Response', function() {
-      // uncomment below and update the code to test ListF24Response
-      //var instane = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be.a(fattureInCloudSdk.ListF24Response);
+      expect(instance).to.be.a(fattureInCloudSdk.ListF24Response);
     });
 
     it('should have the property currentPage (base name: "current_page")', function() {
-      // uncomment below and update the code to test the property currentPage
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.current_page).to.be('number');
     });
 
     it('should have the property firstPageUrl (base name: "first_page_url")', function() {
-      // uncomment below and update the code to test the property firstPageUrl
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.first_page_url).to.be('string');
     });
 
     it('should have the property from (base name: "from")', function() {
-      // uncomment below and update the code to test the property from
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.from).to.be('number');
     });
 
     it('should have the property lastPage (base name: "last_page")', function() {
-      // uncomment below and update the code to test the property lastPage
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.last_page).to.be('number');
     });
 
     it('should have the property lastPageUrl (base name: "last_page_url")', function() {
-      // uncomment below and update the code to test the property lastPageUrl
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.last_page_url).to.be('string');
     });
 
     it('should have the property nextPageUrl (base name: "next_page_url")', function() {
-      // uncomment below and update the code to test the property nextPageUrl
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.next_page_url).to.be('string');
     });
 
     it('should have the property path (base name: "path")', function() {
-      // uncomment below and update the code to test the property path
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.path).to.be('string');
     });
 
     it('should have the property perPage (base name: "per_page")', function() {
-      // uncomment below and update the code to test the property perPage
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.per_page).to.be('number');
     });
 
     it('should have the property prevPageUrl (base name: "prev_page_url")', function() {
-      // uncomment below and update the code to test the property prevPageUrl
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.prev_page_url).to.be('string');
     });
 
     it('should have the property to (base name: "to")', function() {
-      // uncomment below and update the code to test the property to
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.to).to.be('number');
     });
 
     it('should have the property total (base name: "total")', function() {
-      // uncomment below and update the code to test the property total
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.total).to.be('number');
     });
 
     it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property aggregatedData (base name: "aggregated_data")', function() {
-      // uncomment below and update the code to test the property aggregatedData
-      //var instance = new fattureInCloudSdk.ListF24Response();
-      //expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     });
 
   });

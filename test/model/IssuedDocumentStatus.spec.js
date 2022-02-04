@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentPaymentsList();
+    instance = new fattureInCloudSdk.IssuedDocumentPaymentsListItem();
     instance.status = "paid";
   });
 

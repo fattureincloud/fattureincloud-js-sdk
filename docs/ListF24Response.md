@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **to** | **Number** | Last result of the page. | [optional] 
 **total** | **Number** | Total number of results | [optional] 
 **data** | [**[F24]**](F24.md) |  | [optional] 
-**aggregatedData** | [**ListF24ResponseAggregatedDataAggregatedData**](ListF24ResponseAggregatedDataAggregatedData.md) |  | [optional] 
+**aggregatedData** | [**ListF24ResponseAggregatedData**](ListF24ResponseAggregatedData.md) |  | [optional] 
 
 
