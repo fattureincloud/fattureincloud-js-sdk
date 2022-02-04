@@ -29,6 +29,9 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.GetEInvoiceRejectionReasonResponse();
+    instance.data = {
+      reason: "invalid date"
+    }
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +52,11 @@
 
   describe('GetEInvoiceRejectionReasonResponse', function() {
     it('should create an instance of GetEInvoiceRejectionReasonResponse', function() {
-      // uncomment below and update the code to test GetEInvoiceRejectionReasonResponse
-      //var instance = new fattureInCloudSdk.GetEInvoiceRejectionReasonResponse();
-      //expect(instance).to.be.a(fattureInCloudSdk.GetEInvoiceRejectionReasonResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.GetEInvoiceRejectionReasonResponse);
     });
 
     it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new fattureInCloudSdk.GetEInvoiceRejectionReasonResponse();
-      //expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     });
 
   });

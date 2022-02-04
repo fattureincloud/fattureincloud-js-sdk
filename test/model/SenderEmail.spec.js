@@ -29,6 +29,8 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.SenderEmail();
+    instance.id = 0;
+    instance.email = "no-reply@fattureincloud.it";
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +49,17 @@
       object[property] = value;
   }
 
-  describe('SenderEmail', function() {
+  describe('EmailDataSenderEmailsList', function() {
     it('should create an instance of SenderEmail', function() {
-      // uncomment below and update the code to test SenderEmail
-      //var instance = new fattureInCloudSdk.SenderEmail();
-      //expect(instance).to.be.a(fattureInCloudSdk.SenderEmail);
+      expect(instance).to.be.a(fattureInCloudSdk.SenderEmail);
     });
 
     it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new fattureInCloudSdk.SenderEmail();
-      //expect(instance).to.be();
+      expect(typeof instance.id).to.be('number');
     });
 
     it('should have the property email (base name: "email")', function() {
-      // uncomment below and update the code to test the property email
-      //var instance = new fattureInCloudSdk.SenderEmail();
-      //expect(instance).to.be();
+      expect(typeof instance.email).to.be('string');
     });
 
   });

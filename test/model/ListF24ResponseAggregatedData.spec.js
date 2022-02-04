@@ -29,9 +29,7 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ListF24ResponseAggregatedData();
-    instance.aggregated_data = {
-      amount : 5
-    }
+    instance.amount = 6438.96;
   });
 
   var getProperty = function(object, getter, property) {
@@ -55,8 +53,8 @@
       expect(instance).to.be.a(fattureInCloudSdk.ListF24ResponseAggregatedData);
     });
 
-    it('should have the property aggregatedData (base name: "aggregated_data")', function() {
-      expect(typeof instance.aggregated_data).to.be('object');
+    it('should have the property amount (base name: "amount")', function() {
+      expect(typeof instance.amount).to.be('number');
     });
 
   });

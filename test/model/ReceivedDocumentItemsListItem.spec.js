@@ -29,6 +29,21 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
+    instance.id = 12345;
+    instance.product_id = 54321;
+    instance.code = "pdr01";
+    instance.measure = "very big";
+    instance.name = "prod uan";
+    instance.net_price = 100;
+    instance.category = "other";
+    instance.qty = 1;
+    instance.stock = 99;
+    instance.vat = {
+      id : 1020,
+      value : 0,
+      description : "PA Non imp art. 2",
+      is_disabled : false
+    }    
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,71 +62,49 @@
       object[property] = value;
   }
 
-  describe('ReceivedDocumentItemsListItem', function() {
+  describe('ReceivedDocumentItemsList', function() {
     it('should create an instance of ReceivedDocumentItemsListItem', function() {
-      // uncomment below and update the code to test ReceivedDocumentItemsListItem
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentItemsListItem);
+      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentItemsListItem);
     });
 
     it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.id).to.be('number');
     });
 
     it('should have the property productId (base name: "product_id")', function() {
-      // uncomment below and update the code to test the property productId
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.product_id).to.be('number');
     });
 
     it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.code).to.be('string');
     });
 
     it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.name).to.be('string');
     });
 
     it('should have the property measure (base name: "measure")', function() {
-      // uncomment below and update the code to test the property measure
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.measure).to.be('string');
     });
 
     it('should have the property netPrice (base name: "net_price")', function() {
-      // uncomment below and update the code to test the property netPrice
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.net_price).to.be('number');
     });
 
     it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.category).to.be('string');
     });
 
     it('should have the property qty (base name: "qty")', function() {
-      // uncomment below and update the code to test the property qty
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.qty).to.be('number');
     });
 
     it('should have the property vat (base name: "vat")', function() {
-      // uncomment below and update the code to test the property vat
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.vat).to.be('object');
     });
 
     it('should have the property stock (base name: "stock")', function() {
-      // uncomment below and update the code to test the property stock
-      //var instance = new fattureInCloudSdk.ReceivedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.stock).to.be('number');
     });
 
   });

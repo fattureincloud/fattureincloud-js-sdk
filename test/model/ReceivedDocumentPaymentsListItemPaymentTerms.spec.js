@@ -29,6 +29,8 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms();
+    instance.days = 0;
+    instance.type = "standard";    
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +49,17 @@
       object[property] = value;
   }
 
-  describe('ReceivedDocumentPaymentsListItemPaymentTerms', function() {
+  describe('ReceivedDocumentPaymentTerms', function() {
     it('should create an instance of ReceivedDocumentPaymentsListItemPaymentTerms', function() {
-      // uncomment below and update the code to test ReceivedDocumentPaymentsListItemPaymentTerms
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms();
-      //expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms);
+      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms);
     });
 
     it('should have the property days (base name: "days")', function() {
-      // uncomment below and update the code to test the property days
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms();
-      //expect(instance).to.be();
+      expect(typeof instance.days).to.be('number');
     });
 
     it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItemPaymentTerms();
-      //expect(instance).to.be();
+      expect(typeof instance.type).to.be('string');
     });
 
   });
