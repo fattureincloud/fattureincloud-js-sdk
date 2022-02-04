@@ -29,6 +29,11 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.EinvoiceRejectionReason();
+    instance.reason = "invalid date";
+    instance.ei_status = "rejected";
+    instance.solution = "set a valid date";
+    instance.code = "c01";
+    instance.date = "2021-10-10";
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,39 +54,31 @@
 
   describe('EinvoiceRejectionReason', function() {
     it('should create an instance of EinvoiceRejectionReason', function() {
-      // uncomment below and update the code to test EinvoiceRejectionReason
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be.a(fattureInCloudSdk.EinvoiceRejectionReason);
+      expect(instance).to.be.a(fattureInCloudSdk.EinvoiceRejectionReason);
     });
 
     it('should have the property reason (base name: "reason")', function() {
-      // uncomment below and update the code to test the property reason
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be();
+      expect(typeof instance.reason).to.be('string');
     });
 
     it('should have the property eiStatus (base name: "ei_status")', function() {
-      // uncomment below and update the code to test the property eiStatus
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be();
+      expect(typeof instance.ei_status).to.be('string');
+
     });
 
     it('should have the property solution (base name: "solution")', function() {
-      // uncomment below and update the code to test the property solution
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be();
+      expect(typeof instance.solution).to.be('string');
+
     });
 
     it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be();
+      expect(typeof instance.code).to.be('string');
+
     });
 
     it('should have the property date (base name: "date")', function() {
-      // uncomment below and update the code to test the property date
-      //var instance = new fattureInCloudSdk.EinvoiceRejectionReason();
-      //expect(instance).to.be();
+      expect(typeof instance.date).to.be('string');
+
     });
 
   });

@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  instance = new fattureInCloudSdk.EntityType("person");
 
   beforeEach(function() {
   });
@@ -48,9 +49,7 @@
 
   describe('EntityType', function() {
     it('should create an instance of EntityType', function() {
-      // uncomment below and update the code to test EntityType
-      //var instance = new fattureInCloudSdk.EntityType();
-      //expect(instance).to.be.a(fattureInCloudSdk.EntityType);
+      expect(instance).to.be.a(fattureInCloudSdk.EntityType);
     });
 
   });

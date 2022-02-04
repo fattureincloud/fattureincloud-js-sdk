@@ -29,6 +29,20 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
+    instance.amount = 592;
+    instance.due_date = "2021-08-15";
+    instance.paid_date = "2021-08-15";
+    instance.id = 777;
+    instance.payment_terms = {
+      days : 0,
+      type : "standard"
+    },
+    instance.status = "paid";
+    instance.payment_account = {
+      id : 222,
+      name : "Contanti",
+      virtual : false
+    };    
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,53 +61,37 @@
       object[property] = value;
   }
 
-  describe('ReceivedDocumentPaymentsListItem', function() {
+  describe('ReceivedDocumentPaymentsList', function() {
     it('should create an instance of ReceivedDocumentPaymentsListItem', function() {
-      // uncomment below and update the code to test ReceivedDocumentPaymentsListItem
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItem);
+      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItem);
     });
 
     it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.id).to.be('number');
     });
 
     it('should have the property amount (base name: "amount")', function() {
-      // uncomment below and update the code to test the property amount
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.amount).to.be('number');
     });
 
     it('should have the property dueDate (base name: "due_date")', function() {
-      // uncomment below and update the code to test the property dueDate
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.due_date).to.be('string');
     });
 
     it('should have the property paidDate (base name: "paid_date")', function() {
-      // uncomment below and update the code to test the property paidDate
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.paid_date).to.be('string');
     });
 
     it('should have the property paymentTerms (base name: "payment_terms")', function() {
-      // uncomment below and update the code to test the property paymentTerms
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.payment_terms).to.be('object');
     });
 
     it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.status).to.be('string');
     });
 
     it('should have the property paymentAccount (base name: "payment_account")', function() {
-      // uncomment below and update the code to test the property paymentAccount
-      //var instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.payment_account).to.be('object');
     });
 
   });

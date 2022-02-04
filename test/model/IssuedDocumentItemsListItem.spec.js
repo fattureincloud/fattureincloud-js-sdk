@@ -29,6 +29,27 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
+    instance.product_id = 12345;
+    instance.code = "cod3";
+    instance.name = "prod 1";
+    instance.description = "product number uan";
+    instance.category = "cat5";
+    instance.qty = 44;
+    instance.measure = "very big";
+    instance.net_price = 10;
+    instance.gross_price = 12.2;
+    instance.not_taxable = false;
+    instance.apply_withholding_taxes = true;
+    instance.discount = 0;
+    instance.discount_highlight = true;
+    instance.in_ddt = false;
+    instance.stock = 89;
+    instance.vat = {
+                    id : 21
+                },
+    instance.ei_raw = {
+                    prop : true
+                }    
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,119 +68,77 @@
       object[property] = value;
   }
 
-  describe('IssuedDocumentItemsListItem', function() {
+  describe('IssuedDocumentItemsList', function() {
     it('should create an instance of IssuedDocumentItemsListItem', function() {
-      // uncomment below and update the code to test IssuedDocumentItemsListItem
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentItemsListItem);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentItemsListItem);
     });
 
     it('should have the property productId (base name: "product_id")', function() {
-      // uncomment below and update the code to test the property productId
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.product_id).to.be('number');
     });
 
     it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.code).to.be('string');
     });
 
     it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.name).to.be('string');
     });
 
     it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.description).to.be('string');
+    });
+
+    it('should have the property category (base name: "category")', function() {
+      expect(typeof instance.category).to.be('string');
     });
 
     it('should have the property qty (base name: "qty")', function() {
-      // uncomment below and update the code to test the property qty
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.qty).to.be('number');
     });
 
     it('should have the property measure (base name: "measure")', function() {
-      // uncomment below and update the code to test the property measure
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.measure).to.be('string');
     });
 
     it('should have the property netPrice (base name: "net_price")', function() {
-      // uncomment below and update the code to test the property netPrice
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.net_price).to.be('number');
     });
 
     it('should have the property grossPrice (base name: "gross_price")', function() {
-      // uncomment below and update the code to test the property grossPrice
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.gross_price).to.be('number');
     });
 
     it('should have the property vat (base name: "vat")', function() {
-      // uncomment below and update the code to test the property vat
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.vat).to.be('object');
     });
 
     it('should have the property notTaxable (base name: "not_taxable")', function() {
-      // uncomment below and update the code to test the property notTaxable
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.not_taxable).to.be('boolean');
     });
 
     it('should have the property applyWithholdingTaxes (base name: "apply_withholding_taxes")', function() {
-      // uncomment below and update the code to test the property applyWithholdingTaxes
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.apply_withholding_taxes).to.be('boolean');
     });
 
     it('should have the property discount (base name: "discount")', function() {
-      // uncomment below and update the code to test the property discount
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.discount).to.be('number');
     });
 
     it('should have the property discountHighlight (base name: "discount_highlight")', function() {
-      // uncomment below and update the code to test the property discountHighlight
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.discount_highlight).to.be('boolean');
     });
 
     it('should have the property inDdt (base name: "in_ddt")', function() {
-      // uncomment below and update the code to test the property inDdt
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.in_ddt).to.be('boolean');
     });
 
     it('should have the property stock (base name: "stock")', function() {
-      // uncomment below and update the code to test the property stock
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.stock).to.be('number');
     });
 
     it('should have the property eiRaw (base name: "ei_raw")', function() {
-      // uncomment below and update the code to test the property eiRaw
-      //var instance = new fattureInCloudSdk.IssuedDocumentItemsListItem();
-      //expect(instance).to.be();
+      expect(typeof instance.ei_raw).to.be('object');
     });
 
   });
