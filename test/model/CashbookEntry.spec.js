@@ -38,16 +38,17 @@
     instance.amount_in = 100;
     instance.amount_out = 0;
     instance.document = {
-      id :  12345
-    }
-    instance.type = "issued_document";
-    instance.path = "/doc1.pdf";
+        id : 12345,
+        type : "issued_document",
+        path : "/doc1.pdf"
+    },
     instance.payment_account_in = {
-      id : 333
-    }
+        id : 333
+    },
     instance.payment_account_out = {
-      id : 333
+        id : 333
     }
+    
   });
 
   var getProperty = function(object, getter, property) {
@@ -99,20 +100,20 @@
       expect(typeof instance.document).to.be('object');
     });
 
-    it('should have the property amountIn (base name: "amount_in")', function() {
-      expect(typeof instance.amount_in).to.be('number');
-    });
-
-    it('should have the property paymentAccountIn (base name: "payment_account_in")', function() {
-      expect(typeof instance.payment_account_in).to.be('object');
-    });
-
     it('should have the property amountOut (base name: "amount_out")', function() {
       expect(typeof instance.amount_out).to.be('number');
     });
 
     it('should have the property paymentAccountOut (base name: "payment_account_out")', function() {
       expect(typeof instance.payment_account_out).to.be('object');
+    });
+
+    it('should have the property amountIn (base name: "amount_in")', function() {
+      expect(typeof instance.amount_in).to.be('number');
+    });
+
+    it('should have the property paymentAccountIn (base name: "payment_account_in")', function() {
+      expect(typeof instance.payment_account_in).to.be('object');
     });
 
   });
