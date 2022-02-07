@@ -1,4 +1,4 @@
-# fattureInCloudSdk.CashbookEntryDataDocument
+# fattureInCloudSdk.CashbookEntryDocument
 
 ## Properties
 
