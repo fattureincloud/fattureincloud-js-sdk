@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CashbookEntryInOut**](CashbookEntryInOut.md) |  | [optional] 
+**data** | [**CashbookEntry**](CashbookEntry.md) |  | [optional] 
 
 

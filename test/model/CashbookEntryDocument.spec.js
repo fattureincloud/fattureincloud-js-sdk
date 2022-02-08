@@ -28,23 +28,10 @@
   var instance;
 
   beforeEach(function() {
-    instance = new fattureInCloudSdk.CashbookEntryIn();
+    instance = new fattureInCloudSdk.CashbookEntryDocument();
     instance.id = 12345;
-    instance.date = "2021-08-24";
-    instance.description = "Fattura n. 201/2021";
-    instance.entity_name = "Rossi S.r.l.";
-    instance.kind = "issued_document";
-    instance.type = "in";
-    instance.amount_in = 100;
-    instance.payment_account_in = {
-                    id : 333
-                },
-    instance.document = {
-                    id : 12345,
-                    type : "issued_document",
-                    path : "/doc1.pdf"
-                }
-    
+    instance.type = "issued_document";
+    instance.path = "/doc1.pdf";
   });
 
   var getProperty = function(object, getter, property) {
@@ -63,45 +50,21 @@
       object[property] = value;
   }
 
-  describe('CashbookEntryIn', function() {
-    it('should create an instance of CashbookEntryIn', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CashbookEntryIn);
+  describe('CashbookEntryDocument', function() {
+    it('should create an instance of CashbookEntryDocument', function() {
+      expect(instance).to.be.a(fattureInCloudSdk.CashbookEntryDocument);
     });
 
     it('should have the property id (base name: "id")', function() {
       expect(typeof instance.id).to.be('number');
     });
 
-    it('should have the property date (base name: "date")', function() {
-      expect(typeof instance.date).to.be('string');
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      expect(typeof instance.description).to.be('string');
-    });
-
-    it('should have the property kind (base name: "kind")', function() {
-      expect(typeof instance.kind).to.be('string');
-    });
-
     it('should have the property type (base name: "type")', function() {
       expect(typeof instance.type).to.be('string');
     });
 
-    it('should have the property entityName (base name: "entity_name")', function() {
-      expect(typeof instance.entity_name).to.be('string');
-    });
-
-    it('should have the property document (base name: "document")', function() {
-      expect(typeof instance.document).to.be('object');
-    });
-
-    it('should have the property amountIn (base name: "amount_in")', function() {
-      expect(typeof instance.amount_in).to.be('number');
-    });
-
-    it('should have the property paymentAccountIn (base name: "payment_account_in")', function() {
-      expect(typeof instance.payment_account_in).to.be('object');
+    it('should have the property path (base name: "path")', function() {
+      expect(typeof instance.path).to.be('string');
     });
 
   });
