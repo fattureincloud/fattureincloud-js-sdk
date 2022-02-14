@@ -17,18 +17,17 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The CreateReceivedDocumentRequest model module.
  * @module model/CreateReceivedDocumentRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CreateReceivedDocumentRequest {
     /**
      * Constructs a new <code>CreateReceivedDocumentRequest</code>.
      * 
      * @alias module:model/CreateReceivedDocumentRequest
-     * @param data {module:model/ReceivedDocument} 
      */
-    constructor(data) { 
+    constructor() { 
         
-        CreateReceivedDocumentRequest.initialize(this, data);
+        CreateReceivedDocumentRequest.initialize(this);
     }
 
     /**
@@ -36,8 +35,7 @@ class CreateReceivedDocumentRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, data) { 
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**

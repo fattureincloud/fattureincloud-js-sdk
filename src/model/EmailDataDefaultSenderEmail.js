@@ -16,19 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailDataDefaultSenderEmail model module.
  * @module model/EmailDataDefaultSenderEmail
- * @version 2.0.9
+ * @version 5.0.0
  */
 class EmailDataDefaultSenderEmail {
     /**
      * Constructs a new <code>EmailDataDefaultSenderEmail</code>.
      * Default sender email. (Other emails can be found in &#x60;sender_emails_list&#x60;)
      * @alias module:model/EmailDataDefaultSenderEmail
-     * @param id {Number} Id
-     * @param email {String} Email address
      */
-    constructor(id, email) { 
+    constructor() { 
         
-        EmailDataDefaultSenderEmail.initialize(this, id, email);
+        EmailDataDefaultSenderEmail.initialize(this);
     }
 
     /**
@@ -36,9 +34,7 @@ class EmailDataDefaultSenderEmail {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, email) { 
-        obj['id'] = id;
-        obj['email'] = email;
+    static initialize(obj) { 
     }
 
     /**

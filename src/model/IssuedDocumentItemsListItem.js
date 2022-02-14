@@ -17,7 +17,7 @@ import VatType from './VatType';
 /**
  * The IssuedDocumentItemsListItem model module.
  * @module model/IssuedDocumentItemsListItem
- * @version 2.0.9
+ * @version 5.0.0
  */
 class IssuedDocumentItemsListItem {
     /**
@@ -176,16 +176,14 @@ IssuedDocumentItemsListItem.prototype['vat'] = undefined;
 
 /**
  * @member {Boolean} not_taxable
- * @default false
  */
-IssuedDocumentItemsListItem.prototype['not_taxable'] = false;
+IssuedDocumentItemsListItem.prototype['not_taxable'] = undefined;
 
 /**
  * Apply withholding taxes, rivalsa and cassa.
  * @member {Boolean} apply_withholding_taxes
- * @default true
  */
-IssuedDocumentItemsListItem.prototype['apply_withholding_taxes'] = true;
+IssuedDocumentItemsListItem.prototype['apply_withholding_taxes'] = undefined;
 
 /**
  * Discount percentual value.
@@ -195,15 +193,13 @@ IssuedDocumentItemsListItem.prototype['discount'] = undefined;
 
 /**
  * @member {Boolean} discount_highlight
- * @default false
  */
-IssuedDocumentItemsListItem.prototype['discount_highlight'] = false;
+IssuedDocumentItemsListItem.prototype['discount_highlight'] = undefined;
 
 /**
  * @member {Boolean} in_ddt
- * @default true
  */
-IssuedDocumentItemsListItem.prototype['in_ddt'] = true;
+IssuedDocumentItemsListItem.prototype['in_ddt'] = undefined;
 
 /**
  * @member {Boolean} stock

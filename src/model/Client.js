@@ -20,18 +20,17 @@ import VatType from './VatType';
 /**
  * The Client model module.
  * @module model/Client
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Client {
     /**
      * Constructs a new <code>Client</code>.
      * 
      * @alias module:model/Client
-     * @param name {String} Client name
      */
-    constructor(name) { 
+    constructor() { 
         
-        Client.initialize(this, name);
+        Client.initialize(this);
     }
 
     /**
@@ -39,8 +38,7 @@ class Client {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**
@@ -248,9 +246,8 @@ Client.prototype['address_extra'] = undefined;
 /**
  * Client country
  * @member {String} country
- * @default 'Italia'
  */
-Client.prototype['country'] = 'Italia';
+Client.prototype['country'] = undefined;
 
 /**
  * Client email.
@@ -329,9 +326,8 @@ Client.prototype['shipping_address'] = undefined;
 /**
  * Use e-invoices for this entity
  * @member {Boolean} e_invoice
- * @default false
  */
-Client.prototype['e_invoice'] = false;
+Client.prototype['e_invoice'] = undefined;
 
 /**
  * E-invoice code

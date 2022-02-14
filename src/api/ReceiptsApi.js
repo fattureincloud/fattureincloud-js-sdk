@@ -25,7 +25,7 @@ import ModifyReceiptResponse from '../model/ModifyReceiptResponse';
 /**
 * Receipts service.
 * @module api/ReceiptsApi
-* @version 2.0.9
+* @version 5.0.0
 */
 export default class ReceiptsApi {
 

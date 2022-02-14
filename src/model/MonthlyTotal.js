@@ -16,20 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The MonthlyTotal model module.
  * @module model/MonthlyTotal
- * @version 2.0.9
+ * @version 5.0.0
  */
 class MonthlyTotal {
     /**
      * Constructs a new <code>MonthlyTotal</code>.
      * 
      * @alias module:model/MonthlyTotal
-     * @param net {Number} Monthly total net amount.
-     * @param gross {Number} Monthly total gross amount.
-     * @param count {Number} Monthly total receipt number.
      */
-    constructor(net, gross, count) { 
+    constructor() { 
         
-        MonthlyTotal.initialize(this, net, gross, count);
+        MonthlyTotal.initialize(this);
     }
 
     /**
@@ -37,10 +34,7 @@ class MonthlyTotal {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, net, gross, count) { 
-        obj['net'] = net;
-        obj['gross'] = gross;
-        obj['count'] = count;
+    static initialize(obj) { 
     }
 
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetUserInfoResponseInfo model module.
  * @module model/GetUserInfoResponseInfo
- * @version 2.0.9
+ * @version 5.0.0
  */
 class GetUserInfoResponseInfo {
     /**

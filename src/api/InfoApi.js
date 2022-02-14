@@ -32,7 +32,7 @@ import ListVatTypesResponse from '../model/ListVatTypesResponse';
 /**
 * Info service.
 * @module api/InfoApi
-* @version 2.0.9
+* @version 5.0.0
 */
 export default class InfoApi {
 

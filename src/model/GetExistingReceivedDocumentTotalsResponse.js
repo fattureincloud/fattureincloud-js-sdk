@@ -17,7 +17,7 @@ import ReceivedDocumentTotals from './ReceivedDocumentTotals';
 /**
  * The GetExistingReceivedDocumentTotalsResponse model module.
  * @module model/GetExistingReceivedDocumentTotalsResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class GetExistingReceivedDocumentTotalsResponse {
     /**

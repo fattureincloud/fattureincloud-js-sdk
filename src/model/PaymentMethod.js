@@ -19,17 +19,16 @@ import PaymentMethodType from './PaymentMethodType';
 /**
  * The PaymentMethod model module.
  * @module model/PaymentMethod
- * @version 2.0.9
+ * @version 5.0.0
  */
 class PaymentMethod {
     /**
      * Constructs a new <code>PaymentMethod</code>.
      * @alias module:model/PaymentMethod
-     * @param name {String} Name of the payment method
      */
-    constructor(name) { 
+    constructor() { 
         
-        PaymentMethod.initialize(this, name);
+        PaymentMethod.initialize(this);
     }
 
     /**
@@ -37,8 +36,7 @@ class PaymentMethod {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**

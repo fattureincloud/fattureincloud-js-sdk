@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EinvoiceRejectionReason model module.
  * @module model/EinvoiceRejectionReason
- * @version 2.0.9
+ * @version 5.0.0
  */
 class EinvoiceRejectionReason {
     /**

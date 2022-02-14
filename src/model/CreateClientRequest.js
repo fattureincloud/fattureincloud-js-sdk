@@ -17,7 +17,7 @@ import Client from './Client';
 /**
  * The CreateClientRequest model module.
  * @module model/CreateClientRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CreateClientRequest {
     /**

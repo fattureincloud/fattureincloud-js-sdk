@@ -27,7 +27,7 @@ import ShowTotalsMode from './ShowTotalsMode';
 /**
  * The IssuedDocument model module.
  * @module model/IssuedDocument
- * @version 2.0.9
+ * @version 5.0.0
  */
 class IssuedDocument {
     /**
@@ -481,23 +481,20 @@ IssuedDocument.prototype['payment_method'] = undefined;
 /**
  * Use split payment
  * @member {Boolean} use_split_payment
- * @default false
  */
-IssuedDocument.prototype['use_split_payment'] = false;
+IssuedDocument.prototype['use_split_payment'] = undefined;
 
 /**
  * Use gross prices
  * @member {Boolean} use_gross_prices
- * @default false
  */
-IssuedDocument.prototype['use_gross_prices'] = false;
+IssuedDocument.prototype['use_gross_prices'] = undefined;
 
 /**
  * Indicates if this is an e-invoice.
  * @member {Boolean} e_invoice
- * @default false
  */
-IssuedDocument.prototype['e_invoice'] = false;
+IssuedDocument.prototype['e_invoice'] = undefined;
 
 /**
  * @member {module:model/IssuedDocumentEiData} ei_data
@@ -591,16 +588,14 @@ IssuedDocument.prototype['show_totals'] = undefined;
 /**
  * Show paypal button
  * @member {Boolean} show_paypal_button
- * @default false
  */
-IssuedDocument.prototype['show_paypal_button'] = false;
+IssuedDocument.prototype['show_paypal_button'] = undefined;
 
 /**
  * Show notification button
  * @member {Boolean} show_notification_button
- * @default false
  */
-IssuedDocument.prototype['show_notification_button'] = false;
+IssuedDocument.prototype['show_notification_button'] = undefined;
 
 /**
  * Show ts pay button.
@@ -616,9 +611,8 @@ IssuedDocument.prototype['delivery_note'] = undefined;
 /**
  * Attach an accompanying invoice.
  * @member {Boolean} accompanying_invoice
- * @default false
  */
-IssuedDocument.prototype['accompanying_invoice'] = false;
+IssuedDocument.prototype['accompanying_invoice'] = undefined;
 
 /**
  * Number (for the attached delivery note).

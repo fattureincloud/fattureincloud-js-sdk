@@ -16,20 +16,16 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailScheduleInclude model module.
  * @module model/EmailScheduleInclude
- * @version 2.0.9
+ * @version 5.0.0
  */
 class EmailScheduleInclude {
     /**
      * Constructs a new <code>EmailScheduleInclude</code>.
      * @alias module:model/EmailScheduleInclude
-     * @param document {Boolean} If set to true, the email will have a button to view the document
-     * @param deliveryNote {Boolean} If set to true, the email will have a button to view the delivery note
-     * @param attachment {Boolean} If set to true, the email will have a button to view the attachment
-     * @param accompanyingInvoice {Boolean} If set to true, the email will have a button to view the accompanying invoice
      */
-    constructor(document, deliveryNote, attachment, accompanyingInvoice) { 
+    constructor() { 
         
-        EmailScheduleInclude.initialize(this, document, deliveryNote, attachment, accompanyingInvoice);
+        EmailScheduleInclude.initialize(this);
     }
 
     /**
@@ -37,11 +33,7 @@ class EmailScheduleInclude {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, document, deliveryNote, attachment, accompanyingInvoice) { 
-        obj['document'] = document;
-        obj['delivery_note'] = deliveryNote;
-        obj['attachment'] = attachment;
-        obj['accompanying_invoice'] = accompanyingInvoice;
+    static initialize(obj) { 
     }
 
     /**

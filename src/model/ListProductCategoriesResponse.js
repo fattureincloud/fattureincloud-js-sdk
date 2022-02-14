@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListProductCategoriesResponse model module.
  * @module model/ListProductCategoriesResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ListProductCategoriesResponse {
     /**

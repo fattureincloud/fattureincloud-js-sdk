@@ -17,21 +17,16 @@ import IssuedDocumentTotalsVatList from './IssuedDocumentTotalsVatList';
 /**
  * The IssuedDocumentTotals model module.
  * @module model/IssuedDocumentTotals
- * @version 2.0.9
+ * @version 5.0.0
  */
 class IssuedDocumentTotals {
     /**
      * Constructs a new <code>IssuedDocumentTotals</code>.
      * @alias module:model/IssuedDocumentTotals
-     * @param amountNet {Number} Total net amount.
-     * @param amountVat {Number} Total vat amount.
-     * @param amountGross {Number} Total grosas amount.
-     * @param amountDue {Number} Total amount due.
-     * @param paymentsSum {Number} Payments sum.
      */
-    constructor(amountNet, amountVat, amountGross, amountDue, paymentsSum) { 
+    constructor() { 
         
-        IssuedDocumentTotals.initialize(this, amountNet, amountVat, amountGross, amountDue, paymentsSum);
+        IssuedDocumentTotals.initialize(this);
     }
 
     /**
@@ -39,12 +34,7 @@ class IssuedDocumentTotals {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, amountNet, amountVat, amountGross, amountDue, paymentsSum) { 
-        obj['amount_net'] = amountNet;
-        obj['amount_vat'] = amountVat;
-        obj['amount_gross'] = amountGross;
-        obj['amount_due'] = amountDue;
-        obj['payments_sum'] = paymentsSum;
+    static initialize(obj) { 
     }
 
     /**

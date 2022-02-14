@@ -18,7 +18,7 @@ import PermissionsFicIssuedDocumentsDetailed from './PermissionsFicIssuedDocumen
 /**
  * The Permissions model module.
  * @module model/Permissions
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Permissions {
     /**

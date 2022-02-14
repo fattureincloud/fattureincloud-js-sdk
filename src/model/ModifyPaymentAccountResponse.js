@@ -17,7 +17,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The ModifyPaymentAccountResponse model module.
  * @module model/ModifyPaymentAccountResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ModifyPaymentAccountResponse {
     /**

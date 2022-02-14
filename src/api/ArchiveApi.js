@@ -24,7 +24,7 @@ import UploadArchiveAttachmentResponse from '../model/UploadArchiveAttachmentRes
 /**
 * Archive service.
 * @module api/ArchiveApi
-* @version 2.0.9
+* @version 5.0.0
 */
 export default class ArchiveApi {
 

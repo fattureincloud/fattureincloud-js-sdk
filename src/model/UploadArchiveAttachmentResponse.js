@@ -17,7 +17,7 @@ import AttachmentData from './AttachmentData';
 /**
  * The UploadArchiveAttachmentResponse model module.
  * @module model/UploadArchiveAttachmentResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class UploadArchiveAttachmentResponse {
     /**

@@ -17,7 +17,7 @@ import Client from './Client';
 /**
  * The CreateClientResponse model module.
  * @module model/CreateClientResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CreateClientResponse {
     /**

@@ -17,7 +17,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The CreatePaymentAccountRequest model module.
  * @module model/CreatePaymentAccountRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CreatePaymentAccountRequest {
     /**

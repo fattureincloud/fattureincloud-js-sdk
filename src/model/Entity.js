@@ -20,18 +20,17 @@ import VatType from './VatType';
 /**
  * The Entity model module.
  * @module model/Entity
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Entity {
     /**
      * Constructs a new <code>Entity</code>.
      * 
      * @alias module:model/Entity
-     * @param name {String} Name
      */
-    constructor(name) { 
+    constructor() { 
         
-        Entity.initialize(this, name);
+        Entity.initialize(this);
     }
 
     /**
@@ -39,8 +38,7 @@ class Entity {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**
@@ -242,9 +240,8 @@ Entity.prototype['address_extra'] = undefined;
 /**
  * Country
  * @member {String} country
- * @default 'Italia'
  */
-Entity.prototype['country'] = 'Italia';
+Entity.prototype['country'] = undefined;
 
 /**
  * Email.
@@ -324,9 +321,8 @@ Entity.prototype['shipping_address'] = undefined;
 /**
  * [Only for client] Use e-invoices.
  * @member {Boolean} e_invoice
- * @default false
  */
-Entity.prototype['e_invoice'] = false;
+Entity.prototype['e_invoice'] = undefined;
 
 /**
  * [Only for client] E-invoices code.

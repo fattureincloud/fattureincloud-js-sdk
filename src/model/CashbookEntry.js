@@ -20,20 +20,16 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The CashbookEntry model module.
  * @module model/CashbookEntry
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CashbookEntry {
     /**
      * Constructs a new <code>CashbookEntry</code>.
      * @alias module:model/CashbookEntry
-     * @param id {String} Cashbook unique identifier.
-     * @param date {Date} Cashbook date.
-     * @param description {String} Cashbook description.
-     * @param kind {module:model/CashbookEntryKind} 
      */
-    constructor(id, date, description, kind) { 
+    constructor() { 
         
-        CashbookEntry.initialize(this, id, date, description, kind);
+        CashbookEntry.initialize(this);
     }
 
     /**
@@ -41,11 +37,7 @@ class CashbookEntry {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, date, description, kind) { 
-        obj['id'] = id;
-        obj['date'] = date;
-        obj['description'] = description;
-        obj['kind'] = kind;
+    static initialize(obj) { 
     }
 
     /**

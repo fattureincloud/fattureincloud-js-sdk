@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendEInvoiceRequestData model module.
  * @module model/SendEInvoiceRequestData
- * @version 2.0.9
+ * @version 5.0.0
  */
 class SendEInvoiceRequestData {
     /**

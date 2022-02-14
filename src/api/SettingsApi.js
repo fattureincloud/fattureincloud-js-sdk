@@ -32,7 +32,7 @@ import ModifyVatTypeResponse from '../model/ModifyVatTypeResponse';
 /**
 * Settings service.
 * @module api/SettingsApi
-* @version 2.0.9
+* @version 5.0.0
 */
 export default class SettingsApi {
 

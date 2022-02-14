@@ -16,18 +16,16 @@ import ApiClient from '../ApiClient';
 /**
  * The Language model module.
  * @module model/Language
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Language {
     /**
      * Constructs a new <code>Language</code>.
      * @alias module:model/Language
-     * @param code {String} Language code.
-     * @param name {String} Language extended name.
      */
-    constructor(code, name) { 
+    constructor() { 
         
-        Language.initialize(this, code, name);
+        Language.initialize(this);
     }
 
     /**
@@ -35,9 +33,7 @@ class Language {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, code, name) { 
-        obj['code'] = code;
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**

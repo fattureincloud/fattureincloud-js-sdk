@@ -17,7 +17,7 @@ import ReceivedDocument from './ReceivedDocument';
 /**
  * The GetNewReceivedDocumentTotalsRequest model module.
  * @module model/GetNewReceivedDocumentTotalsRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class GetNewReceivedDocumentTotalsRequest {
     /**

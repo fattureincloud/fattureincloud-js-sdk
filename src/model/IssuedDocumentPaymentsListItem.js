@@ -18,7 +18,7 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The IssuedDocumentPaymentsListItem model module.
  * @module model/IssuedDocumentPaymentsListItem
- * @version 2.0.9
+ * @version 5.0.0
  */
 class IssuedDocumentPaymentsListItem {
     /**

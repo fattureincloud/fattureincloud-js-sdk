@@ -16,17 +16,16 @@ import ApiClient from '../ApiClient';
 /**
  * The AttachmentData model module.
  * @module model/AttachmentData
- * @version 2.0.9
+ * @version 5.0.0
  */
 class AttachmentData {
     /**
      * Constructs a new <code>AttachmentData</code>.
      * @alias module:model/AttachmentData
-     * @param attachmentToken {String} Uploaded attachment token.
      */
-    constructor(attachmentToken) { 
+    constructor() { 
         
-        AttachmentData.initialize(this, attachmentToken);
+        AttachmentData.initialize(this);
     }
 
     /**
@@ -34,8 +33,7 @@ class AttachmentData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, attachmentToken) { 
-        obj['attachment_token'] = attachmentToken;
+    static initialize(obj) { 
     }
 
     /**

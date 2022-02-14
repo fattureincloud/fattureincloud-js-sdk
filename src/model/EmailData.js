@@ -18,28 +18,17 @@ import SenderEmail from './SenderEmail';
 /**
  * The EmailData model module.
  * @module model/EmailData
- * @version 2.0.9
+ * @version 5.0.0
  */
 class EmailData {
     /**
      * Constructs a new <code>EmailData</code>.
      * 
      * @alias module:model/EmailData
-     * @param recipientEmail {String} Recipient's email
-     * @param defaultSenderEmail {module:model/EmailDataDefaultSenderEmail} 
-     * @param senderEmailsList {Array.<module:model/SenderEmail>} List of all emails from which the document can be sent
-     * @param ccEmail {String} By default is the logged company email. This is the email address to which a copy will be sent.
-     * @param subject {String} Email subject
-     * @param body {String} Email body
-     * @param documentExists {Boolean} If the document is not a delivery note, this flag will be set to true
-     * @param deliveryNoteExists {Boolean} If the document is a delivery note, this flag will be set to true
-     * @param attachmentExists {Boolean} If the document has one or more attachments, this flag will be set to true
-     * @param accompanyingInvoiceExists {Boolean} If an accompanying invoice exists, this flag will be set to true
-     * @param defaultAttachPdf {Boolean} If a pdf is attached, this flag will be set to true
      */
-    constructor(recipientEmail, defaultSenderEmail, senderEmailsList, ccEmail, subject, body, documentExists, deliveryNoteExists, attachmentExists, accompanyingInvoiceExists, defaultAttachPdf) { 
+    constructor() { 
         
-        EmailData.initialize(this, recipientEmail, defaultSenderEmail, senderEmailsList, ccEmail, subject, body, documentExists, deliveryNoteExists, attachmentExists, accompanyingInvoiceExists, defaultAttachPdf);
+        EmailData.initialize(this);
     }
 
     /**
@@ -47,18 +36,7 @@ class EmailData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, recipientEmail, defaultSenderEmail, senderEmailsList, ccEmail, subject, body, documentExists, deliveryNoteExists, attachmentExists, accompanyingInvoiceExists, defaultAttachPdf) { 
-        obj['recipient_email'] = recipientEmail;
-        obj['default_sender_email'] = defaultSenderEmail;
-        obj['sender_emails_list'] = senderEmailsList;
-        obj['cc_email'] = ccEmail;
-        obj['subject'] = subject;
-        obj['body'] = body;
-        obj['document_exists'] = documentExists;
-        obj['delivery_note_exists'] = deliveryNoteExists;
-        obj['attachment_exists'] = attachmentExists;
-        obj['accompanying_invoice_exists'] = accompanyingInvoiceExists;
-        obj['default_attach_pdf'] = defaultAttachPdf;
+    static initialize(obj) { 
     }
 
     /**

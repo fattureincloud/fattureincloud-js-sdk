@@ -17,7 +17,7 @@ import PaymentMethod from './PaymentMethod';
 /**
  * The GetPaymentMethodResponse model module.
  * @module model/GetPaymentMethodResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class GetPaymentMethodResponse {
     /**

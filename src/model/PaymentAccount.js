@@ -17,18 +17,17 @@ import PaymentAccountType from './PaymentAccountType';
 /**
  * The PaymentAccount model module.
  * @module model/PaymentAccount
- * @version 2.0.9
+ * @version 5.0.0
  */
 class PaymentAccount {
     /**
      * Constructs a new <code>PaymentAccount</code>.
      * 
      * @alias module:model/PaymentAccount
-     * @param name {String} Payment account name.
      */
-    constructor(name) { 
+    constructor() { 
         
-        PaymentAccount.initialize(this, name);
+        PaymentAccount.initialize(this);
     }
 
     /**
@@ -36,8 +35,7 @@ class PaymentAccount {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**

@@ -16,18 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The ListDeliveryNotesDefaultCausalsResponse model module.
  * @module model/ListDeliveryNotesDefaultCausalsResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ListDeliveryNotesDefaultCausalsResponse {
     /**
      * Constructs a new <code>ListDeliveryNotesDefaultCausalsResponse</code>.
      * 
      * @alias module:model/ListDeliveryNotesDefaultCausalsResponse
-     * @param data {Array.<String>} 
      */
-    constructor(data) { 
+    constructor() { 
         
-        ListDeliveryNotesDefaultCausalsResponse.initialize(this, data);
+        ListDeliveryNotesDefaultCausalsResponse.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class ListDeliveryNotesDefaultCausalsResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, data) { 
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**

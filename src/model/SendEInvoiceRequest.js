@@ -17,7 +17,7 @@ import SendEInvoiceRequestData from './SendEInvoiceRequestData';
 /**
  * The SendEInvoiceRequest model module.
  * @module model/SendEInvoiceRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class SendEInvoiceRequest {
     /**

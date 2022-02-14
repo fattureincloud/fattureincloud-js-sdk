@@ -18,7 +18,7 @@ import VatKind from './VatKind';
 /**
  * The IssuedDocumentEiData model module.
  * @module model/IssuedDocumentEiData
- * @version 2.0.9
+ * @version 5.0.0
  */
 class IssuedDocumentEiData {
     /**

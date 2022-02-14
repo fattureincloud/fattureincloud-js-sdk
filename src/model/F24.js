@@ -18,19 +18,16 @@ import PaymentAccount from './PaymentAccount';
 /**
  * The F24 model module.
  * @module model/F24
- * @version 2.0.9
+ * @version 5.0.0
  */
 class F24 {
     /**
      * Constructs a new <code>F24</code>.
      * @alias module:model/F24
-     * @param dueDate {Date} Due date.
-     * @param amount {Number} Taxes amount.
-     * @param description {String} Name or brief description.
      */
-    constructor(dueDate, amount, description) { 
+    constructor() { 
         
-        F24.initialize(this, dueDate, amount, description);
+        F24.initialize(this);
     }
 
     /**
@@ -38,10 +35,7 @@ class F24 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, dueDate, amount, description) { 
-        obj['due_date'] = dueDate;
-        obj['amount'] = amount;
-        obj['description'] = description;
+    static initialize(obj) { 
     }
 
     /**

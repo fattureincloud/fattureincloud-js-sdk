@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListF24ResponseAggregatedData model module.
  * @module model/ListF24ResponseAggregatedData
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ListF24ResponseAggregatedData {
     /**

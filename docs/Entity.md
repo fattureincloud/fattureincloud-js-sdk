@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Code. | [optional] 
-**name** | **String** | Name | 
+**name** | **String** | Name | [optional] 
 **type** | [**EntityType**](EntityType.md) |  | [optional] 
 **firstName** | **String** | First name. | [optional] 
 **lastName** | **String** | Last name. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **addressCity** | **String** | City. | [optional] 
 **addressProvince** | **String** | Province. | [optional] 
 **addressExtra** | **String** | Address extra info. | [optional] 
-**country** | **String** | Country | [optional] [default to &#39;Italia&#39;]
+**country** | **String** | Country | [optional] 
 **email** | **String** | Email. | [optional] 
 **certifiedEmail** | **String** | Certified email. | [optional] 
 **phone** | **String** | Phone. | [optional] 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **bankIban** | **String** | [Only for client] Iban. | [optional] 
 **bankSwiftCode** | **String** | [Only for client] Bank swift code. | [optional] 
 **shippingAddress** | **String** | [Only for client] Shipping address. | [optional] 
-**eInvoice** | **Boolean** | [Only for client] Use e-invoices. | [optional] [default to false]
+**eInvoice** | **Boolean** | [Only for client] Use e-invoices. | [optional] 
 **eiCode** | **String** | [Only for client] E-invoices code. | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 

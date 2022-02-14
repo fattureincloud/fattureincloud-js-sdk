@@ -17,7 +17,7 @@ import CompanyType from './CompanyType';
 /**
  * The ControlledCompany model module.
  * @module model/ControlledCompany
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ControlledCompany {
     /**

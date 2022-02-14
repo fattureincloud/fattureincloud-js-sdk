@@ -16,19 +16,16 @@ import ApiClient from '../ApiClient';
 /**
  * The City model module.
  * @module model/City
- * @version 2.0.9
+ * @version 5.0.0
  */
 class City {
     /**
      * Constructs a new <code>City</code>.
      * @alias module:model/City
-     * @param postalCode {String} City postal code.
-     * @param city {String} City name.
-     * @param province {String} Province.
      */
-    constructor(postalCode, city, province) { 
+    constructor() { 
         
-        City.initialize(this, postalCode, city, province);
+        City.initialize(this);
     }
 
     /**
@@ -36,10 +33,7 @@ class City {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, postalCode, city, province) { 
-        obj['postal_code'] = postalCode;
-        obj['city'] = city;
-        obj['province'] = province;
+    static initialize(obj) { 
     }
 
     /**

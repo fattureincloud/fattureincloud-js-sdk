@@ -21,17 +21,16 @@ import ReceivedDocumentType from './ReceivedDocumentType';
 /**
  * The ReceivedDocument model module.
  * @module model/ReceivedDocument
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ReceivedDocument {
     /**
      * Constructs a new <code>ReceivedDocument</code>.
      * @alias module:model/ReceivedDocument
-     * @param entity {module:model/ReceivedDocumentEntity} 
      */
-    constructor(entity) { 
+    constructor() { 
         
-        ReceivedDocument.initialize(this, entity);
+        ReceivedDocument.initialize(this);
     }
 
     /**
@@ -39,8 +38,7 @@ class ReceivedDocument {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, entity) { 
-        obj['entity'] = entity;
+    static initialize(obj) { 
     }
 
     /**

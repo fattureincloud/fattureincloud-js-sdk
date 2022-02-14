@@ -31,7 +31,7 @@ import UploadIssuedDocumentAttachmentResponse from '../model/UploadIssuedDocumen
 /**
 * IssuedDocuments service.
 * @module api/IssuedDocumentsApi
-* @version 2.0.9
+* @version 5.0.0
 */
 export default class IssuedDocumentsApi {
 

@@ -17,7 +17,7 @@ import Supplier from './Supplier';
 /**
  * The CreateSupplierRequest model module.
  * @module model/CreateSupplierRequest
- * @version 2.0.9
+ * @version 5.0.0
  */
 class CreateSupplierRequest {
     /**

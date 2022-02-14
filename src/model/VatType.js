@@ -16,18 +16,17 @@ import ApiClient from '../ApiClient';
 /**
  * The VatType model module.
  * @module model/VatType
- * @version 2.0.9
+ * @version 5.0.0
  */
 class VatType {
     /**
      * Constructs a new <code>VatType</code>.
      * 
      * @alias module:model/VatType
-     * @param value {Number} [Read Only] Percentual value.
      */
-    constructor(value) { 
+    constructor() { 
         
-        VatType.initialize(this, value);
+        VatType.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class VatType {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, value) { 
-        obj['value'] = value;
+    static initialize(obj) { 
     }
 
     /**
@@ -129,9 +127,8 @@ VatType.prototype['ei_description'] = undefined;
 /**
  * [Read Only] Determine if this vat type is editable.
  * @member {Boolean} editable
- * @default true
  */
-VatType.prototype['editable'] = true;
+VatType.prototype['editable'] = undefined;
 
 /**
  * Determine if the vat type is disabled.

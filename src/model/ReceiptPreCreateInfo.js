@@ -18,23 +18,17 @@ import VatType from './VatType';
 /**
  * The ReceiptPreCreateInfo model module.
  * @module model/ReceiptPreCreateInfo
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ReceiptPreCreateInfo {
     /**
      * Constructs a new <code>ReceiptPreCreateInfo</code>.
      * 
      * @alias module:model/ReceiptPreCreateInfo
-     * @param numerations {Object} Next number by year, receipt type and numeration name.
-     * @param numerationsList {Array.<String>} List of series used in the past.
-     * @param rcCentersList {Array.<String>} List of revenue centers used in the past.
-     * @param paymentAccountsList {Array.<module:model/PaymentAccount>} User payment accounts list.
-     * @param categoriesList {Array.<String>} List of categories used in the past.
-     * @param vatTypesList {Array.<module:model/VatType>} List of user vat types with the default 22%, 10%, 4% and 0% vats.
      */
-    constructor(numerations, numerationsList, rcCentersList, paymentAccountsList, categoriesList, vatTypesList) { 
+    constructor() { 
         
-        ReceiptPreCreateInfo.initialize(this, numerations, numerationsList, rcCentersList, paymentAccountsList, categoriesList, vatTypesList);
+        ReceiptPreCreateInfo.initialize(this);
     }
 
     /**
@@ -42,13 +36,7 @@ class ReceiptPreCreateInfo {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, numerations, numerationsList, rcCentersList, paymentAccountsList, categoriesList, vatTypesList) { 
-        obj['numerations'] = numerations;
-        obj['numerations_list'] = numerationsList;
-        obj['rc_centers_list'] = rcCentersList;
-        obj['payment_accounts_list'] = paymentAccountsList;
-        obj['categories_list'] = categoriesList;
-        obj['vat_types_list'] = vatTypesList;
+    static initialize(obj) { 
     }
 
     /**

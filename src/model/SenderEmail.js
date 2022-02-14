@@ -16,18 +16,16 @@ import ApiClient from '../ApiClient';
 /**
  * The SenderEmail model module.
  * @module model/SenderEmail
- * @version 2.0.9
+ * @version 5.0.0
  */
 class SenderEmail {
     /**
      * Constructs a new <code>SenderEmail</code>.
      * @alias module:model/SenderEmail
-     * @param id {Number} Id
-     * @param email {String} Email address
      */
-    constructor(id, email) { 
+    constructor() { 
         
-        SenderEmail.initialize(this, id, email);
+        SenderEmail.initialize(this);
     }
 
     /**
@@ -35,9 +33,7 @@ class SenderEmail {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, email) { 
-        obj['id'] = id;
-        obj['email'] = email;
+    static initialize(obj) { 
     }
 
     /**

@@ -17,17 +17,16 @@ import VatType from './VatType';
 /**
  * The Product model module.
  * @module model/Product
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Product {
     /**
      * Constructs a new <code>Product</code>.
      * @alias module:model/Product
-     * @param name {String} Product name.
      */
-    constructor(name) { 
+    constructor() { 
         
-        Product.initialize(this, name);
+        Product.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class Product {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**

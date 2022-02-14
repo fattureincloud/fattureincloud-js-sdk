@@ -17,18 +17,17 @@ import SupplierType from './SupplierType';
 /**
  * The Supplier model module.
  * @module model/Supplier
- * @version 2.0.9
+ * @version 5.0.0
  */
 class Supplier {
     /**
      * Constructs a new <code>Supplier</code>.
      * 
      * @alias module:model/Supplier
-     * @param name {String} Supplier name.
      */
-    constructor(name) { 
+    constructor() { 
         
-        Supplier.initialize(this, name);
+        Supplier.initialize(this);
     }
 
     /**
@@ -36,8 +35,7 @@ class Supplier {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj) { 
     }
 
     /**
@@ -209,9 +207,8 @@ Supplier.prototype['address_extra'] = undefined;
 /**
  * Supplier country.
  * @member {String} country
- * @default 'Italia'
  */
-Supplier.prototype['country'] = 'Italia';
+Supplier.prototype['country'] = undefined;
 
 /**
  * Supplier email.

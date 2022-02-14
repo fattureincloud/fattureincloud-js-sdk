@@ -17,7 +17,7 @@ import EinvoiceRejectionReason from './EinvoiceRejectionReason';
 /**
  * The GetEInvoiceRejectionReasonResponse model module.
  * @module model/GetEInvoiceRejectionReasonResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class GetEInvoiceRejectionReasonResponse {
     /**

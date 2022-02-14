@@ -449,4 +449,3 @@ src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/CashbookEntryDocument.spec.js

@@ -17,7 +17,7 @@ import Product from './Product';
 /**
  * The ModifyProductResponse model module.
  * @module model/ModifyProductResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ModifyProductResponse {
     /**

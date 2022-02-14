@@ -19,7 +19,7 @@ import Supplier from './Supplier';
 /**
  * The ListSuppliersResponse model module.
  * @module model/ListSuppliersResponse
- * @version 2.0.9
+ * @version 5.0.0
  */
 class ListSuppliersResponse {
     /**
