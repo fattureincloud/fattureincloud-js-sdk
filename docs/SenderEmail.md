@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** | Id | 
-**email** | **String** | Email address | 
+**id** | **Number** | Id | [optional] 
+**email** | **String** | Email address | [optional] 
 
 

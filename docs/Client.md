@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Client code. | [optional] 
-**name** | **String** | Client name | 
+**name** | **String** | Client name | [optional] 
 **type** | [**ClientType**](ClientType.md) |  | [optional] 
 **firstName** | **String** | Client first name. | [optional] 
 **lastName** | **String** | Client last name. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **addressCity** | **String** | Client city. | [optional] 
 **addressProvince** | **String** | Client province. | [optional] 
 **addressExtra** | **String** | Client address extra info. | [optional] 
-**country** | **String** | Client country | [optional] [default to &#39;Italia&#39;]
+**country** | **String** | Client country | [optional] 
 **email** | **String** | Client email. | [optional] 
 **certifiedEmail** | **String** | Client certified email. | [optional] 
 **phone** | **String** | Client phone. | [optional] 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **bankIban** | **String** | Client iban. | [optional] 
 **bankSwiftCode** | **String** | Client bank swift code. | [optional] 
 **shippingAddress** | **String** | Client shipping address. | [optional] 
-**eInvoice** | **Boolean** | Use e-invoices for this entity | [optional] [default to false]
+**eInvoice** | **Boolean** | Use e-invoices for this entity | [optional] 
 **eiCode** | **String** | E-invoice code | [optional] 
 **discountHighlight** | **Boolean** | Discount Highlight. | [optional] 
 **defaultDiscount** | **Number** | Default discount. | [optional] 
