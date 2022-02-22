@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique identifier | [optional] 
 **code** | **String** | Supplier code. | [optional] 
-**name** | **String** | Supplier name. | 
+**name** | **String** | Supplier name. | [optional] 
 **type** | [**SupplierType**](SupplierType.md) |  | [optional] 
 **firstName** | **String** | Supplier first name. | [optional] 
 **lastName** | **String** | Supplier last name. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **addressCity** | **String** | Supplier city. | [optional] 
 **addressProvince** | **String** | Supplier province. | [optional] 
 **addressExtra** | **String** | Supplier address extra info. | [optional] 
-**country** | **String** | Supplier country. | [optional] [default to &#39;Italia&#39;]
+**country** | **String** | Supplier country. | [optional] 
 **email** | **String** | Supplier email. | [optional] 
 **certifiedEmail** | **String** | Supplier certified email. | [optional] 
 **phone** | **String** | Supplier phone. | [optional] 

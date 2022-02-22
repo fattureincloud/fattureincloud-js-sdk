@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Cashbook unique identifier. | 
-**date** | **Date** | Cashbook date. | 
-**description** | **String** | Cashbook description. | 
-**kind** | [**CashbookEntryKind**](CashbookEntryKind.md) |  | 
+**id** | **String** | Cashbook unique identifier. | [optional] 
+**date** | **Date** | Cashbook date. | [optional] 
+**description** | **String** | Cashbook description. | [optional] 
+**kind** | [**CashbookEntryKind**](CashbookEntryKind.md) |  | [optional] 
 **type** | [**CashbookEntryType**](CashbookEntryType.md) |  | [optional] 
 **entityName** | **String** | Entity name. | [optional] 
 **document** | [**CashbookEntryDocument**](CashbookEntryDocument.md) |  | [optional] 

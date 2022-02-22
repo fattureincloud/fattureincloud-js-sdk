@@ -95,6 +95,7 @@ docs/IssuedDocument.md
 docs/IssuedDocumentEiData.md
 docs/IssuedDocumentExtraData.md
 docs/IssuedDocumentItemsListItem.md
+docs/IssuedDocumentOptions.md
 docs/IssuedDocumentPaymentsListItem.md
 docs/IssuedDocumentPreCreateInfo.md
 docs/IssuedDocumentPreCreateInfoDefaultValues.md
@@ -102,8 +103,6 @@ docs/IssuedDocumentPreCreateInfoExtraDataDefaultValues.md
 docs/IssuedDocumentPreCreateInfoItemsDefaultValues.md
 docs/IssuedDocumentStatus.md
 docs/IssuedDocumentTotals.md
-docs/IssuedDocumentTotalsVatList.md
-docs/IssuedDocumentTotalsVatListVatItem.md
 docs/IssuedDocumentType.md
 docs/IssuedDocumentsApi.md
 docs/IssuedEInvoicesApi.md
@@ -216,6 +215,7 @@ docs/UploadReceivedDocumentAttachmentResponse.md
 docs/User.md
 docs/UserApi.md
 docs/UserCompanyRole.md
+docs/VatItem.md
 docs/VatKind.md
 docs/VatType.md
 docs/VerifyEInvoiceXmlErrorResponse.md
@@ -330,6 +330,7 @@ src/model/IssuedDocument.js
 src/model/IssuedDocumentEiData.js
 src/model/IssuedDocumentExtraData.js
 src/model/IssuedDocumentItemsListItem.js
+src/model/IssuedDocumentOptions.js
 src/model/IssuedDocumentPaymentsListItem.js
 src/model/IssuedDocumentPreCreateInfo.js
 src/model/IssuedDocumentPreCreateInfoDefaultValues.js
@@ -337,8 +338,6 @@ src/model/IssuedDocumentPreCreateInfoExtraDataDefaultValues.js
 src/model/IssuedDocumentPreCreateInfoItemsDefaultValues.js
 src/model/IssuedDocumentStatus.js
 src/model/IssuedDocumentTotals.js
-src/model/IssuedDocumentTotalsVatList.js
-src/model/IssuedDocumentTotalsVatListVatItem.js
 src/model/IssuedDocumentType.js
 src/model/Language.js
 src/model/ListArchiveCategoriesResponse.js
@@ -442,6 +441,7 @@ src/model/UploadIssuedDocumentAttachmentResponse.js
 src/model/UploadReceivedDocumentAttachmentResponse.js
 src/model/User.js
 src/model/UserCompanyRole.js
+src/model/VatItem.js
 src/model/VatKind.js
 src/model/VatType.js
 src/model/VerifyEInvoiceXmlErrorResponse.js
@@ -449,4 +449,5 @@ src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/CashbookEntryDocument.spec.js
+test/model/IssuedDocumentOptions.spec.js
+test/model/VatItem.spec.js
