@@ -29,6 +29,7 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.IssuedDocumentOptions();
+    instance.fix_payments = true;
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +50,11 @@
 
   describe('IssuedDocumentOptions', function() {
     it('should create an instance of IssuedDocumentOptions', function() {
-      // uncomment below and update the code to test IssuedDocumentOptions
-      //var instance = new fattureInCloudSdk.IssuedDocumentOptions();
-      //expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentOptions);
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentOptions);
     });
 
     it('should have the property fixPayments (base name: "fix_payments")', function() {
-      // uncomment below and update the code to test the property fixPayments
-      //var instance = new fattureInCloudSdk.IssuedDocumentOptions();
-      //expect(instance).to.be();
+      expect(typeof instance.fix_payments).to.be('boolean');
     });
 
   });
