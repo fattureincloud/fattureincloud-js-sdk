@@ -29,6 +29,8 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.VatItem();
+    instance.amount_net = 10.0;
+    instance.amount_vat = 20.0;
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,21 +51,15 @@
 
   describe('VatItem', function() {
     it('should create an instance of VatItem', function() {
-      // uncomment below and update the code to test VatItem
-      //var instance = new fattureInCloudSdk.VatItem();
-      //expect(instance).to.be.a(fattureInCloudSdk.VatItem);
+      expect(instance).to.be.a(fattureInCloudSdk.VatItem);
     });
 
     it('should have the property amountNet (base name: "amount_net")', function() {
-      // uncomment below and update the code to test the property amountNet
-      //var instance = new fattureInCloudSdk.VatItem();
-      //expect(instance).to.be();
+      expect(typeof instance.amount_net).to.be('number');
     });
 
     it('should have the property amountVat (base name: "amount_vat")', function() {
-      // uncomment below and update the code to test the property amountVat
-      //var instance = new fattureInCloudSdk.VatItem();
-      //expect(instance).to.be();
+      expect(typeof instance.amount_vat).to.be('number');
     });
 
   });
