@@ -1,4 +1,4 @@
-# fattureInCloudSdk.IssuedDocumentTotalsVatListVatItem
+# fattureInCloudSdk.VatItem
 
 ## Properties
 
