@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.10 (2022-03-01)
+
+
+### Bug Fixes
+
+* models are now nullable ([53b59aa](https://github.com/fattureincloud/fattureincloud-js-sdk/commit/53b59aa1fe621e8cbe3b4b0628176ac0235de418))
+
 ### 2.0.9 (2022-02-08)
 
 
