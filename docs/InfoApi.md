@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**listCountries**](InfoApi.md#listCountries) | **GET** /info/countries | List Countries
 [**listCurrencies**](InfoApi.md#listCurrencies) | **GET** /info/currencies | List Currencies
 [**listDeliveryNotesDefaultCausals**](InfoApi.md#listDeliveryNotesDefaultCausals) | **GET** /info/dn_causals | List Delivery Notes Default Causals
+[**listDetailedCountries**](InfoApi.md#listDetailedCountries) | **GET** /info/detailed_countries | List Detailed Countries
 [**listLanguages**](InfoApi.md#listLanguages) | **GET** /info/languages | List Languages
 [**listPaymentAccounts**](InfoApi.md#listPaymentAccounts) | **GET** /c/{company_id}/info/payment_accounts | List Payment Accounts
 [**listPaymentMethods**](InfoApi.md#listPaymentMethods) | **GET** /c/{company_id}/info/payment_methods | List Payment Methods
@@ -291,6 +292,50 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ListDeliveryNotesDefaultCausalsResponse**](ListDeliveryNotesDefaultCausalsResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listDetailedCountries
+
+> ListDetailedCountriesResponse listDetailedCountries()
+
+List Detailed Countries
+
+Lists the supported countries.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.InfoApi();
+apiInstance.listDetailedCountries().then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ListDetailedCountriesResponse**](ListDetailedCountriesResponse.md)
 
 ### Authorization
 

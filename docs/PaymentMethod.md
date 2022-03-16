@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **bankIban** | **String** | Bank iban | [optional] 
 **bankName** | **String** | Bank name | [optional] 
 **bankBeneficiary** | **String** | Bank beneficiary | [optional] 
-**eiPaymentMethod** | **String** | EInvoice payment method | [optional] 
+**eiPaymentMethod** | **String** | E-invoice payment method | [optional] 
 
 

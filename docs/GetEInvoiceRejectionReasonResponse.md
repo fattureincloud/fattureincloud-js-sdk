@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**EinvoiceRejectionReason**](EinvoiceRejectionReason.md) |  | [optional] 
+**data** | [**EInvoiceRejectionReason**](EInvoiceRejectionReason.md) |  | [optional] 
 
 
