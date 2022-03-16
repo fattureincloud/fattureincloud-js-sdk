@@ -11,7 +11,7 @@
  *
  */
 
- (function(root, factory) {
+(function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
     define(['expect.js', process.cwd()+'/src/index'], factory);
@@ -63,22 +63,18 @@
 
     it('should have the property eiStatus (base name: "ei_status")', function() {
       expect(typeof instance.ei_status).to.be('string');
-
     });
 
     it('should have the property solution (base name: "solution")', function() {
       expect(typeof instance.solution).to.be('string');
-
     });
 
     it('should have the property code (base name: "code")', function() {
       expect(typeof instance.code).to.be('string');
-
     });
 
     it('should have the property date (base name: "date")', function() {
       expect(typeof instance.date).to.be('string');
-
     });
 
   });
