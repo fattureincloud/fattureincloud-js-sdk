@@ -29,6 +29,22 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.ListDetailedCountriesResponse();
+    instance.data = [
+      {
+        name: "Italia",
+        settings_name: "Italia",
+        iso: "IT",
+        fiscal_iso: "IT",
+        uic: "086"
+      },
+      {
+        name: "Albania",
+        settings_name: "Albania",
+        iso: "AL",
+        fiscal_iso: "AL",
+        uic: "087"
+      }
+    ]
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,15 +65,11 @@
 
   describe('ListDetailedCountriesResponse', function() {
     it('should create an instance of ListDetailedCountriesResponse', function() {
-      // uncomment below and update the code to test ListDetailedCountriesResponse
-      //var instance = new fattureInCloudSdk.ListDetailedCountriesResponse();
-      //expect(instance).to.be.a(fattureInCloudSdk.ListDetailedCountriesResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.ListDetailedCountriesResponse);
     });
 
     it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new fattureInCloudSdk.ListDetailedCountriesResponse();
-      //expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     });
 
   });
