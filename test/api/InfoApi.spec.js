@@ -15,6 +15,7 @@
  import ListCitiesResponse from '../../src/model/ListCitiesResponse';
  import ListCostCentersResponse from '../../src/model/ListCostCentersResponse';
  import ListCountriesResponse from '../../src/model/ListCountriesResponse';
+ import ListDetailedCountriesResponse from '../../src/model/ListDetailedCountriesResponse';
  import ListCurrenciesResponse from '../../src/model/ListCurrenciesResponse';
  import ListDeliveryNotesDefaultCausalsResponse from '../../src/model/ListDeliveryNotesDefaultCausalsResponse';
  import ListLanguagesResponse from '../../src/model/ListLanguagesResponse';
@@ -56,6 +57,9 @@
 
   var listCountriesResponseObj = {"data":["Italia","Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","..."]};
   sandbox.stub(instance, "listCountries").returns(listCountriesResponseObj);
+
+  var listDetailedCountriesResponseObj = {"data": [{"name": "Italia", "settings_name": "Italia", "iso": "IT", "fiscal_iso": "IT", "uic": "086"}, {"name": "Albania", "settings_name": "Albania", "iso": "AL", "fiscal_iso": "AL", "uic": "087"}]}
+  sandbox.stub(instance, "listDetailedCountries").returns(listDetailedCountriesResponseObj);
 
   var listCurrenciesResponseObj = {"data":[{"id":"AED","symbol":"AED","html_symbol":"AED","exchange_rate":"4.09500"},{"id":"EUR","symbol":"\u20ac","html_symbol":"€","exchange_rate":"1.00000"}]};
   sandbox.stub(instance, "listCurrencies").returns(listCurrenciesResponseObj);
@@ -146,6 +150,16 @@
         var response = instance.listCountries();
         var responseObj = Object.assign(new ListCountriesResponse(), response);
         var expectedJson = JSON.stringify(listCountriesResponseObj);
+        var actualJson = JSON.stringify(responseObj);
+        expect(actualJson).to.equal(expectedJson);
+        done();
+      });
+    });
+    describe('listDetailedCountries', function() {
+      it('should call listDetailedCountries successfully', function(done) {
+        var response = instance.listDetailedCountries();
+        var responseObj = Object.assign(new ListDetailedCountriesResponse(), response);
+        var expectedJson = JSON.stringify(listDetailedCountriesResponseObj);
         var actualJson = JSON.stringify(responseObj);
         expect(actualJson).to.equal(expectedJson);
         done();
