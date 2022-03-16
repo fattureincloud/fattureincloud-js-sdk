@@ -29,6 +29,11 @@
 
   beforeEach(function() {
     instance = new fattureInCloudSdk.DetailedCountry();
+    instance.name = "Italia";
+    instance.settings_name = "Italia";
+    instance.iso = "IT";
+    instance.fiscal_iso = "IT";
+    instance.uic = "086";
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,39 +54,27 @@
 
   describe('DetailedCountry', function() {
     it('should create an instance of DetailedCountry', function() {
-      // uncomment below and update the code to test DetailedCountry
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be.a(fattureInCloudSdk.DetailedCountry);
+      expect(instance).to.be.a(fattureInCloudSdk.DetailedCountry);
     });
 
     it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be();
+      expect(typeof instance.name).to.be('string');
     });
 
     it('should have the property settingsName (base name: "settings_name")', function() {
-      // uncomment below and update the code to test the property settingsName
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be();
+      expect(typeof instance.settings_name).to.be('string');
     });
 
     it('should have the property iso (base name: "iso")', function() {
-      // uncomment below and update the code to test the property iso
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be();
+      expect(typeof instance.iso).to.be('string');
     });
 
     it('should have the property fiscalIso (base name: "fiscal_iso")', function() {
-      // uncomment below and update the code to test the property fiscalIso
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be();
+      expect(typeof instance.fiscal_iso).to.be('string');
     });
 
     it('should have the property uic (base name: "uic")', function() {
-      // uncomment below and update the code to test the property uic
-      //var instance = new fattureInCloudSdk.DetailedCountry();
-      //expect(instance).to.be();
+      expect(typeof instance.uic).to.be('string');
     });
 
   });
