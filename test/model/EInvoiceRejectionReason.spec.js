@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new fattureInCloudSdk.EinvoiceRejectionReason();
+    instance = new fattureInCloudSdk.EInvoiceRejectionReason();
     instance.reason = "invalid date";
     instance.ei_status = "rejected";
     instance.solution = "set a valid date";
@@ -52,9 +52,9 @@
       object[property] = value;
   }
 
-  describe('EinvoiceRejectionReason', function() {
-    it('should create an instance of EinvoiceRejectionReason', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.EinvoiceRejectionReason);
+  describe('EInvoiceRejectionReason', function() {
+    it('should create an instance of EInvoiceRejectionReason', function() {
+      expect(instance).to.be.a(fattureInCloudSdk.EInvoiceRejectionReason);
     });
 
     it('should have the property reason (base name: "reason")', function() {
@@ -63,22 +63,18 @@
 
     it('should have the property eiStatus (base name: "ei_status")', function() {
       expect(typeof instance.ei_status).to.be('string');
-
     });
 
     it('should have the property solution (base name: "solution")', function() {
       expect(typeof instance.solution).to.be('string');
-
     });
 
     it('should have the property code (base name: "code")', function() {
       expect(typeof instance.code).to.be('string');
-
     });
 
     it('should have the property date (base name: "date")', function() {
       expect(typeof instance.date).to.be('string');
-
     });
 
   });

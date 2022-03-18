@@ -49,8 +49,9 @@ docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
 docs/Currency.md
 docs/DefaultPaymentTermsType.md
+docs/DetailedCountry.md
 docs/DocumentTemplate.md
-docs/EinvoiceRejectionReason.md
+docs/EInvoiceRejectionReason.md
 docs/EmailData.md
 docs/EmailDataDefaultSenderEmail.md
 docs/EmailSchedule.md
@@ -118,6 +119,7 @@ docs/ListCostCentersResponse.md
 docs/ListCountriesResponse.md
 docs/ListCurrenciesResponse.md
 docs/ListDeliveryNotesDefaultCausalsResponse.md
+docs/ListDetailedCountriesResponse.md
 docs/ListF24Response.md
 docs/ListF24ResponseAggregatedData.md
 docs/ListF24ResponseAggregation.md
@@ -285,8 +287,9 @@ src/model/CreateVatTypeRequest.js
 src/model/CreateVatTypeResponse.js
 src/model/Currency.js
 src/model/DefaultPaymentTermsType.js
+src/model/DetailedCountry.js
 src/model/DocumentTemplate.js
-src/model/EinvoiceRejectionReason.js
+src/model/EInvoiceRejectionReason.js
 src/model/EmailData.js
 src/model/EmailDataDefaultSenderEmail.js
 src/model/EmailSchedule.js
@@ -351,6 +354,7 @@ src/model/ListCostCentersResponse.js
 src/model/ListCountriesResponse.js
 src/model/ListCurrenciesResponse.js
 src/model/ListDeliveryNotesDefaultCausalsResponse.js
+src/model/ListDetailedCountriesResponse.js
 src/model/ListF24Response.js
 src/model/ListF24ResponseAggregatedData.js
 src/model/ListF24ResponseAggregation.js
@@ -449,5 +453,6 @@ src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/IssuedDocumentOptions.spec.js
-test/model/VatItem.spec.js
+test/model/DetailedCountry.spec.js
+test/model/EInvoiceRejectionReason.spec.js
+test/model/ListDetailedCountriesResponse.spec.js
