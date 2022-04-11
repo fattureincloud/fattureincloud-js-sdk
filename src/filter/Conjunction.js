@@ -38,7 +38,7 @@ export default class Conjunction extends Expression {
         if (this.right == undefined || this.right == null || this.right == '') {
             throw 'cannot build query with an empty right condition'
         }
-        return `(${this.left} and ${this.right})`
+        return `(${this.left.buildQuery()} and ${this.right.buildQuery()})`
     }
 
     /**

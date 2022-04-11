@@ -38,7 +38,7 @@ export default class Disjunction extends Expression {
         if (this.right == undefined || this.right == null || this.right == '') {
             throw 'cannot build query with an empty right condition'
         }
-        return `(${this.left} or ${this.right})`
+        return `(${this.left.buildQuery()} or ${this.right.buildQuery()})`
     }
 
     /**
