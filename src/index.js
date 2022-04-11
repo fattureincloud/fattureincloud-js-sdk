@@ -238,6 +238,12 @@ import SuppliersApi from './api/SuppliersApi';
 import TaxesApi from './api/TaxesApi';
 import UserApi from './api/UserApi';
 
+import Condition from './filter/Condition';
+import Filter from './filter/Filter';
+import Expression from './filter/Expression';
+import Conjunction from './filter/Conjunction';
+import Disjunction from './filter/Disjunction';
+import Operator from './filter/Operator';
 
 /**
 * JavaScript SDK for the Fatture in Cloud API.<br>
@@ -1619,5 +1625,41 @@ export {
     * The UserApi service constructor.
     * @property {module:api/UserApi}
     */
-    UserApi
+    UserApi,
+
+    /**
+    * The Condition service constructor.
+    * @property {module:filter/Condition}
+    */
+    Condition,
+
+    /**
+    * The Conjunction service constructor.
+    * @property {module:filter/Conjunction}
+    */
+    Conjunction,
+
+    /**
+    * The Disjunction service constructor.
+    * @property {module:filter/Disjunction}
+    */
+    Disjunction,
+
+    /**
+    * The Expression service constructor.
+    * @property {module:filter/Expression}
+    */
+    Expression,
+
+    /**
+    * The Filter service constructor.
+    * @property {module:filter/Filter}
+    */
+    Filter,
+
+    /**
+    * The Operator service constructor.
+    * @property {module:api/Operator}
+    */
+    Operator
 };
