@@ -1627,5 +1627,41 @@ export {
     * The UserApi service constructor.
     * @property {module:api/UserApi}
     */
-    UserApi
+    UserApi,
+
+    /**
+    * The Condition service constructor.
+    * @property {module:filter/Condition}
+    */
+    Condition,
+
+    /**
+    * The Conjunction service constructor.
+    * @property {module:filter/Conjunction}
+    */
+    Conjunction,
+
+    /**
+    * The Disjunction service constructor.
+    * @property {module:filter/Disjunction}
+    */
+    Disjunction,
+
+    /**
+    * The Expression service constructor.
+    * @property {module:filter/Expression}
+    */
+    Expression,
+
+    /**
+    * The Filter service constructor.
+    * @property {module:filter/Filter}
+    */
+    Filter,
+
+    /**
+    * The Operator service constructor.
+    * @property {module:api/Operator}
+    */
+    Operator
 };
