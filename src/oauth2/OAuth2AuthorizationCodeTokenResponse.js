@@ -22,7 +22,7 @@ export default class OAuth2AuthorizationCodeTokenResponse {
     redirectUri
 
     /**
-     * The base uri.
+     * The expire time.
      * @member {String} expiresIn
      */
     expiresIn
