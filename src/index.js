@@ -246,8 +246,8 @@ import Conjunction from './filter/Conjunction';
 import Disjunction from './filter/Disjunction';
 import Operator from './filter/Operator';
 
-import OAuth2AuthorizationCodeManager from './oauth2/Oauth2';
-import OAuth2AuthorizationCodeTokenResponse from './oauth2/Oauth2AuthorizationCodeTokenResponse';
+import OAuth2AuthorizationCodeManager from './oauth2/OAuth2';
+import OAuth2AuthorizationCodeTokenResponse from './oauth2/OAuth2AuthorizationCodeTokenResponse';
 import OAuth2AuthorizationCodeParams from './oauth2/Oauth2AuthorizationCodeParams';
 import Scope from './oauth2/Scope';
 
