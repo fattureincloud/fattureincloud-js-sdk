@@ -1,0 +1,16 @@
+{
+    "env": {
+        "es6": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "plugins": ["unused-imports"],
+    "rules": {
+        "unused-imports/no-unused-imports": "error"
+    }
+}

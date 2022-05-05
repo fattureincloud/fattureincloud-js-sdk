@@ -1,3 +1,7 @@
+/**
+ * The Operator filter module.
+ * @module filter/Operator
+ */
 export default class Operator {
     /**
      * Equal operator.
