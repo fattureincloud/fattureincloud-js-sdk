@@ -246,6 +246,11 @@ import Conjunction from './filter/Conjunction';
 import Disjunction from './filter/Disjunction';
 import Operator from './filter/Operator';
 
+import OAuth2AuthorizationCodeManager from './oauth2/OAuth2';
+import OAuth2AuthorizationCodeTokenResponse from './oauth2/OAuth2AuthorizationCodeTokenResponse';
+import OAuth2AuthorizationCodeParams from './oauth2/OAuth2AuthorizationCodeParams';
+import Scope from './oauth2/Scope';
+
 
 /**
 * JavaScript SDK for the Fatture in Cloud API.<br>
@@ -1663,5 +1668,29 @@ export {
     * The Operator service constructor.
     * @property {module:api/Operator}
     */
-    Operator
+    Operator,
+
+    /**
+    * The OAuth2AuthorizationCodeManager service constructor.
+    * @property {module:api/OAuth2AuthorizationCodeManager}
+    */
+    OAuth2AuthorizationCodeManager,
+
+    /**
+    * The Scope service constructor.
+    * @property {module:api/Scope}
+    */
+    Scope,
+
+    /**
+    * The OAuth2AuthorizationCodeTokenResponse service constructor.
+    * @property {module:api/OAuth2AuthorizationCodeTokenResponse}
+    */
+    OAuth2AuthorizationCodeTokenResponse,
+
+    /**
+    * The OAuth2AuthorizationCodeParams service constructor.
+    * @property {module:api/OAuth2AuthorizationCodeParams}
+    */
+    OAuth2AuthorizationCodeParams
 };
