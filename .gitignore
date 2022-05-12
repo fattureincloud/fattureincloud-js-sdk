@@ -40,3 +40,7 @@ node_modules
 
 # VisualStudioCode
 .vscode/* 
+
+# Js
+dist/
+package-lock.json
