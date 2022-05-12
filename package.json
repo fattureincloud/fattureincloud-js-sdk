@@ -39,6 +39,7 @@
     "eslint": "^8.14.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "expect.js": "^0.3.1",
     "mocha": "^8.0.1",
     "sinon": "^7.2.0",
