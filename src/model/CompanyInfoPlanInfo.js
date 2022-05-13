@@ -11,10 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CompanyInfoPlanInfoFunctions from './CompanyInfoPlanInfoFunctions';
-import CompanyInfoPlanInfoFunctionsStatus from './CompanyInfoPlanInfoFunctionsStatus';
-import CompanyInfoPlanInfoLimits from './CompanyInfoPlanInfoLimits';
+import CompanyInfoPlanInfoFunctions from './CompanyInfoPlanInfoFunctions'
+import CompanyInfoPlanInfoFunctionsStatus from './CompanyInfoPlanInfoFunctionsStatus'
+import CompanyInfoPlanInfoLimits from './CompanyInfoPlanInfoLimits'
 
 /**
  * The CompanyInfoPlanInfo model module.
@@ -22,69 +21,60 @@ import CompanyInfoPlanInfoLimits from './CompanyInfoPlanInfoLimits';
  * @version 2.0.12
  */
 class CompanyInfoPlanInfo {
-    /**
+  /**
      * Constructs a new <code>CompanyInfoPlanInfo</code>.
      * @alias module:model/CompanyInfoPlanInfo
      */
-    constructor() { 
-        
-        CompanyInfoPlanInfo.initialize(this);
-    }
+  constructor () {
+    CompanyInfoPlanInfo.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CompanyInfoPlanInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CompanyInfoPlanInfo} obj Optional instance to populate.
      * @return {module:model/CompanyInfoPlanInfo} The populated <code>CompanyInfoPlanInfo</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CompanyInfoPlanInfo();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CompanyInfoPlanInfo()
 
-            if (data.hasOwnProperty('limits')) {
-                obj['limits'] = CompanyInfoPlanInfoLimits.constructFromObject(data['limits']);
-            }
-            if (data.hasOwnProperty('functions')) {
-                obj['functions'] = CompanyInfoPlanInfoFunctions.constructFromObject(data['functions']);
-            }
-            if (data.hasOwnProperty('functions_status')) {
-                obj['functions_status'] = CompanyInfoPlanInfoFunctionsStatus.constructFromObject(data['functions_status']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('limits')) {
+        obj.limits = CompanyInfoPlanInfoLimits.constructFromObject(data.limits)
+      }
+      if (data.hasOwnProperty('functions')) {
+        obj.functions = CompanyInfoPlanInfoFunctions.constructFromObject(data.functions)
+      }
+      if (data.hasOwnProperty('functions_status')) {
+        obj.functions_status = CompanyInfoPlanInfoFunctionsStatus.constructFromObject(data.functions_status)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/CompanyInfoPlanInfoLimits} limits
  */
-CompanyInfoPlanInfo.prototype['limits'] = undefined;
+CompanyInfoPlanInfo.prototype.limits = undefined
 
 /**
  * @member {module:model/CompanyInfoPlanInfoFunctions} functions
  */
-CompanyInfoPlanInfo.prototype['functions'] = undefined;
+CompanyInfoPlanInfo.prototype.functions = undefined
 
 /**
  * @member {module:model/CompanyInfoPlanInfoFunctionsStatus} functions_status
  */
-CompanyInfoPlanInfo.prototype['functions_status'] = undefined;
+CompanyInfoPlanInfo.prototype.functions_status = undefined
 
-
-
-
-
-
-export default CompanyInfoPlanInfo;
-
+export default CompanyInfoPlanInfo

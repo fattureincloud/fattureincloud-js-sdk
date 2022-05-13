@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Receipt from './Receipt';
+import Receipt from './Receipt'
 
 /**
  * The ModifyReceiptRequest model module.
@@ -20,54 +19,45 @@ import Receipt from './Receipt';
  * @version 2.0.12
  */
 class ModifyReceiptRequest {
-    /**
+  /**
      * Constructs a new <code>ModifyReceiptRequest</code>.
-     * 
+     *
      * @alias module:model/ModifyReceiptRequest
      */
-    constructor() { 
-        
-        ModifyReceiptRequest.initialize(this);
-    }
+  constructor () {
+    ModifyReceiptRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyReceiptRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyReceiptRequest} obj Optional instance to populate.
      * @return {module:model/ModifyReceiptRequest} The populated <code>ModifyReceiptRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyReceiptRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyReceiptRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Receipt.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Receipt.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Receipt} data
  */
-ModifyReceiptRequest.prototype['data'] = undefined;
+ModifyReceiptRequest.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyReceiptRequest;
-
+export default ModifyReceiptRequest

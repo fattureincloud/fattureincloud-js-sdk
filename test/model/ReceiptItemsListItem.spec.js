@@ -11,74 +11,66 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ReceiptItemsListItem();
-    instance.id = 888;
-    instance.amount_net = 8.2;
-    instance.amount_gross = 10;
-    instance.category = "altro";
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ReceiptItemsListItem()
+    instance.id = 888
+    instance.amount_net = 8.2
+    instance.amount_gross = 10
+    instance.category = 'altro'
     instance.vat = {
-                    id : 21
-                };    
-  });
+      id: 21
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ReceiptItemsListItem', function() {
-    it('should create an instance of ReceiptItemsListItem', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ReceiptItemsListItem);
-    });
+  describe('ReceiptItemsListItem', function () {
+    it('should create an instance of ReceiptItemsListItem', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ReceiptItemsListItem)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property amountNet (base name: "amount_net")', function() {
-      expect(typeof instance.amount_net).to.be('number');
-    });
+    it('should have the property amountNet (base name: "amount_net")', function () {
+      expect(typeof instance.amount_net).to.be('number')
+    })
 
-    it('should have the property amountGross (base name: "amount_gross")', function() {
-      expect(typeof instance.amount_gross).to.be('number');
-    });
+    it('should have the property amountGross (base name: "amount_gross")', function () {
+      expect(typeof instance.amount_gross).to.be('number')
+    })
 
-    it('should have the property category (base name: "category")', function() {
-      expect(typeof instance.category).to.be('string');
-    });
+    it('should have the property category (base name: "category")', function () {
+      expect(typeof instance.category).to.be('string')
+    })
 
-    it('should have the property vat (base name: "vat")', function() {
-      expect(typeof instance.vat).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property vat (base name: "vat")', function () {
+      expect(typeof instance.vat).to.be('object')
+    })
+  })
+}))

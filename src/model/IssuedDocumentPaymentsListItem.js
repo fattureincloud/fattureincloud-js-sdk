@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocumentStatus from './IssuedDocumentStatus';
-import PaymentAccount from './PaymentAccount';
+import ApiClient from '../ApiClient'
+import IssuedDocumentStatus from './IssuedDocumentStatus'
+import PaymentAccount from './PaymentAccount'
 
 /**
  * The IssuedDocumentPaymentsListItem model module.
@@ -21,106 +21,97 @@ import PaymentAccount from './PaymentAccount';
  * @version 2.0.12
  */
 class IssuedDocumentPaymentsListItem {
-    /**
+  /**
      * Constructs a new <code>IssuedDocumentPaymentsListItem</code>.
      * @alias module:model/IssuedDocumentPaymentsListItem
      */
-    constructor() { 
-        
-        IssuedDocumentPaymentsListItem.initialize(this);
-    }
+  constructor () {
+    IssuedDocumentPaymentsListItem.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>IssuedDocumentPaymentsListItem</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/IssuedDocumentPaymentsListItem} obj Optional instance to populate.
      * @return {module:model/IssuedDocumentPaymentsListItem} The populated <code>IssuedDocumentPaymentsListItem</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new IssuedDocumentPaymentsListItem();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new IssuedDocumentPaymentsListItem()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('due_date')) {
-                obj['due_date'] = ApiClient.convertToType(data['due_date'], 'Date');
-            }
-            if (data.hasOwnProperty('amount')) {
-                obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = IssuedDocumentStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('payment_account')) {
-                obj['payment_account'] = PaymentAccount.constructFromObject(data['payment_account']);
-            }
-            if (data.hasOwnProperty('paid_date')) {
-                obj['paid_date'] = ApiClient.convertToType(data['paid_date'], 'Date');
-            }
-            if (data.hasOwnProperty('ei_raw')) {
-                obj['ei_raw'] = ApiClient.convertToType(data['ei_raw'], Object);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'Number')
+      }
+      if (data.hasOwnProperty('due_date')) {
+        obj.due_date = ApiClient.convertToType(data.due_date, 'Date')
+      }
+      if (data.hasOwnProperty('amount')) {
+        obj.amount = ApiClient.convertToType(data.amount, 'Number')
+      }
+      if (data.hasOwnProperty('status')) {
+        obj.status = IssuedDocumentStatus.constructFromObject(data.status)
+      }
+      if (data.hasOwnProperty('payment_account')) {
+        obj.payment_account = PaymentAccount.constructFromObject(data.payment_account)
+      }
+      if (data.hasOwnProperty('paid_date')) {
+        obj.paid_date = ApiClient.convertToType(data.paid_date, 'Date')
+      }
+      if (data.hasOwnProperty('ei_raw')) {
+        obj.ei_raw = ApiClient.convertToType(data.ei_raw, Object)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Unique identifier.
  * @member {Number} id
  */
-IssuedDocumentPaymentsListItem.prototype['id'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.id = undefined
 
 /**
  * Due date.
  * @member {Date} due_date
  */
-IssuedDocumentPaymentsListItem.prototype['due_date'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.due_date = undefined
 
 /**
  * Payment amount.
  * @member {Number} amount
  */
-IssuedDocumentPaymentsListItem.prototype['amount'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.amount = undefined
 
 /**
  * @member {module:model/IssuedDocumentStatus} status
  */
-IssuedDocumentPaymentsListItem.prototype['status'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.status = undefined
 
 /**
  * @member {module:model/PaymentAccount} payment_account
  */
-IssuedDocumentPaymentsListItem.prototype['payment_account'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.payment_account = undefined
 
 /**
  * Payment date. [Only if status is paid]
  * @member {Date} paid_date
  */
-IssuedDocumentPaymentsListItem.prototype['paid_date'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.paid_date = undefined
 
 /**
  * Advanced raw attributes for e-invoices.
  * @member {Object} ei_raw
  */
-IssuedDocumentPaymentsListItem.prototype['ei_raw'] = undefined;
+IssuedDocumentPaymentsListItem.prototype.ei_raw = undefined
 
-
-
-
-
-
-export default IssuedDocumentPaymentsListItem;
-
+export default IssuedDocumentPaymentsListItem

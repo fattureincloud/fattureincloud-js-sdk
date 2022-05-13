@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class F24Status.
 * @enum {}
 * @readonly
 */
 export default class F24Status {
-    
-        /**
+  /**
          * value: "paid"
          * @const
          */
-        "paid" = "paid";
+  'paid' = 'paid'
 
-    
-        /**
+  /**
          * value: "not_paid"
          * @const
          */
-        "not_paid" = "not_paid";
+  'not_paid' = 'not_paid'
 
-    
-        /**
+  /**
          * value: "reversed"
          * @const
          */
-        "reversed" = "reversed";
+  'reversed' = 'reversed'
 
-    
-
-    /**
+  /**
     * Returns a <code>F24Status</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/F24Status} The enum <code>F24Status</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

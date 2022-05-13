@@ -11,36 +11,30 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class PaymentAccountType.
 * @enum {}
 * @readonly
 */
 export default class PaymentAccountType {
-    
-        /**
+  /**
          * value: "standard"
          * @const
          */
-        "standard" = "standard";
+  'standard' = 'standard'
 
-    
-        /**
+  /**
          * value: "bank"
          * @const
          */
-        "bank" = "bank";
+  'bank' = 'bank'
 
-    
-
-    /**
+  /**
     * Returns a <code>PaymentAccountType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/PaymentAccountType} The enum <code>PaymentAccountType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

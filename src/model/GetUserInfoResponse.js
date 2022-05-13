@@ -11,10 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GetUserInfoResponseEmailConfirmationState from './GetUserInfoResponseEmailConfirmationState';
-import GetUserInfoResponseInfo from './GetUserInfoResponseInfo';
-import User from './User';
+import GetUserInfoResponseEmailConfirmationState from './GetUserInfoResponseEmailConfirmationState'
+import GetUserInfoResponseInfo from './GetUserInfoResponseInfo'
+import User from './User'
 
 /**
  * The GetUserInfoResponse model module.
@@ -22,70 +21,61 @@ import User from './User';
  * @version 2.0.12
  */
 class GetUserInfoResponse {
-    /**
+  /**
      * Constructs a new <code>GetUserInfoResponse</code>.
-     * 
+     *
      * @alias module:model/GetUserInfoResponse
      */
-    constructor() { 
-        
-        GetUserInfoResponse.initialize(this);
-    }
+  constructor () {
+    GetUserInfoResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetUserInfoResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetUserInfoResponse} obj Optional instance to populate.
      * @return {module:model/GetUserInfoResponse} The populated <code>GetUserInfoResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetUserInfoResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetUserInfoResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = User.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('info')) {
-                obj['info'] = GetUserInfoResponseInfo.constructFromObject(data['info']);
-            }
-            if (data.hasOwnProperty('email_confirmation_state')) {
-                obj['email_confirmation_state'] = GetUserInfoResponseEmailConfirmationState.constructFromObject(data['email_confirmation_state']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = User.constructFromObject(data.data)
+      }
+      if (data.hasOwnProperty('info')) {
+        obj.info = GetUserInfoResponseInfo.constructFromObject(data.info)
+      }
+      if (data.hasOwnProperty('email_confirmation_state')) {
+        obj.email_confirmation_state = GetUserInfoResponseEmailConfirmationState.constructFromObject(data.email_confirmation_state)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/User} data
  */
-GetUserInfoResponse.prototype['data'] = undefined;
+GetUserInfoResponse.prototype.data = undefined
 
 /**
  * @member {module:model/GetUserInfoResponseInfo} info
  */
-GetUserInfoResponse.prototype['info'] = undefined;
+GetUserInfoResponse.prototype.info = undefined
 
 /**
  * @member {module:model/GetUserInfoResponseEmailConfirmationState} email_confirmation_state
  */
-GetUserInfoResponse.prototype['email_confirmation_state'] = undefined;
+GetUserInfoResponse.prototype.email_confirmation_state = undefined
 
-
-
-
-
-
-export default GetUserInfoResponse;
-
+export default GetUserInfoResponse

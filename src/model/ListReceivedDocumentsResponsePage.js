@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceivedDocument from './ReceivedDocument';
+import ApiClient from '../ApiClient'
+import ReceivedDocument from './ReceivedDocument'
 
 /**
  * The ListReceivedDocumentsResponsePage model module.
@@ -20,53 +20,44 @@ import ReceivedDocument from './ReceivedDocument';
  * @version 2.0.12
  */
 class ListReceivedDocumentsResponsePage {
-    /**
+  /**
      * Constructs a new <code>ListReceivedDocumentsResponsePage</code>.
      * @alias module:model/ListReceivedDocumentsResponsePage
      */
-    constructor() { 
-        
-        ListReceivedDocumentsResponsePage.initialize(this);
-    }
+  constructor () {
+    ListReceivedDocumentsResponsePage.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListReceivedDocumentsResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListReceivedDocumentsResponsePage} obj Optional instance to populate.
      * @return {module:model/ListReceivedDocumentsResponsePage} The populated <code>ListReceivedDocumentsResponsePage</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListReceivedDocumentsResponsePage();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListReceivedDocumentsResponsePage()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [ReceivedDocument]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [ReceivedDocument])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/ReceivedDocument>} data
  */
-ListReceivedDocumentsResponsePage.prototype['data'] = undefined;
+ListReceivedDocumentsResponsePage.prototype.data = undefined
 
-
-
-
-
-
-export default ListReceivedDocumentsResponsePage;
-
+export default ListReceivedDocumentsResponsePage

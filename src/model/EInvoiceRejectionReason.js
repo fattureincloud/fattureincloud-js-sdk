@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The EInvoiceRejectionReason model module.
@@ -19,90 +19,81 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class EInvoiceRejectionReason {
-    /**
+  /**
      * Constructs a new <code>EInvoiceRejectionReason</code>.
      * @alias module:model/EInvoiceRejectionReason
      */
-    constructor() { 
-        
-        EInvoiceRejectionReason.initialize(this);
-    }
+  constructor () {
+    EInvoiceRejectionReason.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>EInvoiceRejectionReason</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/EInvoiceRejectionReason} obj Optional instance to populate.
      * @return {module:model/EInvoiceRejectionReason} The populated <code>EInvoiceRejectionReason</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new EInvoiceRejectionReason();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new EInvoiceRejectionReason()
 
-            if (data.hasOwnProperty('reason')) {
-                obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
-            }
-            if (data.hasOwnProperty('ei_status')) {
-                obj['ei_status'] = ApiClient.convertToType(data['ei_status'], 'String');
-            }
-            if (data.hasOwnProperty('solution')) {
-                obj['solution'] = ApiClient.convertToType(data['solution'], 'String');
-            }
-            if (data.hasOwnProperty('code')) {
-                obj['code'] = ApiClient.convertToType(data['code'], 'String');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('reason')) {
+        obj.reason = ApiClient.convertToType(data.reason, 'String')
+      }
+      if (data.hasOwnProperty('ei_status')) {
+        obj.ei_status = ApiClient.convertToType(data.ei_status, 'String')
+      }
+      if (data.hasOwnProperty('solution')) {
+        obj.solution = ApiClient.convertToType(data.solution, 'String')
+      }
+      if (data.hasOwnProperty('code')) {
+        obj.code = ApiClient.convertToType(data.code, 'String')
+      }
+      if (data.hasOwnProperty('date')) {
+        obj.date = ApiClient.convertToType(data.date, 'Date')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Rejection reason.
  * @member {String} reason
  */
-EInvoiceRejectionReason.prototype['reason'] = undefined;
+EInvoiceRejectionReason.prototype.reason = undefined
 
 /**
  * E-invoice status.
  * @member {String} ei_status
  */
-EInvoiceRejectionReason.prototype['ei_status'] = undefined;
+EInvoiceRejectionReason.prototype.ei_status = undefined
 
 /**
  * Error solution.
  * @member {String} solution
  */
-EInvoiceRejectionReason.prototype['solution'] = undefined;
+EInvoiceRejectionReason.prototype.solution = undefined
 
 /**
  * Error code.
  * @member {String} code
  */
-EInvoiceRejectionReason.prototype['code'] = undefined;
+EInvoiceRejectionReason.prototype.code = undefined
 
 /**
  * Rejection date.
  * @member {Date} date
  */
-EInvoiceRejectionReason.prototype['date'] = undefined;
+EInvoiceRejectionReason.prototype.date = undefined
 
-
-
-
-
-
-export default EInvoiceRejectionReason;
-
+export default EInvoiceRejectionReason

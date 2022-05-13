@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ArchiveDocument from './ArchiveDocument';
+import ArchiveDocument from './ArchiveDocument'
 
 /**
  * The GetArchiveDocumentResponse model module.
@@ -20,54 +19,45 @@ import ArchiveDocument from './ArchiveDocument';
  * @version 2.0.12
  */
 class GetArchiveDocumentResponse {
-    /**
+  /**
      * Constructs a new <code>GetArchiveDocumentResponse</code>.
-     * 
+     *
      * @alias module:model/GetArchiveDocumentResponse
      */
-    constructor() { 
-        
-        GetArchiveDocumentResponse.initialize(this);
-    }
+  constructor () {
+    GetArchiveDocumentResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetArchiveDocumentResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetArchiveDocumentResponse} obj Optional instance to populate.
      * @return {module:model/GetArchiveDocumentResponse} The populated <code>GetArchiveDocumentResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetArchiveDocumentResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetArchiveDocumentResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ArchiveDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ArchiveDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ArchiveDocument} data
  */
-GetArchiveDocumentResponse.prototype['data'] = undefined;
+GetArchiveDocumentResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetArchiveDocumentResponse;
-
+export default GetArchiveDocumentResponse

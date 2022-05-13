@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import EmailDataDefaultSenderEmail from './EmailDataDefaultSenderEmail';
-import SenderEmail from './SenderEmail';
+import ApiClient from '../ApiClient'
+import EmailDataDefaultSenderEmail from './EmailDataDefaultSenderEmail'
+import SenderEmail from './SenderEmail'
 
 /**
  * The EmailData model module.
@@ -21,144 +21,135 @@ import SenderEmail from './SenderEmail';
  * @version 2.0.12
  */
 class EmailData {
-    /**
+  /**
      * Constructs a new <code>EmailData</code>.
-     * 
+     *
      * @alias module:model/EmailData
      */
-    constructor() { 
-        
-        EmailData.initialize(this);
-    }
+  constructor () {
+    EmailData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>EmailData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/EmailData} obj Optional instance to populate.
      * @return {module:model/EmailData} The populated <code>EmailData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new EmailData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new EmailData()
 
-            if (data.hasOwnProperty('recipient_email')) {
-                obj['recipient_email'] = ApiClient.convertToType(data['recipient_email'], 'String');
-            }
-            if (data.hasOwnProperty('default_sender_email')) {
-                obj['default_sender_email'] = EmailDataDefaultSenderEmail.constructFromObject(data['default_sender_email']);
-            }
-            if (data.hasOwnProperty('sender_emails_list')) {
-                obj['sender_emails_list'] = ApiClient.convertToType(data['sender_emails_list'], [SenderEmail]);
-            }
-            if (data.hasOwnProperty('cc_email')) {
-                obj['cc_email'] = ApiClient.convertToType(data['cc_email'], 'String');
-            }
-            if (data.hasOwnProperty('subject')) {
-                obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
-            }
-            if (data.hasOwnProperty('body')) {
-                obj['body'] = ApiClient.convertToType(data['body'], 'String');
-            }
-            if (data.hasOwnProperty('document_exists')) {
-                obj['document_exists'] = ApiClient.convertToType(data['document_exists'], 'Boolean');
-            }
-            if (data.hasOwnProperty('delivery_note_exists')) {
-                obj['delivery_note_exists'] = ApiClient.convertToType(data['delivery_note_exists'], 'Boolean');
-            }
-            if (data.hasOwnProperty('attachment_exists')) {
-                obj['attachment_exists'] = ApiClient.convertToType(data['attachment_exists'], 'Boolean');
-            }
-            if (data.hasOwnProperty('accompanying_invoice_exists')) {
-                obj['accompanying_invoice_exists'] = ApiClient.convertToType(data['accompanying_invoice_exists'], 'Boolean');
-            }
-            if (data.hasOwnProperty('default_attach_pdf')) {
-                obj['default_attach_pdf'] = ApiClient.convertToType(data['default_attach_pdf'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('recipient_email')) {
+        obj.recipient_email = ApiClient.convertToType(data.recipient_email, 'String')
+      }
+      if (data.hasOwnProperty('default_sender_email')) {
+        obj.default_sender_email = EmailDataDefaultSenderEmail.constructFromObject(data.default_sender_email)
+      }
+      if (data.hasOwnProperty('sender_emails_list')) {
+        obj.sender_emails_list = ApiClient.convertToType(data.sender_emails_list, [SenderEmail])
+      }
+      if (data.hasOwnProperty('cc_email')) {
+        obj.cc_email = ApiClient.convertToType(data.cc_email, 'String')
+      }
+      if (data.hasOwnProperty('subject')) {
+        obj.subject = ApiClient.convertToType(data.subject, 'String')
+      }
+      if (data.hasOwnProperty('body')) {
+        obj.body = ApiClient.convertToType(data.body, 'String')
+      }
+      if (data.hasOwnProperty('document_exists')) {
+        obj.document_exists = ApiClient.convertToType(data.document_exists, 'Boolean')
+      }
+      if (data.hasOwnProperty('delivery_note_exists')) {
+        obj.delivery_note_exists = ApiClient.convertToType(data.delivery_note_exists, 'Boolean')
+      }
+      if (data.hasOwnProperty('attachment_exists')) {
+        obj.attachment_exists = ApiClient.convertToType(data.attachment_exists, 'Boolean')
+      }
+      if (data.hasOwnProperty('accompanying_invoice_exists')) {
+        obj.accompanying_invoice_exists = ApiClient.convertToType(data.accompanying_invoice_exists, 'Boolean')
+      }
+      if (data.hasOwnProperty('default_attach_pdf')) {
+        obj.default_attach_pdf = ApiClient.convertToType(data.default_attach_pdf, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Recipient's email
  * @member {String} recipient_email
  */
-EmailData.prototype['recipient_email'] = undefined;
+EmailData.prototype.recipient_email = undefined
 
 /**
  * @member {module:model/EmailDataDefaultSenderEmail} default_sender_email
  */
-EmailData.prototype['default_sender_email'] = undefined;
+EmailData.prototype.default_sender_email = undefined
 
 /**
  * List of all emails from which the document can be sent
  * @member {Array.<module:model/SenderEmail>} sender_emails_list
  */
-EmailData.prototype['sender_emails_list'] = undefined;
+EmailData.prototype.sender_emails_list = undefined
 
 /**
  * By default is the logged company email. This is the email address to which a copy will be sent.
  * @member {String} cc_email
  */
-EmailData.prototype['cc_email'] = undefined;
+EmailData.prototype.cc_email = undefined
 
 /**
  * Email subject
  * @member {String} subject
  */
-EmailData.prototype['subject'] = undefined;
+EmailData.prototype.subject = undefined
 
 /**
  * Email body
  * @member {String} body
  */
-EmailData.prototype['body'] = undefined;
+EmailData.prototype.body = undefined
 
 /**
  * If the document is not a delivery note, this flag will be set to true
  * @member {Boolean} document_exists
  */
-EmailData.prototype['document_exists'] = undefined;
+EmailData.prototype.document_exists = undefined
 
 /**
  * If the document is a delivery note, this flag will be set to true
  * @member {Boolean} delivery_note_exists
  */
-EmailData.prototype['delivery_note_exists'] = undefined;
+EmailData.prototype.delivery_note_exists = undefined
 
 /**
  * If the document has one or more attachments, this flag will be set to true
  * @member {Boolean} attachment_exists
  */
-EmailData.prototype['attachment_exists'] = undefined;
+EmailData.prototype.attachment_exists = undefined
 
 /**
  * If an accompanying invoice exists, this flag will be set to true
  * @member {Boolean} accompanying_invoice_exists
  */
-EmailData.prototype['accompanying_invoice_exists'] = undefined;
+EmailData.prototype.accompanying_invoice_exists = undefined
 
 /**
  * If a pdf is attached, this flag will be set to true
  * @member {Boolean} default_attach_pdf
  */
-EmailData.prototype['default_attach_pdf'] = undefined;
+EmailData.prototype.default_attach_pdf = undefined
 
-
-
-
-
-
-export default EmailData;
-
+export default EmailData

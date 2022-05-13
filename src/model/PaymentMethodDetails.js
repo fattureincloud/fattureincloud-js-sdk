@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The PaymentMethodDetails model module.
@@ -19,63 +19,54 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class PaymentMethodDetails {
-    /**
+  /**
      * Constructs a new <code>PaymentMethodDetails</code>.
      * @alias module:model/PaymentMethodDetails
      */
-    constructor() { 
-        
-        PaymentMethodDetails.initialize(this);
-    }
+  constructor () {
+    PaymentMethodDetails.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>PaymentMethodDetails</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/PaymentMethodDetails} obj Optional instance to populate.
      * @return {module:model/PaymentMethodDetails} The populated <code>PaymentMethodDetails</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new PaymentMethodDetails();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new PaymentMethodDetails()
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('title')) {
+        obj.title = ApiClient.convertToType(data.title, 'String')
+      }
+      if (data.hasOwnProperty('description')) {
+        obj.description = ApiClient.convertToType(data.description, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Details title.
  * @member {String} title
  */
-PaymentMethodDetails.prototype['title'] = undefined;
+PaymentMethodDetails.prototype.title = undefined
 
 /**
  * Details description.
  * @member {String} description
  */
-PaymentMethodDetails.prototype['description'] = undefined;
+PaymentMethodDetails.prototype.description = undefined
 
-
-
-
-
-
-export default PaymentMethodDetails;
-
+export default PaymentMethodDetails

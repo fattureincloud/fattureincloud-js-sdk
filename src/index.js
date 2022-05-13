@@ -11,246 +11,243 @@
  *
  */
 
+import ApiClient from './ApiClient'
+import ArchiveDocument from './model/ArchiveDocument'
+import AttachmentData from './model/AttachmentData'
+import CashbookEntry from './model/CashbookEntry'
+import CashbookEntryDocument from './model/CashbookEntryDocument'
+import CashbookEntryKind from './model/CashbookEntryKind'
+import CashbookEntryType from './model/CashbookEntryType'
+import City from './model/City'
+import Client from './model/Client'
+import ClientType from './model/ClientType'
+import Company from './model/Company'
+import CompanyInfo from './model/CompanyInfo'
+import CompanyInfoAccessInfo from './model/CompanyInfoAccessInfo'
+import CompanyInfoPlanInfo from './model/CompanyInfoPlanInfo'
+import CompanyInfoPlanInfoFunctions from './model/CompanyInfoPlanInfoFunctions'
+import CompanyInfoPlanInfoFunctionsStatus from './model/CompanyInfoPlanInfoFunctionsStatus'
+import CompanyInfoPlanInfoLimits from './model/CompanyInfoPlanInfoLimits'
+import CompanyType from './model/CompanyType'
+import ControlledCompany from './model/ControlledCompany'
+import CreateArchiveDocumentRequest from './model/CreateArchiveDocumentRequest'
+import CreateArchiveDocumentResponse from './model/CreateArchiveDocumentResponse'
+import CreateCashbookEntryRequest from './model/CreateCashbookEntryRequest'
+import CreateCashbookEntryResponse from './model/CreateCashbookEntryResponse'
+import CreateClientRequest from './model/CreateClientRequest'
+import CreateClientResponse from './model/CreateClientResponse'
+import CreateF24Request from './model/CreateF24Request'
+import CreateF24Response from './model/CreateF24Response'
+import CreateIssuedDocumentRequest from './model/CreateIssuedDocumentRequest'
+import CreateIssuedDocumentResponse from './model/CreateIssuedDocumentResponse'
+import CreatePaymentAccountRequest from './model/CreatePaymentAccountRequest'
+import CreatePaymentAccountResponse from './model/CreatePaymentAccountResponse'
+import CreatePaymentMethodRequest from './model/CreatePaymentMethodRequest'
+import CreatePaymentMethodResponse from './model/CreatePaymentMethodResponse'
+import CreateProductRequest from './model/CreateProductRequest'
+import CreateProductResponse from './model/CreateProductResponse'
+import CreateReceiptRequest from './model/CreateReceiptRequest'
+import CreateReceiptResponse from './model/CreateReceiptResponse'
+import CreateReceivedDocumentRequest from './model/CreateReceivedDocumentRequest'
+import CreateReceivedDocumentResponse from './model/CreateReceivedDocumentResponse'
+import CreateSupplierRequest from './model/CreateSupplierRequest'
+import CreateSupplierResponse from './model/CreateSupplierResponse'
+import CreateVatTypeRequest from './model/CreateVatTypeRequest'
+import CreateVatTypeResponse from './model/CreateVatTypeResponse'
+import Currency from './model/Currency'
+import DefaultPaymentTermsType from './model/DefaultPaymentTermsType'
+import DetailedCountry from './model/DetailedCountry'
+import DocumentTemplate from './model/DocumentTemplate'
+import EInvoiceRejectionReason from './model/EInvoiceRejectionReason'
+import EmailData from './model/EmailData'
+import EmailDataDefaultSenderEmail from './model/EmailDataDefaultSenderEmail'
+import EmailSchedule from './model/EmailSchedule'
+import EmailScheduleInclude from './model/EmailScheduleInclude'
+import Entity from './model/Entity'
+import EntityType from './model/EntityType'
+import F24 from './model/F24'
+import F24Status from './model/F24Status'
+import FunctionStatus from './model/FunctionStatus'
+import GetArchiveDocumentResponse from './model/GetArchiveDocumentResponse'
+import GetCashbookEntryResponse from './model/GetCashbookEntryResponse'
+import GetClientResponse from './model/GetClientResponse'
+import GetCompanyInfoResponse from './model/GetCompanyInfoResponse'
+import GetEInvoiceRejectionReasonResponse from './model/GetEInvoiceRejectionReasonResponse'
+import GetEmailDataResponse from './model/GetEmailDataResponse'
+import GetExistingIssuedDocumentTotalsRequest from './model/GetExistingIssuedDocumentTotalsRequest'
+import GetExistingIssuedDocumentTotalsResponse from './model/GetExistingIssuedDocumentTotalsResponse'
+import GetExistingReceivedDocumentTotalsRequest from './model/GetExistingReceivedDocumentTotalsRequest'
+import GetExistingReceivedDocumentTotalsResponse from './model/GetExistingReceivedDocumentTotalsResponse'
+import GetF24Response from './model/GetF24Response'
+import GetIssuedDocumentPreCreateInfoResponse from './model/GetIssuedDocumentPreCreateInfoResponse'
+import GetIssuedDocumentResponse from './model/GetIssuedDocumentResponse'
+import GetNewIssuedDocumentTotalsRequest from './model/GetNewIssuedDocumentTotalsRequest'
+import GetNewIssuedDocumentTotalsResponse from './model/GetNewIssuedDocumentTotalsResponse'
+import GetNewReceivedDocumentTotalsRequest from './model/GetNewReceivedDocumentTotalsRequest'
+import GetNewReceivedDocumentTotalsResponse from './model/GetNewReceivedDocumentTotalsResponse'
+import GetPaymentAccountResponse from './model/GetPaymentAccountResponse'
+import GetPaymentMethodResponse from './model/GetPaymentMethodResponse'
+import GetProductResponse from './model/GetProductResponse'
+import GetReceiptPreCreateInfoResponse from './model/GetReceiptPreCreateInfoResponse'
+import GetReceiptResponse from './model/GetReceiptResponse'
+import GetReceiptsMonthlyTotalsResponse from './model/GetReceiptsMonthlyTotalsResponse'
+import GetReceivedDocumentPreCreateInfoResponse from './model/GetReceivedDocumentPreCreateInfoResponse'
+import GetReceivedDocumentResponse from './model/GetReceivedDocumentResponse'
+import GetSupplierResponse from './model/GetSupplierResponse'
+import GetUserInfoResponse from './model/GetUserInfoResponse'
+import GetUserInfoResponseEmailConfirmationState from './model/GetUserInfoResponseEmailConfirmationState'
+import GetUserInfoResponseInfo from './model/GetUserInfoResponseInfo'
+import GetVatTypeResponse from './model/GetVatTypeResponse'
+import IssuedDocument from './model/IssuedDocument'
+import IssuedDocumentEiData from './model/IssuedDocumentEiData'
+import IssuedDocumentExtraData from './model/IssuedDocumentExtraData'
+import IssuedDocumentItemsListItem from './model/IssuedDocumentItemsListItem'
+import IssuedDocumentOptions from './model/IssuedDocumentOptions'
+import IssuedDocumentPaymentsListItem from './model/IssuedDocumentPaymentsListItem'
+import IssuedDocumentPreCreateInfo from './model/IssuedDocumentPreCreateInfo'
+import IssuedDocumentPreCreateInfoDefaultValues from './model/IssuedDocumentPreCreateInfoDefaultValues'
+import IssuedDocumentPreCreateInfoExtraDataDefaultValues from './model/IssuedDocumentPreCreateInfoExtraDataDefaultValues'
+import IssuedDocumentPreCreateInfoItemsDefaultValues from './model/IssuedDocumentPreCreateInfoItemsDefaultValues'
+import IssuedDocumentStatus from './model/IssuedDocumentStatus'
+import IssuedDocumentTotals from './model/IssuedDocumentTotals'
+import IssuedDocumentType from './model/IssuedDocumentType'
+import Language from './model/Language'
+import ListArchiveCategoriesResponse from './model/ListArchiveCategoriesResponse'
+import ListArchiveDocumentsResponse from './model/ListArchiveDocumentsResponse'
+import ListArchiveDocumentsResponsePage from './model/ListArchiveDocumentsResponsePage'
+import ListCashbookEntriesResponse from './model/ListCashbookEntriesResponse'
+import ListCitiesResponse from './model/ListCitiesResponse'
+import ListClientsResponse from './model/ListClientsResponse'
+import ListClientsResponsePage from './model/ListClientsResponsePage'
+import ListCostCentersResponse from './model/ListCostCentersResponse'
+import ListCountriesResponse from './model/ListCountriesResponse'
+import ListCurrenciesResponse from './model/ListCurrenciesResponse'
+import ListDeliveryNotesDefaultCausalsResponse from './model/ListDeliveryNotesDefaultCausalsResponse'
+import ListDetailedCountriesResponse from './model/ListDetailedCountriesResponse'
+import ListF24Response from './model/ListF24Response'
+import ListF24ResponseAggregatedData from './model/ListF24ResponseAggregatedData'
+import ListF24ResponseAggregation from './model/ListF24ResponseAggregation'
+import ListF24ResponsePage from './model/ListF24ResponsePage'
+import ListIssuedDocumentsResponse from './model/ListIssuedDocumentsResponse'
+import ListIssuedDocumentsResponsePage from './model/ListIssuedDocumentsResponsePage'
+import ListLanguagesResponse from './model/ListLanguagesResponse'
+import ListPaymentAccountsResponse from './model/ListPaymentAccountsResponse'
+import ListPaymentMethodsResponse from './model/ListPaymentMethodsResponse'
+import ListProductCategoriesResponse from './model/ListProductCategoriesResponse'
+import ListProductsResponse from './model/ListProductsResponse'
+import ListProductsResponsePage from './model/ListProductsResponsePage'
+import ListReceiptsResponse from './model/ListReceiptsResponse'
+import ListReceiptsResponsePage from './model/ListReceiptsResponsePage'
+import ListReceivedDocumentCategoriesResponse from './model/ListReceivedDocumentCategoriesResponse'
+import ListReceivedDocumentsResponse from './model/ListReceivedDocumentsResponse'
+import ListReceivedDocumentsResponsePage from './model/ListReceivedDocumentsResponsePage'
+import ListRevenueCentersResponse from './model/ListRevenueCentersResponse'
+import ListSuppliersResponse from './model/ListSuppliersResponse'
+import ListSuppliersResponsePage from './model/ListSuppliersResponsePage'
+import ListTemplatesResponse from './model/ListTemplatesResponse'
+import ListUnitsOfMeasureResponse from './model/ListUnitsOfMeasureResponse'
+import ListUserCompaniesResponse from './model/ListUserCompaniesResponse'
+import ListUserCompaniesResponseData from './model/ListUserCompaniesResponseData'
+import ListVatTypesResponse from './model/ListVatTypesResponse'
+import ModifyArchiveDocumentRequest from './model/ModifyArchiveDocumentRequest'
+import ModifyArchiveDocumentResponse from './model/ModifyArchiveDocumentResponse'
+import ModifyCashbookEntryRequest from './model/ModifyCashbookEntryRequest'
+import ModifyCashbookEntryResponse from './model/ModifyCashbookEntryResponse'
+import ModifyClientRequest from './model/ModifyClientRequest'
+import ModifyClientResponse from './model/ModifyClientResponse'
+import ModifyF24Request from './model/ModifyF24Request'
+import ModifyF24Response from './model/ModifyF24Response'
+import ModifyIssuedDocumentRequest from './model/ModifyIssuedDocumentRequest'
+import ModifyIssuedDocumentResponse from './model/ModifyIssuedDocumentResponse'
+import ModifyPaymentAccountRequest from './model/ModifyPaymentAccountRequest'
+import ModifyPaymentAccountResponse from './model/ModifyPaymentAccountResponse'
+import ModifyPaymentMethodRequest from './model/ModifyPaymentMethodRequest'
+import ModifyPaymentMethodResponse from './model/ModifyPaymentMethodResponse'
+import ModifyProductRequest from './model/ModifyProductRequest'
+import ModifyProductResponse from './model/ModifyProductResponse'
+import ModifyReceiptRequest from './model/ModifyReceiptRequest'
+import ModifyReceiptResponse from './model/ModifyReceiptResponse'
+import ModifyReceivedDocumentRequest from './model/ModifyReceivedDocumentRequest'
+import ModifyReceivedDocumentResponse from './model/ModifyReceivedDocumentResponse'
+import ModifySupplierRequest from './model/ModifySupplierRequest'
+import ModifySupplierResponse from './model/ModifySupplierResponse'
+import ModifyVatTypeRequest from './model/ModifyVatTypeRequest'
+import ModifyVatTypeResponse from './model/ModifyVatTypeResponse'
+import MonthlyTotal from './model/MonthlyTotal'
+import OriginalDocumentType from './model/OriginalDocumentType'
+import Pagination from './model/Pagination'
+import PaymentAccount from './model/PaymentAccount'
+import PaymentAccountType from './model/PaymentAccountType'
+import PaymentMethod from './model/PaymentMethod'
+import PaymentMethodDetails from './model/PaymentMethodDetails'
+import PaymentMethodType from './model/PaymentMethodType'
+import PermissionLevel from './model/PermissionLevel'
+import Permissions from './model/Permissions'
+import PermissionsFicIssuedDocumentsDetailed from './model/PermissionsFicIssuedDocumentsDetailed'
+import Product from './model/Product'
+import Receipt from './model/Receipt'
+import ReceiptItemsListItem from './model/ReceiptItemsListItem'
+import ReceiptPreCreateInfo from './model/ReceiptPreCreateInfo'
+import ReceiptType from './model/ReceiptType'
+import ReceivedDocument from './model/ReceivedDocument'
+import ReceivedDocumentEntity from './model/ReceivedDocumentEntity'
+import ReceivedDocumentInfo from './model/ReceivedDocumentInfo'
+import ReceivedDocumentInfoDefaultValues from './model/ReceivedDocumentInfoDefaultValues'
+import ReceivedDocumentInfoItemsDefaultValues from './model/ReceivedDocumentInfoItemsDefaultValues'
+import ReceivedDocumentItemsListItem from './model/ReceivedDocumentItemsListItem'
+import ReceivedDocumentPaymentsListItem from './model/ReceivedDocumentPaymentsListItem'
+import ReceivedDocumentPaymentsListItemPaymentTerms from './model/ReceivedDocumentPaymentsListItemPaymentTerms'
+import ReceivedDocumentTotals from './model/ReceivedDocumentTotals'
+import ReceivedDocumentType from './model/ReceivedDocumentType'
+import ScheduleEmailRequest from './model/ScheduleEmailRequest'
+import SendEInvoiceRequest from './model/SendEInvoiceRequest'
+import SendEInvoiceRequestData from './model/SendEInvoiceRequestData'
+import SendEInvoiceResponse from './model/SendEInvoiceResponse'
+import SendEInvoiceResponseData from './model/SendEInvoiceResponseData'
+import SenderEmail from './model/SenderEmail'
+import ShowTotalsMode from './model/ShowTotalsMode'
+import Supplier from './model/Supplier'
+import SupplierType from './model/SupplierType'
+import UploadArchiveAttachmentResponse from './model/UploadArchiveAttachmentResponse'
+import UploadF24AttachmentResponse from './model/UploadF24AttachmentResponse'
+import UploadIssuedDocumentAttachmentResponse from './model/UploadIssuedDocumentAttachmentResponse'
+import UploadReceivedDocumentAttachmentResponse from './model/UploadReceivedDocumentAttachmentResponse'
+import User from './model/User'
+import UserCompanyRole from './model/UserCompanyRole'
+import VatItem from './model/VatItem'
+import VatKind from './model/VatKind'
+import VatType from './model/VatType'
+import VerifyEInvoiceXmlErrorResponse from './model/VerifyEInvoiceXmlErrorResponse'
+import VerifyEInvoiceXmlErrorResponseError from './model/VerifyEInvoiceXmlErrorResponseError'
+import VerifyEInvoiceXmlErrorResponseExtra from './model/VerifyEInvoiceXmlErrorResponseExtra'
+import VerifyEInvoiceXmlResponse from './model/VerifyEInvoiceXmlResponse'
+import VerifyEInvoiceXmlResponseData from './model/VerifyEInvoiceXmlResponseData'
+import ArchiveApi from './api/ArchiveApi'
+import CashbookApi from './api/CashbookApi'
+import ClientsApi from './api/ClientsApi'
+import CompaniesApi from './api/CompaniesApi'
+import InfoApi from './api/InfoApi'
+import IssuedDocumentsApi from './api/IssuedDocumentsApi'
+import IssuedEInvoicesApi from './api/IssuedEInvoicesApi'
+import ProductsApi from './api/ProductsApi'
+import ReceiptsApi from './api/ReceiptsApi'
+import ReceivedDocumentsApi from './api/ReceivedDocumentsApi'
+import SettingsApi from './api/SettingsApi'
+import SuppliersApi from './api/SuppliersApi'
+import TaxesApi from './api/TaxesApi'
+import UserApi from './api/UserApi'
 
-import ApiClient from './ApiClient';
-import ArchiveDocument from './model/ArchiveDocument';
-import AttachmentData from './model/AttachmentData';
-import CashbookEntry from './model/CashbookEntry';
-import CashbookEntryDocument from './model/CashbookEntryDocument';
-import CashbookEntryKind from './model/CashbookEntryKind';
-import CashbookEntryType from './model/CashbookEntryType';
-import City from './model/City';
-import Client from './model/Client';
-import ClientType from './model/ClientType';
-import Company from './model/Company';
-import CompanyInfo from './model/CompanyInfo';
-import CompanyInfoAccessInfo from './model/CompanyInfoAccessInfo';
-import CompanyInfoPlanInfo from './model/CompanyInfoPlanInfo';
-import CompanyInfoPlanInfoFunctions from './model/CompanyInfoPlanInfoFunctions';
-import CompanyInfoPlanInfoFunctionsStatus from './model/CompanyInfoPlanInfoFunctionsStatus';
-import CompanyInfoPlanInfoLimits from './model/CompanyInfoPlanInfoLimits';
-import CompanyType from './model/CompanyType';
-import ControlledCompany from './model/ControlledCompany';
-import CreateArchiveDocumentRequest from './model/CreateArchiveDocumentRequest';
-import CreateArchiveDocumentResponse from './model/CreateArchiveDocumentResponse';
-import CreateCashbookEntryRequest from './model/CreateCashbookEntryRequest';
-import CreateCashbookEntryResponse from './model/CreateCashbookEntryResponse';
-import CreateClientRequest from './model/CreateClientRequest';
-import CreateClientResponse from './model/CreateClientResponse';
-import CreateF24Request from './model/CreateF24Request';
-import CreateF24Response from './model/CreateF24Response';
-import CreateIssuedDocumentRequest from './model/CreateIssuedDocumentRequest';
-import CreateIssuedDocumentResponse from './model/CreateIssuedDocumentResponse';
-import CreatePaymentAccountRequest from './model/CreatePaymentAccountRequest';
-import CreatePaymentAccountResponse from './model/CreatePaymentAccountResponse';
-import CreatePaymentMethodRequest from './model/CreatePaymentMethodRequest';
-import CreatePaymentMethodResponse from './model/CreatePaymentMethodResponse';
-import CreateProductRequest from './model/CreateProductRequest';
-import CreateProductResponse from './model/CreateProductResponse';
-import CreateReceiptRequest from './model/CreateReceiptRequest';
-import CreateReceiptResponse from './model/CreateReceiptResponse';
-import CreateReceivedDocumentRequest from './model/CreateReceivedDocumentRequest';
-import CreateReceivedDocumentResponse from './model/CreateReceivedDocumentResponse';
-import CreateSupplierRequest from './model/CreateSupplierRequest';
-import CreateSupplierResponse from './model/CreateSupplierResponse';
-import CreateVatTypeRequest from './model/CreateVatTypeRequest';
-import CreateVatTypeResponse from './model/CreateVatTypeResponse';
-import Currency from './model/Currency';
-import DefaultPaymentTermsType from './model/DefaultPaymentTermsType';
-import DetailedCountry from './model/DetailedCountry';
-import DocumentTemplate from './model/DocumentTemplate';
-import EInvoiceRejectionReason from './model/EInvoiceRejectionReason';
-import EmailData from './model/EmailData';
-import EmailDataDefaultSenderEmail from './model/EmailDataDefaultSenderEmail';
-import EmailSchedule from './model/EmailSchedule';
-import EmailScheduleInclude from './model/EmailScheduleInclude';
-import Entity from './model/Entity';
-import EntityType from './model/EntityType';
-import F24 from './model/F24';
-import F24Status from './model/F24Status';
-import FunctionStatus from './model/FunctionStatus';
-import GetArchiveDocumentResponse from './model/GetArchiveDocumentResponse';
-import GetCashbookEntryResponse from './model/GetCashbookEntryResponse';
-import GetClientResponse from './model/GetClientResponse';
-import GetCompanyInfoResponse from './model/GetCompanyInfoResponse';
-import GetEInvoiceRejectionReasonResponse from './model/GetEInvoiceRejectionReasonResponse';
-import GetEmailDataResponse from './model/GetEmailDataResponse';
-import GetExistingIssuedDocumentTotalsRequest from './model/GetExistingIssuedDocumentTotalsRequest';
-import GetExistingIssuedDocumentTotalsResponse from './model/GetExistingIssuedDocumentTotalsResponse';
-import GetExistingReceivedDocumentTotalsRequest from './model/GetExistingReceivedDocumentTotalsRequest';
-import GetExistingReceivedDocumentTotalsResponse from './model/GetExistingReceivedDocumentTotalsResponse';
-import GetF24Response from './model/GetF24Response';
-import GetIssuedDocumentPreCreateInfoResponse from './model/GetIssuedDocumentPreCreateInfoResponse';
-import GetIssuedDocumentResponse from './model/GetIssuedDocumentResponse';
-import GetNewIssuedDocumentTotalsRequest from './model/GetNewIssuedDocumentTotalsRequest';
-import GetNewIssuedDocumentTotalsResponse from './model/GetNewIssuedDocumentTotalsResponse';
-import GetNewReceivedDocumentTotalsRequest from './model/GetNewReceivedDocumentTotalsRequest';
-import GetNewReceivedDocumentTotalsResponse from './model/GetNewReceivedDocumentTotalsResponse';
-import GetPaymentAccountResponse from './model/GetPaymentAccountResponse';
-import GetPaymentMethodResponse from './model/GetPaymentMethodResponse';
-import GetProductResponse from './model/GetProductResponse';
-import GetReceiptPreCreateInfoResponse from './model/GetReceiptPreCreateInfoResponse';
-import GetReceiptResponse from './model/GetReceiptResponse';
-import GetReceiptsMonthlyTotalsResponse from './model/GetReceiptsMonthlyTotalsResponse';
-import GetReceivedDocumentPreCreateInfoResponse from './model/GetReceivedDocumentPreCreateInfoResponse';
-import GetReceivedDocumentResponse from './model/GetReceivedDocumentResponse';
-import GetSupplierResponse from './model/GetSupplierResponse';
-import GetUserInfoResponse from './model/GetUserInfoResponse';
-import GetUserInfoResponseEmailConfirmationState from './model/GetUserInfoResponseEmailConfirmationState';
-import GetUserInfoResponseInfo from './model/GetUserInfoResponseInfo';
-import GetVatTypeResponse from './model/GetVatTypeResponse';
-import IssuedDocument from './model/IssuedDocument';
-import IssuedDocumentEiData from './model/IssuedDocumentEiData';
-import IssuedDocumentExtraData from './model/IssuedDocumentExtraData';
-import IssuedDocumentItemsListItem from './model/IssuedDocumentItemsListItem';
-import IssuedDocumentOptions from './model/IssuedDocumentOptions';
-import IssuedDocumentPaymentsListItem from './model/IssuedDocumentPaymentsListItem';
-import IssuedDocumentPreCreateInfo from './model/IssuedDocumentPreCreateInfo';
-import IssuedDocumentPreCreateInfoDefaultValues from './model/IssuedDocumentPreCreateInfoDefaultValues';
-import IssuedDocumentPreCreateInfoExtraDataDefaultValues from './model/IssuedDocumentPreCreateInfoExtraDataDefaultValues';
-import IssuedDocumentPreCreateInfoItemsDefaultValues from './model/IssuedDocumentPreCreateInfoItemsDefaultValues';
-import IssuedDocumentStatus from './model/IssuedDocumentStatus';
-import IssuedDocumentTotals from './model/IssuedDocumentTotals';
-import IssuedDocumentType from './model/IssuedDocumentType';
-import Language from './model/Language';
-import ListArchiveCategoriesResponse from './model/ListArchiveCategoriesResponse';
-import ListArchiveDocumentsResponse from './model/ListArchiveDocumentsResponse';
-import ListArchiveDocumentsResponsePage from './model/ListArchiveDocumentsResponsePage';
-import ListCashbookEntriesResponse from './model/ListCashbookEntriesResponse';
-import ListCitiesResponse from './model/ListCitiesResponse';
-import ListClientsResponse from './model/ListClientsResponse';
-import ListClientsResponsePage from './model/ListClientsResponsePage';
-import ListCostCentersResponse from './model/ListCostCentersResponse';
-import ListCountriesResponse from './model/ListCountriesResponse';
-import ListCurrenciesResponse from './model/ListCurrenciesResponse';
-import ListDeliveryNotesDefaultCausalsResponse from './model/ListDeliveryNotesDefaultCausalsResponse';
-import ListDetailedCountriesResponse from './model/ListDetailedCountriesResponse';
-import ListF24Response from './model/ListF24Response';
-import ListF24ResponseAggregatedData from './model/ListF24ResponseAggregatedData';
-import ListF24ResponseAggregation from './model/ListF24ResponseAggregation';
-import ListF24ResponsePage from './model/ListF24ResponsePage';
-import ListIssuedDocumentsResponse from './model/ListIssuedDocumentsResponse';
-import ListIssuedDocumentsResponsePage from './model/ListIssuedDocumentsResponsePage';
-import ListLanguagesResponse from './model/ListLanguagesResponse';
-import ListPaymentAccountsResponse from './model/ListPaymentAccountsResponse';
-import ListPaymentMethodsResponse from './model/ListPaymentMethodsResponse';
-import ListProductCategoriesResponse from './model/ListProductCategoriesResponse';
-import ListProductsResponse from './model/ListProductsResponse';
-import ListProductsResponsePage from './model/ListProductsResponsePage';
-import ListReceiptsResponse from './model/ListReceiptsResponse';
-import ListReceiptsResponsePage from './model/ListReceiptsResponsePage';
-import ListReceivedDocumentCategoriesResponse from './model/ListReceivedDocumentCategoriesResponse';
-import ListReceivedDocumentsResponse from './model/ListReceivedDocumentsResponse';
-import ListReceivedDocumentsResponsePage from './model/ListReceivedDocumentsResponsePage';
-import ListRevenueCentersResponse from './model/ListRevenueCentersResponse';
-import ListSuppliersResponse from './model/ListSuppliersResponse';
-import ListSuppliersResponsePage from './model/ListSuppliersResponsePage';
-import ListTemplatesResponse from './model/ListTemplatesResponse';
-import ListUnitsOfMeasureResponse from './model/ListUnitsOfMeasureResponse';
-import ListUserCompaniesResponse from './model/ListUserCompaniesResponse';
-import ListUserCompaniesResponseData from './model/ListUserCompaniesResponseData';
-import ListVatTypesResponse from './model/ListVatTypesResponse';
-import ModifyArchiveDocumentRequest from './model/ModifyArchiveDocumentRequest';
-import ModifyArchiveDocumentResponse from './model/ModifyArchiveDocumentResponse';
-import ModifyCashbookEntryRequest from './model/ModifyCashbookEntryRequest';
-import ModifyCashbookEntryResponse from './model/ModifyCashbookEntryResponse';
-import ModifyClientRequest from './model/ModifyClientRequest';
-import ModifyClientResponse from './model/ModifyClientResponse';
-import ModifyF24Request from './model/ModifyF24Request';
-import ModifyF24Response from './model/ModifyF24Response';
-import ModifyIssuedDocumentRequest from './model/ModifyIssuedDocumentRequest';
-import ModifyIssuedDocumentResponse from './model/ModifyIssuedDocumentResponse';
-import ModifyPaymentAccountRequest from './model/ModifyPaymentAccountRequest';
-import ModifyPaymentAccountResponse from './model/ModifyPaymentAccountResponse';
-import ModifyPaymentMethodRequest from './model/ModifyPaymentMethodRequest';
-import ModifyPaymentMethodResponse from './model/ModifyPaymentMethodResponse';
-import ModifyProductRequest from './model/ModifyProductRequest';
-import ModifyProductResponse from './model/ModifyProductResponse';
-import ModifyReceiptRequest from './model/ModifyReceiptRequest';
-import ModifyReceiptResponse from './model/ModifyReceiptResponse';
-import ModifyReceivedDocumentRequest from './model/ModifyReceivedDocumentRequest';
-import ModifyReceivedDocumentResponse from './model/ModifyReceivedDocumentResponse';
-import ModifySupplierRequest from './model/ModifySupplierRequest';
-import ModifySupplierResponse from './model/ModifySupplierResponse';
-import ModifyVatTypeRequest from './model/ModifyVatTypeRequest';
-import ModifyVatTypeResponse from './model/ModifyVatTypeResponse';
-import MonthlyTotal from './model/MonthlyTotal';
-import OriginalDocumentType from './model/OriginalDocumentType';
-import Pagination from './model/Pagination';
-import PaymentAccount from './model/PaymentAccount';
-import PaymentAccountType from './model/PaymentAccountType';
-import PaymentMethod from './model/PaymentMethod';
-import PaymentMethodDetails from './model/PaymentMethodDetails';
-import PaymentMethodType from './model/PaymentMethodType';
-import PermissionLevel from './model/PermissionLevel';
-import Permissions from './model/Permissions';
-import PermissionsFicIssuedDocumentsDetailed from './model/PermissionsFicIssuedDocumentsDetailed';
-import Product from './model/Product';
-import Receipt from './model/Receipt';
-import ReceiptItemsListItem from './model/ReceiptItemsListItem';
-import ReceiptPreCreateInfo from './model/ReceiptPreCreateInfo';
-import ReceiptType from './model/ReceiptType';
-import ReceivedDocument from './model/ReceivedDocument';
-import ReceivedDocumentEntity from './model/ReceivedDocumentEntity';
-import ReceivedDocumentInfo from './model/ReceivedDocumentInfo';
-import ReceivedDocumentInfoDefaultValues from './model/ReceivedDocumentInfoDefaultValues';
-import ReceivedDocumentInfoItemsDefaultValues from './model/ReceivedDocumentInfoItemsDefaultValues';
-import ReceivedDocumentItemsListItem from './model/ReceivedDocumentItemsListItem';
-import ReceivedDocumentPaymentsListItem from './model/ReceivedDocumentPaymentsListItem';
-import ReceivedDocumentPaymentsListItemPaymentTerms from './model/ReceivedDocumentPaymentsListItemPaymentTerms';
-import ReceivedDocumentTotals from './model/ReceivedDocumentTotals';
-import ReceivedDocumentType from './model/ReceivedDocumentType';
-import ScheduleEmailRequest from './model/ScheduleEmailRequest';
-import SendEInvoiceRequest from './model/SendEInvoiceRequest';
-import SendEInvoiceRequestData from './model/SendEInvoiceRequestData';
-import SendEInvoiceResponse from './model/SendEInvoiceResponse';
-import SendEInvoiceResponseData from './model/SendEInvoiceResponseData';
-import SenderEmail from './model/SenderEmail';
-import ShowTotalsMode from './model/ShowTotalsMode';
-import Supplier from './model/Supplier';
-import SupplierType from './model/SupplierType';
-import UploadArchiveAttachmentResponse from './model/UploadArchiveAttachmentResponse';
-import UploadF24AttachmentResponse from './model/UploadF24AttachmentResponse';
-import UploadIssuedDocumentAttachmentResponse from './model/UploadIssuedDocumentAttachmentResponse';
-import UploadReceivedDocumentAttachmentResponse from './model/UploadReceivedDocumentAttachmentResponse';
-import User from './model/User';
-import UserCompanyRole from './model/UserCompanyRole';
-import VatItem from './model/VatItem';
-import VatKind from './model/VatKind';
-import VatType from './model/VatType';
-import VerifyEInvoiceXmlErrorResponse from './model/VerifyEInvoiceXmlErrorResponse';
-import VerifyEInvoiceXmlErrorResponseError from './model/VerifyEInvoiceXmlErrorResponseError';
-import VerifyEInvoiceXmlErrorResponseExtra from './model/VerifyEInvoiceXmlErrorResponseExtra';
-import VerifyEInvoiceXmlResponse from './model/VerifyEInvoiceXmlResponse';
-import VerifyEInvoiceXmlResponseData from './model/VerifyEInvoiceXmlResponseData';
-import ArchiveApi from './api/ArchiveApi';
-import CashbookApi from './api/CashbookApi';
-import ClientsApi from './api/ClientsApi';
-import CompaniesApi from './api/CompaniesApi';
-import InfoApi from './api/InfoApi';
-import IssuedDocumentsApi from './api/IssuedDocumentsApi';
-import IssuedEInvoicesApi from './api/IssuedEInvoicesApi';
-import ProductsApi from './api/ProductsApi';
-import ReceiptsApi from './api/ReceiptsApi';
-import ReceivedDocumentsApi from './api/ReceivedDocumentsApi';
-import SettingsApi from './api/SettingsApi';
-import SuppliersApi from './api/SuppliersApi';
-import TaxesApi from './api/TaxesApi';
-import UserApi from './api/UserApi';
+import Condition from './filter/Condition'
+import Filter from './filter/Filter'
+import Expression from './filter/Expression'
+import Conjunction from './filter/Conjunction'
+import Disjunction from './filter/Disjunction'
+import Operator from './filter/Operator'
 
-
-import Condition from './filter/Condition';
-import Filter from './filter/Filter';
-import Expression from './filter/Expression';
-import Conjunction from './filter/Conjunction';
-import Disjunction from './filter/Disjunction';
-import Operator from './filter/Operator';
-
-import OAuth2AuthorizationCodeManager from './oauth2/OAuth2';
-import OAuth2AuthorizationCodeTokenResponse from './oauth2/OAuth2AuthorizationCodeTokenResponse';
-import OAuth2AuthorizationCodeParams from './oauth2/OAuth2AuthorizationCodeParams';
-import Scope from './oauth2/Scope';
-
+import OAuth2AuthorizationCodeManager from './oauth2/OAuth2'
+import OAuth2AuthorizationCodeTokenResponse from './oauth2/OAuth2AuthorizationCodeTokenResponse'
+import OAuth2AuthorizationCodeParams from './oauth2/OAuth2AuthorizationCodeParams'
+import Scope from './oauth2/Scope'
 
 /**
 * JavaScript SDK for the Fatture in Cloud API.<br>
@@ -284,1413 +281,1413 @@ import Scope from './oauth2/Scope';
 * @version 2.0.12
 */
 export {
-    /**
+  /**
      * The ApiClient constructor.
      * @property {module:ApiClient}
      */
-    ApiClient,
+  ApiClient,
 
-    /**
+  /**
      * The ArchiveDocument model constructor.
      * @property {module:model/ArchiveDocument}
      */
-    ArchiveDocument,
+  ArchiveDocument,
 
-    /**
+  /**
      * The AttachmentData model constructor.
      * @property {module:model/AttachmentData}
      */
-    AttachmentData,
+  AttachmentData,
 
-    /**
+  /**
      * The CashbookEntry model constructor.
      * @property {module:model/CashbookEntry}
      */
-    CashbookEntry,
+  CashbookEntry,
 
-    /**
+  /**
      * The CashbookEntryDocument model constructor.
      * @property {module:model/CashbookEntryDocument}
      */
-    CashbookEntryDocument,
+  CashbookEntryDocument,
 
-    /**
+  /**
      * The CashbookEntryKind model constructor.
      * @property {module:model/CashbookEntryKind}
      */
-    CashbookEntryKind,
+  CashbookEntryKind,
 
-    /**
+  /**
      * The CashbookEntryType model constructor.
      * @property {module:model/CashbookEntryType}
      */
-    CashbookEntryType,
+  CashbookEntryType,
 
-    /**
+  /**
      * The City model constructor.
      * @property {module:model/City}
      */
-    City,
+  City,
 
-    /**
+  /**
      * The Client model constructor.
      * @property {module:model/Client}
      */
-    Client,
+  Client,
 
-    /**
+  /**
      * The ClientType model constructor.
      * @property {module:model/ClientType}
      */
-    ClientType,
+  ClientType,
 
-    /**
+  /**
      * The Company model constructor.
      * @property {module:model/Company}
      */
-    Company,
+  Company,
 
-    /**
+  /**
      * The CompanyInfo model constructor.
      * @property {module:model/CompanyInfo}
      */
-    CompanyInfo,
+  CompanyInfo,
 
-    /**
+  /**
      * The CompanyInfoAccessInfo model constructor.
      * @property {module:model/CompanyInfoAccessInfo}
      */
-    CompanyInfoAccessInfo,
+  CompanyInfoAccessInfo,
 
-    /**
+  /**
      * The CompanyInfoPlanInfo model constructor.
      * @property {module:model/CompanyInfoPlanInfo}
      */
-    CompanyInfoPlanInfo,
+  CompanyInfoPlanInfo,
 
-    /**
+  /**
      * The CompanyInfoPlanInfoFunctions model constructor.
      * @property {module:model/CompanyInfoPlanInfoFunctions}
      */
-    CompanyInfoPlanInfoFunctions,
+  CompanyInfoPlanInfoFunctions,
 
-    /**
+  /**
      * The CompanyInfoPlanInfoFunctionsStatus model constructor.
      * @property {module:model/CompanyInfoPlanInfoFunctionsStatus}
      */
-    CompanyInfoPlanInfoFunctionsStatus,
+  CompanyInfoPlanInfoFunctionsStatus,
 
-    /**
+  /**
      * The CompanyInfoPlanInfoLimits model constructor.
      * @property {module:model/CompanyInfoPlanInfoLimits}
      */
-    CompanyInfoPlanInfoLimits,
+  CompanyInfoPlanInfoLimits,
 
-    /**
+  /**
      * The CompanyType model constructor.
      * @property {module:model/CompanyType}
      */
-    CompanyType,
+  CompanyType,
 
-    /**
+  /**
      * The ControlledCompany model constructor.
      * @property {module:model/ControlledCompany}
      */
-    ControlledCompany,
+  ControlledCompany,
 
-    /**
+  /**
      * The CreateArchiveDocumentRequest model constructor.
      * @property {module:model/CreateArchiveDocumentRequest}
      */
-    CreateArchiveDocumentRequest,
+  CreateArchiveDocumentRequest,
 
-    /**
+  /**
      * The CreateArchiveDocumentResponse model constructor.
      * @property {module:model/CreateArchiveDocumentResponse}
      */
-    CreateArchiveDocumentResponse,
+  CreateArchiveDocumentResponse,
 
-    /**
+  /**
      * The CreateCashbookEntryRequest model constructor.
      * @property {module:model/CreateCashbookEntryRequest}
      */
-    CreateCashbookEntryRequest,
+  CreateCashbookEntryRequest,
 
-    /**
+  /**
      * The CreateCashbookEntryResponse model constructor.
      * @property {module:model/CreateCashbookEntryResponse}
      */
-    CreateCashbookEntryResponse,
+  CreateCashbookEntryResponse,
 
-    /**
+  /**
      * The CreateClientRequest model constructor.
      * @property {module:model/CreateClientRequest}
      */
-    CreateClientRequest,
+  CreateClientRequest,
 
-    /**
+  /**
      * The CreateClientResponse model constructor.
      * @property {module:model/CreateClientResponse}
      */
-    CreateClientResponse,
+  CreateClientResponse,
 
-    /**
+  /**
      * The CreateF24Request model constructor.
      * @property {module:model/CreateF24Request}
      */
-    CreateF24Request,
+  CreateF24Request,
 
-    /**
+  /**
      * The CreateF24Response model constructor.
      * @property {module:model/CreateF24Response}
      */
-    CreateF24Response,
+  CreateF24Response,
 
-    /**
+  /**
      * The CreateIssuedDocumentRequest model constructor.
      * @property {module:model/CreateIssuedDocumentRequest}
      */
-    CreateIssuedDocumentRequest,
+  CreateIssuedDocumentRequest,
 
-    /**
+  /**
      * The CreateIssuedDocumentResponse model constructor.
      * @property {module:model/CreateIssuedDocumentResponse}
      */
-    CreateIssuedDocumentResponse,
+  CreateIssuedDocumentResponse,
 
-    /**
+  /**
      * The CreatePaymentAccountRequest model constructor.
      * @property {module:model/CreatePaymentAccountRequest}
      */
-    CreatePaymentAccountRequest,
+  CreatePaymentAccountRequest,
 
-    /**
+  /**
      * The CreatePaymentAccountResponse model constructor.
      * @property {module:model/CreatePaymentAccountResponse}
      */
-    CreatePaymentAccountResponse,
+  CreatePaymentAccountResponse,
 
-    /**
+  /**
      * The CreatePaymentMethodRequest model constructor.
      * @property {module:model/CreatePaymentMethodRequest}
      */
-    CreatePaymentMethodRequest,
+  CreatePaymentMethodRequest,
 
-    /**
+  /**
      * The CreatePaymentMethodResponse model constructor.
      * @property {module:model/CreatePaymentMethodResponse}
      */
-    CreatePaymentMethodResponse,
+  CreatePaymentMethodResponse,
 
-    /**
+  /**
      * The CreateProductRequest model constructor.
      * @property {module:model/CreateProductRequest}
      */
-    CreateProductRequest,
+  CreateProductRequest,
 
-    /**
+  /**
      * The CreateProductResponse model constructor.
      * @property {module:model/CreateProductResponse}
      */
-    CreateProductResponse,
+  CreateProductResponse,
 
-    /**
+  /**
      * The CreateReceiptRequest model constructor.
      * @property {module:model/CreateReceiptRequest}
      */
-    CreateReceiptRequest,
+  CreateReceiptRequest,
 
-    /**
+  /**
      * The CreateReceiptResponse model constructor.
      * @property {module:model/CreateReceiptResponse}
      */
-    CreateReceiptResponse,
+  CreateReceiptResponse,
 
-    /**
+  /**
      * The CreateReceivedDocumentRequest model constructor.
      * @property {module:model/CreateReceivedDocumentRequest}
      */
-    CreateReceivedDocumentRequest,
+  CreateReceivedDocumentRequest,
 
-    /**
+  /**
      * The CreateReceivedDocumentResponse model constructor.
      * @property {module:model/CreateReceivedDocumentResponse}
      */
-    CreateReceivedDocumentResponse,
+  CreateReceivedDocumentResponse,
 
-    /**
+  /**
      * The CreateSupplierRequest model constructor.
      * @property {module:model/CreateSupplierRequest}
      */
-    CreateSupplierRequest,
+  CreateSupplierRequest,
 
-    /**
+  /**
      * The CreateSupplierResponse model constructor.
      * @property {module:model/CreateSupplierResponse}
      */
-    CreateSupplierResponse,
+  CreateSupplierResponse,
 
-    /**
+  /**
      * The CreateVatTypeRequest model constructor.
      * @property {module:model/CreateVatTypeRequest}
      */
-    CreateVatTypeRequest,
+  CreateVatTypeRequest,
 
-    /**
+  /**
      * The CreateVatTypeResponse model constructor.
      * @property {module:model/CreateVatTypeResponse}
      */
-    CreateVatTypeResponse,
+  CreateVatTypeResponse,
 
-    /**
+  /**
      * The Currency model constructor.
      * @property {module:model/Currency}
      */
-    Currency,
+  Currency,
 
-    /**
+  /**
      * The DefaultPaymentTermsType model constructor.
      * @property {module:model/DefaultPaymentTermsType}
      */
-    DefaultPaymentTermsType,
+  DefaultPaymentTermsType,
 
-    /**
+  /**
      * The DetailedCountry model constructor.
      * @property {module:model/DetailedCountry}
      */
-    DetailedCountry,
+  DetailedCountry,
 
-    /**
+  /**
      * The DocumentTemplate model constructor.
      * @property {module:model/DocumentTemplate}
      */
-    DocumentTemplate,
+  DocumentTemplate,
 
-    /**
+  /**
      * The EInvoiceRejectionReason model constructor.
      * @property {module:model/EInvoiceRejectionReason}
      */
-    EInvoiceRejectionReason,
+  EInvoiceRejectionReason,
 
-    /**
+  /**
      * The EmailData model constructor.
      * @property {module:model/EmailData}
      */
-    EmailData,
+  EmailData,
 
-    /**
+  /**
      * The EmailDataDefaultSenderEmail model constructor.
      * @property {module:model/EmailDataDefaultSenderEmail}
      */
-    EmailDataDefaultSenderEmail,
+  EmailDataDefaultSenderEmail,
 
-    /**
+  /**
      * The EmailSchedule model constructor.
      * @property {module:model/EmailSchedule}
      */
-    EmailSchedule,
+  EmailSchedule,
 
-    /**
+  /**
      * The EmailScheduleInclude model constructor.
      * @property {module:model/EmailScheduleInclude}
      */
-    EmailScheduleInclude,
+  EmailScheduleInclude,
 
-    /**
+  /**
      * The Entity model constructor.
      * @property {module:model/Entity}
      */
-    Entity,
+  Entity,
 
-    /**
+  /**
      * The EntityType model constructor.
      * @property {module:model/EntityType}
      */
-    EntityType,
+  EntityType,
 
-    /**
+  /**
      * The F24 model constructor.
      * @property {module:model/F24}
      */
-    F24,
+  F24,
 
-    /**
+  /**
      * The F24Status model constructor.
      * @property {module:model/F24Status}
      */
-    F24Status,
+  F24Status,
 
-    /**
+  /**
      * The FunctionStatus model constructor.
      * @property {module:model/FunctionStatus}
      */
-    FunctionStatus,
+  FunctionStatus,
 
-    /**
+  /**
      * The GetArchiveDocumentResponse model constructor.
      * @property {module:model/GetArchiveDocumentResponse}
      */
-    GetArchiveDocumentResponse,
+  GetArchiveDocumentResponse,
 
-    /**
+  /**
      * The GetCashbookEntryResponse model constructor.
      * @property {module:model/GetCashbookEntryResponse}
      */
-    GetCashbookEntryResponse,
+  GetCashbookEntryResponse,
 
-    /**
+  /**
      * The GetClientResponse model constructor.
      * @property {module:model/GetClientResponse}
      */
-    GetClientResponse,
+  GetClientResponse,
 
-    /**
+  /**
      * The GetCompanyInfoResponse model constructor.
      * @property {module:model/GetCompanyInfoResponse}
      */
-    GetCompanyInfoResponse,
+  GetCompanyInfoResponse,
 
-    /**
+  /**
      * The GetEInvoiceRejectionReasonResponse model constructor.
      * @property {module:model/GetEInvoiceRejectionReasonResponse}
      */
-    GetEInvoiceRejectionReasonResponse,
+  GetEInvoiceRejectionReasonResponse,
 
-    /**
+  /**
      * The GetEmailDataResponse model constructor.
      * @property {module:model/GetEmailDataResponse}
      */
-    GetEmailDataResponse,
+  GetEmailDataResponse,
 
-    /**
+  /**
      * The GetExistingIssuedDocumentTotalsRequest model constructor.
      * @property {module:model/GetExistingIssuedDocumentTotalsRequest}
      */
-    GetExistingIssuedDocumentTotalsRequest,
+  GetExistingIssuedDocumentTotalsRequest,
 
-    /**
+  /**
      * The GetExistingIssuedDocumentTotalsResponse model constructor.
      * @property {module:model/GetExistingIssuedDocumentTotalsResponse}
      */
-    GetExistingIssuedDocumentTotalsResponse,
+  GetExistingIssuedDocumentTotalsResponse,
 
-    /**
+  /**
      * The GetExistingReceivedDocumentTotalsRequest model constructor.
      * @property {module:model/GetExistingReceivedDocumentTotalsRequest}
      */
-    GetExistingReceivedDocumentTotalsRequest,
+  GetExistingReceivedDocumentTotalsRequest,
 
-    /**
+  /**
      * The GetExistingReceivedDocumentTotalsResponse model constructor.
      * @property {module:model/GetExistingReceivedDocumentTotalsResponse}
      */
-    GetExistingReceivedDocumentTotalsResponse,
+  GetExistingReceivedDocumentTotalsResponse,
 
-    /**
+  /**
      * The GetF24Response model constructor.
      * @property {module:model/GetF24Response}
      */
-    GetF24Response,
+  GetF24Response,
 
-    /**
+  /**
      * The GetIssuedDocumentPreCreateInfoResponse model constructor.
      * @property {module:model/GetIssuedDocumentPreCreateInfoResponse}
      */
-    GetIssuedDocumentPreCreateInfoResponse,
+  GetIssuedDocumentPreCreateInfoResponse,
 
-    /**
+  /**
      * The GetIssuedDocumentResponse model constructor.
      * @property {module:model/GetIssuedDocumentResponse}
      */
-    GetIssuedDocumentResponse,
+  GetIssuedDocumentResponse,
 
-    /**
+  /**
      * The GetNewIssuedDocumentTotalsRequest model constructor.
      * @property {module:model/GetNewIssuedDocumentTotalsRequest}
      */
-    GetNewIssuedDocumentTotalsRequest,
+  GetNewIssuedDocumentTotalsRequest,
 
-    /**
+  /**
      * The GetNewIssuedDocumentTotalsResponse model constructor.
      * @property {module:model/GetNewIssuedDocumentTotalsResponse}
      */
-    GetNewIssuedDocumentTotalsResponse,
+  GetNewIssuedDocumentTotalsResponse,
 
-    /**
+  /**
      * The GetNewReceivedDocumentTotalsRequest model constructor.
      * @property {module:model/GetNewReceivedDocumentTotalsRequest}
      */
-    GetNewReceivedDocumentTotalsRequest,
+  GetNewReceivedDocumentTotalsRequest,
 
-    /**
+  /**
      * The GetNewReceivedDocumentTotalsResponse model constructor.
      * @property {module:model/GetNewReceivedDocumentTotalsResponse}
      */
-    GetNewReceivedDocumentTotalsResponse,
+  GetNewReceivedDocumentTotalsResponse,
 
-    /**
+  /**
      * The GetPaymentAccountResponse model constructor.
      * @property {module:model/GetPaymentAccountResponse}
      */
-    GetPaymentAccountResponse,
+  GetPaymentAccountResponse,
 
-    /**
+  /**
      * The GetPaymentMethodResponse model constructor.
      * @property {module:model/GetPaymentMethodResponse}
      */
-    GetPaymentMethodResponse,
+  GetPaymentMethodResponse,
 
-    /**
+  /**
      * The GetProductResponse model constructor.
      * @property {module:model/GetProductResponse}
      */
-    GetProductResponse,
+  GetProductResponse,
 
-    /**
+  /**
      * The GetReceiptPreCreateInfoResponse model constructor.
      * @property {module:model/GetReceiptPreCreateInfoResponse}
      */
-    GetReceiptPreCreateInfoResponse,
+  GetReceiptPreCreateInfoResponse,
 
-    /**
+  /**
      * The GetReceiptResponse model constructor.
      * @property {module:model/GetReceiptResponse}
      */
-    GetReceiptResponse,
+  GetReceiptResponse,
 
-    /**
+  /**
      * The GetReceiptsMonthlyTotalsResponse model constructor.
      * @property {module:model/GetReceiptsMonthlyTotalsResponse}
      */
-    GetReceiptsMonthlyTotalsResponse,
+  GetReceiptsMonthlyTotalsResponse,
 
-    /**
+  /**
      * The GetReceivedDocumentPreCreateInfoResponse model constructor.
      * @property {module:model/GetReceivedDocumentPreCreateInfoResponse}
      */
-    GetReceivedDocumentPreCreateInfoResponse,
+  GetReceivedDocumentPreCreateInfoResponse,
 
-    /**
+  /**
      * The GetReceivedDocumentResponse model constructor.
      * @property {module:model/GetReceivedDocumentResponse}
      */
-    GetReceivedDocumentResponse,
+  GetReceivedDocumentResponse,
 
-    /**
+  /**
      * The GetSupplierResponse model constructor.
      * @property {module:model/GetSupplierResponse}
      */
-    GetSupplierResponse,
+  GetSupplierResponse,
 
-    /**
+  /**
      * The GetUserInfoResponse model constructor.
      * @property {module:model/GetUserInfoResponse}
      */
-    GetUserInfoResponse,
+  GetUserInfoResponse,
 
-    /**
+  /**
      * The GetUserInfoResponseEmailConfirmationState model constructor.
      * @property {module:model/GetUserInfoResponseEmailConfirmationState}
      */
-    GetUserInfoResponseEmailConfirmationState,
+  GetUserInfoResponseEmailConfirmationState,
 
-    /**
+  /**
      * The GetUserInfoResponseInfo model constructor.
      * @property {module:model/GetUserInfoResponseInfo}
      */
-    GetUserInfoResponseInfo,
+  GetUserInfoResponseInfo,
 
-    /**
+  /**
      * The GetVatTypeResponse model constructor.
      * @property {module:model/GetVatTypeResponse}
      */
-    GetVatTypeResponse,
+  GetVatTypeResponse,
 
-    /**
+  /**
      * The IssuedDocument model constructor.
      * @property {module:model/IssuedDocument}
      */
-    IssuedDocument,
+  IssuedDocument,
 
-    /**
+  /**
      * The IssuedDocumentEiData model constructor.
      * @property {module:model/IssuedDocumentEiData}
      */
-    IssuedDocumentEiData,
+  IssuedDocumentEiData,
 
-    /**
+  /**
      * The IssuedDocumentExtraData model constructor.
      * @property {module:model/IssuedDocumentExtraData}
      */
-    IssuedDocumentExtraData,
+  IssuedDocumentExtraData,
 
-    /**
+  /**
      * The IssuedDocumentItemsListItem model constructor.
      * @property {module:model/IssuedDocumentItemsListItem}
      */
-    IssuedDocumentItemsListItem,
+  IssuedDocumentItemsListItem,
 
-    /**
+  /**
      * The IssuedDocumentOptions model constructor.
      * @property {module:model/IssuedDocumentOptions}
      */
-    IssuedDocumentOptions,
+  IssuedDocumentOptions,
 
-    /**
+  /**
      * The IssuedDocumentPaymentsListItem model constructor.
      * @property {module:model/IssuedDocumentPaymentsListItem}
      */
-    IssuedDocumentPaymentsListItem,
+  IssuedDocumentPaymentsListItem,
 
-    /**
+  /**
      * The IssuedDocumentPreCreateInfo model constructor.
      * @property {module:model/IssuedDocumentPreCreateInfo}
      */
-    IssuedDocumentPreCreateInfo,
+  IssuedDocumentPreCreateInfo,
 
-    /**
+  /**
      * The IssuedDocumentPreCreateInfoDefaultValues model constructor.
      * @property {module:model/IssuedDocumentPreCreateInfoDefaultValues}
      */
-    IssuedDocumentPreCreateInfoDefaultValues,
+  IssuedDocumentPreCreateInfoDefaultValues,
 
-    /**
+  /**
      * The IssuedDocumentPreCreateInfoExtraDataDefaultValues model constructor.
      * @property {module:model/IssuedDocumentPreCreateInfoExtraDataDefaultValues}
      */
-    IssuedDocumentPreCreateInfoExtraDataDefaultValues,
+  IssuedDocumentPreCreateInfoExtraDataDefaultValues,
 
-    /**
+  /**
      * The IssuedDocumentPreCreateInfoItemsDefaultValues model constructor.
      * @property {module:model/IssuedDocumentPreCreateInfoItemsDefaultValues}
      */
-    IssuedDocumentPreCreateInfoItemsDefaultValues,
+  IssuedDocumentPreCreateInfoItemsDefaultValues,
 
-    /**
+  /**
      * The IssuedDocumentStatus model constructor.
      * @property {module:model/IssuedDocumentStatus}
      */
-    IssuedDocumentStatus,
+  IssuedDocumentStatus,
 
-    /**
+  /**
      * The IssuedDocumentTotals model constructor.
      * @property {module:model/IssuedDocumentTotals}
      */
-    IssuedDocumentTotals,
+  IssuedDocumentTotals,
 
-    /**
+  /**
      * The IssuedDocumentType model constructor.
      * @property {module:model/IssuedDocumentType}
      */
-    IssuedDocumentType,
+  IssuedDocumentType,
 
-    /**
+  /**
      * The Language model constructor.
      * @property {module:model/Language}
      */
-    Language,
+  Language,
 
-    /**
+  /**
      * The ListArchiveCategoriesResponse model constructor.
      * @property {module:model/ListArchiveCategoriesResponse}
      */
-    ListArchiveCategoriesResponse,
+  ListArchiveCategoriesResponse,
 
-    /**
+  /**
      * The ListArchiveDocumentsResponse model constructor.
      * @property {module:model/ListArchiveDocumentsResponse}
      */
-    ListArchiveDocumentsResponse,
+  ListArchiveDocumentsResponse,
 
-    /**
+  /**
      * The ListArchiveDocumentsResponsePage model constructor.
      * @property {module:model/ListArchiveDocumentsResponsePage}
      */
-    ListArchiveDocumentsResponsePage,
+  ListArchiveDocumentsResponsePage,
 
-    /**
+  /**
      * The ListCashbookEntriesResponse model constructor.
      * @property {module:model/ListCashbookEntriesResponse}
      */
-    ListCashbookEntriesResponse,
+  ListCashbookEntriesResponse,
 
-    /**
+  /**
      * The ListCitiesResponse model constructor.
      * @property {module:model/ListCitiesResponse}
      */
-    ListCitiesResponse,
+  ListCitiesResponse,
 
-    /**
+  /**
      * The ListClientsResponse model constructor.
      * @property {module:model/ListClientsResponse}
      */
-    ListClientsResponse,
+  ListClientsResponse,
 
-    /**
+  /**
      * The ListClientsResponsePage model constructor.
      * @property {module:model/ListClientsResponsePage}
      */
-    ListClientsResponsePage,
+  ListClientsResponsePage,
 
-    /**
+  /**
      * The ListCostCentersResponse model constructor.
      * @property {module:model/ListCostCentersResponse}
      */
-    ListCostCentersResponse,
+  ListCostCentersResponse,
 
-    /**
+  /**
      * The ListCountriesResponse model constructor.
      * @property {module:model/ListCountriesResponse}
      */
-    ListCountriesResponse,
+  ListCountriesResponse,
 
-    /**
+  /**
      * The ListCurrenciesResponse model constructor.
      * @property {module:model/ListCurrenciesResponse}
      */
-    ListCurrenciesResponse,
+  ListCurrenciesResponse,
 
-    /**
+  /**
      * The ListDeliveryNotesDefaultCausalsResponse model constructor.
      * @property {module:model/ListDeliveryNotesDefaultCausalsResponse}
      */
-    ListDeliveryNotesDefaultCausalsResponse,
+  ListDeliveryNotesDefaultCausalsResponse,
 
-    /**
+  /**
      * The ListDetailedCountriesResponse model constructor.
      * @property {module:model/ListDetailedCountriesResponse}
      */
-    ListDetailedCountriesResponse,
+  ListDetailedCountriesResponse,
 
-    /**
+  /**
      * The ListF24Response model constructor.
      * @property {module:model/ListF24Response}
      */
-    ListF24Response,
+  ListF24Response,
 
-    /**
+  /**
      * The ListF24ResponseAggregatedData model constructor.
      * @property {module:model/ListF24ResponseAggregatedData}
      */
-    ListF24ResponseAggregatedData,
+  ListF24ResponseAggregatedData,
 
-    /**
+  /**
      * The ListF24ResponseAggregation model constructor.
      * @property {module:model/ListF24ResponseAggregation}
      */
-    ListF24ResponseAggregation,
+  ListF24ResponseAggregation,
 
-    /**
+  /**
      * The ListF24ResponsePage model constructor.
      * @property {module:model/ListF24ResponsePage}
      */
-    ListF24ResponsePage,
+  ListF24ResponsePage,
 
-    /**
+  /**
      * The ListIssuedDocumentsResponse model constructor.
      * @property {module:model/ListIssuedDocumentsResponse}
      */
-    ListIssuedDocumentsResponse,
+  ListIssuedDocumentsResponse,
 
-    /**
+  /**
      * The ListIssuedDocumentsResponsePage model constructor.
      * @property {module:model/ListIssuedDocumentsResponsePage}
      */
-    ListIssuedDocumentsResponsePage,
+  ListIssuedDocumentsResponsePage,
 
-    /**
+  /**
      * The ListLanguagesResponse model constructor.
      * @property {module:model/ListLanguagesResponse}
      */
-    ListLanguagesResponse,
+  ListLanguagesResponse,
 
-    /**
+  /**
      * The ListPaymentAccountsResponse model constructor.
      * @property {module:model/ListPaymentAccountsResponse}
      */
-    ListPaymentAccountsResponse,
+  ListPaymentAccountsResponse,
 
-    /**
+  /**
      * The ListPaymentMethodsResponse model constructor.
      * @property {module:model/ListPaymentMethodsResponse}
      */
-    ListPaymentMethodsResponse,
+  ListPaymentMethodsResponse,
 
-    /**
+  /**
      * The ListProductCategoriesResponse model constructor.
      * @property {module:model/ListProductCategoriesResponse}
      */
-    ListProductCategoriesResponse,
+  ListProductCategoriesResponse,
 
-    /**
+  /**
      * The ListProductsResponse model constructor.
      * @property {module:model/ListProductsResponse}
      */
-    ListProductsResponse,
+  ListProductsResponse,
 
-    /**
+  /**
      * The ListProductsResponsePage model constructor.
      * @property {module:model/ListProductsResponsePage}
      */
-    ListProductsResponsePage,
+  ListProductsResponsePage,
 
-    /**
+  /**
      * The ListReceiptsResponse model constructor.
      * @property {module:model/ListReceiptsResponse}
      */
-    ListReceiptsResponse,
+  ListReceiptsResponse,
 
-    /**
+  /**
      * The ListReceiptsResponsePage model constructor.
      * @property {module:model/ListReceiptsResponsePage}
      */
-    ListReceiptsResponsePage,
+  ListReceiptsResponsePage,
 
-    /**
+  /**
      * The ListReceivedDocumentCategoriesResponse model constructor.
      * @property {module:model/ListReceivedDocumentCategoriesResponse}
      */
-    ListReceivedDocumentCategoriesResponse,
+  ListReceivedDocumentCategoriesResponse,
 
-    /**
+  /**
      * The ListReceivedDocumentsResponse model constructor.
      * @property {module:model/ListReceivedDocumentsResponse}
      */
-    ListReceivedDocumentsResponse,
+  ListReceivedDocumentsResponse,
 
-    /**
+  /**
      * The ListReceivedDocumentsResponsePage model constructor.
      * @property {module:model/ListReceivedDocumentsResponsePage}
      */
-    ListReceivedDocumentsResponsePage,
+  ListReceivedDocumentsResponsePage,
 
-    /**
+  /**
      * The ListRevenueCentersResponse model constructor.
      * @property {module:model/ListRevenueCentersResponse}
      */
-    ListRevenueCentersResponse,
+  ListRevenueCentersResponse,
 
-    /**
+  /**
      * The ListSuppliersResponse model constructor.
      * @property {module:model/ListSuppliersResponse}
      */
-    ListSuppliersResponse,
+  ListSuppliersResponse,
 
-    /**
+  /**
      * The ListSuppliersResponsePage model constructor.
      * @property {module:model/ListSuppliersResponsePage}
      */
-    ListSuppliersResponsePage,
+  ListSuppliersResponsePage,
 
-    /**
+  /**
      * The ListTemplatesResponse model constructor.
      * @property {module:model/ListTemplatesResponse}
      */
-    ListTemplatesResponse,
+  ListTemplatesResponse,
 
-    /**
+  /**
      * The ListUnitsOfMeasureResponse model constructor.
      * @property {module:model/ListUnitsOfMeasureResponse}
      */
-    ListUnitsOfMeasureResponse,
+  ListUnitsOfMeasureResponse,
 
-    /**
+  /**
      * The ListUserCompaniesResponse model constructor.
      * @property {module:model/ListUserCompaniesResponse}
      */
-    ListUserCompaniesResponse,
+  ListUserCompaniesResponse,
 
-    /**
+  /**
      * The ListUserCompaniesResponseData model constructor.
      * @property {module:model/ListUserCompaniesResponseData}
      */
-    ListUserCompaniesResponseData,
+  ListUserCompaniesResponseData,
 
-    /**
+  /**
      * The ListVatTypesResponse model constructor.
      * @property {module:model/ListVatTypesResponse}
      */
-    ListVatTypesResponse,
+  ListVatTypesResponse,
 
-    /**
+  /**
      * The ModifyArchiveDocumentRequest model constructor.
      * @property {module:model/ModifyArchiveDocumentRequest}
      */
-    ModifyArchiveDocumentRequest,
+  ModifyArchiveDocumentRequest,
 
-    /**
+  /**
      * The ModifyArchiveDocumentResponse model constructor.
      * @property {module:model/ModifyArchiveDocumentResponse}
      */
-    ModifyArchiveDocumentResponse,
+  ModifyArchiveDocumentResponse,
 
-    /**
+  /**
      * The ModifyCashbookEntryRequest model constructor.
      * @property {module:model/ModifyCashbookEntryRequest}
      */
-    ModifyCashbookEntryRequest,
+  ModifyCashbookEntryRequest,
 
-    /**
+  /**
      * The ModifyCashbookEntryResponse model constructor.
      * @property {module:model/ModifyCashbookEntryResponse}
      */
-    ModifyCashbookEntryResponse,
+  ModifyCashbookEntryResponse,
 
-    /**
+  /**
      * The ModifyClientRequest model constructor.
      * @property {module:model/ModifyClientRequest}
      */
-    ModifyClientRequest,
+  ModifyClientRequest,
 
-    /**
+  /**
      * The ModifyClientResponse model constructor.
      * @property {module:model/ModifyClientResponse}
      */
-    ModifyClientResponse,
+  ModifyClientResponse,
 
-    /**
+  /**
      * The ModifyF24Request model constructor.
      * @property {module:model/ModifyF24Request}
      */
-    ModifyF24Request,
+  ModifyF24Request,
 
-    /**
+  /**
      * The ModifyF24Response model constructor.
      * @property {module:model/ModifyF24Response}
      */
-    ModifyF24Response,
+  ModifyF24Response,
 
-    /**
+  /**
      * The ModifyIssuedDocumentRequest model constructor.
      * @property {module:model/ModifyIssuedDocumentRequest}
      */
-    ModifyIssuedDocumentRequest,
+  ModifyIssuedDocumentRequest,
 
-    /**
+  /**
      * The ModifyIssuedDocumentResponse model constructor.
      * @property {module:model/ModifyIssuedDocumentResponse}
      */
-    ModifyIssuedDocumentResponse,
+  ModifyIssuedDocumentResponse,
 
-    /**
+  /**
      * The ModifyPaymentAccountRequest model constructor.
      * @property {module:model/ModifyPaymentAccountRequest}
      */
-    ModifyPaymentAccountRequest,
+  ModifyPaymentAccountRequest,
 
-    /**
+  /**
      * The ModifyPaymentAccountResponse model constructor.
      * @property {module:model/ModifyPaymentAccountResponse}
      */
-    ModifyPaymentAccountResponse,
+  ModifyPaymentAccountResponse,
 
-    /**
+  /**
      * The ModifyPaymentMethodRequest model constructor.
      * @property {module:model/ModifyPaymentMethodRequest}
      */
-    ModifyPaymentMethodRequest,
+  ModifyPaymentMethodRequest,
 
-    /**
+  /**
      * The ModifyPaymentMethodResponse model constructor.
      * @property {module:model/ModifyPaymentMethodResponse}
      */
-    ModifyPaymentMethodResponse,
+  ModifyPaymentMethodResponse,
 
-    /**
+  /**
      * The ModifyProductRequest model constructor.
      * @property {module:model/ModifyProductRequest}
      */
-    ModifyProductRequest,
+  ModifyProductRequest,
 
-    /**
+  /**
      * The ModifyProductResponse model constructor.
      * @property {module:model/ModifyProductResponse}
      */
-    ModifyProductResponse,
+  ModifyProductResponse,
 
-    /**
+  /**
      * The ModifyReceiptRequest model constructor.
      * @property {module:model/ModifyReceiptRequest}
      */
-    ModifyReceiptRequest,
+  ModifyReceiptRequest,
 
-    /**
+  /**
      * The ModifyReceiptResponse model constructor.
      * @property {module:model/ModifyReceiptResponse}
      */
-    ModifyReceiptResponse,
+  ModifyReceiptResponse,
 
-    /**
+  /**
      * The ModifyReceivedDocumentRequest model constructor.
      * @property {module:model/ModifyReceivedDocumentRequest}
      */
-    ModifyReceivedDocumentRequest,
+  ModifyReceivedDocumentRequest,
 
-    /**
+  /**
      * The ModifyReceivedDocumentResponse model constructor.
      * @property {module:model/ModifyReceivedDocumentResponse}
      */
-    ModifyReceivedDocumentResponse,
+  ModifyReceivedDocumentResponse,
 
-    /**
+  /**
      * The ModifySupplierRequest model constructor.
      * @property {module:model/ModifySupplierRequest}
      */
-    ModifySupplierRequest,
+  ModifySupplierRequest,
 
-    /**
+  /**
      * The ModifySupplierResponse model constructor.
      * @property {module:model/ModifySupplierResponse}
      */
-    ModifySupplierResponse,
+  ModifySupplierResponse,
 
-    /**
+  /**
      * The ModifyVatTypeRequest model constructor.
      * @property {module:model/ModifyVatTypeRequest}
      */
-    ModifyVatTypeRequest,
+  ModifyVatTypeRequest,
 
-    /**
+  /**
      * The ModifyVatTypeResponse model constructor.
      * @property {module:model/ModifyVatTypeResponse}
      */
-    ModifyVatTypeResponse,
+  ModifyVatTypeResponse,
 
-    /**
+  /**
      * The MonthlyTotal model constructor.
      * @property {module:model/MonthlyTotal}
      */
-    MonthlyTotal,
+  MonthlyTotal,
 
-    /**
+  /**
      * The OriginalDocumentType model constructor.
      * @property {module:model/OriginalDocumentType}
      */
-    OriginalDocumentType,
+  OriginalDocumentType,
 
-    /**
+  /**
      * The Pagination model constructor.
      * @property {module:model/Pagination}
      */
-    Pagination,
+  Pagination,
 
-    /**
+  /**
      * The PaymentAccount model constructor.
      * @property {module:model/PaymentAccount}
      */
-    PaymentAccount,
+  PaymentAccount,
 
-    /**
+  /**
      * The PaymentAccountType model constructor.
      * @property {module:model/PaymentAccountType}
      */
-    PaymentAccountType,
+  PaymentAccountType,
 
-    /**
+  /**
      * The PaymentMethod model constructor.
      * @property {module:model/PaymentMethod}
      */
-    PaymentMethod,
+  PaymentMethod,
 
-    /**
+  /**
      * The PaymentMethodDetails model constructor.
      * @property {module:model/PaymentMethodDetails}
      */
-    PaymentMethodDetails,
+  PaymentMethodDetails,
 
-    /**
+  /**
      * The PaymentMethodType model constructor.
      * @property {module:model/PaymentMethodType}
      */
-    PaymentMethodType,
+  PaymentMethodType,
 
-    /**
+  /**
      * The PermissionLevel model constructor.
      * @property {module:model/PermissionLevel}
      */
-    PermissionLevel,
+  PermissionLevel,
 
-    /**
+  /**
      * The Permissions model constructor.
      * @property {module:model/Permissions}
      */
-    Permissions,
+  Permissions,
 
-    /**
+  /**
      * The PermissionsFicIssuedDocumentsDetailed model constructor.
      * @property {module:model/PermissionsFicIssuedDocumentsDetailed}
      */
-    PermissionsFicIssuedDocumentsDetailed,
+  PermissionsFicIssuedDocumentsDetailed,
 
-    /**
+  /**
      * The Product model constructor.
      * @property {module:model/Product}
      */
-    Product,
+  Product,
 
-    /**
+  /**
      * The Receipt model constructor.
      * @property {module:model/Receipt}
      */
-    Receipt,
+  Receipt,
 
-    /**
+  /**
      * The ReceiptItemsListItem model constructor.
      * @property {module:model/ReceiptItemsListItem}
      */
-    ReceiptItemsListItem,
+  ReceiptItemsListItem,
 
-    /**
+  /**
      * The ReceiptPreCreateInfo model constructor.
      * @property {module:model/ReceiptPreCreateInfo}
      */
-    ReceiptPreCreateInfo,
+  ReceiptPreCreateInfo,
 
-    /**
+  /**
      * The ReceiptType model constructor.
      * @property {module:model/ReceiptType}
      */
-    ReceiptType,
+  ReceiptType,
 
-    /**
+  /**
      * The ReceivedDocument model constructor.
      * @property {module:model/ReceivedDocument}
      */
-    ReceivedDocument,
+  ReceivedDocument,
 
-    /**
+  /**
      * The ReceivedDocumentEntity model constructor.
      * @property {module:model/ReceivedDocumentEntity}
      */
-    ReceivedDocumentEntity,
+  ReceivedDocumentEntity,
 
-    /**
+  /**
      * The ReceivedDocumentInfo model constructor.
      * @property {module:model/ReceivedDocumentInfo}
      */
-    ReceivedDocumentInfo,
+  ReceivedDocumentInfo,
 
-    /**
+  /**
      * The ReceivedDocumentInfoDefaultValues model constructor.
      * @property {module:model/ReceivedDocumentInfoDefaultValues}
      */
-    ReceivedDocumentInfoDefaultValues,
+  ReceivedDocumentInfoDefaultValues,
 
-    /**
+  /**
      * The ReceivedDocumentInfoItemsDefaultValues model constructor.
      * @property {module:model/ReceivedDocumentInfoItemsDefaultValues}
      */
-    ReceivedDocumentInfoItemsDefaultValues,
+  ReceivedDocumentInfoItemsDefaultValues,
 
-    /**
+  /**
      * The ReceivedDocumentItemsListItem model constructor.
      * @property {module:model/ReceivedDocumentItemsListItem}
      */
-    ReceivedDocumentItemsListItem,
+  ReceivedDocumentItemsListItem,
 
-    /**
+  /**
      * The ReceivedDocumentPaymentsListItem model constructor.
      * @property {module:model/ReceivedDocumentPaymentsListItem}
      */
-    ReceivedDocumentPaymentsListItem,
+  ReceivedDocumentPaymentsListItem,
 
-    /**
+  /**
      * The ReceivedDocumentPaymentsListItemPaymentTerms model constructor.
      * @property {module:model/ReceivedDocumentPaymentsListItemPaymentTerms}
      */
-    ReceivedDocumentPaymentsListItemPaymentTerms,
+  ReceivedDocumentPaymentsListItemPaymentTerms,
 
-    /**
+  /**
      * The ReceivedDocumentTotals model constructor.
      * @property {module:model/ReceivedDocumentTotals}
      */
-    ReceivedDocumentTotals,
+  ReceivedDocumentTotals,
 
-    /**
+  /**
      * The ReceivedDocumentType model constructor.
      * @property {module:model/ReceivedDocumentType}
      */
-    ReceivedDocumentType,
+  ReceivedDocumentType,
 
-    /**
+  /**
      * The ScheduleEmailRequest model constructor.
      * @property {module:model/ScheduleEmailRequest}
      */
-    ScheduleEmailRequest,
+  ScheduleEmailRequest,
 
-    /**
+  /**
      * The SendEInvoiceRequest model constructor.
      * @property {module:model/SendEInvoiceRequest}
      */
-    SendEInvoiceRequest,
+  SendEInvoiceRequest,
 
-    /**
+  /**
      * The SendEInvoiceRequestData model constructor.
      * @property {module:model/SendEInvoiceRequestData}
      */
-    SendEInvoiceRequestData,
+  SendEInvoiceRequestData,
 
-    /**
+  /**
      * The SendEInvoiceResponse model constructor.
      * @property {module:model/SendEInvoiceResponse}
      */
-    SendEInvoiceResponse,
+  SendEInvoiceResponse,
 
-    /**
+  /**
      * The SendEInvoiceResponseData model constructor.
      * @property {module:model/SendEInvoiceResponseData}
      */
-    SendEInvoiceResponseData,
+  SendEInvoiceResponseData,
 
-    /**
+  /**
      * The SenderEmail model constructor.
      * @property {module:model/SenderEmail}
      */
-    SenderEmail,
+  SenderEmail,
 
-    /**
+  /**
      * The ShowTotalsMode model constructor.
      * @property {module:model/ShowTotalsMode}
      */
-    ShowTotalsMode,
+  ShowTotalsMode,
 
-    /**
+  /**
      * The Supplier model constructor.
      * @property {module:model/Supplier}
      */
-    Supplier,
+  Supplier,
 
-    /**
+  /**
      * The SupplierType model constructor.
      * @property {module:model/SupplierType}
      */
-    SupplierType,
+  SupplierType,
 
-    /**
+  /**
      * The UploadArchiveAttachmentResponse model constructor.
      * @property {module:model/UploadArchiveAttachmentResponse}
      */
-    UploadArchiveAttachmentResponse,
+  UploadArchiveAttachmentResponse,
 
-    /**
+  /**
      * The UploadF24AttachmentResponse model constructor.
      * @property {module:model/UploadF24AttachmentResponse}
      */
-    UploadF24AttachmentResponse,
+  UploadF24AttachmentResponse,
 
-    /**
+  /**
      * The UploadIssuedDocumentAttachmentResponse model constructor.
      * @property {module:model/UploadIssuedDocumentAttachmentResponse}
      */
-    UploadIssuedDocumentAttachmentResponse,
+  UploadIssuedDocumentAttachmentResponse,
 
-    /**
+  /**
      * The UploadReceivedDocumentAttachmentResponse model constructor.
      * @property {module:model/UploadReceivedDocumentAttachmentResponse}
      */
-    UploadReceivedDocumentAttachmentResponse,
+  UploadReceivedDocumentAttachmentResponse,
 
-    /**
+  /**
      * The User model constructor.
      * @property {module:model/User}
      */
-    User,
+  User,
 
-    /**
+  /**
      * The UserCompanyRole model constructor.
      * @property {module:model/UserCompanyRole}
      */
-    UserCompanyRole,
+  UserCompanyRole,
 
-    /**
+  /**
      * The VatItem model constructor.
      * @property {module:model/VatItem}
      */
-    VatItem,
+  VatItem,
 
-    /**
+  /**
      * The VatKind model constructor.
      * @property {module:model/VatKind}
      */
-    VatKind,
+  VatKind,
 
-    /**
+  /**
      * The VatType model constructor.
      * @property {module:model/VatType}
      */
-    VatType,
+  VatType,
 
-    /**
+  /**
      * The VerifyEInvoiceXmlErrorResponse model constructor.
      * @property {module:model/VerifyEInvoiceXmlErrorResponse}
      */
-    VerifyEInvoiceXmlErrorResponse,
+  VerifyEInvoiceXmlErrorResponse,
 
-    /**
+  /**
      * The VerifyEInvoiceXmlErrorResponseError model constructor.
      * @property {module:model/VerifyEInvoiceXmlErrorResponseError}
      */
-    VerifyEInvoiceXmlErrorResponseError,
+  VerifyEInvoiceXmlErrorResponseError,
 
-    /**
+  /**
      * The VerifyEInvoiceXmlErrorResponseExtra model constructor.
      * @property {module:model/VerifyEInvoiceXmlErrorResponseExtra}
      */
-    VerifyEInvoiceXmlErrorResponseExtra,
+  VerifyEInvoiceXmlErrorResponseExtra,
 
-    /**
+  /**
      * The VerifyEInvoiceXmlResponse model constructor.
      * @property {module:model/VerifyEInvoiceXmlResponse}
      */
-    VerifyEInvoiceXmlResponse,
+  VerifyEInvoiceXmlResponse,
 
-    /**
+  /**
      * The VerifyEInvoiceXmlResponseData model constructor.
      * @property {module:model/VerifyEInvoiceXmlResponseData}
      */
-    VerifyEInvoiceXmlResponseData,
+  VerifyEInvoiceXmlResponseData,
 
-    /**
+  /**
     * The ArchiveApi service constructor.
     * @property {module:api/ArchiveApi}
     */
-    ArchiveApi,
+  ArchiveApi,
 
-    /**
+  /**
     * The CashbookApi service constructor.
     * @property {module:api/CashbookApi}
     */
-    CashbookApi,
+  CashbookApi,
 
-    /**
+  /**
     * The ClientsApi service constructor.
     * @property {module:api/ClientsApi}
     */
-    ClientsApi,
+  ClientsApi,
 
-    /**
+  /**
     * The CompaniesApi service constructor.
     * @property {module:api/CompaniesApi}
     */
-    CompaniesApi,
+  CompaniesApi,
 
-    /**
+  /**
     * The InfoApi service constructor.
     * @property {module:api/InfoApi}
     */
-    InfoApi,
+  InfoApi,
 
-    /**
+  /**
     * The IssuedDocumentsApi service constructor.
     * @property {module:api/IssuedDocumentsApi}
     */
-    IssuedDocumentsApi,
+  IssuedDocumentsApi,
 
-    /**
+  /**
     * The IssuedEInvoicesApi service constructor.
     * @property {module:api/IssuedEInvoicesApi}
     */
-    IssuedEInvoicesApi,
+  IssuedEInvoicesApi,
 
-    /**
+  /**
     * The ProductsApi service constructor.
     * @property {module:api/ProductsApi}
     */
-    ProductsApi,
+  ProductsApi,
 
-    /**
+  /**
     * The ReceiptsApi service constructor.
     * @property {module:api/ReceiptsApi}
     */
-    ReceiptsApi,
+  ReceiptsApi,
 
-    /**
+  /**
     * The ReceivedDocumentsApi service constructor.
     * @property {module:api/ReceivedDocumentsApi}
     */
-    ReceivedDocumentsApi,
+  ReceivedDocumentsApi,
 
-    /**
+  /**
     * The SettingsApi service constructor.
     * @property {module:api/SettingsApi}
     */
-    SettingsApi,
+  SettingsApi,
 
-    /**
+  /**
     * The SuppliersApi service constructor.
     * @property {module:api/SuppliersApi}
     */
-    SuppliersApi,
+  SuppliersApi,
 
-    /**
+  /**
     * The TaxesApi service constructor.
     * @property {module:api/TaxesApi}
     */
-    TaxesApi,
+  TaxesApi,
 
-    /**
+  /**
     * The UserApi service constructor.
     * @property {module:api/UserApi}
     */
-    UserApi,
+  UserApi,
 
-    /**
+  /**
     * The Condition service constructor.
     * @property {module:filter/Condition}
     */
-    Condition,
+  Condition,
 
-    /**
+  /**
     * The Conjunction service constructor.
     * @property {module:filter/Conjunction}
     */
-    Conjunction,
+  Conjunction,
 
-    /**
+  /**
     * The Disjunction service constructor.
     * @property {module:filter/Disjunction}
     */
-    Disjunction,
+  Disjunction,
 
-    /**
+  /**
     * The Expression service constructor.
     * @property {module:filter/Expression}
     */
-    Expression,
+  Expression,
 
-    /**
+  /**
     * The Filter service constructor.
     * @property {module:filter/Filter}
     */
-    Filter,
+  Filter,
 
-    /**
+  /**
     * The Operator service constructor.
     * @property {module:api/Operator}
     */
-    Operator,
+  Operator,
 
-    /**
+  /**
     * The OAuth2AuthorizationCodeManager service constructor.
     * @property {module:api/OAuth2AuthorizationCodeManager}
     */
-    OAuth2AuthorizationCodeManager,
+  OAuth2AuthorizationCodeManager,
 
-    /**
+  /**
     * The Scope service constructor.
     * @property {module:api/Scope}
     */
-    Scope,
+  Scope,
 
-    /**
+  /**
     * The OAuth2AuthorizationCodeTokenResponse service constructor.
     * @property {module:api/OAuth2AuthorizationCodeTokenResponse}
     */
-    OAuth2AuthorizationCodeTokenResponse,
+  OAuth2AuthorizationCodeTokenResponse,
 
-    /**
+  /**
     * The OAuth2AuthorizationCodeParams service constructor.
     * @property {module:api/OAuth2AuthorizationCodeParams}
     */
-    OAuth2AuthorizationCodeParams
-};
+  OAuth2AuthorizationCodeParams
+}

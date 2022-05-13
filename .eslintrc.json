@@ -1,16 +1,28 @@
 {
     "env": {
-        "es6": true
+        "es6": true,
+        "amd": true,
+        "jest": true
     },
     "extends": [
-        "standard"
+        "eslint:recommended", "standard"
     ],
+    "parser": "@babel/eslint-parser",
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": ["unused-imports"],
     "rules": {
-        "unused-imports/no-unused-imports": "error"
-    }
+        "unused-imports/no-unused-imports": "error",
+        "no-prototype-builtins": "warn",
+        "camelcase": "warn",
+        "no-void": "warn",
+        "new-cap": "warn",
+        "eqeqeq": "warn",
+        "no-undef": "warn",
+        "no-useless-escape": "warn",
+        "no-redeclare": "warn"
+    },
+    "ignorePatterns": [ "scripts/", "dist/" ] 
 }

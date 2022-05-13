@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The VerifyEInvoiceXmlErrorResponseError model module.
@@ -19,61 +19,52 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class VerifyEInvoiceXmlErrorResponseError {
-    /**
+  /**
      * Constructs a new <code>VerifyEInvoiceXmlErrorResponseError</code>.
      * @alias module:model/VerifyEInvoiceXmlErrorResponseError
      */
-    constructor() { 
-        
-        VerifyEInvoiceXmlErrorResponseError.initialize(this);
-    }
+  constructor () {
+    VerifyEInvoiceXmlErrorResponseError.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>VerifyEInvoiceXmlErrorResponseError</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/VerifyEInvoiceXmlErrorResponseError} obj Optional instance to populate.
      * @return {module:model/VerifyEInvoiceXmlErrorResponseError} The populated <code>VerifyEInvoiceXmlErrorResponseError</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new VerifyEInvoiceXmlErrorResponseError();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new VerifyEInvoiceXmlErrorResponseError()
 
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
-            if (data.hasOwnProperty('validation_result')) {
-                obj['validation_result'] = ApiClient.convertToType(data['validation_result'], Object);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('message')) {
+        obj.message = ApiClient.convertToType(data.message, 'String')
+      }
+      if (data.hasOwnProperty('validation_result')) {
+        obj.validation_result = ApiClient.convertToType(data.validation_result, Object)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {String} message
  */
-VerifyEInvoiceXmlErrorResponseError.prototype['message'] = undefined;
+VerifyEInvoiceXmlErrorResponseError.prototype.message = undefined
 
 /**
  * @member {Object} validation_result
  */
-VerifyEInvoiceXmlErrorResponseError.prototype['validation_result'] = undefined;
+VerifyEInvoiceXmlErrorResponseError.prototype.validation_result = undefined
 
-
-
-
-
-
-export default VerifyEInvoiceXmlErrorResponseError;
-
+export default VerifyEInvoiceXmlErrorResponseError

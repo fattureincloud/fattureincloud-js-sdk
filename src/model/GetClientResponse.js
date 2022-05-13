@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Client from './Client';
+import Client from './Client'
 
 /**
  * The GetClientResponse model module.
@@ -20,53 +19,44 @@ import Client from './Client';
  * @version 2.0.12
  */
 class GetClientResponse {
-    /**
+  /**
      * Constructs a new <code>GetClientResponse</code>.
      * @alias module:model/GetClientResponse
      */
-    constructor() { 
-        
-        GetClientResponse.initialize(this);
-    }
+  constructor () {
+    GetClientResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetClientResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetClientResponse} obj Optional instance to populate.
      * @return {module:model/GetClientResponse} The populated <code>GetClientResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetClientResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetClientResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Client.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Client.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Client} data
  */
-GetClientResponse.prototype['data'] = undefined;
+GetClientResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetClientResponse;
-
+export default GetClientResponse

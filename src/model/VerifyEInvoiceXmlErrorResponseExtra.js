@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The VerifyEInvoiceXmlErrorResponseExtra model module.
@@ -19,53 +19,44 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class VerifyEInvoiceXmlErrorResponseExtra {
-    /**
+  /**
      * Constructs a new <code>VerifyEInvoiceXmlErrorResponseExtra</code>.
      * @alias module:model/VerifyEInvoiceXmlErrorResponseExtra
      */
-    constructor() { 
-        
-        VerifyEInvoiceXmlErrorResponseExtra.initialize(this);
-    }
+  constructor () {
+    VerifyEInvoiceXmlErrorResponseExtra.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>VerifyEInvoiceXmlErrorResponseExtra</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/VerifyEInvoiceXmlErrorResponseExtra} obj Optional instance to populate.
      * @return {module:model/VerifyEInvoiceXmlErrorResponseExtra} The populated <code>VerifyEInvoiceXmlErrorResponseExtra</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new VerifyEInvoiceXmlErrorResponseExtra();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new VerifyEInvoiceXmlErrorResponseExtra()
 
-            if (data.hasOwnProperty('errors')) {
-                obj['errors'] = ApiClient.convertToType(data['errors'], ['String']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('errors')) {
+        obj.errors = ApiClient.convertToType(data.errors, ['String'])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<String>} errors
  */
-VerifyEInvoiceXmlErrorResponseExtra.prototype['errors'] = undefined;
+VerifyEInvoiceXmlErrorResponseExtra.prototype.errors = undefined
 
-
-
-
-
-
-export default VerifyEInvoiceXmlErrorResponseExtra;
-
+export default VerifyEInvoiceXmlErrorResponseExtra

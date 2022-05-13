@@ -11,36 +11,30 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class ReceiptType.
 * @enum {}
 * @readonly
 */
 export default class ReceiptType {
-    
-        /**
+  /**
          * value: "till_receipt"
          * @const
          */
-        "till_receipt" = "till_receipt";
+  'till_receipt' = 'till_receipt'
 
-    
-        /**
+  /**
          * value: "sales_receipt"
          * @const
          */
-        "sales_receipt" = "sales_receipt";
+  'sales_receipt' = 'sales_receipt'
 
-    
-
-    /**
+  /**
     * Returns a <code>ReceiptType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/ReceiptType} The enum <code>ReceiptType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentMethod from './PaymentMethod';
+import PaymentMethod from './PaymentMethod'
 
 /**
  * The GetPaymentMethodResponse model module.
@@ -20,53 +19,44 @@ import PaymentMethod from './PaymentMethod';
  * @version 2.0.12
  */
 class GetPaymentMethodResponse {
-    /**
+  /**
      * Constructs a new <code>GetPaymentMethodResponse</code>.
      * @alias module:model/GetPaymentMethodResponse
      */
-    constructor() { 
-        
-        GetPaymentMethodResponse.initialize(this);
-    }
+  constructor () {
+    GetPaymentMethodResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetPaymentMethodResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetPaymentMethodResponse} obj Optional instance to populate.
      * @return {module:model/GetPaymentMethodResponse} The populated <code>GetPaymentMethodResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetPaymentMethodResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetPaymentMethodResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = PaymentMethod.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = PaymentMethod.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/PaymentMethod} data
  */
-GetPaymentMethodResponse.prototype['data'] = undefined;
+GetPaymentMethodResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetPaymentMethodResponse;
-
+export default GetPaymentMethodResponse

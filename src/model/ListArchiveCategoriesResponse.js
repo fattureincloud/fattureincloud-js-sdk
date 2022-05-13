@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ListArchiveCategoriesResponse model module.
@@ -19,53 +19,44 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ListArchiveCategoriesResponse {
-    /**
+  /**
      * Constructs a new <code>ListArchiveCategoriesResponse</code>.
      * @alias module:model/ListArchiveCategoriesResponse
      */
-    constructor() { 
-        
-        ListArchiveCategoriesResponse.initialize(this);
-    }
+  constructor () {
+    ListArchiveCategoriesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListArchiveCategoriesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListArchiveCategoriesResponse} obj Optional instance to populate.
      * @return {module:model/ListArchiveCategoriesResponse} The populated <code>ListArchiveCategoriesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListArchiveCategoriesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListArchiveCategoriesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], ['String']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, ['String'])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<String>} data
  */
-ListArchiveCategoriesResponse.prototype['data'] = undefined;
+ListArchiveCategoriesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListArchiveCategoriesResponse;
-
+export default ListArchiveCategoriesResponse

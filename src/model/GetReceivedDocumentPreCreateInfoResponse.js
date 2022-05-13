@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceivedDocumentInfo from './ReceivedDocumentInfo';
+import ReceivedDocumentInfo from './ReceivedDocumentInfo'
 
 /**
  * The GetReceivedDocumentPreCreateInfoResponse model module.
@@ -20,54 +19,45 @@ import ReceivedDocumentInfo from './ReceivedDocumentInfo';
  * @version 2.0.12
  */
 class GetReceivedDocumentPreCreateInfoResponse {
-    /**
+  /**
      * Constructs a new <code>GetReceivedDocumentPreCreateInfoResponse</code>.
-     * 
+     *
      * @alias module:model/GetReceivedDocumentPreCreateInfoResponse
      */
-    constructor() { 
-        
-        GetReceivedDocumentPreCreateInfoResponse.initialize(this);
-    }
+  constructor () {
+    GetReceivedDocumentPreCreateInfoResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetReceivedDocumentPreCreateInfoResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetReceivedDocumentPreCreateInfoResponse} obj Optional instance to populate.
      * @return {module:model/GetReceivedDocumentPreCreateInfoResponse} The populated <code>GetReceivedDocumentPreCreateInfoResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetReceivedDocumentPreCreateInfoResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetReceivedDocumentPreCreateInfoResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ReceivedDocumentInfo.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ReceivedDocumentInfo.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ReceivedDocumentInfo} data
  */
-GetReceivedDocumentPreCreateInfoResponse.prototype['data'] = undefined;
+GetReceivedDocumentPreCreateInfoResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetReceivedDocumentPreCreateInfoResponse;
-
+export default GetReceivedDocumentPreCreateInfoResponse

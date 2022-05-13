@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceiptPreCreateInfo from './ReceiptPreCreateInfo';
+import ReceiptPreCreateInfo from './ReceiptPreCreateInfo'
 
 /**
  * The GetReceiptPreCreateInfoResponse model module.
@@ -20,54 +19,45 @@ import ReceiptPreCreateInfo from './ReceiptPreCreateInfo';
  * @version 2.0.12
  */
 class GetReceiptPreCreateInfoResponse {
-    /**
+  /**
      * Constructs a new <code>GetReceiptPreCreateInfoResponse</code>.
-     * 
+     *
      * @alias module:model/GetReceiptPreCreateInfoResponse
      */
-    constructor() { 
-        
-        GetReceiptPreCreateInfoResponse.initialize(this);
-    }
+  constructor () {
+    GetReceiptPreCreateInfoResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetReceiptPreCreateInfoResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetReceiptPreCreateInfoResponse} obj Optional instance to populate.
      * @return {module:model/GetReceiptPreCreateInfoResponse} The populated <code>GetReceiptPreCreateInfoResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetReceiptPreCreateInfoResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetReceiptPreCreateInfoResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ReceiptPreCreateInfo.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ReceiptPreCreateInfo.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ReceiptPreCreateInfo} data
  */
-GetReceiptPreCreateInfoResponse.prototype['data'] = undefined;
+GetReceiptPreCreateInfoResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetReceiptPreCreateInfoResponse;
-
+export default GetReceiptPreCreateInfoResponse

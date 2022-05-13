@@ -3,11 +3,11 @@
  * @module filter/Conjunction
  */
 export default class Expression {
-    /**
+  /**
      * Builds the query from the expression.
      * @return {String} The query.
      */
-    buildQuery() {
-        throw 'buildQuery not implemented'
-    }
+  buildQuery () {
+    throw new Error('buildQuery not implemented')
+  }
 }

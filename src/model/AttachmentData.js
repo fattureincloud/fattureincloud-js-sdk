@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The AttachmentData model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class AttachmentData {
-    /**
+  /**
      * Constructs a new <code>AttachmentData</code>.
      * @alias module:model/AttachmentData
      */
-    constructor() { 
-        
-        AttachmentData.initialize(this);
-    }
+  constructor () {
+    AttachmentData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>AttachmentData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/AttachmentData} obj Optional instance to populate.
      * @return {module:model/AttachmentData} The populated <code>AttachmentData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new AttachmentData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new AttachmentData()
 
-            if (data.hasOwnProperty('attachment_token')) {
-                obj['attachment_token'] = ApiClient.convertToType(data['attachment_token'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('attachment_token')) {
+        obj.attachment_token = ApiClient.convertToType(data.attachment_token, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Uploaded attachment token.
  * @member {String} attachment_token
  */
-AttachmentData.prototype['attachment_token'] = undefined;
+AttachmentData.prototype.attachment_token = undefined
 
-
-
-
-
-
-export default AttachmentData;
-
+export default AttachmentData

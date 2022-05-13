@@ -11,108 +11,100 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetIssuedDocumentPreCreateInfoResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetIssuedDocumentPreCreateInfoResponse()
     instance.data = {
-      numerations : {
-          2018 : {
-            AB123 : 2
-          },
-          2019 : {
-            123 : null
-          },
-          2020 : {
-            ABC : 2
-          },
-          2021 : {
-            rec123 : 2
-          }
+      numerations: {
+        2018: {
+          AB123: 2
         },
-        dn_numerations : {
-          2017 : {
-            "" : 1000
-          },
-          2018 : {
-            "" : 112
-          },
-          2019 : {
-            "" : 526
-          },
-          2020 : {
-            "" : 11
-          },
-          2021 : {
-            "" : 110
-          }
+        2019: {
+          123: null
         },
-        default_values : {
-          template : {
-            id : 111,
-            type : "standard",
-            name : "Light Smoke"
-          },
-          dn_template : {
-            id : 222,
-            type : "delivery_note",
-            name : "DDT 1"
-          },
-          ai_template : {
-            id : 333,
-            type : "accompanying_invoice",
-            name : "FT Accompagnatoria 1"
-          },
-          notes : "",
-          rivalsa : 0,
-          cassa : 0,
-          withholding_tax : 0,
-          withholding_tax_taxable : 100,
-          other_withholding_tax : 0,
-          use_gross_prices : false
+        2020: {
+          ABC: 2
+        },
+        2021: {
+          rec123: 2
+        }
+      },
+      dn_numerations: {
+        2017: {
+          '': 1000
+        },
+        2018: {
+          '': 112
+        },
+        2019: {
+          '': 526
+        },
+        2020: {
+          '': 11
+        },
+        2021: {
+          '': 110
+        }
+      },
+      default_values: {
+        template: {
+          id: 111,
+          type: 'standard',
+          name: 'Light Smoke'
+        },
+        dn_template: {
+          id: 222,
+          type: 'delivery_note',
+          name: 'DDT 1'
+        },
+        ai_template: {
+          id: 333,
+          type: 'accompanying_invoice',
+          name: 'FT Accompagnatoria 1'
+        },
+        notes: '',
+        rivalsa: 0,
+        cassa: 0,
+        withholding_tax: 0,
+        withholding_tax_taxable: 100,
+        other_withholding_tax: 0,
+        use_gross_prices: false
       }
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetIssuedDocumentPreCreateInfoResponse', function() {
-    it('should create an instance of GetIssuedDocumentPreCreateInfoResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetIssuedDocumentPreCreateInfoResponse);
-    });
+  describe('GetIssuedDocumentPreCreateInfoResponse', function () {
+    it('should create an instance of GetIssuedDocumentPreCreateInfoResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetIssuedDocumentPreCreateInfoResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

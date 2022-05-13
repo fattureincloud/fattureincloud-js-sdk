@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import F24 from './F24';
+import F24 from './F24'
 
 /**
  * The ModifyF24Request model module.
@@ -20,54 +19,45 @@ import F24 from './F24';
  * @version 2.0.12
  */
 class ModifyF24Request {
-    /**
+  /**
      * Constructs a new <code>ModifyF24Request</code>.
-     * 
+     *
      * @alias module:model/ModifyF24Request
      */
-    constructor() { 
-        
-        ModifyF24Request.initialize(this);
-    }
+  constructor () {
+    ModifyF24Request.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyF24Request</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyF24Request} obj Optional instance to populate.
      * @return {module:model/ModifyF24Request} The populated <code>ModifyF24Request</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyF24Request();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyF24Request()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = F24.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = F24.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/F24} data
  */
-ModifyF24Request.prototype['data'] = undefined;
+ModifyF24Request.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyF24Request;
-
+export default ModifyF24Request

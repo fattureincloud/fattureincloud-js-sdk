@@ -11,260 +11,251 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CompanyInfo();
-    instance.id = 12345;
-instance.name = "Studio Commercialista";
-instance.email = "mario.rossi@example.com";
-instance.type = "accountant";
-instance.fic = true;
-instance.fic_plan_name = "premium_plus";
-instance.fic_signup_date = "2013-11-01";
-instance.fic_license_expire = "2030-12-31";
-instance.use_fic = true;
-instance.fic_need_setup = false;
-instance.fic_license_type = "coupon_b";
-instance.dic = true;
-instance.dic_plan_name = "trial";
-instance.dic_signup_date = "2018-03-26";
-instance.dic_license_expire = "2022-12-31";
-instance.use_dic = true;
-instance.dic_license_type = "";
-instance.registration_service = "fic";
-instance.can_use_coupon = false;
-instance.is_accountant = true;
-instance.accountant_id = 12345;
-instance.fic_payment_subject = "client";
-instance.dic_payment_subject = "client";
-instance.dic_plan = "trial";
-instance.dic_need_setup = false;
-instance.access_info = {
-                role : "master",
-                through_accountant : false,
-                permissions : {
-                  fic_situation : "read",
-                  fic_clients : "write",
-                  fic_suppliers : "write",
-                  fic_products : "write",
-                  fic_issued_documents : "detailed",
-                  fic_issued_documents_detailed : {
-                    quotes : "write",
-                    proformas : "write",
-                    invoices : "write",
-                    receipts : "write",
-                    delivery_notes : "write",
-                    credit_notes : "write",
-                    orders : "write",
-                    work_reports : "write",
-                    supplier_orders : "write",
-                    self_invoices : "write"
-                  },
-                  fic_received_documents : "write",
-                  fic_receipts : "write",
-                  fic_calendar : "write",
-                  fic_archive : "write",
-                  fic_taxes : "write",
-                  fic_stock : "write",
-                  fic_cashbook : "write",
-                  fic_settings : "write",
-                  fic_emails : "read",
-                  dic_employees : "none",
-                  dic_timesheet : "none",
-                  dic_settings : "none",
-                  fic_invoice_trading : "none",
-                  fic_export : "write",
-                  fic_import_clients_suppliers : "write",
-                  fic_import_products : "write",
-                  fic_import_issued_documents : "none",
-                  fic_import_bankstatements : "none",
-                  fic_recurring : "write",
-                  fic_riba : "write"
-                }
-              },
-instance.plan_info = {
-                limits : {
-                  clients : 5000,
-                  suppliers : 5000,
-                  products : 5000,
-                  documents : 3000
-                },
-                functions : {
-                  document_attachments : true,
-                  archive : true,
-                  payment_notifications : true,
-                  paypal : true,
-                  receipts : true,
-                  e_invoice : true,
-                  genius : true,
-                  stock : true,
-                  smtp : true,
-                  mail_tracking : true,
-                  subaccounts : true,
-                  tessera_sanitaria : true,
-                  recurring : true,
-                  sofort : false,
-                  cerved : true,
-                  ts_digital : true,
-                  ts_pay : true,
-                  ts_invoice_trading : true
-                },
-                functions_status : {
-                  ts_digital : {
-                    active : true
-                  },
-                  ts_pay : {
-                    active : true
-                  }
-                }
-            }
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CompanyInfo()
+    instance.id = 12345
+    instance.name = 'Studio Commercialista'
+    instance.email = 'mario.rossi@example.com'
+    instance.type = 'accountant'
+    instance.fic = true
+    instance.fic_plan_name = 'premium_plus'
+    instance.fic_signup_date = '2013-11-01'
+    instance.fic_license_expire = '2030-12-31'
+    instance.use_fic = true
+    instance.fic_need_setup = false
+    instance.fic_license_type = 'coupon_b'
+    instance.dic = true
+    instance.dic_plan_name = 'trial'
+    instance.dic_signup_date = '2018-03-26'
+    instance.dic_license_expire = '2022-12-31'
+    instance.use_dic = true
+    instance.dic_license_type = ''
+    instance.registration_service = 'fic'
+    instance.can_use_coupon = false
+    instance.is_accountant = true
+    instance.accountant_id = 12345
+    instance.fic_payment_subject = 'client'
+    instance.dic_payment_subject = 'client'
+    instance.dic_plan = 'trial'
+    instance.dic_need_setup = false
+    instance.access_info = {
+      role: 'master',
+      through_accountant: false,
+      permissions: {
+        fic_situation: 'read',
+        fic_clients: 'write',
+        fic_suppliers: 'write',
+        fic_products: 'write',
+        fic_issued_documents: 'detailed',
+        fic_issued_documents_detailed: {
+          quotes: 'write',
+          proformas: 'write',
+          invoices: 'write',
+          receipts: 'write',
+          delivery_notes: 'write',
+          credit_notes: 'write',
+          orders: 'write',
+          work_reports: 'write',
+          supplier_orders: 'write',
+          self_invoices: 'write'
+        },
+        fic_received_documents: 'write',
+        fic_receipts: 'write',
+        fic_calendar: 'write',
+        fic_archive: 'write',
+        fic_taxes: 'write',
+        fic_stock: 'write',
+        fic_cashbook: 'write',
+        fic_settings: 'write',
+        fic_emails: 'read',
+        dic_employees: 'none',
+        dic_timesheet: 'none',
+        dic_settings: 'none',
+        fic_invoice_trading: 'none',
+        fic_export: 'write',
+        fic_import_clients_suppliers: 'write',
+        fic_import_products: 'write',
+        fic_import_issued_documents: 'none',
+        fic_import_bankstatements: 'none',
+        fic_recurring: 'write',
+        fic_riba: 'write'
+      }
+    }
+    instance.plan_info = {
+      limits: {
+        clients: 5000,
+        suppliers: 5000,
+        products: 5000,
+        documents: 3000
+      },
+      functions: {
+        document_attachments: true,
+        archive: true,
+        payment_notifications: true,
+        paypal: true,
+        receipts: true,
+        e_invoice: true,
+        genius: true,
+        stock: true,
+        smtp: true,
+        mail_tracking: true,
+        subaccounts: true,
+        tessera_sanitaria: true,
+        recurring: true,
+        sofort: false,
+        cerved: true,
+        ts_digital: true,
+        ts_pay: true,
+        ts_invoice_trading: true
+      },
+      functions_status: {
+        ts_digital: {
+          active: true
+        },
+        ts_pay: {
+          active: true
+        }
+      }
+    }
+  })
 
-  });
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  describe('CompanyInfo', function () {
+    it('should create an instance of CompanyInfo', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfo)
+    })
 
-  describe('CompanyInfo', function() {
-    it('should create an instance of CompanyInfo', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfo);
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property name (base name: "name")', function () {
+      expect(typeof instance.name).to.be('string')
+    })
 
-    it('should have the property name (base name: "name")', function() {
-      expect(typeof instance.name).to.be('string');
-    });
+    it('should have the property email (base name: "email")', function () {
+      expect(typeof instance.email).to.be('string')
+    })
 
-    it('should have the property email (base name: "email")', function() {
-      expect(typeof instance.email).to.be('string');
-    });
+    it('should have the property type (base name: "type")', function () {
+      expect(typeof instance.type).to.be('string')
+    })
 
-    it('should have the property type (base name: "type")', function() {
-      expect(typeof instance.type).to.be('string');
-    });
+    it('should have the property fic (base name: "fic")', function () {
+      expect(typeof instance.fic).to.be('boolean')
+    })
 
-    it('should have the property fic (base name: "fic")', function() {
-      expect(typeof instance.fic).to.be('boolean');
-    });
+    it('should have the property ficPlanName (base name: "fic_plan_name")', function () {
+      expect(typeof instance.fic_plan_name).to.be('string')
+    })
 
-    it('should have the property ficPlanName (base name: "fic_plan_name")', function() {
-      expect(typeof instance.fic_plan_name).to.be('string');
-    });
+    it('should have the property ficLicenseType (base name: "fic_license_type")', function () {
+      expect(typeof instance.fic_license_type).to.be('string')
+    })
 
-    it('should have the property ficLicenseType (base name: "fic_license_type")', function() {
-      expect(typeof instance.fic_license_type).to.be('string');
-    });
+    it('should have the property ficPaymentSubject (base name: "fic_payment_subject")', function () {
+      expect(typeof instance.fic_payment_subject).to.be('string')
+    })
 
-    it('should have the property ficPaymentSubject (base name: "fic_payment_subject")', function() {
-      expect(typeof instance.fic_payment_subject).to.be('string');
-    });
+    it('should have the property ficLicenseExpire (base name: "fic_license_expire")', function () {
+      expect(typeof instance.fic_license_expire).to.be('string')
+    })
 
-    it('should have the property ficLicenseExpire (base name: "fic_license_expire")', function() {
-      expect(typeof instance.fic_license_expire).to.be('string');
-    });
+    it('should have the property ficSignupDate (base name: "fic_signup_date")', function () {
+      expect(typeof instance.fic_signup_date).to.be('string')
+    })
 
-    it('should have the property ficSignupDate (base name: "fic_signup_date")', function() {
-      expect(typeof instance.fic_signup_date).to.be('string');
-    });
+    it('should have the property useFic (base name: "use_fic")', function () {
+      expect(typeof instance.use_fic).to.be('boolean')
+    })
 
-    it('should have the property useFic (base name: "use_fic")', function() {
-      expect(typeof instance.use_fic).to.be('boolean');
-    });
+    it('should have the property ficNeedSetup (base name: "fic_need_setup")', function () {
+      expect(typeof instance.fic_need_setup).to.be('boolean')
+    })
 
-    it('should have the property ficNeedSetup (base name: "fic_need_setup")', function() {
-      expect(typeof instance.fic_need_setup).to.be('boolean');
-    });
+    it('should have the property dic (base name: "dic")', function () {
+      expect(typeof instance.dic).to.be('boolean')
+    })
 
-    it('should have the property dic (base name: "dic")', function() {
-      expect(typeof instance.dic).to.be('boolean');
-    });
+    it('should have the property dicPlan (base name: "dic_plan")', function () {
+      expect(typeof instance.dic_plan).to.be('string')
+    })
 
-    it('should have the property dicPlan (base name: "dic_plan")', function() {
-      expect(typeof instance.dic_plan).to.be('string');
-    });
+    it('should have the property dicLicenseExpire (base name: "dic_license_expire")', function () {
+      expect(typeof instance.dic_license_expire).to.be('string')
+    })
 
-    it('should have the property dicLicenseExpire (base name: "dic_license_expire")', function() {
-      expect(typeof instance.dic_license_expire).to.be('string');
-    });
+    it('should have the property useDic (base name: "use_dic")', function () {
+      expect(typeof instance.use_dic).to.be('boolean')
+    })
 
-    it('should have the property useDic (base name: "use_dic")', function() {
-      expect(typeof instance.use_dic).to.be('boolean');
-    });
+    it('should have the property dicNeedSetup (base name: "dic_need_setup")', function () {
+      expect(typeof instance.dic_need_setup).to.be('boolean')
+    })
 
-    it('should have the property dicNeedSetup (base name: "dic_need_setup")', function() {
-      expect(typeof instance.dic_need_setup).to.be('boolean');
-    });
+    it('should have the property accessInfo (base name: "access_info")', function () {
+      expect(typeof instance.access_info).to.be('object')
+    })
 
-    it('should have the property accessInfo (base name: "access_info")', function() {
-      expect(typeof instance.access_info).to.be('object');
-    });
+    it('should have the property planInfo (base name: "plan_info")', function () {
+      expect(typeof instance.plan_info).to.be('object')
+    })
 
-    it('should have the property planInfo (base name: "plan_info")', function() {
-      expect(typeof instance.plan_info).to.be('object');
-    });
+    it('should have the property canUseCoupon (base name: "can_use_coupon")', function () {
+      expect(typeof instance.can_use_coupon).to.be('boolean')
+    })
 
-    it('should have the property canUseCoupon (base name: "can_use_coupon")', function() {
-      expect(typeof instance.can_use_coupon).to.be('boolean');
-    });
+    it('should have the property accountantId (base name: "accountant_id")', function () {
+      expect(typeof instance.accountant_id).to.be('number')
+    })
 
-    it('should have the property accountantId (base name: "accountant_id")', function() {
-      expect(typeof instance.accountant_id).to.be('number');
-    });
+    it('should have the property dicLicenseType (base name: "dic_license_type")', function () {
+      expect(typeof instance.dic_license_type).to.be('string')
+    })
 
-    it('should have the property dicLicenseType (base name: "dic_license_type")', function() {
-      expect(typeof instance.dic_license_type).to.be('string');
-    });
+    it('should have the property dicPaymentSubject (base name: "dic_payment_subject")', function () {
+      expect(typeof instance.dic_payment_subject).to.be('string')
+    })
 
-    it('should have the property dicPaymentSubject (base name: "dic_payment_subject")', function() {
-      expect(typeof instance.dic_payment_subject).to.be('string');
-    });
+    it('should have the property dicPlanName (base name: "dic_plan_name")', function () {
+      expect(typeof instance.dic_plan_name).to.be('string')
+    })
 
-    it('should have the property dicPlanName (base name: "dic_plan_name")', function() {
-      expect(typeof instance.dic_plan_name).to.be('string');
-    });
+    it('should have the property dicSignupDate (base name: "dic_signup_date")', function () {
+      expect(typeof instance.dic_signup_date).to.be('string')
+    })
 
-    it('should have the property dicSignupDate (base name: "dic_signup_date")', function() {
-      expect(typeof instance.dic_signup_date).to.be('string');
-    });
+    it('should have the property isAccountant (base name: "is_accountant")', function () {
+      expect(typeof instance.is_accountant).to.be('boolean')
+    })
 
-    it('should have the property isAccountant (base name: "is_accountant")', function() {
-      expect(typeof instance.is_accountant).to.be('boolean');
-    });
-
-    it('should have the property registrationService (base name: "registration_service")', function() {
-      expect(typeof instance.registration_service).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property registrationService (base name: "registration_service")', function () {
+      expect(typeof instance.registration_service).to.be('string')
+    })
+  })
+}))

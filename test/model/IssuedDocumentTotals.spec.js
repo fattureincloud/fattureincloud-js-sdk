@@ -11,138 +11,130 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentTotals();
-    instance.amount_net = 68.18;
-    instance.taxable_amount = 68.18;
-    instance.amount_vat = 6.82;
-    instance.amount_gross = 75;
-    instance.amount_due = 75;
-    instance.payments_sum = 75;
-    instance.amount_rivalsa = 10;
-    instance.amount_net_with_rivalsa = 10;
-    instance.amount_cassa = 10;
-    instance.not_taxable_amount = 10;
-    instance.taxable_amount_withholding_tax = 10;
-    instance.amount_withholding_tax = 10;
-    instance.taxable_amount_other_withholding_tax = 10;
-    instance.amount_other_withholding_tax = 10;
-    instance.stamp_duty = 10;
-    instance.is_enasarco_maximal_exceeded = false;
-    instance.payments_sum = 2;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.IssuedDocumentTotals()
+    instance.amount_net = 68.18
+    instance.taxable_amount = 68.18
+    instance.amount_vat = 6.82
+    instance.amount_gross = 75
+    instance.amount_due = 75
+    instance.payments_sum = 75
+    instance.amount_rivalsa = 10
+    instance.amount_net_with_rivalsa = 10
+    instance.amount_cassa = 10
+    instance.not_taxable_amount = 10
+    instance.taxable_amount_withholding_tax = 10
+    instance.amount_withholding_tax = 10
+    instance.taxable_amount_other_withholding_tax = 10
+    instance.amount_other_withholding_tax = 10
+    instance.stamp_duty = 10
+    instance.is_enasarco_maximal_exceeded = false
+    instance.payments_sum = 2
     instance.vat_list = {
-                    vat_item : {
-                      amount_net : 68.18,
-                      amount_vat : 6.82
-                    }
-                }    
-  });
+      vat_item: {
+        amount_net: 68.18,
+        amount_vat: 6.82
+      }
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedDocumentTotals', function() {
-    it('should create an instance of IssuedDocumentTotals', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentTotals);
-    });
+  describe('IssuedDocumentTotals', function () {
+    it('should create an instance of IssuedDocumentTotals', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentTotals)
+    })
 
-    it('should have the property amountNet (base name: "amount_net")', function() {
-      expect(typeof instance.amount_net).to.be('number');
-    });
+    it('should have the property amountNet (base name: "amount_net")', function () {
+      expect(typeof instance.amount_net).to.be('number')
+    })
 
-    it('should have the property amountRivalsa (base name: "amount_rivalsa")', function() {
-      expect(typeof instance.amount_rivalsa).to.be('number');
-    });
+    it('should have the property amountRivalsa (base name: "amount_rivalsa")', function () {
+      expect(typeof instance.amount_rivalsa).to.be('number')
+    })
 
-    it('should have the property amountNetWithRivalsa (base name: "amount_net_with_rivalsa")', function() {
-      expect(typeof instance.amount_net_with_rivalsa).to.be('number');
-    });
+    it('should have the property amountNetWithRivalsa (base name: "amount_net_with_rivalsa")', function () {
+      expect(typeof instance.amount_net_with_rivalsa).to.be('number')
+    })
 
-    it('should have the property amountCassa (base name: "amount_cassa")', function() {
-      expect(typeof instance.amount_cassa).to.be('number');
-    });
+    it('should have the property amountCassa (base name: "amount_cassa")', function () {
+      expect(typeof instance.amount_cassa).to.be('number')
+    })
 
-    it('should have the property taxableAmount (base name: "taxable_amount")', function() {
-      expect(typeof instance.taxable_amount).to.be('number');
-    });
+    it('should have the property taxableAmount (base name: "taxable_amount")', function () {
+      expect(typeof instance.taxable_amount).to.be('number')
+    })
 
-    it('should have the property notTaxableAmount (base name: "not_taxable_amount")', function() {
-      expect(typeof instance.not_taxable_amount).to.be('number');
-    });
+    it('should have the property notTaxableAmount (base name: "not_taxable_amount")', function () {
+      expect(typeof instance.not_taxable_amount).to.be('number')
+    })
 
-    it('should have the property amountVat (base name: "amount_vat")', function() {
-      expect(typeof instance.amount_vat).to.be('number');
-    });
+    it('should have the property amountVat (base name: "amount_vat")', function () {
+      expect(typeof instance.amount_vat).to.be('number')
+    })
 
-    it('should have the property amountGross (base name: "amount_gross")', function() {
-      expect(typeof instance.amount_gross).to.be('number');
-    });
+    it('should have the property amountGross (base name: "amount_gross")', function () {
+      expect(typeof instance.amount_gross).to.be('number')
+    })
 
-    it('should have the property taxableAmountWithholdingTax (base name: "taxable_amount_withholding_tax")', function() {
-      expect(typeof instance.taxable_amount_withholding_tax).to.be('number');
-    });
+    it('should have the property taxableAmountWithholdingTax (base name: "taxable_amount_withholding_tax")', function () {
+      expect(typeof instance.taxable_amount_withholding_tax).to.be('number')
+    })
 
-    it('should have the property amountWithholdingTax (base name: "amount_withholding_tax")', function() {
-      expect(typeof instance.amount_withholding_tax).to.be('number');
-    });
+    it('should have the property amountWithholdingTax (base name: "amount_withholding_tax")', function () {
+      expect(typeof instance.amount_withholding_tax).to.be('number')
+    })
 
-    it('should have the property taxableAmountOtherWithholdingTax (base name: "taxable_amount_other_withholding_tax")', function() {
-      expect(typeof instance.taxable_amount_other_withholding_tax).to.be('number');
-    });
+    it('should have the property taxableAmountOtherWithholdingTax (base name: "taxable_amount_other_withholding_tax")', function () {
+      expect(typeof instance.taxable_amount_other_withholding_tax).to.be('number')
+    })
 
-    it('should have the property amountOtherWithholdingTax (base name: "amount_other_withholding_tax")', function() {
-      expect(typeof instance.amount_other_withholding_tax).to.be('number');
-    });
+    it('should have the property amountOtherWithholdingTax (base name: "amount_other_withholding_tax")', function () {
+      expect(typeof instance.amount_other_withholding_tax).to.be('number')
+    })
 
-    it('should have the property stampDuty (base name: "stamp_duty")', function() {
-      expect(typeof instance.stamp_duty).to.be('number');
-    });
+    it('should have the property stampDuty (base name: "stamp_duty")', function () {
+      expect(typeof instance.stamp_duty).to.be('number')
+    })
 
-    it('should have the property amountDue (base name: "amount_due")', function() {
-      expect(typeof instance.amount_due).to.be('number');
-    });
+    it('should have the property amountDue (base name: "amount_due")', function () {
+      expect(typeof instance.amount_due).to.be('number')
+    })
 
-    it('should have the property isEnasarcoMaximalExceeded (base name: "is_enasarco_maximal_exceeded")', function() {
-      expect(typeof instance.is_enasarco_maximal_exceeded).to.be('boolean');
-    });
+    it('should have the property isEnasarcoMaximalExceeded (base name: "is_enasarco_maximal_exceeded")', function () {
+      expect(typeof instance.is_enasarco_maximal_exceeded).to.be('boolean')
+    })
 
-    it('should have the property paymentsSum (base name: "payments_sum")', function() {
-      expect(typeof instance.payments_sum).to.be('number');
-    });
+    it('should have the property paymentsSum (base name: "payments_sum")', function () {
+      expect(typeof instance.payments_sum).to.be('number')
+    })
 
-    it('should have the property vatList (base name: "vat_list")', function() {
-      expect(typeof instance.vat_list).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property vatList (base name: "vat_list")', function () {
+      expect(typeof instance.vat_list).to.be('object')
+    })
+  })
+}))

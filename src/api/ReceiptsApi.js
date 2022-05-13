@@ -11,16 +11,13 @@
  *
  */
 
-
-import ApiClient from "../ApiClient";
-import CreateReceiptRequest from '../model/CreateReceiptRequest';
-import CreateReceiptResponse from '../model/CreateReceiptResponse';
-import GetReceiptPreCreateInfoResponse from '../model/GetReceiptPreCreateInfoResponse';
-import GetReceiptResponse from '../model/GetReceiptResponse';
-import GetReceiptsMonthlyTotalsResponse from '../model/GetReceiptsMonthlyTotalsResponse';
-import ListReceiptsResponse from '../model/ListReceiptsResponse';
-import ModifyReceiptRequest from '../model/ModifyReceiptRequest';
-import ModifyReceiptResponse from '../model/ModifyReceiptResponse';
+import ApiClient from '../ApiClient'
+import CreateReceiptResponse from '../model/CreateReceiptResponse'
+import GetReceiptPreCreateInfoResponse from '../model/GetReceiptPreCreateInfoResponse'
+import GetReceiptResponse from '../model/GetReceiptResponse'
+import GetReceiptsMonthlyTotalsResponse from '../model/GetReceiptsMonthlyTotalsResponse'
+import ListReceiptsResponse from '../model/ListReceiptsResponse'
+import ModifyReceiptResponse from '../model/ModifyReceiptResponse'
 
 /**
 * Receipts service.
@@ -28,21 +25,18 @@ import ModifyReceiptResponse from '../model/ModifyReceiptResponse';
 * @version 2.0.12
 */
 export default class ReceiptsApi {
-
-    /**
-    * Constructs a new ReceiptsApi. 
+  /**
+    * Constructs a new ReceiptsApi.
     * @alias module:api/ReceiptsApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-
-
-    /**
+  /**
      * Create Receipt
      * Creates a new receipt.
      * @param {Number} companyId The ID of the company.
@@ -50,36 +44,36 @@ export default class ReceiptsApi {
      * @param {module:model/CreateReceiptRequest} opts.createReceiptRequest The Receipt to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateReceiptResponse} and HTTP response
      */
-    createReceiptWithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = opts['createReceiptRequest'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling createReceipt");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = CreateReceiptResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  createReceiptWithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = opts.createReceiptRequest
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling createReceipt")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = CreateReceiptResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Create Receipt
      * Creates a new receipt.
      * @param {Number} companyId The ID of the company.
@@ -87,70 +81,68 @@ export default class ReceiptsApi {
      * @param {module:model/CreateReceiptRequest} opts.createReceiptRequest The Receipt to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateReceiptResponse}
      */
-    createReceipt(companyId, opts) {
-      return this.createReceiptWithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  createReceipt (companyId, opts) {
+    return this.createReceiptWithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Delete Receipt
      * Deletes the specified receipt.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteReceiptWithHttpInfo(companyId, documentId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling deleteReceipt");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling deleteReceipt");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts/{document_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  deleteReceiptWithHttpInfo (companyId, documentId) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling deleteReceipt")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling deleteReceipt")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = []
+    const returnType = null
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts/{document_id}', 'DELETE',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Delete Receipt
      * Deletes the specified receipt.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteReceipt(companyId, documentId) {
-      return this.deleteReceiptWithHttpInfo(companyId, documentId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  deleteReceipt (companyId, documentId) {
+    return this.deleteReceiptWithHttpInfo(companyId, documentId)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Get Receipt
      * Gets the specified receipt.
      * @param {Number} companyId The ID of the company.
@@ -160,43 +152,43 @@ export default class ReceiptsApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReceiptResponse} and HTTP response
      */
-    getReceiptWithHttpInfo(companyId, documentId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling getReceipt");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling getReceipt");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetReceiptResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts/{document_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  getReceiptWithHttpInfo (companyId, documentId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling getReceipt")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling getReceipt")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetReceiptResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts/{document_id}', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get Receipt
      * Gets the specified receipt.
      * @param {Number} companyId The ID of the company.
@@ -206,63 +198,61 @@ export default class ReceiptsApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReceiptResponse}
      */
-    getReceipt(companyId, documentId, opts) {
-      return this.getReceiptWithHttpInfo(companyId, documentId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getReceipt (companyId, documentId, opts) {
+    return this.getReceiptWithHttpInfo(companyId, documentId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Get Receipt Pre-Create Info
      * Retrieves the information useful while creating a new receipt.
      * @param {Number} companyId The ID of the company.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReceiptPreCreateInfoResponse} and HTTP response
      */
-    getReceiptPreCreateInfoWithHttpInfo(companyId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling getReceiptPreCreateInfo");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetReceiptPreCreateInfoResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts/info', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  getReceiptPreCreateInfoWithHttpInfo (companyId) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling getReceiptPreCreateInfo")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetReceiptPreCreateInfoResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts/info', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get Receipt Pre-Create Info
      * Retrieves the information useful while creating a new receipt.
      * @param {Number} companyId The ID of the company.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReceiptPreCreateInfoResponse}
      */
-    getReceiptPreCreateInfo(companyId) {
-      return this.getReceiptPreCreateInfoWithHttpInfo(companyId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getReceiptPreCreateInfo (companyId) {
+    return this.getReceiptPreCreateInfoWithHttpInfo(companyId)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Get Receipts Monthly Totals
      * Returns the monthly totals by year and receipt type.
      * @param {Number} companyId The ID of the company.
@@ -270,45 +260,45 @@ export default class ReceiptsApi {
      * @param {String} year Year for which you want monthly totals
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetReceiptsMonthlyTotalsResponse} and HTTP response
      */
-    getReceiptsMonthlyTotalsWithHttpInfo(companyId, type, year) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling getReceiptsMonthlyTotals");
-      }
-      // verify the required parameter 'type' is set
-      if (type === undefined || type === null) {
-        throw new Error("Missing the required parameter 'type' when calling getReceiptsMonthlyTotals");
-      }
-      // verify the required parameter 'year' is set
-      if (year === undefined || year === null) {
-        throw new Error("Missing the required parameter 'year' when calling getReceiptsMonthlyTotals");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-        'type': type,
-        'year': year
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetReceiptsMonthlyTotalsResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts/monthly_totals', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  getReceiptsMonthlyTotalsWithHttpInfo (companyId, type, year) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling getReceiptsMonthlyTotals")
+    }
+    // verify the required parameter 'type' is set
+    if (type === undefined || type === null) {
+      throw new Error("Missing the required parameter 'type' when calling getReceiptsMonthlyTotals")
+    }
+    // verify the required parameter 'year' is set
+    if (year === undefined || year === null) {
+      throw new Error("Missing the required parameter 'year' when calling getReceiptsMonthlyTotals")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+      type,
+      year
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetReceiptsMonthlyTotalsResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts/monthly_totals', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get Receipts Monthly Totals
      * Returns the monthly totals by year and receipt type.
      * @param {Number} companyId The ID of the company.
@@ -316,15 +306,14 @@ export default class ReceiptsApi {
      * @param {String} year Year for which you want monthly totals
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetReceiptsMonthlyTotalsResponse}
      */
-    getReceiptsMonthlyTotals(companyId, type, year) {
-      return this.getReceiptsMonthlyTotalsWithHttpInfo(companyId, type, year)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getReceiptsMonthlyTotals (companyId, type, year) {
+    return this.getReceiptsMonthlyTotalsWithHttpInfo(companyId, type, year)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * List Receipts
      * Lists the receipts.
      * @param {Number} companyId The ID of the company.
@@ -337,42 +326,42 @@ export default class ReceiptsApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListReceiptsResponse} and HTTP response
      */
-    listReceiptsWithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling listReceipts");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset'],
-        'page': opts['page'],
-        'per_page': opts['perPage'],
-        'sort': opts['sort'],
-        'q': opts['q']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListReceiptsResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  listReceiptsWithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling listReceipts")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset,
+      page: opts.page,
+      per_page: opts.perPage,
+      sort: opts.sort,
+      q: opts.q
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = ListReceiptsResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * List Receipts
      * Lists the receipts.
      * @param {Number} companyId The ID of the company.
@@ -385,15 +374,14 @@ export default class ReceiptsApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListReceiptsResponse}
      */
-    listReceipts(companyId, opts) {
-      return this.listReceiptsWithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  listReceipts (companyId, opts) {
+    return this.listReceiptsWithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Modify Receipt
      * Modifies the specified receipt.
      * @param {Number} companyId The ID of the company.
@@ -402,41 +390,41 @@ export default class ReceiptsApi {
      * @param {module:model/ModifyReceiptRequest} opts.modifyReceiptRequest Modified receipt.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ModifyReceiptResponse} and HTTP response
      */
-    modifyReceiptWithHttpInfo(companyId, documentId, opts) {
-      opts = opts || {};
-      let postBody = opts['modifyReceiptRequest'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling modifyReceipt");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling modifyReceipt");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = ModifyReceiptResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/receipts/{document_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  modifyReceiptWithHttpInfo (companyId, documentId, opts) {
+    opts = opts || {}
+    const postBody = opts.modifyReceiptRequest
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling modifyReceipt")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling modifyReceipt")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = ModifyReceiptResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/receipts/{document_id}', 'PUT',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Modify Receipt
      * Modifies the specified receipt.
      * @param {Number} companyId The ID of the company.
@@ -445,12 +433,10 @@ export default class ReceiptsApi {
      * @param {module:model/ModifyReceiptRequest} opts.modifyReceiptRequest Modified receipt.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ModifyReceiptResponse}
      */
-    modifyReceipt(companyId, documentId, opts) {
-      return this.modifyReceiptWithHttpInfo(companyId, documentId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  modifyReceipt (companyId, documentId, opts) {
+    return this.modifyReceiptWithHttpInfo(companyId, documentId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 }

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Product from './Product';
+import ApiClient from '../ApiClient'
+import Product from './Product'
 
 /**
  * The ListProductsResponsePage model module.
@@ -20,53 +20,44 @@ import Product from './Product';
  * @version 2.0.12
  */
 class ListProductsResponsePage {
-    /**
+  /**
      * Constructs a new <code>ListProductsResponsePage</code>.
      * @alias module:model/ListProductsResponsePage
      */
-    constructor() { 
-        
-        ListProductsResponsePage.initialize(this);
-    }
+  constructor () {
+    ListProductsResponsePage.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListProductsResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListProductsResponsePage} obj Optional instance to populate.
      * @return {module:model/ListProductsResponsePage} The populated <code>ListProductsResponsePage</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListProductsResponsePage();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListProductsResponsePage()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [Product]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [Product])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/Product>} data
  */
-ListProductsResponsePage.prototype['data'] = undefined;
+ListProductsResponsePage.prototype.data = undefined
 
-
-
-
-
-
-export default ListProductsResponsePage;
-
+export default ListProductsResponsePage

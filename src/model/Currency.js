@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The Currency model module.
@@ -19,82 +19,73 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class Currency {
-    /**
+  /**
      * Constructs a new <code>Currency</code>.
-     * 
+     *
      * @alias module:model/Currency
      */
-    constructor() { 
-        
-        Currency.initialize(this);
-    }
+  constructor () {
+    Currency.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>Currency</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/Currency} obj Optional instance to populate.
      * @return {module:model/Currency} The populated <code>Currency</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Currency();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new Currency()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('symbol')) {
-                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
-            }
-            if (data.hasOwnProperty('exchange_rate')) {
-                obj['exchange_rate'] = ApiClient.convertToType(data['exchange_rate'], 'String');
-            }
-            if (data.hasOwnProperty('html_symbol')) {
-                obj['html_symbol'] = ApiClient.convertToType(data['html_symbol'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'String')
+      }
+      if (data.hasOwnProperty('symbol')) {
+        obj.symbol = ApiClient.convertToType(data.symbol, 'String')
+      }
+      if (data.hasOwnProperty('exchange_rate')) {
+        obj.exchange_rate = ApiClient.convertToType(data.exchange_rate, 'String')
+      }
+      if (data.hasOwnProperty('html_symbol')) {
+        obj.html_symbol = ApiClient.convertToType(data.html_symbol, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Currency code.
  * @member {String} id
  */
-Currency.prototype['id'] = undefined;
+Currency.prototype.id = undefined
 
 /**
  * Currency symbol.
  * @member {String} symbol
  */
-Currency.prototype['symbol'] = undefined;
+Currency.prototype.symbol = undefined
 
 /**
  * Currency exchange rate (EUR to this).
  * @member {String} exchange_rate
  */
-Currency.prototype['exchange_rate'] = undefined;
+Currency.prototype.exchange_rate = undefined
 
 /**
  * Currency html code.
  * @member {String} html_symbol
  */
-Currency.prototype['html_symbol'] = undefined;
+Currency.prototype.html_symbol = undefined
 
-
-
-
-
-
-export default Currency;
-
+export default Currency

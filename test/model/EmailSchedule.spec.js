@@ -11,92 +11,84 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.EmailSchedule();
-    instance.sender_email = "mariorossi@fattureincloud.it";
-    instance.sender_id = 5;
-    instance.recipient_email = "mary.red@example.com";
-    instance.subject = "Nostra pro forma nr. 1";
-    instance.body = "Gentile Mario Rossi<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottostante.<br><br>{{allegati}}<br><br>Cordiali saluti<br><b>Mario Rossi</b>";
-    instance.attach_pdf = true;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.EmailSchedule()
+    instance.sender_email = 'mariorossi@fattureincloud.it'
+    instance.sender_id = 5
+    instance.recipient_email = 'mary.red@example.com'
+    instance.subject = 'Nostra pro forma nr. 1'
+    instance.body = 'Gentile Mario Rossi<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottostante.<br><br>{{allegati}}<br><br>Cordiali saluti<br><b>Mario Rossi</b>'
+    instance.attach_pdf = true
     instance.include = {
-                    document : false,
-                    delivery_note : false,
-                    attachment : false,
-                    accompanying_invoice : false
-                };
-    instance.send_copy = false;
-  });
+      document: false,
+      delivery_note: false,
+      attachment: false,
+      accompanying_invoice: false
+    }
+    instance.send_copy = false
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('EmailSchedule', function() {
-    it('should create an instance of EmailSchedule', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.EmailSchedule);
-    });
+  describe('EmailSchedule', function () {
+    it('should create an instance of EmailSchedule', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.EmailSchedule)
+    })
 
-    it('should have the property senderId (base name: "sender_id")', function() {
-      expect(typeof instance.sender_id).to.be('number');
-    });
+    it('should have the property senderId (base name: "sender_id")', function () {
+      expect(typeof instance.sender_id).to.be('number')
+    })
 
-    it('should have the property senderEmail (base name: "sender_email")', function() {
-      expect(typeof instance.sender_email).to.be('string');
-    });
+    it('should have the property senderEmail (base name: "sender_email")', function () {
+      expect(typeof instance.sender_email).to.be('string')
+    })
 
-    it('should have the property recipientEmail (base name: "recipient_email")', function() {
-      expect(typeof instance.recipient_email).to.be('string');
-    });
+    it('should have the property recipientEmail (base name: "recipient_email")', function () {
+      expect(typeof instance.recipient_email).to.be('string')
+    })
 
-    it('should have the property subject (base name: "subject")', function() {
-      expect(typeof instance.subject).to.be('string');
-    });
+    it('should have the property subject (base name: "subject")', function () {
+      expect(typeof instance.subject).to.be('string')
+    })
 
-    it('should have the property body (base name: "body")', function() {
-      expect(typeof instance.body).to.be('string');
-    });
+    it('should have the property body (base name: "body")', function () {
+      expect(typeof instance.body).to.be('string')
+    })
 
-    it('should have the property include (base name: "include")', function() {
-      expect(typeof instance.include).to.be('object');
-    });
+    it('should have the property include (base name: "include")', function () {
+      expect(typeof instance.include).to.be('object')
+    })
 
-    it('should have the property attachPdf (base name: "attach_pdf")', function() {
-      expect(typeof instance.attach_pdf).to.be('boolean');
-    });
+    it('should have the property attachPdf (base name: "attach_pdf")', function () {
+      expect(typeof instance.attach_pdf).to.be('boolean')
+    })
 
-    it('should have the property sendCopy (base name: "send_copy")', function() {
-      expect(typeof instance.send_copy).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property sendCopy (base name: "send_copy")', function () {
+      expect(typeof instance.send_copy).to.be('boolean')
+    })
+  })
+}))

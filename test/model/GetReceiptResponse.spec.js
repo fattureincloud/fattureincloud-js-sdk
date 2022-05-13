@@ -11,84 +11,76 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetReceiptResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetReceiptResponse()
     instance.data = {
-      id : 12346,
-      date : "2021-08-19",
-      number : 6,
-      numeration : "REC006",
-      amount_net : 8.2,
-      amount_vat : 1.8,
-      amount_gross : 10,
-      use_gross_prices : true,
-      type : "sales_receipt",
-      description : "cassa 1",
-      rc_center : "",
-      created_at : "2021-08-19",
-      updated_at : "2021-08-19",
-      payment_account : {
-        id : 555,
-        name : "contanti"
+      id: 12346,
+      date: '2021-08-19',
+      number: 6,
+      numeration: 'REC006',
+      amount_net: 8.2,
+      amount_vat: 1.8,
+      amount_gross: 10,
+      use_gross_prices: true,
+      type: 'sales_receipt',
+      description: 'cassa 1',
+      rc_center: '',
+      created_at: '2021-08-19',
+      updated_at: '2021-08-19',
+      payment_account: {
+        id: 555,
+        name: 'contanti'
       },
-      items_list : [
+      items_list: [
         {
-          id : 888,
-          amount_net : 8.2,
-          amount_vat : 1.8,
-          amount_gross : 10,
-          category : "altro",
-          vat : {
-            id : 0,
-            value : 22,
-            description : "iva"
+          id: 888,
+          amount_net: 8.2,
+          amount_vat: 1.8,
+          amount_gross: 10,
+          category: 'altro',
+          vat: {
+            id: 0,
+            value: 22,
+            description: 'iva'
           }
         }
       ]
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetReceiptResponse', function() {
-    it('should create an instance of GetReceiptResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptResponse);
-    });
+  describe('GetReceiptResponse', function () {
+    it('should create an instance of GetReceiptResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

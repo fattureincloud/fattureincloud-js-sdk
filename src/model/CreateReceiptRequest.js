@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Receipt from './Receipt';
+import ApiClient from '../ApiClient'
+import Receipt from './Receipt'
 
 /**
  * The CreateReceiptRequest model module.
@@ -20,63 +20,54 @@ import Receipt from './Receipt';
  * @version 2.0.12
  */
 class CreateReceiptRequest {
-    /**
+  /**
      * Constructs a new <code>CreateReceiptRequest</code>.
-     * 
+     *
      * @alias module:model/CreateReceiptRequest
      */
-    constructor() { 
-        
-        CreateReceiptRequest.initialize(this);
-    }
+  constructor () {
+    CreateReceiptRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateReceiptRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateReceiptRequest} obj Optional instance to populate.
      * @return {module:model/CreateReceiptRequest} The populated <code>CreateReceiptRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateReceiptRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateReceiptRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Receipt.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('autocomplete_number')) {
-                obj['autocomplete_number'] = ApiClient.convertToType(data['autocomplete_number'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Receipt.constructFromObject(data.data)
+      }
+      if (data.hasOwnProperty('autocomplete_number')) {
+        obj.autocomplete_number = ApiClient.convertToType(data.autocomplete_number, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Receipt} data
  */
-CreateReceiptRequest.prototype['data'] = undefined;
+CreateReceiptRequest.prototype.data = undefined
 
 /**
  * If true, the number is autocompleted progressively.
  * @member {Boolean} autocomplete_number
  */
-CreateReceiptRequest.prototype['autocomplete_number'] = undefined;
+CreateReceiptRequest.prototype.autocomplete_number = undefined
 
-
-
-
-
-
-export default CreateReceiptRequest;
-
+export default CreateReceiptRequest

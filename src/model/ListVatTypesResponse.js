@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import VatType from './VatType';
+import ApiClient from '../ApiClient'
+import VatType from './VatType'
 
 /**
  * The ListVatTypesResponse model module.
@@ -20,54 +20,45 @@ import VatType from './VatType';
  * @version 2.0.12
  */
 class ListVatTypesResponse {
-    /**
+  /**
      * Constructs a new <code>ListVatTypesResponse</code>.
-     * 
+     *
      * @alias module:model/ListVatTypesResponse
      */
-    constructor() { 
-        
-        ListVatTypesResponse.initialize(this);
-    }
+  constructor () {
+    ListVatTypesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListVatTypesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListVatTypesResponse} obj Optional instance to populate.
      * @return {module:model/ListVatTypesResponse} The populated <code>ListVatTypesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListVatTypesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListVatTypesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [VatType]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [VatType])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/VatType>} data
  */
-ListVatTypesResponse.prototype['data'] = undefined;
+ListVatTypesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListVatTypesResponse;
-
+export default ListVatTypesResponse

@@ -11,50 +11,42 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class ClientType.
 * @enum {}
 * @readonly
 */
 export default class ClientType {
-    
-        /**
+  /**
          * value: "company"
          * @const
          */
-        "company" = "company";
+  'company' = 'company'
 
-    
-        /**
+  /**
          * value: "person"
          * @const
          */
-        "person" = "person";
+  'person' = 'person'
 
-    
-        /**
+  /**
          * value: "pa"
          * @const
          */
-        "pa" = "pa";
+  'pa' = 'pa'
 
-    
-        /**
+  /**
          * value: "condo"
          * @const
          */
-        "condo" = "condo";
+  'condo' = 'condo'
 
-    
-
-    /**
+  /**
     * Returns a <code>ClientType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/ClientType} The enum <code>ClientType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

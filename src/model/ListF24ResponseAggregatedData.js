@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ListF24ResponseAggregatedData model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ListF24ResponseAggregatedData {
-    /**
+  /**
      * Constructs a new <code>ListF24ResponseAggregatedData</code>.
      * @alias module:model/ListF24ResponseAggregatedData
      */
-    constructor() { 
-        
-        ListF24ResponseAggregatedData.initialize(this);
-    }
+  constructor () {
+    ListF24ResponseAggregatedData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListF24ResponseAggregatedData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListF24ResponseAggregatedData} obj Optional instance to populate.
      * @return {module:model/ListF24ResponseAggregatedData} The populated <code>ListF24ResponseAggregatedData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListF24ResponseAggregatedData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListF24ResponseAggregatedData()
 
-            if (data.hasOwnProperty('amount')) {
-                obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('amount')) {
+        obj.amount = ApiClient.convertToType(data.amount, 'Number')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Total amount.
  * @member {Number} amount
  */
-ListF24ResponseAggregatedData.prototype['amount'] = undefined;
+ListF24ResponseAggregatedData.prototype.amount = undefined
 
-
-
-
-
-
-export default ListF24ResponseAggregatedData;
-
+export default ListF24ResponseAggregatedData

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocument from './IssuedDocument';
+import ApiClient from '../ApiClient'
+import IssuedDocument from './IssuedDocument'
 
 /**
  * The ListIssuedDocumentsResponsePage model module.
@@ -20,53 +20,44 @@ import IssuedDocument from './IssuedDocument';
  * @version 2.0.12
  */
 class ListIssuedDocumentsResponsePage {
-    /**
+  /**
      * Constructs a new <code>ListIssuedDocumentsResponsePage</code>.
      * @alias module:model/ListIssuedDocumentsResponsePage
      */
-    constructor() { 
-        
-        ListIssuedDocumentsResponsePage.initialize(this);
-    }
+  constructor () {
+    ListIssuedDocumentsResponsePage.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListIssuedDocumentsResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListIssuedDocumentsResponsePage} obj Optional instance to populate.
      * @return {module:model/ListIssuedDocumentsResponsePage} The populated <code>ListIssuedDocumentsResponsePage</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListIssuedDocumentsResponsePage();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListIssuedDocumentsResponsePage()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [IssuedDocument]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [IssuedDocument])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/IssuedDocument>} data
  */
-ListIssuedDocumentsResponsePage.prototype['data'] = undefined;
+ListIssuedDocumentsResponsePage.prototype.data = undefined
 
-
-
-
-
-
-export default ListIssuedDocumentsResponsePage;
-
+export default ListIssuedDocumentsResponsePage

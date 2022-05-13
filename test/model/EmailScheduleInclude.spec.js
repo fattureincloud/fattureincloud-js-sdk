@@ -11,67 +11,59 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.EmailScheduleInclude();
-    instance.document = false;
-    instance.delivery_note = false;
-    instance.attachment = false;
-    instance.accompanying_invoice = false;
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.EmailScheduleInclude()
+    instance.document = false
+    instance.delivery_note = false
+    instance.attachment = false
+    instance.accompanying_invoice = false
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('EmailScheduleInclude', function() {
-    it('should create an instance of EmailScheduleInclude', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.EmailScheduleInclude);
-    });
+  describe('EmailScheduleInclude', function () {
+    it('should create an instance of EmailScheduleInclude', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.EmailScheduleInclude)
+    })
 
-    it('should have the property document (base name: "document")', function() {
-      expect(typeof instance.document).to.be('boolean');
-    });
+    it('should have the property document (base name: "document")', function () {
+      expect(typeof instance.document).to.be('boolean')
+    })
 
-    it('should have the property deliveryNote (base name: "delivery_note")', function() {
-      expect(typeof instance.delivery_note).to.be('boolean');
-    });
+    it('should have the property deliveryNote (base name: "delivery_note")', function () {
+      expect(typeof instance.delivery_note).to.be('boolean')
+    })
 
-    it('should have the property attachment (base name: "attachment")', function() {
-      expect(typeof instance.attachment).to.be('boolean');
-    });
+    it('should have the property attachment (base name: "attachment")', function () {
+      expect(typeof instance.attachment).to.be('boolean')
+    })
 
-    it('should have the property accompanyingInvoice (base name: "accompanying_invoice")', function() {
-      expect(typeof instance.accompanying_invoice).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property accompanyingInvoice (base name: "accompanying_invoice")', function () {
+      expect(typeof instance.accompanying_invoice).to.be('boolean')
+    })
+  })
+}))

@@ -11,124 +11,116 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetReceiptPreCreateInfoResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetReceiptPreCreateInfoResponse()
     instance.data = {
-      numerations : {
-          2016 : {
-            sales_receipt : {
-              REC003 : 12,
-              REC002 : 5,
-              REC001 : 2
-            },
-            till_receipt : {
-              REC002 : 6,
-              REC001 : 2
-            }
+      numerations: {
+        2016: {
+          sales_receipt: {
+            REC003: 12,
+            REC002: 5,
+            REC001: 2
           },
-          2017 : {
-            sales_receipt : {
-              REC003 : 14,
-              REC002 : 7,
-              REC001 : 1
-            },
-            till_receipt : {
-              REC003 : 1,
-              REC001 : 3
-            }
-          },
-          2018 : {
-            sales_receipt : {
-              REC001 : 3
-            }
-          },
-          2019 : {
-            sales_receipt : {
-              REC002 : 105,
-              REC001 : 22
-            },
-            till_receipt : {
-              REC003 : 21,
-              REC002 : 24,
-              REC001 : 25
-            }
-          },
-          2020 : {
-            sales_receipt : {
-              REC001 : 3
-            }
-          },
-          2021 : {
-            sales_receipt : {
-              REC005 : 3,
-              REC004 : 2,
-              REC003 : 2,
-              REC001 : 7
-            }
+          till_receipt: {
+            REC002: 6,
+            REC001: 2
           }
         },
-        numerations_list : [
-          "REC001",
-          "REC002",
-          "REC003",
-          "REC005",
-          "REC006"
-        ],
-        rc_centers_list : [
-          "Sede generale",
-          "Negozio Bergamo",
-          "Negozio Milano"
-        ],
-        payment_accounts_list : [
-          {
-            id : 111,
-            name : "Indesa - carta conto"
+        2017: {
+          sales_receipt: {
+            REC003: 14,
+            REC002: 7,
+            REC001: 1
+          },
+          till_receipt: {
+            REC003: 1,
+            REC001: 3
           }
+        },
+        2018: {
+          sales_receipt: {
+            REC001: 3
+          }
+        },
+        2019: {
+          sales_receipt: {
+            REC002: 105,
+            REC001: 22
+          },
+          till_receipt: {
+            REC003: 21,
+            REC002: 24,
+            REC001: 25
+          }
+        },
+        2020: {
+          sales_receipt: {
+            REC001: 3
+          }
+        },
+        2021: {
+          sales_receipt: {
+            REC005: 3,
+            REC004: 2,
+            REC003: 2,
+            REC001: 7
+          }
+        }
+      },
+      numerations_list: [
+        'REC001',
+        'REC002',
+        'REC003',
+        'REC005',
+        'REC006'
+      ],
+      rc_centers_list: [
+        'Sede generale',
+        'Negozio Bergamo',
+        'Negozio Milano'
+      ],
+      payment_accounts_list: [
+        {
+          id: 111,
+          name: 'Indesa - carta conto'
+        }
       ]
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetReceiptPreCreateInfoResponse', function() {
-    it('should create an instance of GetReceiptPreCreateInfoResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptPreCreateInfoResponse);
-    });
+  describe('GetReceiptPreCreateInfoResponse', function () {
+    it('should create an instance of GetReceiptPreCreateInfoResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptPreCreateInfoResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

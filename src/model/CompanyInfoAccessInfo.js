@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Permissions from './Permissions';
-import UserCompanyRole from './UserCompanyRole';
+import ApiClient from '../ApiClient'
+import Permissions from './Permissions'
+import UserCompanyRole from './UserCompanyRole'
 
 /**
  * The CompanyInfoAccessInfo model module.
@@ -21,69 +21,60 @@ import UserCompanyRole from './UserCompanyRole';
  * @version 2.0.12
  */
 class CompanyInfoAccessInfo {
-    /**
+  /**
      * Constructs a new <code>CompanyInfoAccessInfo</code>.
      * @alias module:model/CompanyInfoAccessInfo
      */
-    constructor() { 
-        
-        CompanyInfoAccessInfo.initialize(this);
-    }
+  constructor () {
+    CompanyInfoAccessInfo.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CompanyInfoAccessInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CompanyInfoAccessInfo} obj Optional instance to populate.
      * @return {module:model/CompanyInfoAccessInfo} The populated <code>CompanyInfoAccessInfo</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CompanyInfoAccessInfo();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CompanyInfoAccessInfo()
 
-            if (data.hasOwnProperty('role')) {
-                obj['role'] = UserCompanyRole.constructFromObject(data['role']);
-            }
-            if (data.hasOwnProperty('permissions')) {
-                obj['permissions'] = Permissions.constructFromObject(data['permissions']);
-            }
-            if (data.hasOwnProperty('through_accountant')) {
-                obj['through_accountant'] = ApiClient.convertToType(data['through_accountant'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('role')) {
+        obj.role = UserCompanyRole.constructFromObject(data.role)
+      }
+      if (data.hasOwnProperty('permissions')) {
+        obj.permissions = Permissions.constructFromObject(data.permissions)
+      }
+      if (data.hasOwnProperty('through_accountant')) {
+        obj.through_accountant = ApiClient.convertToType(data.through_accountant, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/UserCompanyRole} role
  */
-CompanyInfoAccessInfo.prototype['role'] = undefined;
+CompanyInfoAccessInfo.prototype.role = undefined
 
 /**
  * @member {module:model/Permissions} permissions
  */
-CompanyInfoAccessInfo.prototype['permissions'] = undefined;
+CompanyInfoAccessInfo.prototype.permissions = undefined
 
 /**
  * @member {Boolean} through_accountant
  */
-CompanyInfoAccessInfo.prototype['through_accountant'] = undefined;
+CompanyInfoAccessInfo.prototype.through_accountant = undefined
 
-
-
-
-
-
-export default CompanyInfoAccessInfo;
-
+export default CompanyInfoAccessInfo

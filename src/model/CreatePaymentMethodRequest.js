@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentMethod from './PaymentMethod';
+import PaymentMethod from './PaymentMethod'
 
 /**
  * The CreatePaymentMethodRequest model module.
@@ -20,53 +19,44 @@ import PaymentMethod from './PaymentMethod';
  * @version 2.0.12
  */
 class CreatePaymentMethodRequest {
-    /**
+  /**
      * Constructs a new <code>CreatePaymentMethodRequest</code>.
      * @alias module:model/CreatePaymentMethodRequest
      */
-    constructor() { 
-        
-        CreatePaymentMethodRequest.initialize(this);
-    }
+  constructor () {
+    CreatePaymentMethodRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreatePaymentMethodRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreatePaymentMethodRequest} obj Optional instance to populate.
      * @return {module:model/CreatePaymentMethodRequest} The populated <code>CreatePaymentMethodRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreatePaymentMethodRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreatePaymentMethodRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = PaymentMethod.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = PaymentMethod.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/PaymentMethod} data
  */
-CreatePaymentMethodRequest.prototype['data'] = undefined;
+CreatePaymentMethodRequest.prototype.data = undefined
 
-
-
-
-
-
-export default CreatePaymentMethodRequest;
-
+export default CreatePaymentMethodRequest

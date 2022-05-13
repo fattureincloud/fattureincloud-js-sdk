@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class IssuedDocumentStatus.
 * @enum {}
 * @readonly
 */
 export default class IssuedDocumentStatus {
-    
-        /**
+  /**
          * value: "not_paid"
          * @const
          */
-        "not_paid" = "not_paid";
+  'not_paid' = 'not_paid'
 
-    
-        /**
+  /**
          * value: "paid"
          * @const
          */
-        "paid" = "paid";
+  'paid' = 'paid'
 
-    
-        /**
+  /**
          * value: "reversed"
          * @const
          */
-        "reversed" = "reversed";
+  'reversed' = 'reversed'
 
-    
-
-    /**
+  /**
     * Returns a <code>IssuedDocumentStatus</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/IssuedDocumentStatus} The enum <code>IssuedDocumentStatus</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

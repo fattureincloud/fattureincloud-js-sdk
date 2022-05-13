@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class OriginalDocumentType.
 * @enum {}
 * @readonly
 */
 export default class OriginalDocumentType {
-    
-        /**
+  /**
          * value: "ordine"
          * @const
          */
-        "ordine" = "ordine";
+  'ordine' = 'ordine'
 
-    
-        /**
+  /**
          * value: "contratto"
          * @const
          */
-        "contratto" = "contratto";
+  'contratto' = 'contratto'
 
-    
-        /**
+  /**
          * value: "convenzione"
          * @const
          */
-        "convenzione" = "convenzione";
+  'convenzione' = 'convenzione'
 
-    
-
-    /**
+  /**
     * Returns a <code>OriginalDocumentType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/OriginalDocumentType} The enum <code>OriginalDocumentType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CashbookEntry from './CashbookEntry';
+import CashbookEntry from './CashbookEntry'
 
 /**
  * The ModifyCashbookEntryResponse model module.
@@ -20,54 +19,45 @@ import CashbookEntry from './CashbookEntry';
  * @version 2.0.12
  */
 class ModifyCashbookEntryResponse {
-    /**
+  /**
      * Constructs a new <code>ModifyCashbookEntryResponse</code>.
-     * 
+     *
      * @alias module:model/ModifyCashbookEntryResponse
      */
-    constructor() { 
-        
-        ModifyCashbookEntryResponse.initialize(this);
-    }
+  constructor () {
+    ModifyCashbookEntryResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyCashbookEntryResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyCashbookEntryResponse} obj Optional instance to populate.
      * @return {module:model/ModifyCashbookEntryResponse} The populated <code>ModifyCashbookEntryResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyCashbookEntryResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyCashbookEntryResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = CashbookEntry.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = CashbookEntry.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/CashbookEntry} data
  */
-ModifyCashbookEntryResponse.prototype['data'] = undefined;
+ModifyCashbookEntryResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyCashbookEntryResponse;
-
+export default ModifyCashbookEntryResponse

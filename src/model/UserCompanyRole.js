@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class UserCompanyRole.
 * @enum {}
 * @readonly
 */
 export default class UserCompanyRole {
-    
-        /**
+  /**
          * value: "master"
          * @const
          */
-        "master" = "master";
+  'master' = 'master'
 
-    
-        /**
+  /**
          * value: "subaccount"
          * @const
          */
-        "subaccount" = "subaccount";
+  'subaccount' = 'subaccount'
 
-    
-        /**
+  /**
          * value: "employee"
          * @const
          */
-        "employee" = "employee";
+  'employee' = 'employee'
 
-    
-
-    /**
+  /**
     * Returns a <code>UserCompanyRole</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/UserCompanyRole} The enum <code>UserCompanyRole</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

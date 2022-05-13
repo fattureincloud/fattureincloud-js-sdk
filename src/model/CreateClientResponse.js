@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Client from './Client';
+import Client from './Client'
 
 /**
  * The CreateClientResponse model module.
@@ -20,53 +19,44 @@ import Client from './Client';
  * @version 2.0.12
  */
 class CreateClientResponse {
-    /**
+  /**
      * Constructs a new <code>CreateClientResponse</code>.
      * @alias module:model/CreateClientResponse
      */
-    constructor() { 
-        
-        CreateClientResponse.initialize(this);
-    }
+  constructor () {
+    CreateClientResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateClientResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateClientResponse} obj Optional instance to populate.
      * @return {module:model/CreateClientResponse} The populated <code>CreateClientResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateClientResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateClientResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Client.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Client.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Client} data
  */
-CreateClientResponse.prototype['data'] = undefined;
+CreateClientResponse.prototype.data = undefined
 
-
-
-
-
-
-export default CreateClientResponse;
-
+export default CreateClientResponse

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CashbookEntry from './CashbookEntry';
+import ApiClient from '../ApiClient'
+import CashbookEntry from './CashbookEntry'
 
 /**
  * The ListCashbookEntriesResponse model module.
@@ -20,54 +20,45 @@ import CashbookEntry from './CashbookEntry';
  * @version 2.0.12
  */
 class ListCashbookEntriesResponse {
-    /**
+  /**
      * Constructs a new <code>ListCashbookEntriesResponse</code>.
-     * 
+     *
      * @alias module:model/ListCashbookEntriesResponse
      */
-    constructor() { 
-        
-        ListCashbookEntriesResponse.initialize(this);
-    }
+  constructor () {
+    ListCashbookEntriesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListCashbookEntriesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListCashbookEntriesResponse} obj Optional instance to populate.
      * @return {module:model/ListCashbookEntriesResponse} The populated <code>ListCashbookEntriesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListCashbookEntriesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListCashbookEntriesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [CashbookEntry]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [CashbookEntry])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/CashbookEntry>} data
  */
-ListCashbookEntriesResponse.prototype['data'] = undefined;
+ListCashbookEntriesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListCashbookEntriesResponse;
-
+export default ListCashbookEntriesResponse

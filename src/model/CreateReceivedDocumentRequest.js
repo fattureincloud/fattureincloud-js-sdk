@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceivedDocument from './ReceivedDocument';
+import ApiClient from '../ApiClient'
+import ReceivedDocument from './ReceivedDocument'
 
 /**
  * The CreateReceivedDocumentRequest model module.
@@ -20,63 +20,54 @@ import ReceivedDocument from './ReceivedDocument';
  * @version 2.0.12
  */
 class CreateReceivedDocumentRequest {
-    /**
+  /**
      * Constructs a new <code>CreateReceivedDocumentRequest</code>.
-     * 
+     *
      * @alias module:model/CreateReceivedDocumentRequest
      */
-    constructor() { 
-        
-        CreateReceivedDocumentRequest.initialize(this);
-    }
+  constructor () {
+    CreateReceivedDocumentRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateReceivedDocumentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateReceivedDocumentRequest} obj Optional instance to populate.
      * @return {module:model/CreateReceivedDocumentRequest} The populated <code>CreateReceivedDocumentRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateReceivedDocumentRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateReceivedDocumentRequest()
 
-            if (data.hasOwnProperty('pending_id')) {
-                obj['pending_id'] = ApiClient.convertToType(data['pending_id'], 'Number');
-            }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ReceivedDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('pending_id')) {
+        obj.pending_id = ApiClient.convertToType(data.pending_id, 'Number')
+      }
+      if (data.hasOwnProperty('data')) {
+        obj.data = ReceivedDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Pending received document id of the document from which the new document is created.
  * @member {Number} pending_id
  */
-CreateReceivedDocumentRequest.prototype['pending_id'] = undefined;
+CreateReceivedDocumentRequest.prototype.pending_id = undefined
 
 /**
  * @member {module:model/ReceivedDocument} data
  */
-CreateReceivedDocumentRequest.prototype['data'] = undefined;
+CreateReceivedDocumentRequest.prototype.data = undefined
 
-
-
-
-
-
-export default CreateReceivedDocumentRequest;
-
+export default CreateReceivedDocumentRequest

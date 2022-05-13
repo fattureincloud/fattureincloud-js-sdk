@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The GetUserInfoResponseEmailConfirmationState model module.
@@ -19,53 +19,44 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class GetUserInfoResponseEmailConfirmationState {
-    /**
+  /**
      * Constructs a new <code>GetUserInfoResponseEmailConfirmationState</code>.
      * @alias module:model/GetUserInfoResponseEmailConfirmationState
      */
-    constructor() { 
-        
-        GetUserInfoResponseEmailConfirmationState.initialize(this);
-    }
+  constructor () {
+    GetUserInfoResponseEmailConfirmationState.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetUserInfoResponseEmailConfirmationState</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetUserInfoResponseEmailConfirmationState} obj Optional instance to populate.
      * @return {module:model/GetUserInfoResponseEmailConfirmationState} The populated <code>GetUserInfoResponseEmailConfirmationState</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetUserInfoResponseEmailConfirmationState();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetUserInfoResponseEmailConfirmationState()
 
-            if (data.hasOwnProperty('need_confirmation')) {
-                obj['need_confirmation'] = ApiClient.convertToType(data['need_confirmation'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('need_confirmation')) {
+        obj.need_confirmation = ApiClient.convertToType(data.need_confirmation, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Boolean} need_confirmation
  */
-GetUserInfoResponseEmailConfirmationState.prototype['need_confirmation'] = undefined;
+GetUserInfoResponseEmailConfirmationState.prototype.need_confirmation = undefined
 
-
-
-
-
-
-export default GetUserInfoResponseEmailConfirmationState;
-
+export default GetUserInfoResponseEmailConfirmationState

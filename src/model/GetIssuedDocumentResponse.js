@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocument from './IssuedDocument';
+import IssuedDocument from './IssuedDocument'
 
 /**
  * The GetIssuedDocumentResponse model module.
@@ -20,53 +19,44 @@ import IssuedDocument from './IssuedDocument';
  * @version 2.0.12
  */
 class GetIssuedDocumentResponse {
-    /**
+  /**
      * Constructs a new <code>GetIssuedDocumentResponse</code>.
      * @alias module:model/GetIssuedDocumentResponse
      */
-    constructor() { 
-        
-        GetIssuedDocumentResponse.initialize(this);
-    }
+  constructor () {
+    GetIssuedDocumentResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetIssuedDocumentResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetIssuedDocumentResponse} obj Optional instance to populate.
      * @return {module:model/GetIssuedDocumentResponse} The populated <code>GetIssuedDocumentResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetIssuedDocumentResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetIssuedDocumentResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = IssuedDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = IssuedDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/IssuedDocument} data
  */
-GetIssuedDocumentResponse.prototype['data'] = undefined;
+GetIssuedDocumentResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetIssuedDocumentResponse;
-
+export default GetIssuedDocumentResponse

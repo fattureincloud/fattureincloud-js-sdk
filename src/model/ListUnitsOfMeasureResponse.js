@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ListUnitsOfMeasureResponse model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ListUnitsOfMeasureResponse {
-    /**
+  /**
      * Constructs a new <code>ListUnitsOfMeasureResponse</code>.
-     * 
+     *
      * @alias module:model/ListUnitsOfMeasureResponse
      */
-    constructor() { 
-        
-        ListUnitsOfMeasureResponse.initialize(this);
-    }
+  constructor () {
+    ListUnitsOfMeasureResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListUnitsOfMeasureResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListUnitsOfMeasureResponse} obj Optional instance to populate.
      * @return {module:model/ListUnitsOfMeasureResponse} The populated <code>ListUnitsOfMeasureResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListUnitsOfMeasureResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListUnitsOfMeasureResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], ['String']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, ['String'])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<String>} data
  */
-ListUnitsOfMeasureResponse.prototype['data'] = undefined;
+ListUnitsOfMeasureResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListUnitsOfMeasureResponse;
-
+export default ListUnitsOfMeasureResponse

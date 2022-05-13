@@ -11,104 +11,96 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CreateReceivedDocumentRequest();
-    instance.pending_id = 5;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CreateReceivedDocumentRequest()
+    instance.pending_id = 5
     instance.data = {
-        id : 12345,
-        type : "expense",
-        description : "Soggiorno di lavoro",
-        amortization : 1,
-        rc_center : "",
-        invoice_number : "",
-        is_marked : false,
-        is_detailed : false,
-        e_invoice : false,
-        entity : {
-          id : 111,
-          name : "Hotel Rubino Palace"
-        },
-        date : "2021-08-15",
-        next_due_date : "2021-08-15",
-        currency : {
-          id : "EUR",
-          exchange_rate : "1.00000",
-          symbol : "€"
-        },
-        amount_net : 592,
-        amount_vat : 0,
-        amount_gross : 592,
-        amount_withholding_tax : 0,
-        amount_other_withholding_tax : 0,
-        tax_deductibility : 50,
-        vat_deductibility : 100,
-        payments_list : [
-          {
-            amount : 592,
-            due_date : "2021-08-15",
-            paid_date : "2021-08-15",
-            id : 777,
-            payment_terms : {
-              days : 0,
-              type : "standard"
-            },
-            status : "paid",
-            payment_account : {
-              id : 222,
-              name : "Contanti",
-              virtual : false
-            }
+      id: 12345,
+      type: 'expense',
+      description: 'Soggiorno di lavoro',
+      amortization: 1,
+      rc_center: '',
+      invoice_number: '',
+      is_marked: false,
+      is_detailed: false,
+      e_invoice: false,
+      entity: {
+        id: 111,
+        name: 'Hotel Rubino Palace'
+      },
+      date: '2021-08-15',
+      next_due_date: '2021-08-15',
+      currency: {
+        id: 'EUR',
+        exchange_rate: '1.00000',
+        symbol: '€'
+      },
+      amount_net: 592,
+      amount_vat: 0,
+      amount_gross: 592,
+      amount_withholding_tax: 0,
+      amount_other_withholding_tax: 0,
+      tax_deductibility: 50,
+      vat_deductibility: 100,
+      payments_list: [
+        {
+          amount: 592,
+          due_date: '2021-08-15',
+          paid_date: '2021-08-15',
+          id: 777,
+          payment_terms: {
+            days: 0,
+            type: 'standard'
+          },
+          status: 'paid',
+          payment_account: {
+            id: 222,
+            name: 'Contanti',
+            virtual: false
           }
-        ],
-        attachment_url : "spesa_ger5i783t45hu6ti.pdf"
+        }
+      ],
+      attachment_url: 'spesa_ger5i783t45hu6ti.pdf'
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('CreateReceivedDocumentRequest', function() {
-    it('should create an instance of CreateReceivedDocumentRequest', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CreateReceivedDocumentRequest);
-    });
+  describe('CreateReceivedDocumentRequest', function () {
+    it('should create an instance of CreateReceivedDocumentRequest', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CreateReceivedDocumentRequest)
+    })
 
-    it('should have the property pendingId (base name: "pending_id")', function() {
-      expect(typeof instance.pending_id).to.be('number');
-    });
+    it('should have the property pendingId (base name: "pending_id")', function () {
+      expect(typeof instance.pending_id).to.be('number')
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

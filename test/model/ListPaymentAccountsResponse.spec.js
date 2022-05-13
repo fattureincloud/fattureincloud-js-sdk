@@ -11,69 +11,61 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ListPaymentAccountsResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ListPaymentAccountsResponse()
     instance.data = [
       {
-        id : 21,
-        name : "Indesa - Carta conto",
-        type : "standard",
-        iban : null,
-        sia : null,
-        virtual : false
+        id: 21,
+        name: 'Indesa - Carta conto',
+        type: 'standard',
+        iban: null,
+        sia: null,
+        virtual: false
       },
       {
-        id : 109,
-        name : "Indesa",
-        type : "bank",
-        iban : "IT17A1234563200000003498936",
-        sia : "IN234",
-        virtual : false
+        id: 109,
+        name: 'Indesa',
+        type: 'bank',
+        iban: 'IT17A1234563200000003498936',
+        sia: 'IN234',
+        virtual: false
       }
     ]
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ListPaymentAccountsResponse', function() {
-    it('should create an instance of ListPaymentAccountsResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ListPaymentAccountsResponse);
-    });
+  describe('ListPaymentAccountsResponse', function () {
+    it('should create an instance of ListPaymentAccountsResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ListPaymentAccountsResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

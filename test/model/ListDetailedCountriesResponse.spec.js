@@ -11,67 +11,59 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ListDetailedCountriesResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ListDetailedCountriesResponse()
     instance.data = [
       {
-        name: "Italia",
-        settings_name: "Italia",
-        iso: "IT",
-        fiscal_iso: "IT",
-        uic: "086"
+        name: 'Italia',
+        settings_name: 'Italia',
+        iso: 'IT',
+        fiscal_iso: 'IT',
+        uic: '086'
       },
       {
-        name: "Albania",
-        settings_name: "Albania",
-        iso: "AL",
-        fiscal_iso: "AL",
-        uic: "087"
+        name: 'Albania',
+        settings_name: 'Albania',
+        iso: 'AL',
+        fiscal_iso: 'AL',
+        uic: '087'
       }
     ]
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ListDetailedCountriesResponse', function() {
-    it('should create an instance of ListDetailedCountriesResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ListDetailedCountriesResponse);
-    });
+  describe('ListDetailedCountriesResponse', function () {
+    it('should create an instance of ListDetailedCountriesResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ListDetailedCountriesResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

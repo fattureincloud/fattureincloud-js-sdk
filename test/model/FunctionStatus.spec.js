@@ -11,52 +11,44 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.FunctionStatus();
-    instance.active = true;
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.FunctionStatus()
+    instance.active = true
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('FunctionStatus', function() {
-    it('should create an instance of FunctionStatus', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.FunctionStatus);
-    });
+  describe('FunctionStatus', function () {
+    it('should create an instance of FunctionStatus', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.FunctionStatus)
+    })
 
-    it('should have the property active (base name: "active")', function() {
-      expect(typeof instance.active).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property active (base name: "active")', function () {
+      expect(typeof instance.active).to.be('boolean')
+    })
+  })
+}))

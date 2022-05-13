@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AttachmentData from './AttachmentData';
+import AttachmentData from './AttachmentData'
 
 /**
  * The UploadArchiveAttachmentResponse model module.
@@ -20,53 +19,44 @@ import AttachmentData from './AttachmentData';
  * @version 2.0.12
  */
 class UploadArchiveAttachmentResponse {
-    /**
+  /**
      * Constructs a new <code>UploadArchiveAttachmentResponse</code>.
      * @alias module:model/UploadArchiveAttachmentResponse
      */
-    constructor() { 
-        
-        UploadArchiveAttachmentResponse.initialize(this);
-    }
+  constructor () {
+    UploadArchiveAttachmentResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>UploadArchiveAttachmentResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/UploadArchiveAttachmentResponse} obj Optional instance to populate.
      * @return {module:model/UploadArchiveAttachmentResponse} The populated <code>UploadArchiveAttachmentResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new UploadArchiveAttachmentResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new UploadArchiveAttachmentResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = AttachmentData.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = AttachmentData.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/AttachmentData} data
  */
-UploadArchiveAttachmentResponse.prototype['data'] = undefined;
+UploadArchiveAttachmentResponse.prototype.data = undefined
 
-
-
-
-
-
-export default UploadArchiveAttachmentResponse;
-
+export default UploadArchiveAttachmentResponse

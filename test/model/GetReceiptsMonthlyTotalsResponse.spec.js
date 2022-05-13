@@ -11,113 +11,105 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetReceiptsMonthlyTotalsResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetReceiptsMonthlyTotalsResponse()
     instance.data = [
       {
-        net : 15000,
-        gross : 18000,
-        count : 10
+        net: 15000,
+        gross: 18000,
+        count: 10
       },
       {
-        net : 18000,
-        gross : 22000,
-        count : 20
+        net: 18000,
+        gross: 22000,
+        count: 20
       },
       {
-        net : 20000,
-        gross : 24400,
-        count : 30
+        net: 20000,
+        gross: 24400,
+        count: 30
       },
       {
-        net : 19000,
-        gross : 22000,
-        count : 20
+        net: 19000,
+        gross: 22000,
+        count: 20
       },
       {
-        net : 17000,
-        gross : 20000,
-        count : 10
+        net: 17000,
+        gross: 20000,
+        count: 10
       },
       {
-        net : 18000,
-        gross : 24000,
-        count : 21
+        net: 18000,
+        gross: 24000,
+        count: 21
       },
       {
-        net : 22000,
-        gross : 25000,
-        count : 30
+        net: 22000,
+        gross: 25000,
+        count: 30
       },
       {
-        net : 17000,
-        gross : 21000,
-        count : 21
+        net: 17000,
+        gross: 21000,
+        count: 21
       },
       {
-        net : 0,
-        gross : 0,
-        count : 10
+        net: 0,
+        gross: 0,
+        count: 10
       },
       {
-        net : 0,
-        gross : 0,
-        count : 20
+        net: 0,
+        gross: 0,
+        count: 20
       },
       {
-        net : 0,
-        gross : 0,
-        count : 30
+        net: 0,
+        gross: 0,
+        count: 30
       },
       {
-        net : 0,
-        gross : 0,
-        count : 21
+        net: 0,
+        gross: 0,
+        count: 21
       }
     ]
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetReceiptsMonthlyTotalsResponse', function() {
-    it('should create an instance of GetReceiptsMonthlyTotalsResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptsMonthlyTotalsResponse);
-    });
+  describe('GetReceiptsMonthlyTotalsResponse', function () {
+    it('should create an instance of GetReceiptsMonthlyTotalsResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetReceiptsMonthlyTotalsResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

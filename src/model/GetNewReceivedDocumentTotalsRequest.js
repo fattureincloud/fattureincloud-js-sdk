@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceivedDocument from './ReceivedDocument';
+import ReceivedDocument from './ReceivedDocument'
 
 /**
  * The GetNewReceivedDocumentTotalsRequest model module.
@@ -20,54 +19,45 @@ import ReceivedDocument from './ReceivedDocument';
  * @version 2.0.12
  */
 class GetNewReceivedDocumentTotalsRequest {
-    /**
+  /**
      * Constructs a new <code>GetNewReceivedDocumentTotalsRequest</code>.
-     * 
+     *
      * @alias module:model/GetNewReceivedDocumentTotalsRequest
      */
-    constructor() { 
-        
-        GetNewReceivedDocumentTotalsRequest.initialize(this);
-    }
+  constructor () {
+    GetNewReceivedDocumentTotalsRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetNewReceivedDocumentTotalsRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetNewReceivedDocumentTotalsRequest} obj Optional instance to populate.
      * @return {module:model/GetNewReceivedDocumentTotalsRequest} The populated <code>GetNewReceivedDocumentTotalsRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetNewReceivedDocumentTotalsRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetNewReceivedDocumentTotalsRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ReceivedDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ReceivedDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ReceivedDocument} data
  */
-GetNewReceivedDocumentTotalsRequest.prototype['data'] = undefined;
+GetNewReceivedDocumentTotalsRequest.prototype.data = undefined
 
-
-
-
-
-
-export default GetNewReceivedDocumentTotalsRequest;
-
+export default GetNewReceivedDocumentTotalsRequest

@@ -11,57 +11,48 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class CashbookEntryKind.
 * @enum {}
 * @readonly
 */
 export default class CashbookEntryKind {
-    
-        /**
+  /**
          * value: "cashbook"
          * @const
          */
-        "cashbook" = "cashbook";
+  'cashbook' = 'cashbook'
 
-    
-        /**
+  /**
          * value: "issued_document"
          * @const
          */
-        "issued_document" = "issued_document";
+  'issued_document' = 'issued_document'
 
-    
-        /**
+  /**
          * value: "received_document"
          * @const
          */
-        "received_document" = "received_document";
+  'received_document' = 'received_document'
 
-    
-        /**
+  /**
          * value: "tax"
          * @const
          */
-        "tax" = "tax";
+  'tax' = 'tax'
 
-    
-        /**
+  /**
          * value: "receipt"
          * @const
          */
-        "receipt" = "receipt";
+  'receipt' = 'receipt'
 
-    
-
-    /**
+  /**
     * Returns a <code>CashbookEntryKind</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/CashbookEntryKind} The enum <code>CashbookEntryKind</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

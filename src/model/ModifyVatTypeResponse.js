@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import VatType from './VatType';
+import VatType from './VatType'
 
 /**
  * The ModifyVatTypeResponse model module.
@@ -20,53 +19,44 @@ import VatType from './VatType';
  * @version 2.0.12
  */
 class ModifyVatTypeResponse {
-    /**
+  /**
      * Constructs a new <code>ModifyVatTypeResponse</code>.
      * @alias module:model/ModifyVatTypeResponse
      */
-    constructor() { 
-        
-        ModifyVatTypeResponse.initialize(this);
-    }
+  constructor () {
+    ModifyVatTypeResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyVatTypeResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyVatTypeResponse} obj Optional instance to populate.
      * @return {module:model/ModifyVatTypeResponse} The populated <code>ModifyVatTypeResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyVatTypeResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyVatTypeResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = VatType.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = VatType.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/VatType} data
  */
-ModifyVatTypeResponse.prototype['data'] = undefined;
+ModifyVatTypeResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyVatTypeResponse;
-
+export default ModifyVatTypeResponse

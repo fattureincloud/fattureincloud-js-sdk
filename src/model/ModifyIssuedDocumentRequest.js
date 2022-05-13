@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocument from './IssuedDocument';
-import IssuedDocumentOptions from './IssuedDocumentOptions';
+import IssuedDocument from './IssuedDocument'
+import IssuedDocumentOptions from './IssuedDocumentOptions'
 
 /**
  * The ModifyIssuedDocumentRequest model module.
@@ -21,62 +20,53 @@ import IssuedDocumentOptions from './IssuedDocumentOptions';
  * @version 2.0.12
  */
 class ModifyIssuedDocumentRequest {
-    /**
+  /**
      * Constructs a new <code>ModifyIssuedDocumentRequest</code>.
-     * 
+     *
      * @alias module:model/ModifyIssuedDocumentRequest
      */
-    constructor() { 
-        
-        ModifyIssuedDocumentRequest.initialize(this);
-    }
+  constructor () {
+    ModifyIssuedDocumentRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyIssuedDocumentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyIssuedDocumentRequest} obj Optional instance to populate.
      * @return {module:model/ModifyIssuedDocumentRequest} The populated <code>ModifyIssuedDocumentRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyIssuedDocumentRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyIssuedDocumentRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = IssuedDocument.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('options')) {
-                obj['options'] = IssuedDocumentOptions.constructFromObject(data['options']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = IssuedDocument.constructFromObject(data.data)
+      }
+      if (data.hasOwnProperty('options')) {
+        obj.options = IssuedDocumentOptions.constructFromObject(data.options)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/IssuedDocument} data
  */
-ModifyIssuedDocumentRequest.prototype['data'] = undefined;
+ModifyIssuedDocumentRequest.prototype.data = undefined
 
 /**
  * @member {module:model/IssuedDocumentOptions} options
  */
-ModifyIssuedDocumentRequest.prototype['options'] = undefined;
+ModifyIssuedDocumentRequest.prototype.options = undefined
 
-
-
-
-
-
-export default ModifyIssuedDocumentRequest;
-
+export default ModifyIssuedDocumentRequest

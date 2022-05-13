@@ -11,122 +11,114 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ListArchiveDocumentsResponse();
-    instance.current_page = 2;
-    instance.first_page_url = "page=1";
-    instance.from = 1;
-    instance.last_page = 3;
-    instance.last_page_url = "page=3";
-    instance.next_page_url = "page=3";
-    instance.path = "/archive";
-    instance.per_page = 50;
-    instance.prev_page_url = "page=1";
-    instance.to = 3;
-    instance.total = 155;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ListArchiveDocumentsResponse()
+    instance.current_page = 2
+    instance.first_page_url = 'page=1'
+    instance.from = 1
+    instance.last_page = 3
+    instance.last_page_url = 'page=3'
+    instance.next_page_url = 'page=3'
+    instance.path = '/archive'
+    instance.per_page = 50
+    instance.prev_page_url = 'page=1'
+    instance.to = 3
+    instance.total = 155
     instance.data = [
-                    {
-                      id : 12345,
-                      date : "2021-08-20",
-                      category : "Altri documenti",
-                      description : "spesa 2",
-                      attachment_url : "spesa2.pdf"
-                    },
-                    {
-                      id : 12346,
-                      date : "2021-08-19",
-                      category : "Altri documenti",
-                      description : "spesa 1",
-                      attachment_url : "spesa1.pdf"
-                    }
-                ];    
-  });
+      {
+        id: 12345,
+        date: '2021-08-20',
+        category: 'Altri documenti',
+        description: 'spesa 2',
+        attachment_url: 'spesa2.pdf'
+      },
+      {
+        id: 12346,
+        date: '2021-08-19',
+        category: 'Altri documenti',
+        description: 'spesa 1',
+        attachment_url: 'spesa1.pdf'
+      }
+    ]
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ListArchiveDocumentsResponse', function() {
-    it('should create an instance of ListArchiveDocumentsResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ListArchiveDocumentsResponse);
-    });
+  describe('ListArchiveDocumentsResponse', function () {
+    it('should create an instance of ListArchiveDocumentsResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ListArchiveDocumentsResponse)
+    })
 
-    it('should have the property currentPage (base name: "current_page")', function() {
-      expect(typeof instance.current_page).to.be('number');
-    });
+    it('should have the property currentPage (base name: "current_page")', function () {
+      expect(typeof instance.current_page).to.be('number')
+    })
 
-    it('should have the property firstPageUrl (base name: "first_page_url")', function() {
-      expect(typeof instance.first_page_url).to.be('string');
-    });
+    it('should have the property firstPageUrl (base name: "first_page_url")', function () {
+      expect(typeof instance.first_page_url).to.be('string')
+    })
 
-    it('should have the property from (base name: "from")', function() {
-      expect(typeof instance.from).to.be('number');
-    });
+    it('should have the property from (base name: "from")', function () {
+      expect(typeof instance.from).to.be('number')
+    })
 
-    it('should have the property lastPage (base name: "last_page")', function() {
-      expect(typeof instance.last_page).to.be('number');
-    });
+    it('should have the property lastPage (base name: "last_page")', function () {
+      expect(typeof instance.last_page).to.be('number')
+    })
 
-    it('should have the property lastPageUrl (base name: "last_page_url")', function() {
-      expect(typeof instance.last_page_url).to.be('string');
-    });
+    it('should have the property lastPageUrl (base name: "last_page_url")', function () {
+      expect(typeof instance.last_page_url).to.be('string')
+    })
 
-    it('should have the property nextPageUrl (base name: "next_page_url")', function() {
-      expect(typeof instance.next_page_url).to.be('string');
-    });
+    it('should have the property nextPageUrl (base name: "next_page_url")', function () {
+      expect(typeof instance.next_page_url).to.be('string')
+    })
 
-    it('should have the property path (base name: "path")', function() {
-      expect(typeof instance.path).to.be('string');
-    });
+    it('should have the property path (base name: "path")', function () {
+      expect(typeof instance.path).to.be('string')
+    })
 
-    it('should have the property perPage (base name: "per_page")', function() {
-      expect(typeof instance.per_page).to.be('number');
-    });
+    it('should have the property perPage (base name: "per_page")', function () {
+      expect(typeof instance.per_page).to.be('number')
+    })
 
-    it('should have the property prevPageUrl (base name: "prev_page_url")', function() {
-      expect(typeof instance.prev_page_url).to.be('string');
-    });
+    it('should have the property prevPageUrl (base name: "prev_page_url")', function () {
+      expect(typeof instance.prev_page_url).to.be('string')
+    })
 
-    it('should have the property to (base name: "to")', function() {
-      expect(typeof instance.to).to.be('number');
-    });
+    it('should have the property to (base name: "to")', function () {
+      expect(typeof instance.to).to.be('number')
+    })
 
-    it('should have the property total (base name: "total")', function() {
-      expect(typeof instance.total).to.be('number');
-    });
+    it('should have the property total (base name: "total")', function () {
+      expect(typeof instance.total).to.be('number')
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

@@ -11,89 +11,81 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem();
-    instance.amount = 592;
-    instance.due_date = "2021-08-15";
-    instance.paid_date = "2021-08-15";
-    instance.id = 777;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ReceivedDocumentPaymentsListItem()
+    instance.amount = 592
+    instance.due_date = '2021-08-15'
+    instance.paid_date = '2021-08-15'
+    instance.id = 777
     instance.payment_terms = {
-      days : 0,
-      type : "standard"
-    },
-    instance.status = "paid";
+      days: 0,
+      type: 'standard'
+    }
+    instance.status = 'paid'
     instance.payment_account = {
-      id : 222,
-      name : "Contanti",
-      virtual : false
-    };    
-  });
+      id: 222,
+      name: 'Contanti',
+      virtual: false
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ReceivedDocumentPaymentsList', function() {
-    it('should create an instance of ReceivedDocumentPaymentsListItem', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItem);
-    });
+  describe('ReceivedDocumentPaymentsList', function () {
+    it('should create an instance of ReceivedDocumentPaymentsListItem', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentPaymentsListItem)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property amount (base name: "amount")', function() {
-      expect(typeof instance.amount).to.be('number');
-    });
+    it('should have the property amount (base name: "amount")', function () {
+      expect(typeof instance.amount).to.be('number')
+    })
 
-    it('should have the property dueDate (base name: "due_date")', function() {
-      expect(typeof instance.due_date).to.be('string');
-    });
+    it('should have the property dueDate (base name: "due_date")', function () {
+      expect(typeof instance.due_date).to.be('string')
+    })
 
-    it('should have the property paidDate (base name: "paid_date")', function() {
-      expect(typeof instance.paid_date).to.be('string');
-    });
+    it('should have the property paidDate (base name: "paid_date")', function () {
+      expect(typeof instance.paid_date).to.be('string')
+    })
 
-    it('should have the property paymentTerms (base name: "payment_terms")', function() {
-      expect(typeof instance.payment_terms).to.be('object');
-    });
+    it('should have the property paymentTerms (base name: "payment_terms")', function () {
+      expect(typeof instance.payment_terms).to.be('object')
+    })
 
-    it('should have the property status (base name: "status")', function() {
-      expect(typeof instance.status).to.be('string');
-    });
+    it('should have the property status (base name: "status")', function () {
+      expect(typeof instance.status).to.be('string')
+    })
 
-    it('should have the property paymentAccount (base name: "payment_account")', function() {
-      expect(typeof instance.payment_account).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property paymentAccount (base name: "payment_account")', function () {
+      expect(typeof instance.payment_account).to.be('object')
+    })
+  })
+}))

@@ -11,67 +11,59 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetExistingIssuedDocumentTotalsResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetExistingIssuedDocumentTotalsResponse()
     instance.data = {
-      amount_net : 68.18,
-      amount_rivalsa : 13.64,
-      amount_net_with_rivalsa : 81.82000000000001,
-      taxable_amount : 81.82,
-      vat_list : {
-        10 : {
-          amount_net : 81.82,
-          amount_vat : 8.18
+      amount_net: 68.18,
+      amount_rivalsa: 13.64,
+      amount_net_with_rivalsa: 81.82000000000001,
+      taxable_amount: 81.82,
+      vat_list: {
+        10: {
+          amount_net: 81.82,
+          amount_vat: 8.18
         }
       },
-      amount_vat : 8.18,
-      amount_gross : 90,
-      amount_due : 90,
-      payments_sum : 75
+      amount_vat: 8.18,
+      amount_gross: 90,
+      amount_due: 90,
+      payments_sum: 75
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetExistingIssuedDocumentTotalsResponse', function() {
-    it('should create an instance of GetExistingIssuedDocumentTotalsResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetExistingIssuedDocumentTotalsResponse);
-    });
+  describe('GetExistingIssuedDocumentTotalsResponse', function () {
+    it('should create an instance of GetExistingIssuedDocumentTotalsResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetExistingIssuedDocumentTotalsResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

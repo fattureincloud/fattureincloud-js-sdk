@@ -11,14 +11,11 @@
  *
  */
 
-
-import ApiClient from "../ApiClient";
-import CreateSupplierRequest from '../model/CreateSupplierRequest';
-import CreateSupplierResponse from '../model/CreateSupplierResponse';
-import GetSupplierResponse from '../model/GetSupplierResponse';
-import ListSuppliersResponse from '../model/ListSuppliersResponse';
-import ModifySupplierRequest from '../model/ModifySupplierRequest';
-import ModifySupplierResponse from '../model/ModifySupplierResponse';
+import ApiClient from '../ApiClient'
+import CreateSupplierResponse from '../model/CreateSupplierResponse'
+import GetSupplierResponse from '../model/GetSupplierResponse'
+import ListSuppliersResponse from '../model/ListSuppliersResponse'
+import ModifySupplierResponse from '../model/ModifySupplierResponse'
 
 /**
 * Suppliers service.
@@ -26,21 +23,18 @@ import ModifySupplierResponse from '../model/ModifySupplierResponse';
 * @version 2.0.12
 */
 export default class SuppliersApi {
-
-    /**
-    * Constructs a new SuppliersApi. 
+  /**
+    * Constructs a new SuppliersApi.
     * @alias module:api/SuppliersApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-
-
-    /**
+  /**
      * Create Supplier
      * Creates a new supplier.
      * @param {Number} companyId The ID of the company.
@@ -48,36 +42,36 @@ export default class SuppliersApi {
      * @param {module:model/CreateSupplierRequest} opts.createSupplierRequest The supplier to create
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateSupplierResponse} and HTTP response
      */
-    createSupplierWithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = opts['createSupplierRequest'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling createSupplier");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = CreateSupplierResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/entities/suppliers', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  createSupplierWithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = opts.createSupplierRequest
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling createSupplier")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = CreateSupplierResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/entities/suppliers', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Create Supplier
      * Creates a new supplier.
      * @param {Number} companyId The ID of the company.
@@ -85,70 +79,68 @@ export default class SuppliersApi {
      * @param {module:model/CreateSupplierRequest} opts.createSupplierRequest The supplier to create
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateSupplierResponse}
      */
-    createSupplier(companyId, opts) {
-      return this.createSupplierWithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  createSupplier (companyId, opts) {
+    return this.createSupplierWithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Delete Supplier
      * Deletes the specified supplier.
      * @param {Number} companyId The ID of the company.
      * @param {Number} supplierId The ID of the supplier.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteSupplierWithHttpInfo(companyId, supplierId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling deleteSupplier");
-      }
-      // verify the required parameter 'supplierId' is set
-      if (supplierId === undefined || supplierId === null) {
-        throw new Error("Missing the required parameter 'supplierId' when calling deleteSupplier");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'supplier_id': supplierId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/c/{company_id}/entities/suppliers/{supplier_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  deleteSupplierWithHttpInfo (companyId, supplierId) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling deleteSupplier")
+    }
+    // verify the required parameter 'supplierId' is set
+    if (supplierId === undefined || supplierId === null) {
+      throw new Error("Missing the required parameter 'supplierId' when calling deleteSupplier")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      supplier_id: supplierId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = []
+    const returnType = null
+    return this.apiClient.callApi(
+      '/c/{company_id}/entities/suppliers/{supplier_id}', 'DELETE',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Delete Supplier
      * Deletes the specified supplier.
      * @param {Number} companyId The ID of the company.
      * @param {Number} supplierId The ID of the supplier.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteSupplier(companyId, supplierId) {
-      return this.deleteSupplierWithHttpInfo(companyId, supplierId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  deleteSupplier (companyId, supplierId) {
+    return this.deleteSupplierWithHttpInfo(companyId, supplierId)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Get Supplier
      * Gets the specified supplier.
      * @param {Number} companyId The ID of the company.
@@ -158,43 +150,43 @@ export default class SuppliersApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSupplierResponse} and HTTP response
      */
-    getSupplierWithHttpInfo(companyId, supplierId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling getSupplier");
-      }
-      // verify the required parameter 'supplierId' is set
-      if (supplierId === undefined || supplierId === null) {
-        throw new Error("Missing the required parameter 'supplierId' when calling getSupplier");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'supplier_id': supplierId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetSupplierResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/entities/suppliers/{supplier_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  getSupplierWithHttpInfo (companyId, supplierId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling getSupplier")
+    }
+    // verify the required parameter 'supplierId' is set
+    if (supplierId === undefined || supplierId === null) {
+      throw new Error("Missing the required parameter 'supplierId' when calling getSupplier")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      supplier_id: supplierId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetSupplierResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/entities/suppliers/{supplier_id}', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get Supplier
      * Gets the specified supplier.
      * @param {Number} companyId The ID of the company.
@@ -204,15 +196,14 @@ export default class SuppliersApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSupplierResponse}
      */
-    getSupplier(companyId, supplierId, opts) {
-      return this.getSupplierWithHttpInfo(companyId, supplierId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getSupplier (companyId, supplierId, opts) {
+    return this.getSupplierWithHttpInfo(companyId, supplierId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * List Suppliers
      * Lists the suppliers.
      * @param {Number} companyId The ID of the company.
@@ -225,42 +216,42 @@ export default class SuppliersApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListSuppliersResponse} and HTTP response
      */
-    listSuppliersWithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling listSuppliers");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset'],
-        'sort': opts['sort'],
-        'page': opts['page'],
-        'per_page': opts['perPage'],
-        'q': opts['q']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListSuppliersResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/entities/suppliers', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  listSuppliersWithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling listSuppliers")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset,
+      sort: opts.sort,
+      page: opts.page,
+      per_page: opts.perPage,
+      q: opts.q
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = ListSuppliersResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/entities/suppliers', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * List Suppliers
      * Lists the suppliers.
      * @param {Number} companyId The ID of the company.
@@ -273,15 +264,14 @@ export default class SuppliersApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListSuppliersResponse}
      */
-    listSuppliers(companyId, opts) {
-      return this.listSuppliersWithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  listSuppliers (companyId, opts) {
+    return this.listSuppliersWithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Modify Supplier
      * Modifies the specified supplier.
      * @param {Number} companyId The ID of the company.
@@ -290,41 +280,41 @@ export default class SuppliersApi {
      * @param {module:model/ModifySupplierRequest} opts.modifySupplierRequest The modified Supplier. First level parameters are managed in delta mode.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ModifySupplierResponse} and HTTP response
      */
-    modifySupplierWithHttpInfo(companyId, supplierId, opts) {
-      opts = opts || {};
-      let postBody = opts['modifySupplierRequest'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling modifySupplier");
-      }
-      // verify the required parameter 'supplierId' is set
-      if (supplierId === undefined || supplierId === null) {
-        throw new Error("Missing the required parameter 'supplierId' when calling modifySupplier");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'supplier_id': supplierId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = ModifySupplierResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/entities/suppliers/{supplier_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  modifySupplierWithHttpInfo (companyId, supplierId, opts) {
+    opts = opts || {}
+    const postBody = opts.modifySupplierRequest
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling modifySupplier")
+    }
+    // verify the required parameter 'supplierId' is set
+    if (supplierId === undefined || supplierId === null) {
+      throw new Error("Missing the required parameter 'supplierId' when calling modifySupplier")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      supplier_id: supplierId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = ModifySupplierResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/entities/suppliers/{supplier_id}', 'PUT',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Modify Supplier
      * Modifies the specified supplier.
      * @param {Number} companyId The ID of the company.
@@ -333,12 +323,10 @@ export default class SuppliersApi {
      * @param {module:model/ModifySupplierRequest} opts.modifySupplierRequest The modified Supplier. First level parameters are managed in delta mode.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ModifySupplierResponse}
      */
-    modifySupplier(companyId, supplierId, opts) {
-      return this.modifySupplierWithHttpInfo(companyId, supplierId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  modifySupplier (companyId, supplierId, opts) {
+    return this.modifySupplierWithHttpInfo(companyId, supplierId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 }

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Supplier from './Supplier';
+import Supplier from './Supplier'
 
 /**
  * The ModifySupplierResponse model module.
@@ -20,53 +19,44 @@ import Supplier from './Supplier';
  * @version 2.0.12
  */
 class ModifySupplierResponse {
-    /**
+  /**
      * Constructs a new <code>ModifySupplierResponse</code>.
      * @alias module:model/ModifySupplierResponse
      */
-    constructor() { 
-        
-        ModifySupplierResponse.initialize(this);
-    }
+  constructor () {
+    ModifySupplierResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifySupplierResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifySupplierResponse} obj Optional instance to populate.
      * @return {module:model/ModifySupplierResponse} The populated <code>ModifySupplierResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifySupplierResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifySupplierResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Supplier.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Supplier.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Supplier} data
  */
-ModifySupplierResponse.prototype['data'] = undefined;
+ModifySupplierResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ModifySupplierResponse;
-
+export default ModifySupplierResponse

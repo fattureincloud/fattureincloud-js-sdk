@@ -11,86 +11,78 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CreateReceiptRequest();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CreateReceiptRequest()
     instance.data = {
-      date : "2021-08-19",
-      number : 6,
-      numeration : "REC006",
-      amount_net : 8.2,
-      amount_vat : 1.8,
-      amount_gross : 10,
-      use_gross_prices : true,
-      type : "sales_receipt",
-      description : "cassa 1",
-      rc_center : "",
-      payment_account : {
-        id : 555,
-        name : "contanti"
+      date: '2021-08-19',
+      number: 6,
+      numeration: 'REC006',
+      amount_net: 8.2,
+      amount_vat: 1.8,
+      amount_gross: 10,
+      use_gross_prices: true,
+      type: 'sales_receipt',
+      description: 'cassa 1',
+      rc_center: '',
+      payment_account: {
+        id: 555,
+        name: 'contanti'
       },
-      items_list : [
+      items_list: [
         {
-          id : 888,
-          amount_net : 8.2,
-          amount_vat : 1.8,
-          amount_gross : 10,
-          category : "altro",
-          vat : {
-            id : 0,
-            value : 22,
-            description : "iva"
+          id: 888,
+          amount_net: 8.2,
+          amount_vat: 1.8,
+          amount_gross: 10,
+          category: 'altro',
+          vat: {
+            id: 0,
+            value: 22,
+            description: 'iva'
           }
         }
       ]
-    };
-    instance.autocomplete_number = true;
-  });
+    }
+    instance.autocomplete_number = true
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('CreateReceiptRequest', function() {
-    it('should create an instance of CreateReceiptRequest', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CreateReceiptRequest);
-    });
+  describe('CreateReceiptRequest', function () {
+    it('should create an instance of CreateReceiptRequest', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CreateReceiptRequest)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
 
-    it('should have the property autocompleteNumber (base name: "autocomplete_number")', function() {
-      expect(typeof instance.autocomplete_number).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property autocompleteNumber (base name: "autocomplete_number")', function () {
+      expect(typeof instance.autocomplete_number).to.be('boolean')
+    })
+  })
+}))

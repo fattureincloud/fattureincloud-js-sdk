@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import EmailSchedule from './EmailSchedule';
+import EmailSchedule from './EmailSchedule'
 
 /**
  * The ScheduleEmailRequest model module.
@@ -20,54 +19,45 @@ import EmailSchedule from './EmailSchedule';
  * @version 2.0.12
  */
 class ScheduleEmailRequest {
-    /**
+  /**
      * Constructs a new <code>ScheduleEmailRequest</code>.
-     * 
+     *
      * @alias module:model/ScheduleEmailRequest
      */
-    constructor() { 
-        
-        ScheduleEmailRequest.initialize(this);
-    }
+  constructor () {
+    ScheduleEmailRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ScheduleEmailRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ScheduleEmailRequest} obj Optional instance to populate.
      * @return {module:model/ScheduleEmailRequest} The populated <code>ScheduleEmailRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ScheduleEmailRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ScheduleEmailRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = EmailSchedule.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = EmailSchedule.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/EmailSchedule} data
  */
-ScheduleEmailRequest.prototype['data'] = undefined;
+ScheduleEmailRequest.prototype.data = undefined
 
-
-
-
-
-
-export default ScheduleEmailRequest;
-
+export default ScheduleEmailRequest

@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DocumentTemplate from './DocumentTemplate';
+import ApiClient from '../ApiClient'
+import DocumentTemplate from './DocumentTemplate'
 
 /**
  * The ListTemplatesResponse model module.
@@ -20,54 +20,45 @@ import DocumentTemplate from './DocumentTemplate';
  * @version 2.0.12
  */
 class ListTemplatesResponse {
-    /**
+  /**
      * Constructs a new <code>ListTemplatesResponse</code>.
-     * 
+     *
      * @alias module:model/ListTemplatesResponse
      */
-    constructor() { 
-        
-        ListTemplatesResponse.initialize(this);
-    }
+  constructor () {
+    ListTemplatesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListTemplatesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListTemplatesResponse} obj Optional instance to populate.
      * @return {module:model/ListTemplatesResponse} The populated <code>ListTemplatesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListTemplatesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListTemplatesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [DocumentTemplate]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [DocumentTemplate])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/DocumentTemplate>} data
  */
-ListTemplatesResponse.prototype['data'] = undefined;
+ListTemplatesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListTemplatesResponse;
-
+export default ListTemplatesResponse

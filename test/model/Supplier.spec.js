@@ -11,157 +11,149 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.Supplier();
-    instance.id = 12345;
-    instance.code = "AE86";
-    instance.name = "Mario Rossi S.R.L.";
-    instance.type = "company";
-    instance.first_name = "Mario";
-    instance.last_name = "Rossi";
-    instance.contact_person = "";
-    instance.vat_number = 111222333;
-    instance.tax_code = "111122233";
-    instance.address_street = "Corso Magellano 46";
-    instance.address_postal_code = "20146";
-    instance.address_city = "Milano";
-    instance.address_province = "MI";
-    instance.address_extra = "";
-    instance.country = "Italia";
-    instance.email = "mario.rossi@example.com";
-    instance.certified_email = "mario.rossi@pec.example.com";
-    instance.phone = "1234567890";
-    instance.fax = "123456789";
-    instance.notes = "";
-    instance.created_at = "2021-15-08";
-    instance.updated_at = "2021-15-08";    
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.Supplier()
+    instance.id = 12345
+    instance.code = 'AE86'
+    instance.name = 'Mario Rossi S.R.L.'
+    instance.type = 'company'
+    instance.first_name = 'Mario'
+    instance.last_name = 'Rossi'
+    instance.contact_person = ''
+    instance.vat_number = 111222333
+    instance.tax_code = '111122233'
+    instance.address_street = 'Corso Magellano 46'
+    instance.address_postal_code = '20146'
+    instance.address_city = 'Milano'
+    instance.address_province = 'MI'
+    instance.address_extra = ''
+    instance.country = 'Italia'
+    instance.email = 'mario.rossi@example.com'
+    instance.certified_email = 'mario.rossi@pec.example.com'
+    instance.phone = '1234567890'
+    instance.fax = '123456789'
+    instance.notes = ''
+    instance.created_at = '2021-15-08'
+    instance.updated_at = '2021-15-08'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('Supplier', function() {
-    it('should create an instance of Supplier', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.Supplier);
-    });
+  describe('Supplier', function () {
+    it('should create an instance of Supplier', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.Supplier)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property code (base name: "code")', function() {
-      expect(typeof instance.code).to.be('string');
-    });
+    it('should have the property code (base name: "code")', function () {
+      expect(typeof instance.code).to.be('string')
+    })
 
-    it('should have the property name (base name: "name")', function() {
-      expect(typeof instance.name).to.be('string');
-    });
+    it('should have the property name (base name: "name")', function () {
+      expect(typeof instance.name).to.be('string')
+    })
 
-    it('should have the property type (base name: "type")', function() {
-      expect(typeof instance.type).to.be('string');
-    });
+    it('should have the property type (base name: "type")', function () {
+      expect(typeof instance.type).to.be('string')
+    })
 
-    it('should have the property firstName (base name: "first_name")', function() {
-      expect(typeof instance.first_name).to.be('string');
-    });
+    it('should have the property firstName (base name: "first_name")', function () {
+      expect(typeof instance.first_name).to.be('string')
+    })
 
-    it('should have the property lastName (base name: "last_name")', function() {
-      expect(typeof instance.last_name).to.be('string');
-    });
+    it('should have the property lastName (base name: "last_name")', function () {
+      expect(typeof instance.last_name).to.be('string')
+    })
 
-    it('should have the property contactPerson (base name: "contact_person")', function() {
-      expect(typeof instance.contact_person).to.be('string');
-    });
+    it('should have the property contactPerson (base name: "contact_person")', function () {
+      expect(typeof instance.contact_person).to.be('string')
+    })
 
-    it('should have the property vatNumber (base name: "vat_number")', function() {
-      expect(typeof instance.vat_number).to.be('number');
-    });
+    it('should have the property vatNumber (base name: "vat_number")', function () {
+      expect(typeof instance.vat_number).to.be('number')
+    })
 
-    it('should have the property taxCode (base name: "tax_code")', function() {
-      expect(typeof instance.tax_code).to.be('string');
-    });
+    it('should have the property taxCode (base name: "tax_code")', function () {
+      expect(typeof instance.tax_code).to.be('string')
+    })
 
-    it('should have the property addressStreet (base name: "address_street")', function() {
-      expect(typeof instance.address_street).to.be('string');
-    });
+    it('should have the property addressStreet (base name: "address_street")', function () {
+      expect(typeof instance.address_street).to.be('string')
+    })
 
-    it('should have the property addressPostalCode (base name: "address_postal_code")', function() {
-      expect(typeof instance.address_postal_code).to.be('string');
-    });
+    it('should have the property addressPostalCode (base name: "address_postal_code")', function () {
+      expect(typeof instance.address_postal_code).to.be('string')
+    })
 
-    it('should have the property addressCity (base name: "address_city")', function() {
-      expect(typeof instance.address_city).to.be('string');
-    });
+    it('should have the property addressCity (base name: "address_city")', function () {
+      expect(typeof instance.address_city).to.be('string')
+    })
 
-    it('should have the property addressProvince (base name: "address_province")', function() {
-      expect(typeof instance.address_province).to.be('string');
-    });
+    it('should have the property addressProvince (base name: "address_province")', function () {
+      expect(typeof instance.address_province).to.be('string')
+    })
 
-    it('should have the property addressExtra (base name: "address_extra")', function() {
-      expect(typeof instance.address_extra).to.be('string');
-    });
+    it('should have the property addressExtra (base name: "address_extra")', function () {
+      expect(typeof instance.address_extra).to.be('string')
+    })
 
-    it('should have the property country (base name: "country")', function() {
-      expect(typeof instance.country).to.be('string');
-    });
+    it('should have the property country (base name: "country")', function () {
+      expect(typeof instance.country).to.be('string')
+    })
 
-    it('should have the property email (base name: "email")', function() {
-      expect(typeof instance.email).to.be('string');
-    });
+    it('should have the property email (base name: "email")', function () {
+      expect(typeof instance.email).to.be('string')
+    })
 
-    it('should have the property certifiedEmail (base name: "certified_email")', function() {
-      expect(typeof instance.certified_email).to.be('string');
-    });
+    it('should have the property certifiedEmail (base name: "certified_email")', function () {
+      expect(typeof instance.certified_email).to.be('string')
+    })
 
-    it('should have the property phone (base name: "phone")', function() {
-      expect(typeof instance.phone).to.be('string');
-    });
+    it('should have the property phone (base name: "phone")', function () {
+      expect(typeof instance.phone).to.be('string')
+    })
 
-    it('should have the property fax (base name: "fax")', function() {
-      expect(typeof instance.fax).to.be('string');
-    });
+    it('should have the property fax (base name: "fax")', function () {
+      expect(typeof instance.fax).to.be('string')
+    })
 
-    it('should have the property notes (base name: "notes")', function() {
-      expect(typeof instance.notes).to.be('string');
-    });
+    it('should have the property notes (base name: "notes")', function () {
+      expect(typeof instance.notes).to.be('string')
+    })
 
-    it('should have the property createdAt (base name: "created_at")', function() {
-      expect(typeof instance.created_at).to.be('string');
-    });
+    it('should have the property createdAt (base name: "created_at")', function () {
+      expect(typeof instance.created_at).to.be('string')
+    })
 
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      expect(typeof instance.updated_at).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property updatedAt (base name: "updated_at")', function () {
+      expect(typeof instance.updated_at).to.be('string')
+    })
+  })
+}))

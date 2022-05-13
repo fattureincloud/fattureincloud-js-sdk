@@ -11,65 +11,57 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ScheduleEmailRequest();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ScheduleEmailRequest()
     instance.data = {
-      sender_email : "mariorossi@fattureincloud.it",
-      recipient_email : "mary.red@example.com",
-      subject : "Nostra pro forma nr. 1",
-      body : "Gentile Mario Rossi,<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottostante.<br><br>{{allegati}}<br><br>Cordiali saluti,<br><b>Mario Rossi</b>",
-      include : {
-        document : false,
-        delivery_note : false,
-        attachment : false,
-        accompanying_invoice : false
+      sender_email: 'mariorossi@fattureincloud.it',
+      recipient_email: 'mary.red@example.com',
+      subject: 'Nostra pro forma nr. 1',
+      body: 'Gentile Mario Rossi,<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottostante.<br><br>{{allegati}}<br><br>Cordiali saluti,<br><b>Mario Rossi</b>',
+      include: {
+        document: false,
+        delivery_note: false,
+        attachment: false,
+        accompanying_invoice: false
       },
-      attach_pdf : true,
-      send_copy : false
-    };
-  });
+      attach_pdf: true,
+      send_copy: false
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ScheduleEmailRequest', function() {
-    it('should create an instance of ScheduleEmailRequest', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ScheduleEmailRequest);
-    });
+  describe('ScheduleEmailRequest', function () {
+    it('should create an instance of ScheduleEmailRequest', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ScheduleEmailRequest)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

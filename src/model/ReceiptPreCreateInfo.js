@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentAccount from './PaymentAccount';
-import VatType from './VatType';
+import ApiClient from '../ApiClient'
+import PaymentAccount from './PaymentAccount'
+import VatType from './VatType'
 
 /**
  * The ReceiptPreCreateInfo model module.
@@ -21,99 +21,90 @@ import VatType from './VatType';
  * @version 2.0.12
  */
 class ReceiptPreCreateInfo {
-    /**
+  /**
      * Constructs a new <code>ReceiptPreCreateInfo</code>.
-     * 
+     *
      * @alias module:model/ReceiptPreCreateInfo
      */
-    constructor() { 
-        
-        ReceiptPreCreateInfo.initialize(this);
-    }
+  constructor () {
+    ReceiptPreCreateInfo.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ReceiptPreCreateInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ReceiptPreCreateInfo} obj Optional instance to populate.
      * @return {module:model/ReceiptPreCreateInfo} The populated <code>ReceiptPreCreateInfo</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ReceiptPreCreateInfo();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ReceiptPreCreateInfo()
 
-            if (data.hasOwnProperty('numerations')) {
-                obj['numerations'] = ApiClient.convertToType(data['numerations'], {'String': Object});
-            }
-            if (data.hasOwnProperty('numerations_list')) {
-                obj['numerations_list'] = ApiClient.convertToType(data['numerations_list'], ['String']);
-            }
-            if (data.hasOwnProperty('rc_centers_list')) {
-                obj['rc_centers_list'] = ApiClient.convertToType(data['rc_centers_list'], ['String']);
-            }
-            if (data.hasOwnProperty('payment_accounts_list')) {
-                obj['payment_accounts_list'] = ApiClient.convertToType(data['payment_accounts_list'], [PaymentAccount]);
-            }
-            if (data.hasOwnProperty('categories_list')) {
-                obj['categories_list'] = ApiClient.convertToType(data['categories_list'], ['String']);
-            }
-            if (data.hasOwnProperty('vat_types_list')) {
-                obj['vat_types_list'] = ApiClient.convertToType(data['vat_types_list'], [VatType]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('numerations')) {
+        obj.numerations = ApiClient.convertToType(data.numerations, { String: Object })
+      }
+      if (data.hasOwnProperty('numerations_list')) {
+        obj.numerations_list = ApiClient.convertToType(data.numerations_list, ['String'])
+      }
+      if (data.hasOwnProperty('rc_centers_list')) {
+        obj.rc_centers_list = ApiClient.convertToType(data.rc_centers_list, ['String'])
+      }
+      if (data.hasOwnProperty('payment_accounts_list')) {
+        obj.payment_accounts_list = ApiClient.convertToType(data.payment_accounts_list, [PaymentAccount])
+      }
+      if (data.hasOwnProperty('categories_list')) {
+        obj.categories_list = ApiClient.convertToType(data.categories_list, ['String'])
+      }
+      if (data.hasOwnProperty('vat_types_list')) {
+        obj.vat_types_list = ApiClient.convertToType(data.vat_types_list, [VatType])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Object.<String, Object.<String, Number>>} numerations
  */
-ReceiptPreCreateInfo.prototype['numerations'] = undefined;
+ReceiptPreCreateInfo.prototype.numerations = undefined
 
 /**
  * List of series used in the past.
  * @member {Array.<String>} numerations_list
  */
-ReceiptPreCreateInfo.prototype['numerations_list'] = undefined;
+ReceiptPreCreateInfo.prototype.numerations_list = undefined
 
 /**
  * List of revenue centers used in the past.
  * @member {Array.<String>} rc_centers_list
  */
-ReceiptPreCreateInfo.prototype['rc_centers_list'] = undefined;
+ReceiptPreCreateInfo.prototype.rc_centers_list = undefined
 
 /**
  * User payment accounts list.
  * @member {Array.<module:model/PaymentAccount>} payment_accounts_list
  */
-ReceiptPreCreateInfo.prototype['payment_accounts_list'] = undefined;
+ReceiptPreCreateInfo.prototype.payment_accounts_list = undefined
 
 /**
  * List of categories used in the past.
  * @member {Array.<String>} categories_list
  */
-ReceiptPreCreateInfo.prototype['categories_list'] = undefined;
+ReceiptPreCreateInfo.prototype.categories_list = undefined
 
 /**
  * List of user vat types with the default 22%, 10%, 4% and 0% vats.
  * @member {Array.<module:model/VatType>} vat_types_list
  */
-ReceiptPreCreateInfo.prototype['vat_types_list'] = undefined;
+ReceiptPreCreateInfo.prototype.vat_types_list = undefined
 
-
-
-
-
-
-export default ReceiptPreCreateInfo;
-
+export default ReceiptPreCreateInfo

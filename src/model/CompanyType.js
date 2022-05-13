@@ -11,36 +11,30 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class CompanyType.
 * @enum {}
 * @readonly
 */
 export default class CompanyType {
-    
-        /**
+  /**
          * value: "company"
          * @const
          */
-        "company" = "company";
+  'company' = 'company'
 
-    
-        /**
+  /**
          * value: "accountant"
          * @const
          */
-        "accountant" = "accountant";
+  'accountant' = 'accountant'
 
-    
-
-    /**
+  /**
     * Returns a <code>CompanyType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/CompanyType} The enum <code>CompanyType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

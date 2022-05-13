@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The GetUserInfoResponseInfo model module.
@@ -19,69 +19,60 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class GetUserInfoResponseInfo {
-    /**
+  /**
      * Constructs a new <code>GetUserInfoResponseInfo</code>.
      * @alias module:model/GetUserInfoResponseInfo
      */
-    constructor() { 
-        
-        GetUserInfoResponseInfo.initialize(this);
-    }
+  constructor () {
+    GetUserInfoResponseInfo.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetUserInfoResponseInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetUserInfoResponseInfo} obj Optional instance to populate.
      * @return {module:model/GetUserInfoResponseInfo} The populated <code>GetUserInfoResponseInfo</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetUserInfoResponseInfo();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetUserInfoResponseInfo()
 
-            if (data.hasOwnProperty('need_marketing_consents_confirmation')) {
-                obj['need_marketing_consents_confirmation'] = ApiClient.convertToType(data['need_marketing_consents_confirmation'], 'Boolean');
-            }
-            if (data.hasOwnProperty('need_password_change')) {
-                obj['need_password_change'] = ApiClient.convertToType(data['need_password_change'], 'Boolean');
-            }
-            if (data.hasOwnProperty('need_terms_of_service_confirmation')) {
-                obj['need_terms_of_service_confirmation'] = ApiClient.convertToType(data['need_terms_of_service_confirmation'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('need_marketing_consents_confirmation')) {
+        obj.need_marketing_consents_confirmation = ApiClient.convertToType(data.need_marketing_consents_confirmation, 'Boolean')
+      }
+      if (data.hasOwnProperty('need_password_change')) {
+        obj.need_password_change = ApiClient.convertToType(data.need_password_change, 'Boolean')
+      }
+      if (data.hasOwnProperty('need_terms_of_service_confirmation')) {
+        obj.need_terms_of_service_confirmation = ApiClient.convertToType(data.need_terms_of_service_confirmation, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Boolean} need_marketing_consents_confirmation
  */
-GetUserInfoResponseInfo.prototype['need_marketing_consents_confirmation'] = undefined;
+GetUserInfoResponseInfo.prototype.need_marketing_consents_confirmation = undefined
 
 /**
  * @member {Boolean} need_password_change
  */
-GetUserInfoResponseInfo.prototype['need_password_change'] = undefined;
+GetUserInfoResponseInfo.prototype.need_password_change = undefined
 
 /**
  * @member {Boolean} need_terms_of_service_confirmation
  */
-GetUserInfoResponseInfo.prototype['need_terms_of_service_confirmation'] = undefined;
+GetUserInfoResponseInfo.prototype.need_terms_of_service_confirmation = undefined
 
-
-
-
-
-
-export default GetUserInfoResponseInfo;
-
+export default GetUserInfoResponseInfo

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ListUserCompaniesResponseData from './ListUserCompaniesResponseData';
+import ListUserCompaniesResponseData from './ListUserCompaniesResponseData'
 
 /**
  * The ListUserCompaniesResponse model module.
@@ -20,54 +19,45 @@ import ListUserCompaniesResponseData from './ListUserCompaniesResponseData';
  * @version 2.0.12
  */
 class ListUserCompaniesResponse {
-    /**
+  /**
      * Constructs a new <code>ListUserCompaniesResponse</code>.
-     * 
+     *
      * @alias module:model/ListUserCompaniesResponse
      */
-    constructor() { 
-        
-        ListUserCompaniesResponse.initialize(this);
-    }
+  constructor () {
+    ListUserCompaniesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListUserCompaniesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListUserCompaniesResponse} obj Optional instance to populate.
      * @return {module:model/ListUserCompaniesResponse} The populated <code>ListUserCompaniesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListUserCompaniesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListUserCompaniesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ListUserCompaniesResponseData.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ListUserCompaniesResponseData.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ListUserCompaniesResponseData} data
  */
-ListUserCompaniesResponse.prototype['data'] = undefined;
+ListUserCompaniesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListUserCompaniesResponse;
-
+export default ListUserCompaniesResponse

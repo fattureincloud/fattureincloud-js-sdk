@@ -11,94 +11,85 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CompanyInfoPlanInfo();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CompanyInfoPlanInfo()
     instance.limits = {
-      clients : 5000,
-      suppliers : 5000,
-      products : 5000,
-      documents : 3000
-    },
+      clients: 5000,
+      suppliers: 5000,
+      products: 5000,
+      documents: 3000
+    }
     instance.functions = {
-      document_attachments : true,
-      archive : true,
-      payment_notifications : true,
-      paypal : true,
-      receipts : true,
-      e_invoice : true,
-      genius : true,
-      stock : true,
-      smtp : true,
-      mail_tracking : true,
-      subaccounts : true,
-      tessera_sanitaria : true,
-      recurring : true,
-      sofort : false,
-      cerved : true,
-      ts_digital : true,
-      ts_pay : true,
-      ts_invoice_trading : true
-    },
+      document_attachments: true,
+      archive: true,
+      payment_notifications: true,
+      paypal: true,
+      receipts: true,
+      e_invoice: true,
+      genius: true,
+      stock: true,
+      smtp: true,
+      mail_tracking: true,
+      subaccounts: true,
+      tessera_sanitaria: true,
+      recurring: true,
+      sofort: false,
+      cerved: true,
+      ts_digital: true,
+      ts_pay: true,
+      ts_invoice_trading: true
+    }
     instance.functions_status = {
-      ts_digital : {
-        active : true
+      ts_digital: {
+        active: true
       },
-      ts_pay : {
-        active : true
+      ts_pay: {
+        active: true
       }
-  }
+    }
+  })
 
-  });
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  describe('CompanyInfoPlanInfo', function () {
+    it('should create an instance of CompanyInfoPlanInfo', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfoPlanInfo)
+    })
 
-  describe('CompanyInfoPlanInfo', function() {
-    it('should create an instance of CompanyInfoPlanInfo', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfoPlanInfo);
-    });
+    it('should have the property limits (base name: "limits")', function () {
+      expect(typeof instance.limits).to.be('object')
+    })
 
-    it('should have the property limits (base name: "limits")', function() {
-      expect(typeof instance.limits).to.be('object');
-    });
+    it('should have the property functions (base name: "functions")', function () {
+      expect(typeof instance.functions).to.be('object')
+    })
 
-    it('should have the property functions (base name: "functions")', function() {
-      expect(typeof instance.functions).to.be('object');
-    });
-
-    it('should have the property functionsStatus (base name: "functions_status")', function() {
-      expect(typeof instance.functions_status).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property functionsStatus (base name: "functions_status")', function () {
+      expect(typeof instance.functions_status).to.be('object')
+    })
+  })
+}))

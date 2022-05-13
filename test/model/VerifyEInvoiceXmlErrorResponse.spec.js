@@ -11,66 +11,58 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponse()
     instance.error = {
-      message : "errore",
-      validation_result : {
-          success : false
+      message: 'errore',
+      validation_result: {
+        success: false
       }
-    },
+    }
     instance.extra = {
-      errors : [
-          "errore brutto"
+      errors: [
+        'errore brutto'
       ]
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('VerifyEInvoiceXmlErrorResponse', function() {
-    it('should create an instance of VerifyEInvoiceXmlErrorResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponse);
-    });
+  describe('VerifyEInvoiceXmlErrorResponse', function () {
+    it('should create an instance of VerifyEInvoiceXmlErrorResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponse)
+    })
 
-    it('should have the property error (base name: "error")', function() {
-      expect(typeof instance.error).to.be('object');
-    });
+    it('should have the property error (base name: "error")', function () {
+      expect(typeof instance.error).to.be('object')
+    })
 
-    it('should have the property extra (base name: "extra")', function() {
-      expect(typeof instance.extra).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property extra (base name: "extra")', function () {
+      expect(typeof instance.extra).to.be('object')
+    })
+  })
+}))

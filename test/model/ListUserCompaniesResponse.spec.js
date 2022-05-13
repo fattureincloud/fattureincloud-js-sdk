@@ -11,97 +11,89 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ListUserCompaniesResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ListUserCompaniesResponse()
     instance.data = {
-      companies : [
+      companies: [
         {
-          id : 12345,
-          name : "Studio Commercialista",
-          tax_code : "ABCSFN94T17A794K",
-          type : "accountant",
-          access_token : "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95",
-          connection_id : 94566,
-          controlled_companies : [
+          id: 12345,
+          name: 'Studio Commercialista',
+          tax_code: 'ABCSFN94T17A794K',
+          type: 'accountant',
+          access_token: '4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95',
+          connection_id: 94566,
+          controlled_companies: [
             {
-              id : 12246,
-              name : "Studio Commercialista",
-              tax_code : "ABCSFN94T17A794K",
-              type : "company",
-              access_token : "4ff5f0fe5abcdf1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95",
-              connection_id : 94566,
-              controlled_companies : [],
-              fic : true,
-              dic : true,
-              fic_plan : "premium_plus",
-              fic_license_expire : "2021-12-31",
-              permissions : {
-                fic_situation : "write",
-                fic_clients : "write",
-                fic_suppliers : "write",
-                fic_products : "write",
-                fic_issued_documents : "write",
-                fic_received_documents : "write",
-                fic_receipts : "write",
-                fic_calendar : "write",
-                fic_archive : "write",
-                fic_taxes : "write",
-                fic_stock : "write",
-                fic_cashbook : "write",
-                fic_settings : "write",
-                fic_emails : "write",
-                dic_employees : "write",
-                dic_timesheet : "write",
-                dic_settings : "write"
+              id: 12246,
+              name: 'Studio Commercialista',
+              tax_code: 'ABCSFN94T17A794K',
+              type: 'company',
+              access_token: '4ff5f0fe5abcdf1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95',
+              connection_id: 94566,
+              controlled_companies: [],
+              fic: true,
+              dic: true,
+              fic_plan: 'premium_plus',
+              fic_license_expire: '2021-12-31',
+              permissions: {
+                fic_situation: 'write',
+                fic_clients: 'write',
+                fic_suppliers: 'write',
+                fic_products: 'write',
+                fic_issued_documents: 'write',
+                fic_received_documents: 'write',
+                fic_receipts: 'write',
+                fic_calendar: 'write',
+                fic_archive: 'write',
+                fic_taxes: 'write',
+                fic_stock: 'write',
+                fic_cashbook: 'write',
+                fic_settings: 'write',
+                fic_emails: 'write',
+                dic_employees: 'write',
+                dic_timesheet: 'write',
+                dic_settings: 'write'
               }
             }
           ]
         }
       ]
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ListUserCompaniesResponse', function() {
-    it('should create an instance of ListUserCompaniesResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ListUserCompaniesResponse);
-    });
+  describe('ListUserCompaniesResponse', function () {
+    it('should create an instance of ListUserCompaniesResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ListUserCompaniesResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

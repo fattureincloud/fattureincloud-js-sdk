@@ -11,124 +11,116 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ReceivedDocumentInfo();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ReceivedDocumentInfo()
     instance.default_values = {
-      detailed : false
-      },
+      detailed: false
+    }
     instance.items_default_values = {
-          vat : 21
-      },
+      vat: 21
+    }
     instance.countries_list = [
-          "Italia",
-          "Afghanistan",
-          "Albania"
-      ],
+      'Italia',
+      'Afghanistan',
+      'Albania'
+    ]
     instance.currencies_list = [
-          {
-            id : "AED",
-            symbol : "AED",
-            html_symbol : "AED",
-            exchange_rate : "4.09500"
-          },
-          {
-            id : "ALL",
-            symbol : "ALL",
-            html_symbol : "ALL",
-            exchange_rate : "121.50000"
-          }
-      ],
+      {
+        id: 'AED',
+        symbol: 'AED',
+        html_symbol: 'AED',
+        exchange_rate: '4.09500'
+      },
+      {
+        id: 'ALL',
+        symbol: 'ALL',
+        html_symbol: 'ALL',
+        exchange_rate: '121.50000'
+      }
+    ]
     instance.categories_list = [
-          "Auto",
-          "Telefono e internet"
-      ],
+      'Auto',
+      'Telefono e internet'
+    ]
     instance.payment_accounts_list = [
-          {
-            id : 111,
-            name : "Indesa - carta conto"
-          }
-      ],
+      {
+        id: 111,
+        name: 'Indesa - carta conto'
+      }
+    ]
     instance.vat_types_list = [
-          {
-            id : 1334,
-            value : 0,
-            description : "Non imp. art. 17 c. 6 DPR 633/72 e s.m.i.",
-            is_disabled : false
-          },
-          {
-            id : 1333,
-            value : 0,
-            description : "Non sogg. art. 74 c. 7 e 8 DPR 633/72",
-            is_disabled : false
-          }
-      ]
-  });
+      {
+        id: 1334,
+        value: 0,
+        description: 'Non imp. art. 17 c. 6 DPR 633/72 e s.m.i.',
+        is_disabled: false
+      },
+      {
+        id: 1333,
+        value: 0,
+        description: 'Non sogg. art. 74 c. 7 e 8 DPR 633/72',
+        is_disabled: false
+      }
+    ]
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ReceivedDocumentInfo', function() {
-    it('should create an instance of ReceivedDocumentInfo', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentInfo);
-    });
+  describe('ReceivedDocumentInfo', function () {
+    it('should create an instance of ReceivedDocumentInfo', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ReceivedDocumentInfo)
+    })
 
-    it('should have the property defaultValues (base name: "default_values")', function() {
-      expect(typeof instance.default_values).to.be('object');
-    });
+    it('should have the property defaultValues (base name: "default_values")', function () {
+      expect(typeof instance.default_values).to.be('object')
+    })
 
-    it('should have the property itemsDefaultValues (base name: "items_default_values")', function() {
-      expect(typeof instance.items_default_values).to.be('object');
-    });
+    it('should have the property itemsDefaultValues (base name: "items_default_values")', function () {
+      expect(typeof instance.items_default_values).to.be('object')
+    })
 
-    it('should have the property countriesList (base name: "countries_list")', function() {
-      expect(typeof instance.countries_list).to.be('object');
-    });
+    it('should have the property countriesList (base name: "countries_list")', function () {
+      expect(typeof instance.countries_list).to.be('object')
+    })
 
-    it('should have the property currenciesList (base name: "currencies_list")', function() {
-      expect(typeof instance.currencies_list).to.be('object');
-    });
+    it('should have the property currenciesList (base name: "currencies_list")', function () {
+      expect(typeof instance.currencies_list).to.be('object')
+    })
 
-    it('should have the property categoriesList (base name: "categories_list")', function() {
-      expect(typeof instance.categories_list).to.be('object');
-    });
+    it('should have the property categoriesList (base name: "categories_list")', function () {
+      expect(typeof instance.categories_list).to.be('object')
+    })
 
-    it('should have the property paymentAccountsList (base name: "payment_accounts_list")', function() {
-      expect(typeof instance.payment_accounts_list).to.be('object');
-    });
+    it('should have the property paymentAccountsList (base name: "payment_accounts_list")', function () {
+      expect(typeof instance.payment_accounts_list).to.be('object')
+    })
 
-    it('should have the property vatTypesList (base name: "vat_types_list")', function() {
-      expect(typeof instance.vat_types_list).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property vatTypesList (base name: "vat_types_list")', function () {
+      expect(typeof instance.vat_types_list).to.be('object')
+    })
+  })
+}))

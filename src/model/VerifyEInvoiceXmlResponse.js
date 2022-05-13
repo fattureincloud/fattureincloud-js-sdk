@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import VerifyEInvoiceXmlResponseData from './VerifyEInvoiceXmlResponseData';
+import VerifyEInvoiceXmlResponseData from './VerifyEInvoiceXmlResponseData'
 
 /**
  * The VerifyEInvoiceXmlResponse model module.
@@ -20,53 +19,44 @@ import VerifyEInvoiceXmlResponseData from './VerifyEInvoiceXmlResponseData';
  * @version 2.0.12
  */
 class VerifyEInvoiceXmlResponse {
-    /**
+  /**
      * Constructs a new <code>VerifyEInvoiceXmlResponse</code>.
      * @alias module:model/VerifyEInvoiceXmlResponse
      */
-    constructor() { 
-        
-        VerifyEInvoiceXmlResponse.initialize(this);
-    }
+  constructor () {
+    VerifyEInvoiceXmlResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>VerifyEInvoiceXmlResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/VerifyEInvoiceXmlResponse} obj Optional instance to populate.
      * @return {module:model/VerifyEInvoiceXmlResponse} The populated <code>VerifyEInvoiceXmlResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new VerifyEInvoiceXmlResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new VerifyEInvoiceXmlResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = VerifyEInvoiceXmlResponseData.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = VerifyEInvoiceXmlResponseData.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/VerifyEInvoiceXmlResponseData} data
  */
-VerifyEInvoiceXmlResponse.prototype['data'] = undefined;
+VerifyEInvoiceXmlResponse.prototype.data = undefined
 
-
-
-
-
-
-export default VerifyEInvoiceXmlResponse;
-
+export default VerifyEInvoiceXmlResponse

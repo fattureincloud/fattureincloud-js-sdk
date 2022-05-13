@@ -11,50 +11,42 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class EntityType.
 * @enum {}
 * @readonly
 */
 export default class EntityType {
-    
-        /**
+  /**
          * value: "company"
          * @const
          */
-        "company" = "company";
+  'company' = 'company'
 
-    
-        /**
+  /**
          * value: "person"
          * @const
          */
-        "person" = "person";
+  'person' = 'person'
 
-    
-        /**
+  /**
          * value: "pa"
          * @const
          */
-        "pa" = "pa";
+  'pa' = 'pa'
 
-    
-        /**
+  /**
          * value: "condo"
          * @const
          */
-        "condo" = "condo";
+  'condo' = 'condo'
 
-    
-
-    /**
+  /**
     * Returns a <code>EntityType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/EntityType} The enum <code>EntityType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

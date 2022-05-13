@@ -11,114 +11,106 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.EmailData();
-    instance.recipient_email = "mary.red@example.com";
-    instance.cc_email = "m.rossi@exxample.com";
-    instance.subject = "Nostra pro forma nr. 1";
-    instance.body = "Gentile Mario Rossi<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottoastante.<br><br>{{allegati}}<br><br>Cordiali saluti<br><b>Mario Rossi</b>";
-    instance.document_exists = true;
-    instance.delivery_note_exists = false;
-    instance.attachment_exists = false;
-    instance.accompanying_invoice_exists = false;
-    instance.default_attach_pdf = false;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.EmailData()
+    instance.recipient_email = 'mary.red@example.com'
+    instance.cc_email = 'm.rossi@exxample.com'
+    instance.subject = 'Nostra pro forma nr. 1'
+    instance.body = 'Gentile Mario Rossi<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottoastante.<br><br>{{allegati}}<br><br>Cordiali saluti<br><b>Mario Rossi</b>'
+    instance.document_exists = true
+    instance.delivery_note_exists = false
+    instance.attachment_exists = false
+    instance.accompanying_invoice_exists = false
+    instance.default_attach_pdf = false
     instance.default_sender_email = {
-                    id : 0,
-                    email : "no-reply@fattureincloud.it"
-                  },
+      id: 0,
+      email: 'no-reply@fattureincloud.it'
+    }
     instance.sender_emails_list = [
-                    {
-                      id : 0,
-                      email : "no-reply@fattureincloud.it"
-                    },
-                    {
-                      id : 888,
-                      email : "mariorossi@fattureincloud.it"
-                    }
-                ]
-  });
+      {
+        id: 0,
+        email: 'no-reply@fattureincloud.it'
+      },
+      {
+        id: 888,
+        email: 'mariorossi@fattureincloud.it'
+      }
+    ]
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('EmailData', function() {
-    it('should create an instance of EmailData', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.EmailData);
-    });
+  describe('EmailData', function () {
+    it('should create an instance of EmailData', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.EmailData)
+    })
 
-    it('should have the property recipientEmail (base name: "recipient_email")', function() {
-      expect(typeof instance.recipient_email).to.be('string');
-    });
+    it('should have the property recipientEmail (base name: "recipient_email")', function () {
+      expect(typeof instance.recipient_email).to.be('string')
+    })
 
-    it('should have the property defaultSenderEmail (base name: "default_sender_email")', function() {
-      expect(typeof instance.default_sender_email).to.be('object');
-    });
+    it('should have the property defaultSenderEmail (base name: "default_sender_email")', function () {
+      expect(typeof instance.default_sender_email).to.be('object')
+    })
 
-    it('should have the property senderEmailsList (base name: "sender_emails_list")', function() {
-      expect(typeof instance.sender_emails_list).to.be('object');
-    });
+    it('should have the property senderEmailsList (base name: "sender_emails_list")', function () {
+      expect(typeof instance.sender_emails_list).to.be('object')
+    })
 
-    it('should have the property ccEmail (base name: "cc_email")', function() {
-      expect(typeof instance.cc_email).to.be('string');
-    });
+    it('should have the property ccEmail (base name: "cc_email")', function () {
+      expect(typeof instance.cc_email).to.be('string')
+    })
 
-    it('should have the property subject (base name: "subject")', function() {
-      expect(typeof instance.subject).to.be('string');
-    });
+    it('should have the property subject (base name: "subject")', function () {
+      expect(typeof instance.subject).to.be('string')
+    })
 
-    it('should have the property body (base name: "body")', function() {
-      expect(typeof instance.body).to.be('string');
-    });
+    it('should have the property body (base name: "body")', function () {
+      expect(typeof instance.body).to.be('string')
+    })
 
-    it('should have the property documentExists (base name: "document_exists")', function() {
-      expect(typeof instance.document_exists).to.be('boolean');
-    });
+    it('should have the property documentExists (base name: "document_exists")', function () {
+      expect(typeof instance.document_exists).to.be('boolean')
+    })
 
-    it('should have the property deliveryNoteExists (base name: "delivery_note_exists")', function() {
-      expect(typeof instance.delivery_note_exists).to.be('boolean');
-    });
+    it('should have the property deliveryNoteExists (base name: "delivery_note_exists")', function () {
+      expect(typeof instance.delivery_note_exists).to.be('boolean')
+    })
 
-    it('should have the property attachmentExists (base name: "attachment_exists")', function() {
-      expect(typeof instance.attachment_exists).to.be('boolean');
-    });
+    it('should have the property attachmentExists (base name: "attachment_exists")', function () {
+      expect(typeof instance.attachment_exists).to.be('boolean')
+    })
 
-    it('should have the property accompanyingInvoiceExists (base name: "accompanying_invoice_exists")', function() {
-      expect(typeof instance.accompanying_invoice_exists).to.be('boolean');
-    });
+    it('should have the property accompanyingInvoiceExists (base name: "accompanying_invoice_exists")', function () {
+      expect(typeof instance.accompanying_invoice_exists).to.be('boolean')
+    })
 
-    it('should have the property defaultAttachPdf (base name: "default_attach_pdf")', function() {
-      expect(typeof instance.default_attach_pdf).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property defaultAttachPdf (base name: "default_attach_pdf")', function () {
+      expect(typeof instance.default_attach_pdf).to.be('boolean')
+    })
+  })
+}))

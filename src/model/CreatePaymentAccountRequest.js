@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentAccount from './PaymentAccount';
+import PaymentAccount from './PaymentAccount'
 
 /**
  * The CreatePaymentAccountRequest model module.
@@ -20,53 +19,44 @@ import PaymentAccount from './PaymentAccount';
  * @version 2.0.12
  */
 class CreatePaymentAccountRequest {
-    /**
+  /**
      * Constructs a new <code>CreatePaymentAccountRequest</code>.
      * @alias module:model/CreatePaymentAccountRequest
      */
-    constructor() { 
-        
-        CreatePaymentAccountRequest.initialize(this);
-    }
+  constructor () {
+    CreatePaymentAccountRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreatePaymentAccountRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreatePaymentAccountRequest} obj Optional instance to populate.
      * @return {module:model/CreatePaymentAccountRequest} The populated <code>CreatePaymentAccountRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreatePaymentAccountRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreatePaymentAccountRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = PaymentAccount.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = PaymentAccount.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/PaymentAccount} data
  */
-CreatePaymentAccountRequest.prototype['data'] = undefined;
+CreatePaymentAccountRequest.prototype.data = undefined
 
-
-
-
-
-
-export default CreatePaymentAccountRequest;
-
+export default CreatePaymentAccountRequest

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CashbookEntry from './CashbookEntry';
+import CashbookEntry from './CashbookEntry'
 
 /**
  * The CreateCashbookEntryRequest model module.
@@ -20,54 +19,45 @@ import CashbookEntry from './CashbookEntry';
  * @version 2.0.12
  */
 class CreateCashbookEntryRequest {
-    /**
+  /**
      * Constructs a new <code>CreateCashbookEntryRequest</code>.
-     * 
+     *
      * @alias module:model/CreateCashbookEntryRequest
      */
-    constructor() { 
-        
-        CreateCashbookEntryRequest.initialize(this);
-    }
+  constructor () {
+    CreateCashbookEntryRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateCashbookEntryRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateCashbookEntryRequest} obj Optional instance to populate.
      * @return {module:model/CreateCashbookEntryRequest} The populated <code>CreateCashbookEntryRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateCashbookEntryRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateCashbookEntryRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = CashbookEntry.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = CashbookEntry.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/CashbookEntry} data
  */
-CreateCashbookEntryRequest.prototype['data'] = undefined;
+CreateCashbookEntryRequest.prototype.data = undefined
 
-
-
-
-
-
-export default CreateCashbookEntryRequest;
-
+export default CreateCashbookEntryRequest

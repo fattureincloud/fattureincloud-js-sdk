@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The SendEInvoiceResponseData model module.
@@ -19,63 +19,54 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class SendEInvoiceResponseData {
-    /**
+  /**
      * Constructs a new <code>SendEInvoiceResponseData</code>.
      * @alias module:model/SendEInvoiceResponseData
      */
-    constructor() { 
-        
-        SendEInvoiceResponseData.initialize(this);
-    }
+  constructor () {
+    SendEInvoiceResponseData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>SendEInvoiceResponseData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/SendEInvoiceResponseData} obj Optional instance to populate.
      * @return {module:model/SendEInvoiceResponseData} The populated <code>SendEInvoiceResponseData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new SendEInvoiceResponseData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new SendEInvoiceResponseData()
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('name')) {
+        obj.name = ApiClient.convertToType(data.name, 'String')
+      }
+      if (data.hasOwnProperty('date')) {
+        obj.date = ApiClient.convertToType(data.date, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Response message.
  * @member {String} name
  */
-SendEInvoiceResponseData.prototype['name'] = undefined;
+SendEInvoiceResponseData.prototype.name = undefined
 
 /**
  * E-invoice sent date.
  * @member {String} date
  */
-SendEInvoiceResponseData.prototype['date'] = undefined;
+SendEInvoiceResponseData.prototype.date = undefined
 
-
-
-
-
-
-export default SendEInvoiceResponseData;
-
+export default SendEInvoiceResponseData

@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class ReceivedDocumentType.
 * @enum {}
 * @readonly
 */
 export default class ReceivedDocumentType {
-    
-        /**
+  /**
          * value: "expense"
          * @const
          */
-        "expense" = "expense";
+  'expense' = 'expense'
 
-    
-        /**
+  /**
          * value: "passive_credit_note"
          * @const
          */
-        "passive_credit_note" = "passive_credit_note";
+  'passive_credit_note' = 'passive_credit_note'
 
-    
-        /**
+  /**
          * value: "passive_delivery_note"
          * @const
          */
-        "passive_delivery_note" = "passive_delivery_note";
+  'passive_delivery_note' = 'passive_delivery_note'
 
-    
-
-    /**
+  /**
     * Returns a <code>ReceivedDocumentType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/ReceivedDocumentType} The enum <code>ReceivedDocumentType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

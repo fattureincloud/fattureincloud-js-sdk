@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentAccount from './PaymentAccount';
+import PaymentAccount from './PaymentAccount'
 
 /**
  * The ModifyPaymentAccountRequest model module.
@@ -20,53 +19,44 @@ import PaymentAccount from './PaymentAccount';
  * @version 2.0.12
  */
 class ModifyPaymentAccountRequest {
-    /**
+  /**
      * Constructs a new <code>ModifyPaymentAccountRequest</code>.
      * @alias module:model/ModifyPaymentAccountRequest
      */
-    constructor() { 
-        
-        ModifyPaymentAccountRequest.initialize(this);
-    }
+  constructor () {
+    ModifyPaymentAccountRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyPaymentAccountRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyPaymentAccountRequest} obj Optional instance to populate.
      * @return {module:model/ModifyPaymentAccountRequest} The populated <code>ModifyPaymentAccountRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyPaymentAccountRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyPaymentAccountRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = PaymentAccount.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = PaymentAccount.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/PaymentAccount} data
  */
-ModifyPaymentAccountRequest.prototype['data'] = undefined;
+ModifyPaymentAccountRequest.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyPaymentAccountRequest;
-
+export default ModifyPaymentAccountRequest

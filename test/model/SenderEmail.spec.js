@@ -11,57 +11,49 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.SenderEmail();
-    instance.id = 0;
-    instance.email = "no-reply@fattureincloud.it";
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.SenderEmail()
+    instance.id = 0
+    instance.email = 'no-reply@fattureincloud.it'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('EmailDataSenderEmailsList', function() {
-    it('should create an instance of SenderEmail', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.SenderEmail);
-    });
+  describe('EmailDataSenderEmailsList', function () {
+    it('should create an instance of SenderEmail', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.SenderEmail)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property email (base name: "email")', function() {
-      expect(typeof instance.email).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property email (base name: "email")', function () {
+      expect(typeof instance.email).to.be('string')
+    })
+  })
+}))

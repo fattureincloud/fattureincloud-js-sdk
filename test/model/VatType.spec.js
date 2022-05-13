@@ -11,92 +11,84 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.VatType();
-    instance.id = 0;
-    instance.value = 22;
-    instance.description = "Non imponibile art. 123";
-    instance.notes = "IVA non imponibile ai sensi dell\'articolo 123 comma 2";
-    instance.e_invoice = true;
-    instance.ei_type = 2;
-    instance.ei_description = "string";
-    instance.editable = true;
-    instance.is_disabled = false;    
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.VatType()
+    instance.id = 0
+    instance.value = 22
+    instance.description = 'Non imponibile art. 123'
+    instance.notes = "IVA non imponibile ai sensi dell'articolo 123 comma 2"
+    instance.e_invoice = true
+    instance.ei_type = 2
+    instance.ei_description = 'string'
+    instance.editable = true
+    instance.is_disabled = false
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('VatType', function() {
-    it('should create an instance of VatType', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.VatType);
-    });
+  describe('VatType', function () {
+    it('should create an instance of VatType', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.VatType)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property value (base name: "value")', function() {
-      expect(typeof instance.value).to.be('number');
-    });
+    it('should have the property value (base name: "value")', function () {
+      expect(typeof instance.value).to.be('number')
+    })
 
-    it('should have the property description (base name: "description")', function() {
-      expect(typeof instance.description).to.be('string');
-    });
+    it('should have the property description (base name: "description")', function () {
+      expect(typeof instance.description).to.be('string')
+    })
 
-    it('should have the property notes (base name: "notes")', function() {
-      expect(typeof instance.notes).to.be('string');
-    });
+    it('should have the property notes (base name: "notes")', function () {
+      expect(typeof instance.notes).to.be('string')
+    })
 
-    it('should have the property eInvoice (base name: "e_invoice")', function() {
-      expect(typeof instance.e_invoice).to.be('boolean');
-    });
+    it('should have the property eInvoice (base name: "e_invoice")', function () {
+      expect(typeof instance.e_invoice).to.be('boolean')
+    })
 
-    it('should have the property eiType (base name: "ei_type")', function() {
-      expect(typeof instance.ei_type).to.be('number');
-    });
+    it('should have the property eiType (base name: "ei_type")', function () {
+      expect(typeof instance.ei_type).to.be('number')
+    })
 
-    it('should have the property eiDescription (base name: "ei_description")', function() {
-      expect(typeof instance.ei_description).to.be('string');
-    });
+    it('should have the property eiDescription (base name: "ei_description")', function () {
+      expect(typeof instance.ei_description).to.be('string')
+    })
 
-    it('should have the property editable (base name: "editable")', function() {
-      expect(typeof instance.editable).to.be('boolean');
-    });
+    it('should have the property editable (base name: "editable")', function () {
+      expect(typeof instance.editable).to.be('boolean')
+    })
 
-    it('should have the property isDisabled (base name: "is_disabled")', function() {
-      expect(typeof instance.is_disabled).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property isDisabled (base name: "is_disabled")', function () {
+      expect(typeof instance.is_disabled).to.be('boolean')
+    })
+  })
+}))

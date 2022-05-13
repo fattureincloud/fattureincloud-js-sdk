@@ -11,62 +11,54 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoItemsDefaultValues();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoItemsDefaultValues()
     instance.vat = {
-      id : 0,
-      value : 22,
-      description : "iva",
-      notes : "",
-      e_invoice : true,
-      ei_type : "0",
-      ei_description : "",
-      is_disabled : false,
-      editable : false
+      id: 0,
+      value: 22,
+      description: 'iva',
+      notes: '',
+      e_invoice: true,
+      ei_type: '0',
+      ei_description: '',
+      is_disabled: false,
+      editable: false
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedDocumentPreCreateInfoItemsDefaultValues', function() {
-    it('should create an instance of IssuedDocumentPreCreateInfoItemsDefaultValues', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoItemsDefaultValues);
-    });
+  describe('IssuedDocumentPreCreateInfoItemsDefaultValues', function () {
+    it('should create an instance of IssuedDocumentPreCreateInfoItemsDefaultValues', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoItemsDefaultValues)
+    })
 
-    it('should have the property vat (base name: "vat")', function() {
-      expect(typeof instance.vat).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property vat (base name: "vat")', function () {
+      expect(typeof instance.vat).to.be('object')
+    })
+  })
+}))

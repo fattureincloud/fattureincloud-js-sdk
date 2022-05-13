@@ -11,90 +11,82 @@
  *
  */
 
- import SendEInvoiceRequest from '../../src/model/SendEInvoiceRequest';
- import SendEInvoiceResponse from '../../src/model/SendEInvoiceResponse';
- import VerifyEInvoiceXmlErrorResponse from '../../src/model/VerifyEInvoiceXmlErrorResponse';
- import VerifyEInvoiceXmlResponse from '../../src/model/VerifyEInvoiceXmlResponse';
+import SendEInvoiceResponse from '../../src/model/SendEInvoiceResponse'
+import VerifyEInvoiceXmlResponse from '../../src/model/VerifyEInvoiceXmlResponse';
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var sandbox = require("sinon").createSandbox();
+  const sandbox = require('sinon').createSandbox()
 
-  var instance = new fattureInCloudSdk.IssuedEInvoicesApi();
+  const instance = new fattureInCloudSdk.IssuedEInvoicesApi()
 
-  var sendEInvoiceResponseObj = {"data":{"name":"CARICATO","date":"2021-08-23 10:38:03"}};
-  var sendEInvoiceStub = sandbox.stub(instance, "sendEInvoice").returns(sendEInvoiceResponseObj);
+  const sendEInvoiceResponseObj = { data: { name: 'CARICATO', date: '2021-08-23 10:38:03' } }
+  const sendEInvoiceStub = sandbox.stub(instance, 'sendEInvoice').returns(sendEInvoiceResponseObj)
 
-  var verifyEInvoiceXmlResponseObj = {"data":{"success":true}};
-  sandbox.stub(instance, "verifyEInvoiceXml").returns(verifyEInvoiceXmlResponseObj);
+  const verifyEInvoiceXmlResponseObj = { data: { success: true } }
+  sandbox.stub(instance, 'verifyEInvoiceXml').returns(verifyEInvoiceXmlResponseObj)
 
-  var getEInvoiceXmlResponse = '<?xml version="1.0"?><p:FatturaElettronica xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" versione="FPA12" xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2/Schema_del_file_xml_FatturaPA_versione_1.2.xsd"><FatturaElettronicaHeader><DatiTrasmissione><IdTrasmittente><IdPaese>IT</IdPaese><IdCodice>01234567890</IdCodice></IdTrasmittente><ProgressivoInvio>00001</ProgressivoInvio><FormatoTrasmissione>FPA12</FormatoTrasmissione><CodiceDestinatario>AAAAAA</CodiceDestinatario></DatiTrasmissione><CedentePrestatore><DatiAnagrafici><IdFiscaleIVA><IdPaese>IT</IdPaese><IdCodice>01234567890</IdCodice></IdFiscaleIVA><Anagrafica><Denominazione>ALPHA SRL</Denominazione></Anagrafica><RegimeFiscale>RF19</RegimeFiscale></DatiAnagrafici><Sede><Indirizzo>VIALE ROMA 543</Indirizzo><CAP>07100</CAP><Comune>SASSARI</Comune><Provincia>SS</Provincia><Nazione>IT</Nazione></Sede></CedentePrestatore><CessionarioCommittente><DatiAnagrafici><CodiceFiscale>09876543210</CodiceFiscale><Anagrafica><Denominazione>AMMINISTRAZIONE BETA</Denominazione></Anagrafica></DatiAnagrafici><Sede><Indirizzo>VIA TORINO 38-B</Indirizzo><CAP>00145</CAP><Comune>ROMA</Comune><Provincia>RM</Provincia><Nazione>IT</Nazione></Sede></CessionarioCommittente></FatturaElettronicaHeader><FatturaElettronicaBody><DatiGenerali><DatiGeneraliDocumento><TipoDocumento>TD01</TipoDocumento><Divisa>EUR</Divisa><Data>2017-01-18</Data><Numero>123</Numero><Causale>LA FATTURA FA RIFERIMENTO AD UNA OPERAZIONE AAAA BBBBBBBBBBBBBBBBBB CCC DDDDDDDDDDDDDDD E FFFFFFFFFFFFFFFFFFFF GGGGGGGGGG HHHHHHH II LLLLLLLLLLLLLLLLL MMM NNNNN OO PPPPPPPPPPP QQQQ RRRR SSSSSSSSSSSSSS</Causale><Causale>SEGUE DESCRIZIONE CAUSALE NEL CASO IN CUI NON SIANO STATI SUFFICIENTI 200 CARATTERI AAAAAAAAAAA BBBBBBBBBBBBBBBBB</Causale></DatiGeneraliDocumento><DatiOrdineAcquisto><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>66685</IdDocumento><NumItem>1</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiOrdineAcquisto><DatiContratto><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>123</IdDocumento><Data>2016-09-01</Data><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiContratto><DatiConvenzione><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>456</IdDocumento><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiConvenzione><DatiRicezione><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>789</IdDocumento><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiRicezione><DatiTrasporto><DatiAnagraficiVettore><IdFiscaleIVA><IdPaese>IT</IdPaese><IdCodice>24681012141</IdCodice></IdFiscaleIVA><Anagrafica><Denominazione>Trasporto spa</Denominazione></Anagrafica></DatiAnagraficiVettore><DataOraConsegna>2017-01-10T16:46:12.000+02:00</DataOraConsegna></DatiTrasporto></DatiGenerali><DatiBeniServizi><DettaglioLinee><NumeroLinea>1</NumeroLinea><Descrizione>DESCRIZIONE DELLA FORNITURA</Descrizione><Quantita>5.00</Quantita><PrezzoUnitario>1.00</PrezzoUnitario><PrezzoTotale>5.00</PrezzoTotale><AliquotaIVA>22.00</AliquotaIVA></DettaglioLinee><DatiRiepilogo><AliquotaIVA>22.00</AliquotaIVA><ImponibileImporto>5.00</ImponibileImporto><Imposta>1.10</Imposta><EsigibilitaIVA>I</EsigibilitaIVA></DatiRiepilogo></DatiBeniServizi><DatiPagamento><CondizioniPagamento>TP01</CondizioniPagamento><DettaglioPagamento><ModalitaPagamento>MP01</ModalitaPagamento><DataScadenzaPagamento>2017-02-18</DataScadenzaPagamento><ImportoPagamento>6.10</ImportoPagamento></DettaglioPagamento></DatiPagamento></FatturaElettronicaBody></p:FatturaElettronica>';
-  sandbox.stub(instance, "getEInvoiceXml").returns(getEInvoiceXmlResponse);
+  const getEInvoiceXmlResponse = '<?xml version="1.0"?><p:FatturaElettronica xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" versione="FPA12" xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2/Schema_del_file_xml_FatturaPA_versione_1.2.xsd"><FatturaElettronicaHeader><DatiTrasmissione><IdTrasmittente><IdPaese>IT</IdPaese><IdCodice>01234567890</IdCodice></IdTrasmittente><ProgressivoInvio>00001</ProgressivoInvio><FormatoTrasmissione>FPA12</FormatoTrasmissione><CodiceDestinatario>AAAAAA</CodiceDestinatario></DatiTrasmissione><CedentePrestatore><DatiAnagrafici><IdFiscaleIVA><IdPaese>IT</IdPaese><IdCodice>01234567890</IdCodice></IdFiscaleIVA><Anagrafica><Denominazione>ALPHA SRL</Denominazione></Anagrafica><RegimeFiscale>RF19</RegimeFiscale></DatiAnagrafici><Sede><Indirizzo>VIALE ROMA 543</Indirizzo><CAP>07100</CAP><Comune>SASSARI</Comune><Provincia>SS</Provincia><Nazione>IT</Nazione></Sede></CedentePrestatore><CessionarioCommittente><DatiAnagrafici><CodiceFiscale>09876543210</CodiceFiscale><Anagrafica><Denominazione>AMMINISTRAZIONE BETA</Denominazione></Anagrafica></DatiAnagrafici><Sede><Indirizzo>VIA TORINO 38-B</Indirizzo><CAP>00145</CAP><Comune>ROMA</Comune><Provincia>RM</Provincia><Nazione>IT</Nazione></Sede></CessionarioCommittente></FatturaElettronicaHeader><FatturaElettronicaBody><DatiGenerali><DatiGeneraliDocumento><TipoDocumento>TD01</TipoDocumento><Divisa>EUR</Divisa><Data>2017-01-18</Data><Numero>123</Numero><Causale>LA FATTURA FA RIFERIMENTO AD UNA OPERAZIONE AAAA BBBBBBBBBBBBBBBBBB CCC DDDDDDDDDDDDDDD E FFFFFFFFFFFFFFFFFFFF GGGGGGGGGG HHHHHHH II LLLLLLLLLLLLLLLLL MMM NNNNN OO PPPPPPPPPPP QQQQ RRRR SSSSSSSSSSSSSS</Causale><Causale>SEGUE DESCRIZIONE CAUSALE NEL CASO IN CUI NON SIANO STATI SUFFICIENTI 200 CARATTERI AAAAAAAAAAA BBBBBBBBBBBBBBBBB</Causale></DatiGeneraliDocumento><DatiOrdineAcquisto><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>66685</IdDocumento><NumItem>1</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiOrdineAcquisto><DatiContratto><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>123</IdDocumento><Data>2016-09-01</Data><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiContratto><DatiConvenzione><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>456</IdDocumento><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiConvenzione><DatiRicezione><RiferimentoNumeroLinea>1</RiferimentoNumeroLinea><IdDocumento>789</IdDocumento><NumItem>5</NumItem><CodiceCUP>123abc</CodiceCUP><CodiceCIG>456def</CodiceCIG></DatiRicezione><DatiTrasporto><DatiAnagraficiVettore><IdFiscaleIVA><IdPaese>IT</IdPaese><IdCodice>24681012141</IdCodice></IdFiscaleIVA><Anagrafica><Denominazione>Trasporto spa</Denominazione></Anagrafica></DatiAnagraficiVettore><DataOraConsegna>2017-01-10T16:46:12.000+02:00</DataOraConsegna></DatiTrasporto></DatiGenerali><DatiBeniServizi><DettaglioLinee><NumeroLinea>1</NumeroLinea><Descrizione>DESCRIZIONE DELLA FORNITURA</Descrizione><Quantita>5.00</Quantita><PrezzoUnitario>1.00</PrezzoUnitario><PrezzoTotale>5.00</PrezzoTotale><AliquotaIVA>22.00</AliquotaIVA></DettaglioLinee><DatiRiepilogo><AliquotaIVA>22.00</AliquotaIVA><ImponibileImporto>5.00</ImponibileImporto><Imposta>1.10</Imposta><EsigibilitaIVA>I</EsigibilitaIVA></DatiRiepilogo></DatiBeniServizi><DatiPagamento><CondizioniPagamento>TP01</CondizioniPagamento><DettaglioPagamento><ModalitaPagamento>MP01</ModalitaPagamento><DataScadenzaPagamento>2017-02-18</DataScadenzaPagamento><ImportoPagamento>6.10</ImportoPagamento></DettaglioPagamento></DatiPagamento></FatturaElettronicaBody></p:FatturaElettronica>'
+  sandbox.stub(instance, 'getEInvoiceXml').returns(getEInvoiceXmlResponse)
 
-  beforeEach(function() {
+  beforeEach(function () {
 
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedEInvoicesApi', function() {
-    describe('sendEInvoice', function() {
-      it('should call sendEInvoice successfully', function(done) {
-        var opts = { "sendEInvoiceRequest":
-          {"data":{"withholding_tax_causal":"causale"}}
-        };
-        var response = instance.sendEInvoice(2, opts);
-        var responseObj = Object.assign(new SendEInvoiceResponse(), response);
-        var expectedJson = JSON.stringify(sendEInvoiceResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        expect(sendEInvoiceStub.getCall(0).args[1]).to.equal(opts);
-        done();
-      });
-    });
-    describe('verifyEInvoiceXml', function() {
-      it('should call verifyEInvoiceXml successfully', function(done) {
-        var response = instance.verifyEInvoiceXml();
-        var responseObj = Object.assign(new VerifyEInvoiceXmlResponse(), response);
-        var expectedJson = JSON.stringify(verifyEInvoiceXmlResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        done();
-      });
-    });
-    describe('getEInvoiceXml', function() {
-      it('should call getEInvoiceXml successfully', function(done) {
-        var response = instance.getEInvoiceXml();
-        expect(response).to.equal(getEInvoiceXmlResponse);
-        done();
-      });
-    });
-  });
-
-}));
+  describe('IssuedEInvoicesApi', function () {
+    describe('sendEInvoice', function () {
+      it('should call sendEInvoice successfully', function (done) {
+        const opts = {
+          sendEInvoiceRequest:
+          { data: { withholding_tax_causal: 'causale' } }
+        }
+        const response = instance.sendEInvoice(2, opts)
+        const responseObj = Object.assign(new SendEInvoiceResponse(), response)
+        const expectedJson = JSON.stringify(sendEInvoiceResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        expect(sendEInvoiceStub.getCall(0).args[1]).to.equal(opts)
+        done()
+      })
+    })
+    describe('verifyEInvoiceXml', function () {
+      it('should call verifyEInvoiceXml successfully', function (done) {
+        const response = instance.verifyEInvoiceXml()
+        const responseObj = Object.assign(new VerifyEInvoiceXmlResponse(), response)
+        const expectedJson = JSON.stringify(verifyEInvoiceXmlResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        done()
+      })
+    })
+    describe('getEInvoiceXml', function () {
+      it('should call getEInvoiceXml successfully', function (done) {
+        const response = instance.getEInvoiceXml()
+        expect(response).to.equal(getEInvoiceXmlResponse)
+        done()
+      })
+    })
+  })
+}))

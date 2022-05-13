@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ListCountriesResponse model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ListCountriesResponse {
-    /**
+  /**
      * Constructs a new <code>ListCountriesResponse</code>.
-     * 
+     *
      * @alias module:model/ListCountriesResponse
      */
-    constructor() { 
-        
-        ListCountriesResponse.initialize(this);
-    }
+  constructor () {
+    ListCountriesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListCountriesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListCountriesResponse} obj Optional instance to populate.
      * @return {module:model/ListCountriesResponse} The populated <code>ListCountriesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListCountriesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListCountriesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], ['String']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, ['String'])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<String>} data
  */
-ListCountriesResponse.prototype['data'] = undefined;
+ListCountriesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListCountriesResponse;
-
+export default ListCountriesResponse

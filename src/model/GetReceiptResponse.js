@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Receipt from './Receipt';
+import Receipt from './Receipt'
 
 /**
  * The GetReceiptResponse model module.
@@ -20,54 +19,45 @@ import Receipt from './Receipt';
  * @version 2.0.12
  */
 class GetReceiptResponse {
-    /**
+  /**
      * Constructs a new <code>GetReceiptResponse</code>.
-     * 
+     *
      * @alias module:model/GetReceiptResponse
      */
-    constructor() { 
-        
-        GetReceiptResponse.initialize(this);
-    }
+  constructor () {
+    GetReceiptResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetReceiptResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetReceiptResponse} obj Optional instance to populate.
      * @return {module:model/GetReceiptResponse} The populated <code>GetReceiptResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetReceiptResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetReceiptResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Receipt.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Receipt.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Receipt} data
  */
-GetReceiptResponse.prototype['data'] = undefined;
+GetReceiptResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetReceiptResponse;
-
+export default GetReceiptResponse

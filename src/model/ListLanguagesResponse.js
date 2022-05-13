@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Language from './Language';
+import ApiClient from '../ApiClient'
+import Language from './Language'
 
 /**
  * The ListLanguagesResponse model module.
@@ -20,54 +20,45 @@ import Language from './Language';
  * @version 2.0.12
  */
 class ListLanguagesResponse {
-    /**
+  /**
      * Constructs a new <code>ListLanguagesResponse</code>.
-     * 
+     *
      * @alias module:model/ListLanguagesResponse
      */
-    constructor() { 
-        
-        ListLanguagesResponse.initialize(this);
-    }
+  constructor () {
+    ListLanguagesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListLanguagesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListLanguagesResponse} obj Optional instance to populate.
      * @return {module:model/ListLanguagesResponse} The populated <code>ListLanguagesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListLanguagesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListLanguagesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [Language]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [Language])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/Language>} data
  */
-ListLanguagesResponse.prototype['data'] = undefined;
+ListLanguagesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListLanguagesResponse;
-
+export default ListLanguagesResponse

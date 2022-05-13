@@ -11,10 +11,9 @@
  *
  */
 
-
-import ApiClient from "../ApiClient";
-import GetUserInfoResponse from '../model/GetUserInfoResponse';
-import ListUserCompaniesResponse from '../model/ListUserCompaniesResponse';
+import ApiClient from '../ApiClient'
+import GetUserInfoResponse from '../model/GetUserInfoResponse'
+import ListUserCompaniesResponse from '../model/ListUserCompaniesResponse'
 
 /**
 * User service.
@@ -22,100 +21,94 @@ import ListUserCompaniesResponse from '../model/ListUserCompaniesResponse';
 * @version 2.0.12
 */
 export default class UserApi {
-
-    /**
-    * Constructs a new UserApi. 
+  /**
+    * Constructs a new UserApi.
     * @alias module:api/UserApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-
-
-    /**
+  /**
      * Get User Info
      * Gets the current user's info.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetUserInfoResponse} and HTTP response
      */
-    getUserInfoWithHttpInfo() {
-      let postBody = null;
+  getUserInfoWithHttpInfo () {
+    const postBody = null
 
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetUserInfoResponse;
-      return this.apiClient.callApi(
-        '/user/info', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+    const pathParams = {
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
     }
 
-    /**
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetUserInfoResponse
+    return this.apiClient.callApi(
+      '/user/info', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get User Info
      * Gets the current user's info.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetUserInfoResponse}
      */
-    getUserInfo() {
-      return this.getUserInfoWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getUserInfo () {
+    return this.getUserInfoWithHttpInfo()
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * List User Companies
      * Lists the companies controlled by the current user.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListUserCompaniesResponse} and HTTP response
      */
-    listUserCompaniesWithHttpInfo() {
-      let postBody = null;
+  listUserCompaniesWithHttpInfo () {
+    const postBody = null
 
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListUserCompaniesResponse;
-      return this.apiClient.callApi(
-        '/user/companies', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+    const pathParams = {
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
     }
 
-    /**
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = ListUserCompaniesResponse
+    return this.apiClient.callApi(
+      '/user/companies', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * List User Companies
      * Lists the companies controlled by the current user.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListUserCompaniesResponse}
      */
-    listUserCompanies() {
-      return this.listUserCompaniesWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  listUserCompanies () {
+    return this.listUserCompaniesWithHttpInfo()
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 }

@@ -11,15 +11,12 @@
  *
  */
 
-
-import ApiClient from "../ApiClient";
-import CreateF24Request from '../model/CreateF24Request';
-import CreateF24Response from '../model/CreateF24Response';
-import GetF24Response from '../model/GetF24Response';
-import ListF24Response from '../model/ListF24Response';
-import ModifyF24Request from '../model/ModifyF24Request';
-import ModifyF24Response from '../model/ModifyF24Response';
-import UploadF24AttachmentResponse from '../model/UploadF24AttachmentResponse';
+import ApiClient from '../ApiClient'
+import CreateF24Response from '../model/CreateF24Response'
+import GetF24Response from '../model/GetF24Response'
+import ListF24Response from '../model/ListF24Response'
+import ModifyF24Response from '../model/ModifyF24Response'
+import UploadF24AttachmentResponse from '../model/UploadF24AttachmentResponse'
 
 /**
 * Taxes service.
@@ -27,21 +24,18 @@ import UploadF24AttachmentResponse from '../model/UploadF24AttachmentResponse';
 * @version 2.0.12
 */
 export default class TaxesApi {
-
-    /**
-    * Constructs a new TaxesApi. 
+  /**
+    * Constructs a new TaxesApi.
     * @alias module:api/TaxesApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
-        this.apiClient = apiClient || ApiClient.instance;
-    }
+  constructor (apiClient) {
+    this.apiClient = apiClient || ApiClient.instance
+  }
 
-
-
-    /**
+  /**
      * Create F24
      * Creates a new F24.
      * @param {Number} companyId The ID of the company.
@@ -49,36 +43,36 @@ export default class TaxesApi {
      * @param {module:model/CreateF24Request} opts.createF24Request The F24 to create
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreateF24Response} and HTTP response
      */
-    createF24WithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = opts['createF24Request'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling createF24");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = CreateF24Response;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  createF24WithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = opts.createF24Request
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling createF24")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = CreateF24Response
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Create F24
      * Creates a new F24.
      * @param {Number} companyId The ID of the company.
@@ -86,125 +80,122 @@ export default class TaxesApi {
      * @param {module:model/CreateF24Request} opts.createF24Request The F24 to create
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreateF24Response}
      */
-    createF24(companyId, opts) {
-      return this.createF24WithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  createF24 (companyId, opts) {
+    return this.createF24WithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Delete F24
      * Removes the specified F24.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteF24WithHttpInfo(companyId, documentId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling deleteF24");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling deleteF24");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes/{document_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  deleteF24WithHttpInfo (companyId, documentId) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling deleteF24")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling deleteF24")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = []
+    const returnType = null
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes/{document_id}', 'DELETE',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Delete F24
      * Removes the specified F24.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteF24(companyId, documentId) {
-      return this.deleteF24WithHttpInfo(companyId, documentId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  deleteF24 (companyId, documentId) {
+    return this.deleteF24WithHttpInfo(companyId, documentId)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Delete F24 Attachment
      * Removes the attachment of the specified F24.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteF24AttachmentWithHttpInfo(companyId, documentId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling deleteF24Attachment");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling deleteF24Attachment");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes/{document_id}/attachment', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  deleteF24AttachmentWithHttpInfo (companyId, documentId) {
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling deleteF24Attachment")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling deleteF24Attachment")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = []
+    const returnType = null
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes/{document_id}/attachment', 'DELETE',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Delete F24 Attachment
      * Removes the attachment of the specified F24.
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteF24Attachment(companyId, documentId) {
-      return this.deleteF24AttachmentWithHttpInfo(companyId, documentId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  deleteF24Attachment (companyId, documentId) {
+    return this.deleteF24AttachmentWithHttpInfo(companyId, documentId)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Get F24
      * Gets the specified F24.
      * @param {Number} companyId The ID of the company.
@@ -214,43 +205,43 @@ export default class TaxesApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetF24Response} and HTTP response
      */
-    getF24WithHttpInfo(companyId, documentId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling getF24");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling getF24");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetF24Response;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes/{document_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  getF24WithHttpInfo (companyId, documentId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling getF24")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling getF24")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = GetF24Response
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes/{document_id}', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Get F24
      * Gets the specified F24.
      * @param {Number} companyId The ID of the company.
@@ -260,15 +251,14 @@ export default class TaxesApi {
      * @param {module:model/String} opts.fieldset Name of the fieldset.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetF24Response}
      */
-    getF24(companyId, documentId, opts) {
-      return this.getF24WithHttpInfo(companyId, documentId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  getF24 (companyId, documentId, opts) {
+    return this.getF24WithHttpInfo(companyId, documentId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * List F24
      * Lists the F24s.
      * @param {Number} companyId The ID of the company.
@@ -281,42 +271,42 @@ export default class TaxesApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListF24Response} and HTTP response
      */
-    listF24WithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling listF24");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-        'fields': opts['fields'],
-        'fieldset': opts['fieldset'],
-        'sort': opts['sort'],
-        'page': opts['page'],
-        'per_page': opts['perPage'],
-        'q': opts['q']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ListF24Response;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  listF24WithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling listF24")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+      fields: opts.fields,
+      fieldset: opts.fieldset,
+      sort: opts.sort,
+      page: opts.page,
+      per_page: opts.perPage,
+      q: opts.q
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = []
+    const accepts = ['application/json']
+    const returnType = ListF24Response
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes', 'GET',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * List F24
      * Lists the F24s.
      * @param {Number} companyId The ID of the company.
@@ -329,15 +319,14 @@ export default class TaxesApi {
      * @param {String} opts.q Query for filtering the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListF24Response}
      */
-    listF24(companyId, opts) {
-      return this.listF24WithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  listF24 (companyId, opts) {
+    return this.listF24WithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Modify F24
      * Modifies the specified F24.
      * @param {Number} companyId The ID of the company.
@@ -346,41 +335,41 @@ export default class TaxesApi {
      * @param {module:model/ModifyF24Request} opts.modifyF24Request The F24
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ModifyF24Response} and HTTP response
      */
-    modifyF24WithHttpInfo(companyId, documentId, opts) {
-      opts = opts || {};
-      let postBody = opts['modifyF24Request'];
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling modifyF24");
-      }
-      // verify the required parameter 'documentId' is set
-      if (documentId === undefined || documentId === null) {
-        throw new Error("Missing the required parameter 'documentId' when calling modifyF24");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'document_id': documentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = ModifyF24Response;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes/{document_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  modifyF24WithHttpInfo (companyId, documentId, opts) {
+    opts = opts || {}
+    const postBody = opts.modifyF24Request
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling modifyF24")
+    }
+    // verify the required parameter 'documentId' is set
+    if (documentId === undefined || documentId === null) {
+      throw new Error("Missing the required parameter 'documentId' when calling modifyF24")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId,
+      document_id: documentId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['application/json']
+    const accepts = ['application/json']
+    const returnType = ModifyF24Response
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes/{document_id}', 'PUT',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Modify F24
      * Modifies the specified F24.
      * @param {Number} companyId The ID of the company.
@@ -389,15 +378,14 @@ export default class TaxesApi {
      * @param {module:model/ModifyF24Request} opts.modifyF24Request The F24
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ModifyF24Response}
      */
-    modifyF24(companyId, documentId, opts) {
-      return this.modifyF24WithHttpInfo(companyId, documentId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
+  modifyF24 (companyId, documentId, opts) {
+    return this.modifyF24WithHttpInfo(companyId, documentId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 
-
-    /**
+  /**
      * Upload F24 Attachment
      * Uploads an attachment destined to a F24. The actual association between the document and the attachment must be implemented separately, using the returned token.
      * @param {Number} companyId The ID of the company.
@@ -406,38 +394,38 @@ export default class TaxesApi {
      * @param {File} opts.attachment Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadF24AttachmentResponse} and HTTP response
      */
-    uploadF24AttachmentWithHttpInfo(companyId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling uploadF24Attachment");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-        'filename': opts['filename'],
-        'attachment': opts['attachment']
-      };
-
-      let authNames = ['OAuth2AuthenticationCodeFlow'];
-      let contentTypes = ['multipart/form-data'];
-      let accepts = ['application/json'];
-      let returnType = UploadF24AttachmentResponse;
-      return this.apiClient.callApi(
-        '/c/{company_id}/taxes/attachment', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
+  uploadF24AttachmentWithHttpInfo (companyId, opts) {
+    opts = opts || {}
+    const postBody = null
+    // verify the required parameter 'companyId' is set
+    if (companyId === undefined || companyId === null) {
+      throw new Error("Missing the required parameter 'companyId' when calling uploadF24Attachment")
     }
 
-    /**
+    const pathParams = {
+      company_id: companyId
+    }
+    const queryParams = {
+    }
+    const headerParams = {
+    }
+    const formParams = {
+      filename: opts.filename,
+      attachment: opts.attachment
+    }
+
+    const authNames = ['OAuth2AuthenticationCodeFlow']
+    const contentTypes = ['multipart/form-data']
+    const accepts = ['application/json']
+    const returnType = UploadF24AttachmentResponse
+    return this.apiClient.callApi(
+      '/c/{company_id}/taxes/attachment', 'POST',
+      pathParams, queryParams, headerParams, formParams, postBody,
+      authNames, contentTypes, accepts, returnType, null
+    )
+  }
+
+  /**
      * Upload F24 Attachment
      * Uploads an attachment destined to a F24. The actual association between the document and the attachment must be implemented separately, using the returned token.
      * @param {Number} companyId The ID of the company.
@@ -446,12 +434,10 @@ export default class TaxesApi {
      * @param {File} opts.attachment Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadF24AttachmentResponse}
      */
-    uploadF24Attachment(companyId, opts) {
-      return this.uploadF24AttachmentWithHttpInfo(companyId, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
+  uploadF24Attachment (companyId, opts) {
+    return this.uploadF24AttachmentWithHttpInfo(companyId, opts)
+      .then(function (response_and_data) {
+        return response_and_data.data
+      })
+  }
 }

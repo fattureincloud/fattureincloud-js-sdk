@@ -11,101 +11,93 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ListSuppliersResponsePage();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ListSuppliersResponsePage()
     instance.data = [
       {
-        id : 12345,
-        code : "AE86",
-        name : "Mario Rossi S.R.L.",
-        type : "company",
-        first_name : "Mario",
-        last_name : "Rossi",
-        contact_person : "",
-        vat_number : "111222333",
-        tax_code : "111122233",
-        address_street : "Corso Magellano, 46",
-        address_postal_code : "20146",
-        address_city : "Milano",
-        address_province : "MI",
-        address_extra : "",
-        country : "Italia",
-        email : "mario.rossi@example.com",
-        certified_email : "mario.rossi@pec.example.com",
-        phone : "1234567890",
-        fax : "123456789",
-        notes : "",
-        created_at : "2021-15-08",
-        updated_at : "2021-15-08"
+        id: 12345,
+        code: 'AE86',
+        name: 'Mario Rossi S.R.L.',
+        type: 'company',
+        first_name: 'Mario',
+        last_name: 'Rossi',
+        contact_person: '',
+        vat_number: '111222333',
+        tax_code: '111122233',
+        address_street: 'Corso Magellano, 46',
+        address_postal_code: '20146',
+        address_city: 'Milano',
+        address_province: 'MI',
+        address_extra: '',
+        country: 'Italia',
+        email: 'mario.rossi@example.com',
+        certified_email: 'mario.rossi@pec.example.com',
+        phone: '1234567890',
+        fax: '123456789',
+        notes: '',
+        created_at: '2021-15-08',
+        updated_at: '2021-15-08'
       },
       {
-        id : 12346,
-        code : "GT86",
-        name : "Maria Grossi S.R.L.",
-        type : "company",
-        first_name : "",
-        last_name : "",
-        contact_person : "",
-        vat_number : "200020102020",
-        tax_code : "200020102020",
-        address_street : "Vicolo stretto, 32",
-        address_postal_code : "20146",
-        address_city : "Milano",
-        address_province : "MI",
-        address_extra : "",
-        country : "Italia",
-        email : "maria.grossi@example.com",
-        certified_email : "maria.grossi@pec.example.com",
-        phone : "0987654321",
-        fax : "098765432",
-        notes : "",
-        created_at : "2021-15-09",
-        updated_at : "2021-15-09"
+        id: 12346,
+        code: 'GT86',
+        name: 'Maria Grossi S.R.L.',
+        type: 'company',
+        first_name: '',
+        last_name: '',
+        contact_person: '',
+        vat_number: '200020102020',
+        tax_code: '200020102020',
+        address_street: 'Vicolo stretto, 32',
+        address_postal_code: '20146',
+        address_city: 'Milano',
+        address_province: 'MI',
+        address_extra: '',
+        country: 'Italia',
+        email: 'maria.grossi@example.com',
+        certified_email: 'maria.grossi@pec.example.com',
+        phone: '0987654321',
+        fax: '098765432',
+        notes: '',
+        created_at: '2021-15-09',
+        updated_at: '2021-15-09'
       }
-    ];
-  });
+    ]
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ListSuppliersResponsePage', function() {
-    it('should create an instance of ListSuppliersResponsePage', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ListSuppliersResponsePage);
-    });
+  describe('ListSuppliersResponsePage', function () {
+    it('should create an instance of ListSuppliersResponsePage', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ListSuppliersResponsePage)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

@@ -11,112 +11,104 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentExtraData();
-    instance.show_sofort_button = true;
-    instance.multifatture_sent = 3;
-    instance.ts_communication = true;
-    instance.ts_flag_tipo_spesa = 1;
-    instance.ts_pagamento_tracciato = true;
-    instance.ts_tipo_spesa = "TK";
-    instance.ts_opposizione = true;
-    instance.ts_status = 1;
-    instance.ts_file_id = "file.png";
-    instance.ts_sent_date = "2020-10-10";
-    instance.ts_full_amount = true;
-    instance.imported_by = "jss";
-    instance.ts_single_sending = false;    
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.IssuedDocumentExtraData()
+    instance.show_sofort_button = true
+    instance.multifatture_sent = 3
+    instance.ts_communication = true
+    instance.ts_flag_tipo_spesa = 1
+    instance.ts_pagamento_tracciato = true
+    instance.ts_tipo_spesa = 'TK'
+    instance.ts_opposizione = true
+    instance.ts_status = 1
+    instance.ts_file_id = 'file.png'
+    instance.ts_sent_date = '2020-10-10'
+    instance.ts_full_amount = true
+    instance.imported_by = 'jss'
+    instance.ts_single_sending = false
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedDocumentExtraData', function() {
-    it('should create an instance of IssuedDocumentExtraData', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentExtraData);
-    });
+  describe('IssuedDocumentExtraData', function () {
+    it('should create an instance of IssuedDocumentExtraData', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentExtraData)
+    })
 
-    it('should have the property showSofortButton (base name: "show_sofort_button")', function() {
-      expect(typeof instance.show_sofort_button).to.be('boolean');
-    });
+    it('should have the property showSofortButton (base name: "show_sofort_button")', function () {
+      expect(typeof instance.show_sofort_button).to.be('boolean')
+    })
 
-    it('should have the property multifattureSent (base name: "multifatture_sent")', function() {
-      expect(typeof instance.multifatture_sent).to.be('number');
-    });
+    it('should have the property multifattureSent (base name: "multifatture_sent")', function () {
+      expect(typeof instance.multifatture_sent).to.be('number')
+    })
 
-    it('should have the property tsCommunication (base name: "ts_communication")', function() {
-      expect(typeof instance.ts_communication).to.be('boolean');
-    });
+    it('should have the property tsCommunication (base name: "ts_communication")', function () {
+      expect(typeof instance.ts_communication).to.be('boolean')
+    })
 
-    it('should have the property tsFlagTipoSpesa (base name: "ts_flag_tipo_spesa")', function() {
-      expect(typeof instance.ts_flag_tipo_spesa).to.be('number');
-    });
+    it('should have the property tsFlagTipoSpesa (base name: "ts_flag_tipo_spesa")', function () {
+      expect(typeof instance.ts_flag_tipo_spesa).to.be('number')
+    })
 
-    it('should have the property tsPagamentoTracciato (base name: "ts_pagamento_tracciato")', function() {
-      expect(typeof instance.ts_pagamento_tracciato).to.be('boolean');
-    });
+    it('should have the property tsPagamentoTracciato (base name: "ts_pagamento_tracciato")', function () {
+      expect(typeof instance.ts_pagamento_tracciato).to.be('boolean')
+    })
 
-    it('should have the property tsTipoSpesa (base name: "ts_tipo_spesa")', function() {
-      expect(typeof instance.ts_tipo_spesa).to.be('string');
-    });
+    it('should have the property tsTipoSpesa (base name: "ts_tipo_spesa")', function () {
+      expect(typeof instance.ts_tipo_spesa).to.be('string')
+    })
 
-    it('should have the property tsOpposizione (base name: "ts_opposizione")', function() {
-      expect(typeof instance.ts_opposizione).to.be('boolean');
-    });
+    it('should have the property tsOpposizione (base name: "ts_opposizione")', function () {
+      expect(typeof instance.ts_opposizione).to.be('boolean')
+    })
 
-    it('should have the property tsStatus (base name: "ts_status")', function() {
-      expect(typeof instance.ts_status).to.be('number');
-    });
+    it('should have the property tsStatus (base name: "ts_status")', function () {
+      expect(typeof instance.ts_status).to.be('number')
+    })
 
-    it('should have the property tsFileId (base name: "ts_file_id")', function() {
-      expect(typeof instance.ts_file_id).to.be('string');
-    });
+    it('should have the property tsFileId (base name: "ts_file_id")', function () {
+      expect(typeof instance.ts_file_id).to.be('string')
+    })
 
-    it('should have the property tsSentDate (base name: "ts_sent_date")', function() {
-      expect(typeof instance.ts_sent_date).to.be('string');
-    });
+    it('should have the property tsSentDate (base name: "ts_sent_date")', function () {
+      expect(typeof instance.ts_sent_date).to.be('string')
+    })
 
-    it('should have the property tsFullAmount (base name: "ts_full_amount")', function() {
-      expect(typeof instance.ts_full_amount).to.be('boolean');
-    });
+    it('should have the property tsFullAmount (base name: "ts_full_amount")', function () {
+      expect(typeof instance.ts_full_amount).to.be('boolean')
+    })
 
-    it('should have the property importedBy (base name: "imported_by")', function() {
-      expect(typeof instance.imported_by).to.be('string');
-    });
+    it('should have the property importedBy (base name: "imported_by")', function () {
+      expect(typeof instance.imported_by).to.be('string')
+    })
 
-    it('should have the property tsSingleSending (base name: "ts_single_sending")', function() {
-      expect(typeof instance.ts_single_sending).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property tsSingleSending (base name: "ts_single_sending")', function () {
+      expect(typeof instance.ts_single_sending).to.be('boolean')
+    })
+  })
+}))

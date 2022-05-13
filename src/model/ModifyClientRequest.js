@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Client from './Client';
+import Client from './Client'
 
 /**
  * The ModifyClientRequest model module.
@@ -20,54 +19,45 @@ import Client from './Client';
  * @version 2.0.12
  */
 class ModifyClientRequest {
-    /**
+  /**
      * Constructs a new <code>ModifyClientRequest</code>.
-     * 
+     *
      * @alias module:model/ModifyClientRequest
      */
-    constructor() { 
-        
-        ModifyClientRequest.initialize(this);
-    }
+  constructor () {
+    ModifyClientRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyClientRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyClientRequest} obj Optional instance to populate.
      * @return {module:model/ModifyClientRequest} The populated <code>ModifyClientRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyClientRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyClientRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Client.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Client.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Client} data
  */
-ModifyClientRequest.prototype['data'] = undefined;
+ModifyClientRequest.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyClientRequest;
-
+export default ModifyClientRequest

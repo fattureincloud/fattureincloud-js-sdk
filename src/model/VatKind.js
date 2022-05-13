@@ -11,50 +11,42 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class VatKind.
 * @enum {}
 * @readonly
 */
 export default class VatKind {
-    
-        /**
+  /**
          * value: "null"
          * @const
          */
-        "null" = "null";
+  'null' = 'null'
 
-    
-        /**
+  /**
          * value: "I"
          * @const
          */
-        "I" = "I";
+  'I' = 'I'
 
-    
-        /**
+  /**
          * value: "D"
          * @const
          */
-        "D" = "D";
+  'D' = 'D'
 
-    
-        /**
+  /**
          * value: "S"
          * @const
          */
-        "S" = "S";
+  'S' = 'S'
 
-    
-
-    /**
+  /**
     * Returns a <code>VatKind</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/VatKind} The enum <code>VatKind</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

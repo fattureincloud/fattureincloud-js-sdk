@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ArchiveDocument model module.
@@ -19,99 +19,90 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ArchiveDocument {
-    /**
+  /**
      * Constructs a new <code>ArchiveDocument</code>.
      * @alias module:model/ArchiveDocument
      */
-    constructor() { 
-        
-        ArchiveDocument.initialize(this);
-    }
+  constructor () {
+    ArchiveDocument.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ArchiveDocument</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ArchiveDocument} obj Optional instance to populate.
      * @return {module:model/ArchiveDocument} The populated <code>ArchiveDocument</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ArchiveDocument();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ArchiveDocument()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'Date');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('attachment_url')) {
-                obj['attachment_url'] = ApiClient.convertToType(data['attachment_url'], 'String');
-            }
-            if (data.hasOwnProperty('category')) {
-                obj['category'] = ApiClient.convertToType(data['category'], 'String');
-            }
-            if (data.hasOwnProperty('attachment_token')) {
-                obj['attachment_token'] = ApiClient.convertToType(data['attachment_token'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'Number')
+      }
+      if (data.hasOwnProperty('date')) {
+        obj.date = ApiClient.convertToType(data.date, 'Date')
+      }
+      if (data.hasOwnProperty('description')) {
+        obj.description = ApiClient.convertToType(data.description, 'String')
+      }
+      if (data.hasOwnProperty('attachment_url')) {
+        obj.attachment_url = ApiClient.convertToType(data.attachment_url, 'String')
+      }
+      if (data.hasOwnProperty('category')) {
+        obj.category = ApiClient.convertToType(data.category, 'String')
+      }
+      if (data.hasOwnProperty('attachment_token')) {
+        obj.attachment_token = ApiClient.convertToType(data.attachment_token, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Archive document unique identifier.
  * @member {Number} id
  */
-ArchiveDocument.prototype['id'] = undefined;
+ArchiveDocument.prototype.id = undefined
 
 /**
  * Archive document date.
  * @member {Date} date
  */
-ArchiveDocument.prototype['date'] = undefined;
+ArchiveDocument.prototype.date = undefined
 
 /**
  * Archive Document description.
  * @member {String} description
  */
-ArchiveDocument.prototype['description'] = undefined;
+ArchiveDocument.prototype.description = undefined
 
 /**
  * [Read Only] Absolute url of the attached file. Authomatically set if a valid attachment token is passed via POST /archive or PUT /archive/{documentId}.
  * @member {String} attachment_url
  */
-ArchiveDocument.prototype['attachment_url'] = undefined;
+ArchiveDocument.prototype.attachment_url = undefined
 
 /**
  * Archive document category.
  * @member {String} category
  */
-ArchiveDocument.prototype['category'] = undefined;
+ArchiveDocument.prototype.category = undefined
 
 /**
  * [Write Only]  [Required] Attachment token returned by POST /archive/attachment. Used to attach the file already uploaded.
  * @member {String} attachment_token
  */
-ArchiveDocument.prototype['attachment_token'] = undefined;
+ArchiveDocument.prototype.attachment_token = undefined
 
-
-
-
-
-
-export default ArchiveDocument;
-
+export default ArchiveDocument

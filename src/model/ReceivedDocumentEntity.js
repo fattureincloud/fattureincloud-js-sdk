@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ReceivedDocumentEntity model module.
@@ -19,63 +19,54 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ReceivedDocumentEntity {
-    /**
+  /**
      * Constructs a new <code>ReceivedDocumentEntity</code>.
      * @alias module:model/ReceivedDocumentEntity
      */
-    constructor() { 
-        
-        ReceivedDocumentEntity.initialize(this);
-    }
+  constructor () {
+    ReceivedDocumentEntity.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ReceivedDocumentEntity</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ReceivedDocumentEntity} obj Optional instance to populate.
      * @return {module:model/ReceivedDocumentEntity} The populated <code>ReceivedDocumentEntity</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ReceivedDocumentEntity();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ReceivedDocumentEntity()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'Number')
+      }
+      if (data.hasOwnProperty('name')) {
+        obj.name = ApiClient.convertToType(data.name, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Entity unique identifier.
  * @member {Number} id
  */
-ReceivedDocumentEntity.prototype['id'] = undefined;
+ReceivedDocumentEntity.prototype.id = undefined
 
 /**
  * Entity name.
  * @member {String} name
  */
-ReceivedDocumentEntity.prototype['name'] = undefined;
+ReceivedDocumentEntity.prototype.name = undefined
 
-
-
-
-
-
-export default ReceivedDocumentEntity;
-
+export default ReceivedDocumentEntity

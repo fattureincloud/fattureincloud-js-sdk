@@ -11,36 +11,30 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class DefaultPaymentTermsType.
 * @enum {}
 * @readonly
 */
 export default class DefaultPaymentTermsType {
-    
-        /**
+  /**
          * value: "standard"
          * @const
          */
-        "standard" = "standard";
+  'standard' = 'standard'
 
-    
-        /**
+  /**
          * value: "end_of_month"
          * @const
          */
-        "end_of_month" = "end_of_month";
+  'end_of_month' = 'end_of_month'
 
-    
-
-    /**
+  /**
     * Returns a <code>DefaultPaymentTermsType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/DefaultPaymentTermsType} The enum <code>DefaultPaymentTermsType</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

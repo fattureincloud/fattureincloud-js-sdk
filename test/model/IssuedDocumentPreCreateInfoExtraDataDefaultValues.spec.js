@@ -11,67 +11,59 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoExtraDataDefaultValues();
-    instance.ts_communication = false;
-    instance.ts_tipo_spesa = "SR";
-    instance.ts_flag_tipo_spesa = 0;
-    instance.ts_pagamento_tracciato = false;      
-    });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoExtraDataDefaultValues()
+    instance.ts_communication = false
+    instance.ts_tipo_spesa = 'SR'
+    instance.ts_flag_tipo_spesa = 0
+    instance.ts_pagamento_tracciato = false
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedDocumentPreCreateInfoExtraDataDefaultValues', function() {
-    it('should create an instance of IssuedDocumentPreCreateInfoExtraDataDefaultValues', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoExtraDataDefaultValues);
-    });
+  describe('IssuedDocumentPreCreateInfoExtraDataDefaultValues', function () {
+    it('should create an instance of IssuedDocumentPreCreateInfoExtraDataDefaultValues', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoExtraDataDefaultValues)
+    })
 
-    it('should have the property tsCommunication (base name: "ts_communication")', function() {
-      expect(typeof instance.ts_communication).to.be('boolean');
-    });
+    it('should have the property tsCommunication (base name: "ts_communication")', function () {
+      expect(typeof instance.ts_communication).to.be('boolean')
+    })
 
-    it('should have the property tsTipoSpesa (base name: "ts_tipo_spesa")', function() {
-      expect(typeof instance.ts_tipo_spesa).to.be('string');
-    });
+    it('should have the property tsTipoSpesa (base name: "ts_tipo_spesa")', function () {
+      expect(typeof instance.ts_tipo_spesa).to.be('string')
+    })
 
-    it('should have the property tsFlagTipoSpesa (base name: "ts_flag_tipo_spesa")', function() {
-      expect(typeof instance.ts_flag_tipo_spesa).to.be('number');
-    });
+    it('should have the property tsFlagTipoSpesa (base name: "ts_flag_tipo_spesa")', function () {
+      expect(typeof instance.ts_flag_tipo_spesa).to.be('number')
+    })
 
-    it('should have the property tsPagamentoTracciato (base name: "ts_pagamento_tracciato")', function() {
-      expect(typeof instance.ts_pagamento_tracciato).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property tsPagamentoTracciato (base name: "ts_pagamento_tracciato")', function () {
+      expect(typeof instance.ts_pagamento_tracciato).to.be('boolean')
+    })
+  })
+}))

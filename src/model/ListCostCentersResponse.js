@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ListCostCentersResponse model module.
@@ -19,53 +19,44 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ListCostCentersResponse {
-    /**
+  /**
      * Constructs a new <code>ListCostCentersResponse</code>.
      * @alias module:model/ListCostCentersResponse
      */
-    constructor() { 
-        
-        ListCostCentersResponse.initialize(this);
-    }
+  constructor () {
+    ListCostCentersResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListCostCentersResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListCostCentersResponse} obj Optional instance to populate.
      * @return {module:model/ListCostCentersResponse} The populated <code>ListCostCentersResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListCostCentersResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListCostCentersResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], ['String']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, ['String'])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<String>} data
  */
-ListCostCentersResponse.prototype['data'] = undefined;
+ListCostCentersResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListCostCentersResponse;
-
+export default ListCostCentersResponse

@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocument from './IssuedDocument';
-import IssuedDocumentOptions from './IssuedDocumentOptions';
+import IssuedDocument from './IssuedDocument'
+import IssuedDocumentOptions from './IssuedDocumentOptions'
 
 /**
  * The CreateIssuedDocumentRequest model module.
@@ -21,61 +20,52 @@ import IssuedDocumentOptions from './IssuedDocumentOptions';
  * @version 2.0.12
  */
 class CreateIssuedDocumentRequest {
-    /**
+  /**
      * Constructs a new <code>CreateIssuedDocumentRequest</code>.
      * @alias module:model/CreateIssuedDocumentRequest
      */
-    constructor() { 
-        
-        CreateIssuedDocumentRequest.initialize(this);
-    }
+  constructor () {
+    CreateIssuedDocumentRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateIssuedDocumentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateIssuedDocumentRequest} obj Optional instance to populate.
      * @return {module:model/CreateIssuedDocumentRequest} The populated <code>CreateIssuedDocumentRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateIssuedDocumentRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateIssuedDocumentRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = IssuedDocument.constructFromObject(data['data']);
-            }
-            if (data.hasOwnProperty('options')) {
-                obj['options'] = IssuedDocumentOptions.constructFromObject(data['options']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = IssuedDocument.constructFromObject(data.data)
+      }
+      if (data.hasOwnProperty('options')) {
+        obj.options = IssuedDocumentOptions.constructFromObject(data.options)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/IssuedDocument} data
  */
-CreateIssuedDocumentRequest.prototype['data'] = undefined;
+CreateIssuedDocumentRequest.prototype.data = undefined
 
 /**
  * @member {module:model/IssuedDocumentOptions} options
  */
-CreateIssuedDocumentRequest.prototype['options'] = undefined;
+CreateIssuedDocumentRequest.prototype.options = undefined
 
-
-
-
-
-
-export default CreateIssuedDocumentRequest;
-
+export default CreateIssuedDocumentRequest

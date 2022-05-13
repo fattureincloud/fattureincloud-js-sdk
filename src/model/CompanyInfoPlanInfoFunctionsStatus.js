@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import FunctionStatus from './FunctionStatus';
+import FunctionStatus from './FunctionStatus'
 
 /**
  * The CompanyInfoPlanInfoFunctionsStatus model module.
@@ -20,61 +19,52 @@ import FunctionStatus from './FunctionStatus';
  * @version 2.0.12
  */
 class CompanyInfoPlanInfoFunctionsStatus {
-    /**
+  /**
      * Constructs a new <code>CompanyInfoPlanInfoFunctionsStatus</code>.
      * @alias module:model/CompanyInfoPlanInfoFunctionsStatus
      */
-    constructor() { 
-        
-        CompanyInfoPlanInfoFunctionsStatus.initialize(this);
-    }
+  constructor () {
+    CompanyInfoPlanInfoFunctionsStatus.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CompanyInfoPlanInfoFunctionsStatus</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CompanyInfoPlanInfoFunctionsStatus} obj Optional instance to populate.
      * @return {module:model/CompanyInfoPlanInfoFunctionsStatus} The populated <code>CompanyInfoPlanInfoFunctionsStatus</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CompanyInfoPlanInfoFunctionsStatus();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CompanyInfoPlanInfoFunctionsStatus()
 
-            if (data.hasOwnProperty('ts_digital')) {
-                obj['ts_digital'] = FunctionStatus.constructFromObject(data['ts_digital']);
-            }
-            if (data.hasOwnProperty('ts_pay')) {
-                obj['ts_pay'] = FunctionStatus.constructFromObject(data['ts_pay']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('ts_digital')) {
+        obj.ts_digital = FunctionStatus.constructFromObject(data.ts_digital)
+      }
+      if (data.hasOwnProperty('ts_pay')) {
+        obj.ts_pay = FunctionStatus.constructFromObject(data.ts_pay)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/FunctionStatus} ts_digital
  */
-CompanyInfoPlanInfoFunctionsStatus.prototype['ts_digital'] = undefined;
+CompanyInfoPlanInfoFunctionsStatus.prototype.ts_digital = undefined
 
 /**
  * @member {module:model/FunctionStatus} ts_pay
  */
-CompanyInfoPlanInfoFunctionsStatus.prototype['ts_pay'] = undefined;
+CompanyInfoPlanInfoFunctionsStatus.prototype.ts_pay = undefined
 
-
-
-
-
-
-export default CompanyInfoPlanInfoFunctionsStatus;
-
+export default CompanyInfoPlanInfoFunctionsStatus

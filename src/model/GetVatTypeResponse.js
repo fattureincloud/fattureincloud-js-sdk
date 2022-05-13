@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import VatType from './VatType';
+import VatType from './VatType'
 
 /**
  * The GetVatTypeResponse model module.
@@ -20,53 +19,44 @@ import VatType from './VatType';
  * @version 2.0.12
  */
 class GetVatTypeResponse {
-    /**
+  /**
      * Constructs a new <code>GetVatTypeResponse</code>.
      * @alias module:model/GetVatTypeResponse
      */
-    constructor() { 
-        
-        GetVatTypeResponse.initialize(this);
-    }
+  constructor () {
+    GetVatTypeResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetVatTypeResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetVatTypeResponse} obj Optional instance to populate.
      * @return {module:model/GetVatTypeResponse} The populated <code>GetVatTypeResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetVatTypeResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetVatTypeResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = VatType.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = VatType.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/VatType} data
  */
-GetVatTypeResponse.prototype['data'] = undefined;
+GetVatTypeResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetVatTypeResponse;
-
+export default GetVatTypeResponse

@@ -11,155 +11,147 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetCompanyInfoResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetCompanyInfoResponse()
     instance.data = {
-      id : 12345,
-      name : "Studio Commercialista",
-      email : "mario.rossi@example.com",
-      type : "accountant",
-      fic : true,
-      fic_plan_name : "premium_plus",
-      fic_signup_date : "2013-11-01",
-      fic_license_expire : "2030-12-31",
-      use_fic : true,
-      fic_need_setup : false,
-      fic_license_type : "coupon_b",
-      dic : true,
-      dic_plan_name : "trial",
-      dic_signup_date : "2018-03-26",
-      dic_license_expire : "2022-12-31",
-      use_dic : true,
-      dic_license_type : "trial",
-      registration_service : "fic",
-      can_use_coupon : false,
-      access_info : {
-        role : "master",
-        through_accountant : false,
-        permissions : {
-          fic_situation : "read",
-          fic_clients : "write",
-          fic_suppliers : "write",
-          fic_products : "write",
-          fic_issued_documents : "detailed",
-          fic_issued_documents_detailed : {
-            quotes : "write",
-            proformas : "write",
-            invoices : "write",
-            receipts : "write",
-            delivery_notes : "write",
-            credit_notes : "write",
-            orders : "write",
-            work_reports : "write",
-            supplier_orders : "write",
-            self_invoices : "write"
+      id: 12345,
+      name: 'Studio Commercialista',
+      email: 'mario.rossi@example.com',
+      type: 'accountant',
+      fic: true,
+      fic_plan_name: 'premium_plus',
+      fic_signup_date: '2013-11-01',
+      fic_license_expire: '2030-12-31',
+      use_fic: true,
+      fic_need_setup: false,
+      fic_license_type: 'coupon_b',
+      dic: true,
+      dic_plan_name: 'trial',
+      dic_signup_date: '2018-03-26',
+      dic_license_expire: '2022-12-31',
+      use_dic: true,
+      dic_license_type: 'trial',
+      registration_service: 'fic',
+      can_use_coupon: false,
+      access_info: {
+        role: 'master',
+        through_accountant: false,
+        permissions: {
+          fic_situation: 'read',
+          fic_clients: 'write',
+          fic_suppliers: 'write',
+          fic_products: 'write',
+          fic_issued_documents: 'detailed',
+          fic_issued_documents_detailed: {
+            quotes: 'write',
+            proformas: 'write',
+            invoices: 'write',
+            receipts: 'write',
+            delivery_notes: 'write',
+            credit_notes: 'write',
+            orders: 'write',
+            work_reports: 'write',
+            supplier_orders: 'write',
+            self_invoices: 'write'
           },
-          fic_received_documents : "write",
-          fic_receipts : "write",
-          fic_calendar : "write",
-          fic_archive : "write",
-          fic_taxes : "write",
-          fic_stock : "write",
-          fic_cashbook : "write",
-          fic_settings : "write",
-          fic_emails : "read",
-          dic_employees : "none",
-          dic_timesheet : "none",
-          dic_settings : "none",
-          fic_invoice_trading : "none",
-          fic_export : "write",
-          fic_import_clients_suppliers : "write",
-          fic_import_products : "write",
-          fic_import_issued_documents : "none",
-          fic_import_bankstatements : "none",
-          fic_recurring : "write",
-          fic_riba : "write"
+          fic_received_documents: 'write',
+          fic_receipts: 'write',
+          fic_calendar: 'write',
+          fic_archive: 'write',
+          fic_taxes: 'write',
+          fic_stock: 'write',
+          fic_cashbook: 'write',
+          fic_settings: 'write',
+          fic_emails: 'read',
+          dic_employees: 'none',
+          dic_timesheet: 'none',
+          dic_settings: 'none',
+          fic_invoice_trading: 'none',
+          fic_export: 'write',
+          fic_import_clients_suppliers: 'write',
+          fic_import_products: 'write',
+          fic_import_issued_documents: 'none',
+          fic_import_bankstatements: 'none',
+          fic_recurring: 'write',
+          fic_riba: 'write'
         }
       },
-      plan_info : {
-        limits : {
-          clients : 5000,
-          suppliers : 5000,
-          products : 5000,
-          documents : 3000
+      plan_info: {
+        limits: {
+          clients: 5000,
+          suppliers: 5000,
+          products: 5000,
+          documents: 3000
         },
-        functions : {
-          document_attachments : true,
-          archive : true,
-          payment_notifications : true,
-          paypal : true,
-          receipts : true,
-          e_invoice : true,
-          genius : true,
-          stock : true,
-          smtp : true,
-          mail_tracking : true,
-          subaccounts : true,
-          tessera_sanitaria : true,
-          recurring : true,
-          sofort : false,
-          cerved : true,
-          ts_digital : true,
-          ts_pay : true,
-          ts_invoice_trading : true
+        functions: {
+          document_attachments: true,
+          archive: true,
+          payment_notifications: true,
+          paypal: true,
+          receipts: true,
+          e_invoice: true,
+          genius: true,
+          stock: true,
+          smtp: true,
+          mail_tracking: true,
+          subaccounts: true,
+          tessera_sanitaria: true,
+          recurring: true,
+          sofort: false,
+          cerved: true,
+          ts_digital: true,
+          ts_pay: true,
+          ts_invoice_trading: true
         },
-        functions_status : {
-          ts_digital : {
-            active : true
+        functions_status: {
+          ts_digital: {
+            active: true
           },
-          ts_pay : {
-            active : true
+          ts_pay: {
+            active: true
           }
         }
       },
-      is_accountant : true,
-      accountant_id : 12345,
-      fic_payment_subject : "client",
-      dic_payment_subject : "client"
+      is_accountant: true,
+      accountant_id: 12345,
+      fic_payment_subject: 'client',
+      dic_payment_subject: 'client'
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetCompanyInfoResponse', function() {
-    it('should create an instance of GetCompanyInfoResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetCompanyInfoResponse);
-    });
+  describe('GetCompanyInfoResponse', function () {
+    it('should create an instance of GetCompanyInfoResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetCompanyInfoResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

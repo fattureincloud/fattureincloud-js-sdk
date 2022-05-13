@@ -11,126 +11,118 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ReceiptPreCreateInfo();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ReceiptPreCreateInfo()
     instance.numerations = {
-      2020 : {
-        sales_receipt : {
-            REC001 : 3
+      2020: {
+        sales_receipt: {
+          REC001: 3
         }
       },
-      2021 : {
-        sales_receipt : {
-            REC005 : 3,
-            REC004 : 2,
-            REC003 : 2,
-            REC001 : 7
-          }
+      2021: {
+        sales_receipt: {
+          REC005: 3,
+          REC004: 2,
+          REC003: 2,
+          REC001: 7
         }
-      },
+      }
+    }
     instance.numerations_list = [
-          "REC001",
-          "REC002",
-          "REC003",
-          "REC005",
-          "REC006"
-      ],
+      'REC001',
+      'REC002',
+      'REC003',
+      'REC005',
+      'REC006'
+    ]
     instance.rc_centers_list = [
-          "Sede generale",
-          "Negozio Bergamo",
-          "Negozio Milano"
-      ],
+      'Sede generale',
+      'Negozio Bergamo',
+      'Negozio Milano'
+    ]
     instance.payment_accounts_list = [
-          {
-          id : 111,
-          name : "Indesa - carta conto"
-          },
-          {
-          id : 222,
-          name : "Contanti"
-          }
-      ],
+      {
+        id: 111,
+        name: 'Indesa - carta conto'
+      },
+      {
+        id: 222,
+        name: 'Contanti'
+      }
+    ]
     instance.categories_list = [
-          "altro",
-          "arredamento"
-      ],
+      'altro',
+      'arredamento'
+    ]
     instance.vat_types_list = [
-          {
-          id : 1334,
-          value : 0,
-          description : "Non imp. art. 17 c. 6 DPR 633/72 e s.m.i.",
-          is_disabled : false
-          },
-          {
-          id : 1333,
-          value : 0,
-          description : "Non sogg. art. 74 c. 7 e 8 DPR 633/72",
-          is_disabled : false
-          }
-      ];
-  });
+      {
+        id: 1334,
+        value: 0,
+        description: 'Non imp. art. 17 c. 6 DPR 633/72 e s.m.i.',
+        is_disabled: false
+      },
+      {
+        id: 1333,
+        value: 0,
+        description: 'Non sogg. art. 74 c. 7 e 8 DPR 633/72',
+        is_disabled: false
+      }
+    ]
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ReceiptPreCreateInfo', function() {
-    it('should create an instance of ReceiptPreCreateInfo', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ReceiptPreCreateInfo);
-    });
+  describe('ReceiptPreCreateInfo', function () {
+    it('should create an instance of ReceiptPreCreateInfo', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ReceiptPreCreateInfo)
+    })
 
-    it('should have the property numerations (base name: "numerations")', function() {
-      expect(typeof instance.numerations).to.be('object');
-    });
+    it('should have the property numerations (base name: "numerations")', function () {
+      expect(typeof instance.numerations).to.be('object')
+    })
 
-    it('should have the property numerationsList (base name: "numerations_list")', function() {
-      expect(typeof instance.numerations_list).to.be('object');
-    });
+    it('should have the property numerationsList (base name: "numerations_list")', function () {
+      expect(typeof instance.numerations_list).to.be('object')
+    })
 
-    it('should have the property rcCentersList (base name: "rc_centers_list")', function() {
-      expect(typeof instance.rc_centers_list).to.be('object');
-    });
+    it('should have the property rcCentersList (base name: "rc_centers_list")', function () {
+      expect(typeof instance.rc_centers_list).to.be('object')
+    })
 
-    it('should have the property paymentAccountsList (base name: "payment_accounts_list")', function() {
-      expect(typeof instance.payment_accounts_list).to.be('object');
-    });
+    it('should have the property paymentAccountsList (base name: "payment_accounts_list")', function () {
+      expect(typeof instance.payment_accounts_list).to.be('object')
+    })
 
-    it('should have the property categoriesList (base name: "categories_list")', function() {
-      expect(typeof instance.categories_list).to.be('object');
-    });
+    it('should have the property categoriesList (base name: "categories_list")', function () {
+      expect(typeof instance.categories_list).to.be('object')
+    })
 
-    it('should have the property vatTypesList (base name: "vat_types_list")', function() {
-      expect(typeof instance.vat_types_list).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property vatTypesList (base name: "vat_types_list")', function () {
+      expect(typeof instance.vat_types_list).to.be('object')
+    })
+  })
+}))

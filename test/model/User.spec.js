@@ -11,82 +11,74 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.User();
-    instance.id = 12345;
-    instance.name = "Mario Rossi";
-    instance.first_name = "Mario";
-    instance.last_name = "Rossi";
-    instance.email = "mario.rossi@example.com";
-    instance.hash = "5add29e1234532a1bf2ed7b612043029";
-    instance.picture = "picture.jpg";    
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.User()
+    instance.id = 12345
+    instance.name = 'Mario Rossi'
+    instance.first_name = 'Mario'
+    instance.last_name = 'Rossi'
+    instance.email = 'mario.rossi@example.com'
+    instance.hash = '5add29e1234532a1bf2ed7b612043029'
+    instance.picture = 'picture.jpg'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('User', function() {
-    it('should create an instance of User', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.User);
-    });
+  describe('User', function () {
+    it('should create an instance of User', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.User)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property name (base name: "name")', function() {
-      expect(typeof instance.name).to.be('string');
-    });
+    it('should have the property name (base name: "name")', function () {
+      expect(typeof instance.name).to.be('string')
+    })
 
-    it('should have the property firstName (base name: "first_name")', function() {
-      expect(typeof instance.first_name).to.be('string');
-    });
+    it('should have the property firstName (base name: "first_name")', function () {
+      expect(typeof instance.first_name).to.be('string')
+    })
 
-    it('should have the property lastName (base name: "last_name")', function() {
-      expect(typeof instance.last_name).to.be('string');
-    });
+    it('should have the property lastName (base name: "last_name")', function () {
+      expect(typeof instance.last_name).to.be('string')
+    })
 
-    it('should have the property email (base name: "email")', function() {
-      expect(typeof instance.email).to.be('string');
-    });
+    it('should have the property email (base name: "email")', function () {
+      expect(typeof instance.email).to.be('string')
+    })
 
-    it('should have the property hash (base name: "hash")', function() {
-      expect(typeof instance.hash).to.be('string');
-    });
+    it('should have the property hash (base name: "hash")', function () {
+      expect(typeof instance.hash).to.be('string')
+    })
 
-    it('should have the property picture (base name: "picture")', function() {
-      expect(typeof instance.picture).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property picture (base name: "picture")', function () {
+      expect(typeof instance.picture).to.be('string')
+    })
+  })
+}))

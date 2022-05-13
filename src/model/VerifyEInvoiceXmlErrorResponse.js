@@ -11,9 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import VerifyEInvoiceXmlErrorResponseError from './VerifyEInvoiceXmlErrorResponseError';
-import VerifyEInvoiceXmlErrorResponseExtra from './VerifyEInvoiceXmlErrorResponseExtra';
+import VerifyEInvoiceXmlErrorResponseError from './VerifyEInvoiceXmlErrorResponseError'
+import VerifyEInvoiceXmlErrorResponseExtra from './VerifyEInvoiceXmlErrorResponseExtra'
 
 /**
  * The VerifyEInvoiceXmlErrorResponse model module.
@@ -21,61 +20,52 @@ import VerifyEInvoiceXmlErrorResponseExtra from './VerifyEInvoiceXmlErrorRespons
  * @version 2.0.12
  */
 class VerifyEInvoiceXmlErrorResponse {
-    /**
+  /**
      * Constructs a new <code>VerifyEInvoiceXmlErrorResponse</code>.
      * @alias module:model/VerifyEInvoiceXmlErrorResponse
      */
-    constructor() { 
-        
-        VerifyEInvoiceXmlErrorResponse.initialize(this);
-    }
+  constructor () {
+    VerifyEInvoiceXmlErrorResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>VerifyEInvoiceXmlErrorResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/VerifyEInvoiceXmlErrorResponse} obj Optional instance to populate.
      * @return {module:model/VerifyEInvoiceXmlErrorResponse} The populated <code>VerifyEInvoiceXmlErrorResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new VerifyEInvoiceXmlErrorResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new VerifyEInvoiceXmlErrorResponse()
 
-            if (data.hasOwnProperty('error')) {
-                obj['error'] = VerifyEInvoiceXmlErrorResponseError.constructFromObject(data['error']);
-            }
-            if (data.hasOwnProperty('extra')) {
-                obj['extra'] = VerifyEInvoiceXmlErrorResponseExtra.constructFromObject(data['extra']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('error')) {
+        obj.error = VerifyEInvoiceXmlErrorResponseError.constructFromObject(data.error)
+      }
+      if (data.hasOwnProperty('extra')) {
+        obj.extra = VerifyEInvoiceXmlErrorResponseExtra.constructFromObject(data.extra)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/VerifyEInvoiceXmlErrorResponseError} error
  */
-VerifyEInvoiceXmlErrorResponse.prototype['error'] = undefined;
+VerifyEInvoiceXmlErrorResponse.prototype.error = undefined
 
 /**
  * @member {module:model/VerifyEInvoiceXmlErrorResponseExtra} extra
  */
-VerifyEInvoiceXmlErrorResponse.prototype['extra'] = undefined;
+VerifyEInvoiceXmlErrorResponse.prototype.extra = undefined
 
-
-
-
-
-
-export default VerifyEInvoiceXmlErrorResponse;
-
+export default VerifyEInvoiceXmlErrorResponse

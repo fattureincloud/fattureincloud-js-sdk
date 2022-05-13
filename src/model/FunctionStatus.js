@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The FunctionStatus model module.
@@ -19,53 +19,44 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class FunctionStatus {
-    /**
+  /**
      * Constructs a new <code>FunctionStatus</code>.
      * @alias module:model/FunctionStatus
      */
-    constructor() { 
-        
-        FunctionStatus.initialize(this);
-    }
+  constructor () {
+    FunctionStatus.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>FunctionStatus</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/FunctionStatus} obj Optional instance to populate.
      * @return {module:model/FunctionStatus} The populated <code>FunctionStatus</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new FunctionStatus();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new FunctionStatus()
 
-            if (data.hasOwnProperty('active')) {
-                obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('active')) {
+        obj.active = ApiClient.convertToType(data.active, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Boolean} active
  */
-FunctionStatus.prototype['active'] = undefined;
+FunctionStatus.prototype.active = undefined
 
-
-
-
-
-
-export default FunctionStatus;
-
+export default FunctionStatus

@@ -11,75 +11,67 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetEmailDataResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetEmailDataResponse()
     instance.data = {
-      recipient_email : "mary.red@example.com",
-      default_sender_email : {
-        id : 0,
-        email : "no-reply@fattureincloud.it"
+      recipient_email: 'mary.red@example.com',
+      default_sender_email: {
+        id: 0,
+        email: 'no-reply@fattureincloud.it'
       },
-      sender_emails_list : [
+      sender_emails_list: [
         {
-          id : 0,
-          email : "no-reply@fattureincloud.it"
+          id: 0,
+          email: 'no-reply@fattureincloud.it'
         },
         {
-          id : 888,
-          email : "mariorossi@fattureincloud.it"
+          id: 888,
+          email: 'mariorossi@fattureincloud.it'
         }
       ],
-      cc_email : "m.rossi@exxample.com",
-      subject : "Nostra pro forma nr. 1",
-      body : "Gentile Mario Rossi,<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottoastante.<br><br>{{allegati}}<br><br>Cordiali saluti,<br><b>Mario Rossi</b>",
-      document_exists : true,
-      delivery_note_exists : false,
-      attachment_exists : false,
-      accompanying_invoice_exists : false
+      cc_email: 'm.rossi@exxample.com',
+      subject: 'Nostra pro forma nr. 1',
+      body: 'Gentile Mario Rossi,<br>per vedere la nostra pro forma di  o per scaricarne una copia in versione PDF prema sul bottone sottoastante.<br><br>{{allegati}}<br><br>Cordiali saluti,<br><b>Mario Rossi</b>',
+      document_exists: true,
+      delivery_note_exists: false,
+      attachment_exists: false,
+      accompanying_invoice_exists: false
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('GetEmailDataResponse', function() {
-    it('should create an instance of GetEmailDataResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.GetEmailDataResponse);
-    });
+  describe('GetEmailDataResponse', function () {
+    it('should create an instance of GetEmailDataResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.GetEmailDataResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

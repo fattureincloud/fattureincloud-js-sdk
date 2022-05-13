@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PaymentMethod from './PaymentMethod';
+import ApiClient from '../ApiClient'
+import PaymentMethod from './PaymentMethod'
 
 /**
  * The ListPaymentMethodsResponse model module.
@@ -20,54 +20,45 @@ import PaymentMethod from './PaymentMethod';
  * @version 2.0.12
  */
 class ListPaymentMethodsResponse {
-    /**
+  /**
      * Constructs a new <code>ListPaymentMethodsResponse</code>.
-     * 
+     *
      * @alias module:model/ListPaymentMethodsResponse
      */
-    constructor() { 
-        
-        ListPaymentMethodsResponse.initialize(this);
-    }
+  constructor () {
+    ListPaymentMethodsResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListPaymentMethodsResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListPaymentMethodsResponse} obj Optional instance to populate.
      * @return {module:model/ListPaymentMethodsResponse} The populated <code>ListPaymentMethodsResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListPaymentMethodsResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListPaymentMethodsResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [PaymentMethod]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [PaymentMethod])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/PaymentMethod>} data
  */
-ListPaymentMethodsResponse.prototype['data'] = undefined;
+ListPaymentMethodsResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListPaymentMethodsResponse;
-
+export default ListPaymentMethodsResponse

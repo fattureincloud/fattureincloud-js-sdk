@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocumentTotals from './IssuedDocumentTotals';
+import IssuedDocumentTotals from './IssuedDocumentTotals'
 
 /**
  * The GetExistingIssuedDocumentTotalsResponse model module.
@@ -20,54 +19,45 @@ import IssuedDocumentTotals from './IssuedDocumentTotals';
  * @version 2.0.12
  */
 class GetExistingIssuedDocumentTotalsResponse {
-    /**
+  /**
      * Constructs a new <code>GetExistingIssuedDocumentTotalsResponse</code>.
-     * 
+     *
      * @alias module:model/GetExistingIssuedDocumentTotalsResponse
      */
-    constructor() { 
-        
-        GetExistingIssuedDocumentTotalsResponse.initialize(this);
-    }
+  constructor () {
+    GetExistingIssuedDocumentTotalsResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetExistingIssuedDocumentTotalsResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetExistingIssuedDocumentTotalsResponse} obj Optional instance to populate.
      * @return {module:model/GetExistingIssuedDocumentTotalsResponse} The populated <code>GetExistingIssuedDocumentTotalsResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetExistingIssuedDocumentTotalsResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetExistingIssuedDocumentTotalsResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = IssuedDocumentTotals.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = IssuedDocumentTotals.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/IssuedDocumentTotals} data
  */
-GetExistingIssuedDocumentTotalsResponse.prototype['data'] = undefined;
+GetExistingIssuedDocumentTotalsResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetExistingIssuedDocumentTotalsResponse;
-
+export default GetExistingIssuedDocumentTotalsResponse

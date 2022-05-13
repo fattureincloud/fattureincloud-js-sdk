@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DetailedCountry from './DetailedCountry';
+import ApiClient from '../ApiClient'
+import DetailedCountry from './DetailedCountry'
 
 /**
  * The ListDetailedCountriesResponse model module.
@@ -20,53 +20,44 @@ import DetailedCountry from './DetailedCountry';
  * @version 2.0.12
  */
 class ListDetailedCountriesResponse {
-    /**
+  /**
      * Constructs a new <code>ListDetailedCountriesResponse</code>.
      * @alias module:model/ListDetailedCountriesResponse
      */
-    constructor() { 
-        
-        ListDetailedCountriesResponse.initialize(this);
-    }
+  constructor () {
+    ListDetailedCountriesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListDetailedCountriesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListDetailedCountriesResponse} obj Optional instance to populate.
      * @return {module:model/ListDetailedCountriesResponse} The populated <code>ListDetailedCountriesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListDetailedCountriesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListDetailedCountriesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [DetailedCountry]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [DetailedCountry])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/DetailedCountry>} data
  */
-ListDetailedCountriesResponse.prototype['data'] = undefined;
+ListDetailedCountriesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListDetailedCountriesResponse;
-
+export default ListDetailedCountriesResponse

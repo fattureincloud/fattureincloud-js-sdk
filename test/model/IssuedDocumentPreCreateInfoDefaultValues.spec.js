@@ -11,132 +11,124 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoDefaultValues();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.IssuedDocumentPreCreateInfoDefaultValues()
     instance.default_template = {
-      id : 111,
-      type : "standard",
-      name : "Light Smoke"
-      },
+      id: 111,
+      type: 'standard',
+      name: 'Light Smoke'
+    }
     instance.dn_template = {
-          id : 222,
-          type : "delivery_note",
-          name : "DDT 1"
-      },
+      id: 222,
+      type: 'delivery_note',
+      name: 'DDT 1'
+    }
     instance.ai_template = {
-          id : 333,
-          type : "accompanying_invoice",
-          name : "FT Accompagnatoria 1"
-      },
-    instance.notes = "";
-    instance.rivalsa = 0;
-    instance.cassa = 0;
-    instance.withholding_tax = 0;
-    instance.withholding_tax_taxable = 100;
-    instance.other_withholding_tax = 0;
-    instance.use_gross_prices = false;
+      id: 333,
+      type: 'accompanying_invoice',
+      name: 'FT Accompagnatoria 1'
+    }
+    instance.notes = ''
+    instance.rivalsa = 0
+    instance.cassa = 0
+    instance.withholding_tax = 0
+    instance.withholding_tax_taxable = 100
+    instance.other_withholding_tax = 0
+    instance.use_gross_prices = false
     instance.payment_method = {
-        id : 123321,
-        name : "Bonifico bancario",
-        is_default : true,
-        details : [
-            {
-            title : "Banca",
-            description : "Indesa"
-            },
-            {
-            title : "IBAN",
-            description : "IT17QA12345600000003498936"
-            },
-            {
-            title : "Intestatario",
-            description : "Mario Rossi"
-            }
-          ]
-      }
-  });
+      id: 123321,
+      name: 'Bonifico bancario',
+      is_default: true,
+      details: [
+        {
+          title: 'Banca',
+          description: 'Indesa'
+        },
+        {
+          title: 'IBAN',
+          description: 'IT17QA12345600000003498936'
+        },
+        {
+          title: 'Intestatario',
+          description: 'Mario Rossi'
+        }
+      ]
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('IssuedDocumentPreCreateInfoDefaultValues', function() {
-    it('should create an instance of IssuedDocumentPreCreateInfoDefaultValues', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoDefaultValues);
-    });
+  describe('IssuedDocumentPreCreateInfoDefaultValues', function () {
+    it('should create an instance of IssuedDocumentPreCreateInfoDefaultValues', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPreCreateInfoDefaultValues)
+    })
 
-    it('should have the property defaultTemplate (base name: "default_template")', function() {
-      expect(typeof instance.default_template).to.be('object');
-    });
+    it('should have the property defaultTemplate (base name: "default_template")', function () {
+      expect(typeof instance.default_template).to.be('object')
+    })
 
-    it('should have the property dnTemplate (base name: "dn_template")', function() {
-      expect(typeof instance.dn_template).to.be('object');
-    });
+    it('should have the property dnTemplate (base name: "dn_template")', function () {
+      expect(typeof instance.dn_template).to.be('object')
+    })
 
-    it('should have the property aiTemplate (base name: "ai_template")', function() {
-      expect(typeof instance.ai_template).to.be('object');
-    });
+    it('should have the property aiTemplate (base name: "ai_template")', function () {
+      expect(typeof instance.ai_template).to.be('object')
+    })
 
-    it('should have the property notes (base name: "notes")', function() {
-      expect(typeof instance.notes).to.be('string');
-    });
+    it('should have the property notes (base name: "notes")', function () {
+      expect(typeof instance.notes).to.be('string')
+    })
 
-    it('should have the property rivalsa (base name: "rivalsa")', function() {
-      expect(typeof instance.rivalsa).to.be('number');
-    });
+    it('should have the property rivalsa (base name: "rivalsa")', function () {
+      expect(typeof instance.rivalsa).to.be('number')
+    })
 
-    it('should have the property cassa (base name: "cassa")', function() {
-      expect(typeof instance.cassa).to.be('number');
-    });
+    it('should have the property cassa (base name: "cassa")', function () {
+      expect(typeof instance.cassa).to.be('number')
+    })
 
-    it('should have the property withholdingTax (base name: "withholding_tax")', function() {
-      expect(typeof instance.withholding_tax).to.be('number');
-    });
+    it('should have the property withholdingTax (base name: "withholding_tax")', function () {
+      expect(typeof instance.withholding_tax).to.be('number')
+    })
 
-    it('should have the property withholdingTaxTaxable (base name: "withholding_tax_taxable")', function() {
-      expect(typeof instance.withholding_tax_taxable).to.be('number');
-    });
+    it('should have the property withholdingTaxTaxable (base name: "withholding_tax_taxable")', function () {
+      expect(typeof instance.withholding_tax_taxable).to.be('number')
+    })
 
-    it('should have the property otherWithholdingTax (base name: "other_withholding_tax")', function() {
-      expect(typeof instance.other_withholding_tax).to.be('number');
-    });
+    it('should have the property otherWithholdingTax (base name: "other_withholding_tax")', function () {
+      expect(typeof instance.other_withholding_tax).to.be('number')
+    })
 
-    it('should have the property useGrossPrices (base name: "use_gross_prices")', function() {
-      expect(typeof instance.use_gross_prices).to.be('boolean');
-    });
+    it('should have the property useGrossPrices (base name: "use_gross_prices")', function () {
+      expect(typeof instance.use_gross_prices).to.be('boolean')
+    })
 
-    it('should have the property paymentMethod (base name: "payment_method")', function() {
-      expect(typeof instance.payment_method).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property paymentMethod (base name: "payment_method")', function () {
+      expect(typeof instance.payment_method).to.be('object')
+    })
+  })
+}))

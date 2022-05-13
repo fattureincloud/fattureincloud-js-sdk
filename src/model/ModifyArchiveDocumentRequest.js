@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ArchiveDocument from './ArchiveDocument';
+import ArchiveDocument from './ArchiveDocument'
 
 /**
  * The ModifyArchiveDocumentRequest model module.
@@ -20,54 +19,45 @@ import ArchiveDocument from './ArchiveDocument';
  * @version 2.0.12
  */
 class ModifyArchiveDocumentRequest {
-    /**
+  /**
      * Constructs a new <code>ModifyArchiveDocumentRequest</code>.
-     * 
+     *
      * @alias module:model/ModifyArchiveDocumentRequest
      */
-    constructor() { 
-        
-        ModifyArchiveDocumentRequest.initialize(this);
-    }
+  constructor () {
+    ModifyArchiveDocumentRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyArchiveDocumentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyArchiveDocumentRequest} obj Optional instance to populate.
      * @return {module:model/ModifyArchiveDocumentRequest} The populated <code>ModifyArchiveDocumentRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyArchiveDocumentRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyArchiveDocumentRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ArchiveDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ArchiveDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ArchiveDocument} data
  */
-ModifyArchiveDocumentRequest.prototype['data'] = undefined;
+ModifyArchiveDocumentRequest.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyArchiveDocumentRequest;
-
+export default ModifyArchiveDocumentRequest

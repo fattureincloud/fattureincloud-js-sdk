@@ -11,68 +11,60 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CompanyInfoAccessInfo();
-    instance.role = "master";
-    instance.through_accountant = false;
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CompanyInfoAccessInfo()
+    instance.role = 'master'
+    instance.through_accountant = false
     instance.permissions = {
-                    fic_situation : "read",
-                    fic_clients : "write",
-                    fic_suppliers : "write",
-                    fic_products : "write",
-                    fic_issued_documents : "detailed"
-                }    
-  });
+      fic_situation: 'read',
+      fic_clients: 'write',
+      fic_suppliers: 'write',
+      fic_products: 'write',
+      fic_issued_documents: 'detailed'
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('CompanyInfoAccessInfo', function() {
-    it('should create an instance of CompanyInfoAccessInfo', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfoAccessInfo);
-    });
+  describe('CompanyInfoAccessInfo', function () {
+    it('should create an instance of CompanyInfoAccessInfo', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CompanyInfoAccessInfo)
+    })
 
-    it('should have the property role (base name: "role")', function() {
-      expect(typeof instance.role).to.be('string');
-    });
+    it('should have the property role (base name: "role")', function () {
+      expect(typeof instance.role).to.be('string')
+    })
 
-    it('should have the property permissions (base name: "permissions")', function() {
-      expect(typeof instance.permissions).to.be('object');
-    });
+    it('should have the property permissions (base name: "permissions")', function () {
+      expect(typeof instance.permissions).to.be('object')
+    })
 
-    it('should have the property throughAccountant (base name: "through_accountant")', function() {
-      expect(typeof instance.through_accountant).to.be('boolean');
-    });
-
-  });
-
-}));
+    it('should have the property throughAccountant (base name: "through_accountant")', function () {
+      expect(typeof instance.through_accountant).to.be('boolean')
+    })
+  })
+}))

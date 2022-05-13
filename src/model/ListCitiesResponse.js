@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import City from './City';
+import ApiClient from '../ApiClient'
+import City from './City'
 
 /**
  * The ListCitiesResponse model module.
@@ -20,54 +20,45 @@ import City from './City';
  * @version 2.0.12
  */
 class ListCitiesResponse {
-    /**
+  /**
      * Constructs a new <code>ListCitiesResponse</code>.
-     * 
+     *
      * @alias module:model/ListCitiesResponse
      */
-    constructor() { 
-        
-        ListCitiesResponse.initialize(this);
-    }
+  constructor () {
+    ListCitiesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListCitiesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListCitiesResponse} obj Optional instance to populate.
      * @return {module:model/ListCitiesResponse} The populated <code>ListCitiesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListCitiesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListCitiesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [City]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [City])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/City>} data
  */
-ListCitiesResponse.prototype['data'] = undefined;
+ListCitiesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListCitiesResponse;
-
+export default ListCitiesResponse

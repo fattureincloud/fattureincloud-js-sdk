@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import F24 from './F24';
+import ApiClient from '../ApiClient'
+import F24 from './F24'
 
 /**
  * The ListF24ResponsePage model module.
@@ -20,53 +20,44 @@ import F24 from './F24';
  * @version 2.0.12
  */
 class ListF24ResponsePage {
-    /**
+  /**
      * Constructs a new <code>ListF24ResponsePage</code>.
      * @alias module:model/ListF24ResponsePage
      */
-    constructor() { 
-        
-        ListF24ResponsePage.initialize(this);
-    }
+  constructor () {
+    ListF24ResponsePage.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListF24ResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListF24ResponsePage} obj Optional instance to populate.
      * @return {module:model/ListF24ResponsePage} The populated <code>ListF24ResponsePage</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListF24ResponsePage();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListF24ResponsePage()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [F24]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [F24])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/F24>} data
  */
-ListF24ResponsePage.prototype['data'] = undefined;
+ListF24ResponsePage.prototype.data = undefined
 
-
-
-
-
-
-export default ListF24ResponsePage;
-
+export default ListF24ResponsePage

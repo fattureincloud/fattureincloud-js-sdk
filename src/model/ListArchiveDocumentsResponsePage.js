@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ArchiveDocument from './ArchiveDocument';
+import ApiClient from '../ApiClient'
+import ArchiveDocument from './ArchiveDocument'
 
 /**
  * The ListArchiveDocumentsResponsePage model module.
@@ -20,53 +20,44 @@ import ArchiveDocument from './ArchiveDocument';
  * @version 2.0.12
  */
 class ListArchiveDocumentsResponsePage {
-    /**
+  /**
      * Constructs a new <code>ListArchiveDocumentsResponsePage</code>.
      * @alias module:model/ListArchiveDocumentsResponsePage
      */
-    constructor() { 
-        
-        ListArchiveDocumentsResponsePage.initialize(this);
-    }
+  constructor () {
+    ListArchiveDocumentsResponsePage.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListArchiveDocumentsResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListArchiveDocumentsResponsePage} obj Optional instance to populate.
      * @return {module:model/ListArchiveDocumentsResponsePage} The populated <code>ListArchiveDocumentsResponsePage</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListArchiveDocumentsResponsePage();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListArchiveDocumentsResponsePage()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [ArchiveDocument]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [ArchiveDocument])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/ArchiveDocument>} data
  */
-ListArchiveDocumentsResponsePage.prototype['data'] = undefined;
+ListArchiveDocumentsResponsePage.prototype.data = undefined
 
-
-
-
-
-
-export default ListArchiveDocumentsResponsePage;
-
+export default ListArchiveDocumentsResponsePage

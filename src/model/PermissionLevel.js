@@ -11,50 +11,42 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class PermissionLevel.
 * @enum {}
 * @readonly
 */
 export default class PermissionLevel {
-    
-        /**
+  /**
          * value: "none"
          * @const
          */
-        "none" = "none";
+  'none' = 'none'
 
-    
-        /**
+  /**
          * value: "read"
          * @const
          */
-        "read" = "read";
+  'read' = 'read'
 
-    
-        /**
+  /**
          * value: "write"
          * @const
          */
-        "write" = "write";
+  'write' = 'write'
 
-    
-        /**
+  /**
          * value: "detailed"
          * @const
          */
-        "detailed" = "detailed";
+  'detailed' = 'detailed'
 
-    
-
-    /**
+  /**
     * Returns a <code>PermissionLevel</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/PermissionLevel} The enum <code>PermissionLevel</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The Language model module.
@@ -19,63 +19,54 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class Language {
-    /**
+  /**
      * Constructs a new <code>Language</code>.
      * @alias module:model/Language
      */
-    constructor() { 
-        
-        Language.initialize(this);
-    }
+  constructor () {
+    Language.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>Language</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/Language} obj Optional instance to populate.
      * @return {module:model/Language} The populated <code>Language</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new Language();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new Language()
 
-            if (data.hasOwnProperty('code')) {
-                obj['code'] = ApiClient.convertToType(data['code'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('code')) {
+        obj.code = ApiClient.convertToType(data.code, 'String')
+      }
+      if (data.hasOwnProperty('name')) {
+        obj.name = ApiClient.convertToType(data.name, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Language code.
  * @member {String} code
  */
-Language.prototype['code'] = undefined;
+Language.prototype.code = undefined
 
 /**
  * Language extended name.
  * @member {String} name
  */
-Language.prototype['name'] = undefined;
+Language.prototype.name = undefined
 
-
-
-
-
-
-export default Language;
-
+export default Language

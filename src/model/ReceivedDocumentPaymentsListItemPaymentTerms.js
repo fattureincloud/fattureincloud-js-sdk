@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The ReceivedDocumentPaymentsListItemPaymentTerms model module.
@@ -19,62 +19,53 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class ReceivedDocumentPaymentsListItemPaymentTerms {
-    /**
+  /**
      * Constructs a new <code>ReceivedDocumentPaymentsListItemPaymentTerms</code>.
      * @alias module:model/ReceivedDocumentPaymentsListItemPaymentTerms
      */
-    constructor() { 
-        
-        ReceivedDocumentPaymentsListItemPaymentTerms.initialize(this);
-    }
+  constructor () {
+    ReceivedDocumentPaymentsListItemPaymentTerms.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ReceivedDocumentPaymentsListItemPaymentTerms</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ReceivedDocumentPaymentsListItemPaymentTerms} obj Optional instance to populate.
      * @return {module:model/ReceivedDocumentPaymentsListItemPaymentTerms} The populated <code>ReceivedDocumentPaymentsListItemPaymentTerms</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ReceivedDocumentPaymentsListItemPaymentTerms();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ReceivedDocumentPaymentsListItemPaymentTerms()
 
-            if (data.hasOwnProperty('days')) {
-                obj['days'] = ApiClient.convertToType(data['days'], 'Number');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('days')) {
+        obj.days = ApiClient.convertToType(data.days, 'Number')
+      }
+      if (data.hasOwnProperty('type')) {
+        obj.type = ApiClient.convertToType(data.type, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Number of days.
  * @member {Number} days
  */
-ReceivedDocumentPaymentsListItemPaymentTerms.prototype['days'] = undefined;
+ReceivedDocumentPaymentsListItemPaymentTerms.prototype.days = undefined
 
 /**
  * @member {String} type
  */
-ReceivedDocumentPaymentsListItemPaymentTerms.prototype['type'] = undefined;
+ReceivedDocumentPaymentsListItemPaymentTerms.prototype.type = undefined
 
-
-
-
-
-
-export default ReceivedDocumentPaymentsListItemPaymentTerms;
-
+export default ReceivedDocumentPaymentsListItemPaymentTerms

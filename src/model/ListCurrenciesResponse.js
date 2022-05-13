@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Currency from './Currency';
+import ApiClient from '../ApiClient'
+import Currency from './Currency'
 
 /**
  * The ListCurrenciesResponse model module.
@@ -20,54 +20,45 @@ import Currency from './Currency';
  * @version 2.0.12
  */
 class ListCurrenciesResponse {
-    /**
+  /**
      * Constructs a new <code>ListCurrenciesResponse</code>.
-     * 
+     *
      * @alias module:model/ListCurrenciesResponse
      */
-    constructor() { 
-        
-        ListCurrenciesResponse.initialize(this);
-    }
+  constructor () {
+    ListCurrenciesResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListCurrenciesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListCurrenciesResponse} obj Optional instance to populate.
      * @return {module:model/ListCurrenciesResponse} The populated <code>ListCurrenciesResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListCurrenciesResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListCurrenciesResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [Currency]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ApiClient.convertToType(data.data, [Currency])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/Currency>} data
  */
-ListCurrenciesResponse.prototype['data'] = undefined;
+ListCurrenciesResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ListCurrenciesResponse;
-
+export default ListCurrenciesResponse

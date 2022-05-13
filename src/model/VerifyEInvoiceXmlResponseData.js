@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The VerifyEInvoiceXmlResponseData model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class VerifyEInvoiceXmlResponseData {
-    /**
+  /**
      * Constructs a new <code>VerifyEInvoiceXmlResponseData</code>.
      * @alias module:model/VerifyEInvoiceXmlResponseData
      */
-    constructor() { 
-        
-        VerifyEInvoiceXmlResponseData.initialize(this);
-    }
+  constructor () {
+    VerifyEInvoiceXmlResponseData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>VerifyEInvoiceXmlResponseData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/VerifyEInvoiceXmlResponseData} obj Optional instance to populate.
      * @return {module:model/VerifyEInvoiceXmlResponseData} The populated <code>VerifyEInvoiceXmlResponseData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new VerifyEInvoiceXmlResponseData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new VerifyEInvoiceXmlResponseData()
 
-            if (data.hasOwnProperty('success')) {
-                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('success')) {
+        obj.success = ApiClient.convertToType(data.success, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Determine if the invoice XML is valid.
  * @member {Boolean} success
  */
-VerifyEInvoiceXmlResponseData.prototype['success'] = undefined;
+VerifyEInvoiceXmlResponseData.prototype.success = undefined
 
-
-
-
-
-
-export default VerifyEInvoiceXmlResponseData;
-
+export default VerifyEInvoiceXmlResponseData

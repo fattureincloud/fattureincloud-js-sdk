@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ReceivedDocument from './ReceivedDocument';
+import ReceivedDocument from './ReceivedDocument'
 
 /**
  * The ModifyReceivedDocumentResponse model module.
@@ -20,54 +19,45 @@ import ReceivedDocument from './ReceivedDocument';
  * @version 2.0.12
  */
 class ModifyReceivedDocumentResponse {
-    /**
+  /**
      * Constructs a new <code>ModifyReceivedDocumentResponse</code>.
-     * 
+     *
      * @alias module:model/ModifyReceivedDocumentResponse
      */
-    constructor() { 
-        
-        ModifyReceivedDocumentResponse.initialize(this);
-    }
+  constructor () {
+    ModifyReceivedDocumentResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyReceivedDocumentResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyReceivedDocumentResponse} obj Optional instance to populate.
      * @return {module:model/ModifyReceivedDocumentResponse} The populated <code>ModifyReceivedDocumentResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyReceivedDocumentResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyReceivedDocumentResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ReceivedDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = ReceivedDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ReceivedDocument} data
  */
-ModifyReceivedDocumentResponse.prototype['data'] = undefined;
+ModifyReceivedDocumentResponse.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyReceivedDocumentResponse;
-
+export default ModifyReceivedDocumentResponse

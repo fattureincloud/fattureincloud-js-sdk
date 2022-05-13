@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The IssuedDocumentOptions model module.
@@ -19,54 +19,45 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class IssuedDocumentOptions {
-    /**
+  /**
      * Constructs a new <code>IssuedDocumentOptions</code>.
      * @alias module:model/IssuedDocumentOptions
      */
-    constructor() { 
-        
-        IssuedDocumentOptions.initialize(this);
-    }
+  constructor () {
+    IssuedDocumentOptions.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>IssuedDocumentOptions</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/IssuedDocumentOptions} obj Optional instance to populate.
      * @return {module:model/IssuedDocumentOptions} The populated <code>IssuedDocumentOptions</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new IssuedDocumentOptions();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new IssuedDocumentOptions()
 
-            if (data.hasOwnProperty('fix_payments')) {
-                obj['fix_payments'] = ApiClient.convertToType(data['fix_payments'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('fix_payments')) {
+        obj.fix_payments = ApiClient.convertToType(data.fix_payments, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Fixes your last payment amount to match your document total
  * @member {Boolean} fix_payments
  */
-IssuedDocumentOptions.prototype['fix_payments'] = undefined;
+IssuedDocumentOptions.prototype.fix_payments = undefined
 
-
-
-
-
-
-export default IssuedDocumentOptions;
-
+export default IssuedDocumentOptions

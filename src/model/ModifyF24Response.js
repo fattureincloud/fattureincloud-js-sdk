@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import F24 from './F24';
+import F24 from './F24'
 
 /**
  * The ModifyF24Response model module.
@@ -20,54 +19,45 @@ import F24 from './F24';
  * @version 2.0.12
  */
 class ModifyF24Response {
-    /**
+  /**
      * Constructs a new <code>ModifyF24Response</code>.
-     * 
+     *
      * @alias module:model/ModifyF24Response
      */
-    constructor() { 
-        
-        ModifyF24Response.initialize(this);
-    }
+  constructor () {
+    ModifyF24Response.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ModifyF24Response</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ModifyF24Response} obj Optional instance to populate.
      * @return {module:model/ModifyF24Response} The populated <code>ModifyF24Response</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ModifyF24Response();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ModifyF24Response()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = F24.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = F24.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/F24} data
  */
-ModifyF24Response.prototype['data'] = undefined;
+ModifyF24Response.prototype.data = undefined
 
-
-
-
-
-
-export default ModifyF24Response;
-
+export default ModifyF24Response

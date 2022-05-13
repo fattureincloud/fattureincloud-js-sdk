@@ -11,71 +11,63 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CreateProductResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CreateProductResponse()
     instance.data = {
-      id : 12345,
-      name : "Tavolo di marmo",
-      code : "TAVOLO003",
-      net_price : 240,
-      gross_price : 280,
-      use_gross_price : false,
-      net_cost : 0,
-      measure : "",
-      description : "Tavolo in marmo pregiato",
-      category : "arredamento",
-      in_stock : true,
-      default_vat : {
-        id : 3,
-        value : 22,
-        description : "Non imponibile art. 123",
-        notes : "IVA non imponibile ai sensi dell\'articolo 123, comma 2",
-        is_disabled : false
+      id: 12345,
+      name: 'Tavolo di marmo',
+      code: 'TAVOLO003',
+      net_price: 240,
+      gross_price: 280,
+      use_gross_price: false,
+      net_cost: 0,
+      measure: '',
+      description: 'Tavolo in marmo pregiato',
+      category: 'arredamento',
+      in_stock: true,
+      default_vat: {
+        id: 3,
+        value: 22,
+        description: 'Non imponibile art. 123',
+        notes: "IVA non imponibile ai sensi dell'articolo 123, comma 2",
+        is_disabled: false
       }
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('CreateProductResponse', function() {
-    it('should create an instance of CreateProductResponse', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CreateProductResponse);
-    });
+  describe('CreateProductResponse', function () {
+    it('should create an instance of CreateProductResponse', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CreateProductResponse)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

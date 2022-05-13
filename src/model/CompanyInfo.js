@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CompanyInfoAccessInfo from './CompanyInfoAccessInfo';
-import CompanyInfoPlanInfo from './CompanyInfoPlanInfo';
-import CompanyType from './CompanyType';
+import ApiClient from '../ApiClient'
+import CompanyInfoAccessInfo from './CompanyInfoAccessInfo'
+import CompanyInfoPlanInfo from './CompanyInfoPlanInfo'
+import CompanyType from './CompanyType'
 
 /**
  * The CompanyInfo model module.
@@ -22,115 +22,106 @@ import CompanyType from './CompanyType';
  * @version 2.0.12
  */
 class CompanyInfo {
-    /**
+  /**
      * Constructs a new <code>CompanyInfo</code>.
-     * 
+     *
      * @alias module:model/CompanyInfo
      */
-    constructor() { 
-        
-        CompanyInfo.initialize(this);
-    }
+  constructor () {
+    CompanyInfo.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CompanyInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CompanyInfo} obj Optional instance to populate.
      * @return {module:model/CompanyInfo} The populated <code>CompanyInfo</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CompanyInfo();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CompanyInfo()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = CompanyType.constructFromObject(data['type']);
-            }
-            if (data.hasOwnProperty('access_info')) {
-                obj['access_info'] = CompanyInfoAccessInfo.constructFromObject(data['access_info']);
-            }
-            if (data.hasOwnProperty('plan_info')) {
-                obj['plan_info'] = CompanyInfoPlanInfo.constructFromObject(data['plan_info']);
-            }
-            if (data.hasOwnProperty('accountant_id')) {
-                obj['accountant_id'] = ApiClient.convertToType(data['accountant_id'], 'Number');
-            }
-            if (data.hasOwnProperty('is_accountant')) {
-                obj['is_accountant'] = ApiClient.convertToType(data['is_accountant'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'Number')
+      }
+      if (data.hasOwnProperty('name')) {
+        obj.name = ApiClient.convertToType(data.name, 'String')
+      }
+      if (data.hasOwnProperty('email')) {
+        obj.email = ApiClient.convertToType(data.email, 'String')
+      }
+      if (data.hasOwnProperty('type')) {
+        obj.type = CompanyType.constructFromObject(data.type)
+      }
+      if (data.hasOwnProperty('access_info')) {
+        obj.access_info = CompanyInfoAccessInfo.constructFromObject(data.access_info)
+      }
+      if (data.hasOwnProperty('plan_info')) {
+        obj.plan_info = CompanyInfoPlanInfo.constructFromObject(data.plan_info)
+      }
+      if (data.hasOwnProperty('accountant_id')) {
+        obj.accountant_id = ApiClient.convertToType(data.accountant_id, 'Number')
+      }
+      if (data.hasOwnProperty('is_accountant')) {
+        obj.is_accountant = ApiClient.convertToType(data.is_accountant, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Company unique identifier.
  * @member {Number} id
  */
-CompanyInfo.prototype['id'] = undefined;
+CompanyInfo.prototype.id = undefined
 
 /**
  * Company name.
  * @member {String} name
  */
-CompanyInfo.prototype['name'] = undefined;
+CompanyInfo.prototype.name = undefined
 
 /**
  * Company email.
  * @member {String} email
  */
-CompanyInfo.prototype['email'] = undefined;
+CompanyInfo.prototype.email = undefined
 
 /**
  * @member {module:model/CompanyType} type
  */
-CompanyInfo.prototype['type'] = undefined;
+CompanyInfo.prototype.type = undefined
 
 /**
  * @member {module:model/CompanyInfoAccessInfo} access_info
  */
-CompanyInfo.prototype['access_info'] = undefined;
+CompanyInfo.prototype.access_info = undefined
 
 /**
  * @member {module:model/CompanyInfoPlanInfo} plan_info
  */
-CompanyInfo.prototype['plan_info'] = undefined;
+CompanyInfo.prototype.plan_info = undefined
 
 /**
  * Accountant unique identifier.
  * @member {Number} accountant_id
  */
-CompanyInfo.prototype['accountant_id'] = undefined;
+CompanyInfo.prototype.accountant_id = undefined
 
 /**
  * Determine if the logged account is an accountant.
  * @member {Boolean} is_accountant
  */
-CompanyInfo.prototype['is_accountant'] = undefined;
+CompanyInfo.prototype.is_accountant = undefined
 
-
-
-
-
-
-export default CompanyInfo;
-
+export default CompanyInfo

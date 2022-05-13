@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Company from './Company';
+import ApiClient from '../ApiClient'
+import Company from './Company'
 
 /**
  * The ListUserCompaniesResponseData model module.
@@ -20,53 +20,44 @@ import Company from './Company';
  * @version 2.0.12
  */
 class ListUserCompaniesResponseData {
-    /**
+  /**
      * Constructs a new <code>ListUserCompaniesResponseData</code>.
      * @alias module:model/ListUserCompaniesResponseData
      */
-    constructor() { 
-        
-        ListUserCompaniesResponseData.initialize(this);
-    }
+  constructor () {
+    ListUserCompaniesResponseData.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListUserCompaniesResponseData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListUserCompaniesResponseData} obj Optional instance to populate.
      * @return {module:model/ListUserCompaniesResponseData} The populated <code>ListUserCompaniesResponseData</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListUserCompaniesResponseData();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListUserCompaniesResponseData()
 
-            if (data.hasOwnProperty('companies')) {
-                obj['companies'] = ApiClient.convertToType(data['companies'], [Company]);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('companies')) {
+        obj.companies = ApiClient.convertToType(data.companies, [Company])
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {Array.<module:model/Company>} companies
  */
-ListUserCompaniesResponseData.prototype['companies'] = undefined;
+ListUserCompaniesResponseData.prototype.companies = undefined
 
-
-
-
-
-
-export default ListUserCompaniesResponseData;
-
+export default ListUserCompaniesResponseData

@@ -11,63 +11,55 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ModifyF24Response();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ModifyF24Response()
     instance.data = {
-      id : 12345,
-      amount : 840.36,
-      description : "PAGAMENTO IVA 2021",
-      due_date : "2021-12-31",
-      status : "paid",
-      payment_account : {
-        id : 111,
-        name : "Indesa - carta conto"
+      id: 12345,
+      amount: 840.36,
+      description: 'PAGAMENTO IVA 2021',
+      due_date: '2021-12-31',
+      status: 'paid',
+      payment_account: {
+        id: 111,
+        name: 'Indesa - carta conto'
       },
-      attachment_url : "b19c01da9b1688fb73d0d9e8adae89a8.pdf"
-    };
-  });
+      attachment_url: 'b19c01da9b1688fb73d0d9e8adae89a8.pdf'
+    }
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ModifyF24Response', function() {
-    it('should create an instance of ModifyF24Response', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ModifyF24Response);
-    });
+  describe('ModifyF24Response', function () {
+    it('should create an instance of ModifyF24Response', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ModifyF24Response)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

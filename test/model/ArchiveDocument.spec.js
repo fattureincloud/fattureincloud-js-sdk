@@ -11,77 +11,69 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ArchiveDocument();
-    instance.id = 12345;
-    instance.date = "2021-08-20";
-    instance.category = "Altri documenti";
-    instance.description = "spesa 2";
-    instance.attachment_url = "spesa2.pdf";
-    instance.attachment_token = "jwfbaiuwbfoiewfoa8weohafw7gefa9we";
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ArchiveDocument()
+    instance.id = 12345
+    instance.date = '2021-08-20'
+    instance.category = 'Altri documenti'
+    instance.description = 'spesa 2'
+    instance.attachment_url = 'spesa2.pdf'
+    instance.attachment_token = 'jwfbaiuwbfoiewfoa8weohafw7gefa9we'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ArchiveDocument', function() {
-    it('should create an instance of ArchiveDocument', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ArchiveDocument);
-    });
+  describe('ArchiveDocument', function () {
+    it('should create an instance of ArchiveDocument', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ArchiveDocument)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property date (base name: "date")', function() {
-      expect(typeof instance.date).to.be('string');;
-    });
+    it('should have the property date (base name: "date")', function () {
+      expect(typeof instance.date).to.be('string')
+    })
 
-    it('should have the property description (base name: "description")', function() {
-      expect(typeof instance.description).to.be('string');
-    });
+    it('should have the property description (base name: "description")', function () {
+      expect(typeof instance.description).to.be('string')
+    })
 
-    it('should have the property attachmentUrl (base name: "attachment_url")', function() {
-      expect(typeof instance.attachment_url).to.be('string');
-    });
+    it('should have the property attachmentUrl (base name: "attachment_url")', function () {
+      expect(typeof instance.attachment_url).to.be('string')
+    })
 
-    it('should have the property category (base name: "category")', function() {
-      expect(typeof instance.category).to.be('string');
-    });
+    it('should have the property category (base name: "category")', function () {
+      expect(typeof instance.category).to.be('string')
+    })
 
-    it('should have the property attachmentToken (base name: "attachment_token")', function() {
-      expect(typeof instance.attachment_token).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property attachmentToken (base name: "attachment_token")', function () {
+      expect(typeof instance.attachment_token).to.be('string')
+    })
+  })
+}))

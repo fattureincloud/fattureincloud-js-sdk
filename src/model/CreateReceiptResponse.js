@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Receipt from './Receipt';
+import Receipt from './Receipt'
 
 /**
  * The CreateReceiptResponse model module.
@@ -20,54 +19,45 @@ import Receipt from './Receipt';
  * @version 2.0.12
  */
 class CreateReceiptResponse {
-    /**
+  /**
      * Constructs a new <code>CreateReceiptResponse</code>.
-     * 
+     *
      * @alias module:model/CreateReceiptResponse
      */
-    constructor() { 
-        
-        CreateReceiptResponse.initialize(this);
-    }
+  constructor () {
+    CreateReceiptResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateReceiptResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateReceiptResponse} obj Optional instance to populate.
      * @return {module:model/CreateReceiptResponse} The populated <code>CreateReceiptResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateReceiptResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateReceiptResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Receipt.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Receipt.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Receipt} data
  */
-CreateReceiptResponse.prototype['data'] = undefined;
+CreateReceiptResponse.prototype.data = undefined
 
-
-
-
-
-
-export default CreateReceiptResponse;
-
+export default CreateReceiptResponse

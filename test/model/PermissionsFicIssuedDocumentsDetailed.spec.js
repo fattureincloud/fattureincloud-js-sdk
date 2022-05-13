@@ -11,97 +11,89 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.PermissionsFicIssuedDocumentsDetailed();
-    instance.quotes = "write";
-    instance.proformas = "write";
-    instance.invoices = "write";
-    instance.receipts = "write";
-    instance.delivery_notes = "write";
-    instance.credit_notes = "write";
-    instance.orders = "write";
-    instance.work_reports = "write";
-    instance.supplier_orders = "write";
-    instance.self_invoices = "write";    
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.PermissionsFicIssuedDocumentsDetailed()
+    instance.quotes = 'write'
+    instance.proformas = 'write'
+    instance.invoices = 'write'
+    instance.receipts = 'write'
+    instance.delivery_notes = 'write'
+    instance.credit_notes = 'write'
+    instance.orders = 'write'
+    instance.work_reports = 'write'
+    instance.supplier_orders = 'write'
+    instance.self_invoices = 'write'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('PermissionsFicIssuedDocumentsDetailed', function() {
-    it('should create an instance of PermissionsFicIssuedDocumentsDetailed', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.PermissionsFicIssuedDocumentsDetailed);
-    });
+  describe('PermissionsFicIssuedDocumentsDetailed', function () {
+    it('should create an instance of PermissionsFicIssuedDocumentsDetailed', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.PermissionsFicIssuedDocumentsDetailed)
+    })
 
-    it('should have the property quotes (base name: "quotes")', function() {
-      expect(typeof instance.quotes).to.be('string');
-    });
+    it('should have the property quotes (base name: "quotes")', function () {
+      expect(typeof instance.quotes).to.be('string')
+    })
 
-    it('should have the property proformas (base name: "proformas")', function() {
-      expect(typeof instance.proformas).to.be('string');
-    });
+    it('should have the property proformas (base name: "proformas")', function () {
+      expect(typeof instance.proformas).to.be('string')
+    })
 
-    it('should have the property invoices (base name: "invoices")', function() {
-      expect(typeof instance.invoices).to.be('string');
-    });
+    it('should have the property invoices (base name: "invoices")', function () {
+      expect(typeof instance.invoices).to.be('string')
+    })
 
-    it('should have the property receipts (base name: "receipts")', function() {
-      expect(typeof instance.receipts).to.be('string');
-    });
+    it('should have the property receipts (base name: "receipts")', function () {
+      expect(typeof instance.receipts).to.be('string')
+    })
 
-    it('should have the property deliveryNotes (base name: "delivery_notes")', function() {
-      expect(typeof instance.delivery_notes).to.be('string');
-    });
+    it('should have the property deliveryNotes (base name: "delivery_notes")', function () {
+      expect(typeof instance.delivery_notes).to.be('string')
+    })
 
-    it('should have the property creditNotes (base name: "credit_notes")', function() {
-      expect(typeof instance.credit_notes).to.be('string');
-    });
+    it('should have the property creditNotes (base name: "credit_notes")', function () {
+      expect(typeof instance.credit_notes).to.be('string')
+    })
 
-    it('should have the property orders (base name: "orders")', function() {
-      expect(typeof instance.orders).to.be('string');
-    });
+    it('should have the property orders (base name: "orders")', function () {
+      expect(typeof instance.orders).to.be('string')
+    })
 
-    it('should have the property workReports (base name: "work_reports")', function() {
-      expect(typeof instance.work_reports).to.be('string');
-    });
+    it('should have the property workReports (base name: "work_reports")', function () {
+      expect(typeof instance.work_reports).to.be('string')
+    })
 
-    it('should have the property supplierOrders (base name: "supplier_orders")', function() {
-      expect(typeof instance.supplier_orders).to.be('string');
-    });
+    it('should have the property supplierOrders (base name: "supplier_orders")', function () {
+      expect(typeof instance.supplier_orders).to.be('string')
+    })
 
-    it('should have the property selfInvoices (base name: "self_invoices")', function() {
-      expect(typeof instance.self_invoices).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property selfInvoices (base name: "self_invoices")', function () {
+      expect(typeof instance.self_invoices).to.be('string')
+    })
+  })
+}))

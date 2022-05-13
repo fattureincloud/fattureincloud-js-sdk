@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The EmailScheduleInclude model module.
@@ -19,81 +19,72 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class EmailScheduleInclude {
-    /**
+  /**
      * Constructs a new <code>EmailScheduleInclude</code>.
      * @alias module:model/EmailScheduleInclude
      */
-    constructor() { 
-        
-        EmailScheduleInclude.initialize(this);
-    }
+  constructor () {
+    EmailScheduleInclude.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>EmailScheduleInclude</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/EmailScheduleInclude} obj Optional instance to populate.
      * @return {module:model/EmailScheduleInclude} The populated <code>EmailScheduleInclude</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new EmailScheduleInclude();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new EmailScheduleInclude()
 
-            if (data.hasOwnProperty('document')) {
-                obj['document'] = ApiClient.convertToType(data['document'], 'Boolean');
-            }
-            if (data.hasOwnProperty('delivery_note')) {
-                obj['delivery_note'] = ApiClient.convertToType(data['delivery_note'], 'Boolean');
-            }
-            if (data.hasOwnProperty('attachment')) {
-                obj['attachment'] = ApiClient.convertToType(data['attachment'], 'Boolean');
-            }
-            if (data.hasOwnProperty('accompanying_invoice')) {
-                obj['accompanying_invoice'] = ApiClient.convertToType(data['accompanying_invoice'], 'Boolean');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('document')) {
+        obj.document = ApiClient.convertToType(data.document, 'Boolean')
+      }
+      if (data.hasOwnProperty('delivery_note')) {
+        obj.delivery_note = ApiClient.convertToType(data.delivery_note, 'Boolean')
+      }
+      if (data.hasOwnProperty('attachment')) {
+        obj.attachment = ApiClient.convertToType(data.attachment, 'Boolean')
+      }
+      if (data.hasOwnProperty('accompanying_invoice')) {
+        obj.accompanying_invoice = ApiClient.convertToType(data.accompanying_invoice, 'Boolean')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * If set to true, the email will have a button to view the document
  * @member {Boolean} document
  */
-EmailScheduleInclude.prototype['document'] = undefined;
+EmailScheduleInclude.prototype.document = undefined
 
 /**
  * If set to true, the email will have a button to view the delivery note
  * @member {Boolean} delivery_note
  */
-EmailScheduleInclude.prototype['delivery_note'] = undefined;
+EmailScheduleInclude.prototype.delivery_note = undefined
 
 /**
  * If set to true, the email will have a button to view the attachment
  * @member {Boolean} attachment
  */
-EmailScheduleInclude.prototype['attachment'] = undefined;
+EmailScheduleInclude.prototype.attachment = undefined
 
 /**
  * If set to true, the email will have a button to view the accompanying invoice
  * @member {Boolean} accompanying_invoice
  */
-EmailScheduleInclude.prototype['accompanying_invoice'] = undefined;
+EmailScheduleInclude.prototype.accompanying_invoice = undefined
 
-
-
-
-
-
-export default EmailScheduleInclude;
-
+export default EmailScheduleInclude

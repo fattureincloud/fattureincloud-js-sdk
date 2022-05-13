@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient'
 
 /**
  * The EmailDataDefaultSenderEmail model module.
@@ -19,64 +19,55 @@ import ApiClient from '../ApiClient';
  * @version 2.0.12
  */
 class EmailDataDefaultSenderEmail {
-    /**
+  /**
      * Constructs a new <code>EmailDataDefaultSenderEmail</code>.
      * Default sender email. (Other emails can be found in &#x60;sender_emails_list&#x60;)
      * @alias module:model/EmailDataDefaultSenderEmail
      */
-    constructor() { 
-        
-        EmailDataDefaultSenderEmail.initialize(this);
-    }
+  constructor () {
+    EmailDataDefaultSenderEmail.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>EmailDataDefaultSenderEmail</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/EmailDataDefaultSenderEmail} obj Optional instance to populate.
      * @return {module:model/EmailDataDefaultSenderEmail} The populated <code>EmailDataDefaultSenderEmail</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new EmailDataDefaultSenderEmail();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new EmailDataDefaultSenderEmail()
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('id')) {
+        obj.id = ApiClient.convertToType(data.id, 'Number')
+      }
+      if (data.hasOwnProperty('email')) {
+        obj.email = ApiClient.convertToType(data.email, 'String')
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * Id
  * @member {Number} id
  */
-EmailDataDefaultSenderEmail.prototype['id'] = undefined;
+EmailDataDefaultSenderEmail.prototype.id = undefined
 
 /**
  * Email address
  * @member {String} email
  */
-EmailDataDefaultSenderEmail.prototype['email'] = undefined;
+EmailDataDefaultSenderEmail.prototype.email = undefined
 
-
-
-
-
-
-export default EmailDataDefaultSenderEmail;
-
+export default EmailDataDefaultSenderEmail

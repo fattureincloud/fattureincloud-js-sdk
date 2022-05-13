@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ListF24ResponseAggregatedData from './ListF24ResponseAggregatedData';
+import ListF24ResponseAggregatedData from './ListF24ResponseAggregatedData'
 
 /**
  * The ListF24ResponseAggregation model module.
@@ -20,53 +19,44 @@ import ListF24ResponseAggregatedData from './ListF24ResponseAggregatedData';
  * @version 2.0.12
  */
 class ListF24ResponseAggregation {
-    /**
+  /**
      * Constructs a new <code>ListF24ResponseAggregation</code>.
      * @alias module:model/ListF24ResponseAggregation
      */
-    constructor() { 
-        
-        ListF24ResponseAggregation.initialize(this);
-    }
+  constructor () {
+    ListF24ResponseAggregation.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>ListF24ResponseAggregation</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/ListF24ResponseAggregation} obj Optional instance to populate.
      * @return {module:model/ListF24ResponseAggregation} The populated <code>ListF24ResponseAggregation</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ListF24ResponseAggregation();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new ListF24ResponseAggregation()
 
-            if (data.hasOwnProperty('aggregated_data')) {
-                obj['aggregated_data'] = ListF24ResponseAggregatedData.constructFromObject(data['aggregated_data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('aggregated_data')) {
+        obj.aggregated_data = ListF24ResponseAggregatedData.constructFromObject(data.aggregated_data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/ListF24ResponseAggregatedData} aggregated_data
  */
-ListF24ResponseAggregation.prototype['aggregated_data'] = undefined;
+ListF24ResponseAggregation.prototype.aggregated_data = undefined
 
-
-
-
-
-
-export default ListF24ResponseAggregation;
-
+export default ListF24ResponseAggregation

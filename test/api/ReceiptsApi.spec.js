@@ -11,149 +11,142 @@
  *
  */
 
- import CreateReceiptRequest from '../../src/model/CreateReceiptRequest';
- import CreateReceiptResponse from '../../src/model/CreateReceiptResponse';
- import GetReceiptPreCreateInfoResponse from '../../src/model/GetReceiptPreCreateInfoResponse';
- import GetReceiptResponse from '../../src/model/GetReceiptResponse';
- import GetReceiptsMonthlyTotalsResponse from '../../src/model/GetReceiptsMonthlyTotalsResponse';
- import ListReceiptsResponse from '../../src/model/ListReceiptsResponse';
- import ModifyReceiptRequest from '../../src/model/ModifyReceiptRequest';
- import ModifyReceiptResponse from '../../src/model/ModifyReceiptResponse';
+import CreateReceiptResponse from '../../src/model/CreateReceiptResponse'
+import GetReceiptPreCreateInfoResponse from '../../src/model/GetReceiptPreCreateInfoResponse'
+import GetReceiptResponse from '../../src/model/GetReceiptResponse'
+import GetReceiptsMonthlyTotalsResponse from '../../src/model/GetReceiptsMonthlyTotalsResponse'
+import ListReceiptsResponse from '../../src/model/ListReceiptsResponse'
+import ModifyReceiptResponse from '../../src/model/ModifyReceiptResponse';
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var sandbox = require("sinon").createSandbox();
+  const sandbox = require('sinon').createSandbox()
 
-  var instance = new fattureInCloudSdk.ReceiptsApi();
+  const instance = new fattureInCloudSdk.ReceiptsApi()
 
-  var createReceiptResponseObj = {"data":{"id":12346,"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","created_at":"2021-08-19 17:57:56","updated_at":"2021-08-19 17:57:56","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}};
-  var createReceiptStub = sandbox.stub(instance, "createReceipt").returns(createReceiptResponseObj);
+  const createReceiptResponseObj = { data: { id: 12346, date: '2021-08-19', number: 6, numeration: 'REC006', amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', created_at: '2021-08-19 17:57:56', updated_at: '2021-08-19 17:57:56', payment_account: { id: 555, name: 'contanti' }, items_list: [{ id: 888, amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }] } }
+  const createReceiptStub = sandbox.stub(instance, 'createReceipt').returns(createReceiptResponseObj)
 
-  var deleteReceiptResponseObj = {};
-  sandbox.stub(instance, "deleteReceipt").returns(deleteReceiptResponseObj);
+  const deleteReceiptResponseObj = {}
+  sandbox.stub(instance, 'deleteReceipt').returns(deleteReceiptResponseObj)
 
-  var getReceiptResponseObj = {"data":{"id":12346,"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","created_at":"2021-08-19 17:57:56","updated_at":"2021-08-19 17:57:56","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}};
-  sandbox.stub(instance, "getReceipt").returns(getReceiptResponseObj);
+  const getReceiptResponseObj = { data: { id: 12346, date: '2021-08-19', number: 6, numeration: 'REC006', amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', created_at: '2021-08-19 17:57:56', updated_at: '2021-08-19 17:57:56', payment_account: { id: 555, name: 'contanti' }, items_list: [{ id: 888, amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }] } }
+  sandbox.stub(instance, 'getReceipt').returns(getReceiptResponseObj)
 
-  var getReceiptPreCreateInfoResponseObj = {"data":{"numerations":{"2016":{"sales_receipt":{"REC003":12,"REC002":5,"REC001":2},"till_receipt":{"REC002":6,"REC001":2}},"2017":{"sales_receipt":{"REC003":14,"REC002":7,"REC001":1},"till_receipt":{"REC003":1,"REC001":3}},"2018":{"sales_receipt":{"REC001":3}},"2019":{"sales_receipt":{"REC002":105,"REC001":22},"till_receipt":{"REC003":21,"REC002":24,"REC001":25}},"2020":{"sales_receipt":{"REC001":3}},"2021":{"sales_receipt":{"REC005":3,"REC004":2,"REC003":2,"REC001":7}}},"numerations_list":["REC001","REC002","REC003","REC005","REC006"],"rc_centers_list":["Sede generale","Negozio Bergamo","Negozio Milano"],"payment_accounts_list":[{"id":111,"name":"Indesa - carta conto"},{"id":222,"name":"Contanti"},{"id":333,"name":"Bonifico Bancario"}],"categories_list":["altro","arredamento"],"vat_types_list":[{"id":1334,"value":0,"description":"Non imp. art. 17 c. 6 DPR 633\/72 e s.m.i.","is_disabled":false},{"id":1333,"value":0,"description":"Non sogg. art. 74 c. 7 e 8 DPR 633\/72","is_disabled":false},{"id":1332,"value":0,"description":"Non imp. art. 17 c. 6 lett. A TER DPR 633\/72","is_disabled":false},{"id":1331,"value":22,"description":"Pippus","is_disabled":false},{"id":1330,"value":0,"description":"Natura 4","is_disabled":false},{"id":1020,"value":0,"description":"PA Non imp art. 2","is_disabled":false},{"id":1018,"value":0,"description":"Aliq. 22% reverse charge","is_disabled":false},{"id":1015,"value":22,"description":"Speciale prova","is_disabled":false},{"id":1014,"value":0,"description":"Ai sensi dellarticolo 123","is_disabled":false},{"id":1013,"value":0,"description":"Non imponibile art. 8 lett. A DPR 633\/72","is_disabled":false},{"id":1010,"value":0,"description":"NON IMPONIBILE IVA EX ART. 8 COMMA 1 LETT.A","is_disabled":false},{"id":1009,"value":20,"description":"Aliquota 20%","is_disabled":false},{"id":1008,"value":0,"description":"Non imp. art. 41 D.L. 427\/93","is_disabled":false},{"id":1007,"value":0,"description":"Non imp. art. 71 DPR 633\/72","is_disabled":false},{"id":1006,"value":0,"description":"Escl. art. 15 DPR 633\/72","is_disabled":false},{"id":1004,"value":0,"description":"Non imp. art. 1 L. 244\/2007","is_disabled":false},{"id":1003,"value":0,"description":"Non imp. art. 8 DPR 633\/72","is_disabled":false},{"id":1002,"value":0,"description":"Omaggi art. 2 c. 2 n. 4 DPR 633\/72","is_disabled":false},{"id":1000,"value":0,"description":"art.26 COMMA\' 3 DPR 633\/72","is_disabled":false}]}};
-  sandbox.stub(instance, "getReceiptPreCreateInfo").returns(getReceiptPreCreateInfoResponseObj);
+  const getReceiptPreCreateInfoResponseObj = { data: { numerations: { 2016: { sales_receipt: { REC003: 12, REC002: 5, REC001: 2 }, till_receipt: { REC002: 6, REC001: 2 } }, 2017: { sales_receipt: { REC003: 14, REC002: 7, REC001: 1 }, till_receipt: { REC003: 1, REC001: 3 } }, 2018: { sales_receipt: { REC001: 3 } }, 2019: { sales_receipt: { REC002: 105, REC001: 22 }, till_receipt: { REC003: 21, REC002: 24, REC001: 25 } }, 2020: { sales_receipt: { REC001: 3 } }, 2021: { sales_receipt: { REC005: 3, REC004: 2, REC003: 2, REC001: 7 } } }, numerations_list: ['REC001', 'REC002', 'REC003', 'REC005', 'REC006'], rc_centers_list: ['Sede generale', 'Negozio Bergamo', 'Negozio Milano'], payment_accounts_list: [{ id: 111, name: 'Indesa - carta conto' }, { id: 222, name: 'Contanti' }, { id: 333, name: 'Bonifico Bancario' }], categories_list: ['altro', 'arredamento'], vat_types_list: [{ id: 1334, value: 0, description: 'Non imp. art. 17 c. 6 DPR 633/72 e s.m.i.', is_disabled: false }, { id: 1333, value: 0, description: 'Non sogg. art. 74 c. 7 e 8 DPR 633/72', is_disabled: false }, { id: 1332, value: 0, description: 'Non imp. art. 17 c. 6 lett. A TER DPR 633/72', is_disabled: false }, { id: 1331, value: 22, description: 'Pippus', is_disabled: false }, { id: 1330, value: 0, description: 'Natura 4', is_disabled: false }, { id: 1020, value: 0, description: 'PA Non imp art. 2', is_disabled: false }, { id: 1018, value: 0, description: 'Aliq. 22% reverse charge', is_disabled: false }, { id: 1015, value: 22, description: 'Speciale prova', is_disabled: false }, { id: 1014, value: 0, description: 'Ai sensi dellarticolo 123', is_disabled: false }, { id: 1013, value: 0, description: 'Non imponibile art. 8 lett. A DPR 633/72', is_disabled: false }, { id: 1010, value: 0, description: 'NON IMPONIBILE IVA EX ART. 8 COMMA 1 LETT.A', is_disabled: false }, { id: 1009, value: 20, description: 'Aliquota 20%', is_disabled: false }, { id: 1008, value: 0, description: 'Non imp. art. 41 D.L. 427/93', is_disabled: false }, { id: 1007, value: 0, description: 'Non imp. art. 71 DPR 633/72', is_disabled: false }, { id: 1006, value: 0, description: 'Escl. art. 15 DPR 633/72', is_disabled: false }, { id: 1004, value: 0, description: 'Non imp. art. 1 L. 244/2007', is_disabled: false }, { id: 1003, value: 0, description: 'Non imp. art. 8 DPR 633/72', is_disabled: false }, { id: 1002, value: 0, description: 'Omaggi art. 2 c. 2 n. 4 DPR 633/72', is_disabled: false }, { id: 1000, value: 0, description: "art.26 COMMA' 3 DPR 633/72", is_disabled: false }] } }
+  sandbox.stub(instance, 'getReceiptPreCreateInfo').returns(getReceiptPreCreateInfoResponseObj)
 
-  var getReceiptsMonthlyTotalsResponseObj = {"data":[{"net":15000,"gross":18000,"count":10},{"net":18000,"gross":22000,"count":20},{"net":20000,"gross":24400,"count":30},{"net":19000,"gross":22000,"count":20},{"net":17000,"gross":20000,"count":10},{"net":18000,"gross":24000,"count":21},{"net":22000,"gross":25000,"count":30},{"net":17000,"gross":21000,"count":21},{"net":0,"gross":0,"count":10},{"net":0,"gross":0,"count":20},{"net":0,"gross":0,"count":30},{"net":0,"gross":0,"count":21}]};
-  sandbox.stub(instance, "getReceiptsMonthlyTotals").returns(getReceiptsMonthlyTotalsResponseObj);
+  const getReceiptsMonthlyTotalsResponseObj = { data: [{ net: 15000, gross: 18000, count: 10 }, { net: 18000, gross: 22000, count: 20 }, { net: 20000, gross: 24400, count: 30 }, { net: 19000, gross: 22000, count: 20 }, { net: 17000, gross: 20000, count: 10 }, { net: 18000, gross: 24000, count: 21 }, { net: 22000, gross: 25000, count: 30 }, { net: 17000, gross: 21000, count: 21 }, { net: 0, gross: 0, count: 10 }, { net: 0, gross: 0, count: 20 }, { net: 0, gross: 0, count: 30 }, { net: 0, gross: 0, count: 21 }] }
+  sandbox.stub(instance, 'getReceiptsMonthlyTotals').returns(getReceiptsMonthlyTotalsResponseObj)
 
-  var listReceiptsResponseObj = {"current_page":1,"data":[{"id":12345,"date":"2021-08-20","number":5,"numeration":"REC005","amount_net":16.39,"amount_vat":3.61,"amount_gross":20,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","created_at":"2021-08-20 13:56:56","updated_at":"2021-08-20 13:56:56","payment_account":{"id":222,"name":"carta di credito"},"items_list":[{"id":666,"amount_net":10,"amount_vat":2.2,"amount_gross":12.2,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}},{"id":777,"amount_net":100,"amount_vat":4,"amount_gross":104,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]},{"id":12346,"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","created_at":"2021-08-19 17:57:56","updated_at":"2021-08-19 17:57:56","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}],"first_page_url":"page=1","from":1,"last_page":4,"last_page_url":"page=4","next_page_url":"page=2","path":"receipts","per_page":50,"prev_page_url":null,"to":50,"total":65};
-  sandbox.stub(instance, "listReceipts").returns(listReceiptsResponseObj);
+  const listReceiptsResponseObj = { current_page: 1, data: [{ id: 12345, date: '2021-08-20', number: 5, numeration: 'REC005', amount_net: 16.39, amount_vat: 3.61, amount_gross: 20, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', created_at: '2021-08-20 13:56:56', updated_at: '2021-08-20 13:56:56', payment_account: { id: 222, name: 'carta di credito' }, items_list: [{ id: 666, amount_net: 10, amount_vat: 2.2, amount_gross: 12.2, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }, { id: 777, amount_net: 100, amount_vat: 4, amount_gross: 104, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }] }, { id: 12346, date: '2021-08-19', number: 6, numeration: 'REC006', amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', created_at: '2021-08-19 17:57:56', updated_at: '2021-08-19 17:57:56', payment_account: { id: 555, name: 'contanti' }, items_list: [{ id: 888, amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }] }], first_page_url: 'page=1', from: 1, last_page: 4, last_page_url: 'page=4', next_page_url: 'page=2', path: 'receipts', per_page: 50, prev_page_url: null, to: 50, total: 65 }
+  sandbox.stub(instance, 'listReceipts').returns(listReceiptsResponseObj)
 
-  var modifyReceiptResponseObj = {"data":{"id":12346,"date":"2021-08-19","number":6,"numeration":"REC006","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","created_at":"2021-08-19 17:57:56","updated_at":"2021-08-19 17:57:56","payment_account":{"id":555,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":0,"value":22,"description":"iva"}}]}};
-  var modifyReceiptStub = sandbox.stub(instance, "modifyReceipt").returns(modifyReceiptResponseObj);
+  const modifyReceiptResponseObj = { data: { id: 12346, date: '2021-08-19', number: 6, numeration: 'REC006', amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', created_at: '2021-08-19 17:57:56', updated_at: '2021-08-19 17:57:56', payment_account: { id: 555, name: 'contanti' }, items_list: [{ id: 888, amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, category: 'altro', vat: { id: 0, value: 22, description: 'iva' } }] } }
+  const modifyReceiptStub = sandbox.stub(instance, 'modifyReceipt').returns(modifyReceiptResponseObj)
 
-  beforeEach(function() {
+  beforeEach(function () {
 
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ReceiptsApi', function() {
-    describe('createReceipt', function() {
-      it('should call createReceipt successfully', function(done) {
-        var opts = { "createReceiptRequest":
-          {"data":{"date":"2021-08-19","number":6,"numeration":"rreccc","amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"use_gross_prices":true,"type":"sales_receipt","description":"cassa 1","rc_center":"","payment_account":{"id":21,"name":"contanti"},"items_list":[{"id":888,"amount_net":8.2,"amount_vat":1.8,"amount_gross":10,"category":"altro","vat":{"id":1409,"value":22,"description":"iva"}}]}}
-        };
-        var response = instance.createReceipt(2, opts);
-        var responseObj = Object.assign(new CreateReceiptResponse(), response);
-        var expectedJson = JSON.stringify(createReceiptResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        expect(createReceiptStub.getCall(0).args[1]).to.equal(opts);
-        done();
-      });
-    });
-    describe('deleteReceipt', function() {
-      it('should call deleteReceipt successfully', function(done) {
-        expect(1).to.equal(1);
-        done();
-      });
-    });
-    describe('getReceipt', function() {
-      it('should call getReceipt successfully', function(done) {
-        var response = instance.getReceipt();
-        var responseObj = Object.assign(new GetReceiptResponse(), response);
-        var expectedJson = JSON.stringify(getReceiptResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        done();
-      });
-    });
-    describe('getReceiptPreCreateInfo', function() {
-      it('should call getReceiptPreCreateInfo successfully', function(done) {
-        var response = instance.getReceiptPreCreateInfo();
-        var responseObj = Object.assign(new GetReceiptPreCreateInfoResponse(), response);
-        var expectedJson = JSON.stringify(getReceiptPreCreateInfoResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        done();
-      });
-    });
-    describe('getReceiptsMonthlyTotals', function() {
-      it('should call getReceiptsMonthlyTotals successfully', function(done) {
-        var response = instance.getReceiptsMonthlyTotals();
-        var responseObj = Object.assign(new GetReceiptsMonthlyTotalsResponse(), response);
-        var expectedJson = JSON.stringify(getReceiptsMonthlyTotalsResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        done();
-      });
-    });
-    describe('listReceipts', function() {
-      it('should call listReceipts successfully', function(done) {
-        var response = instance.listReceipts();
-        var responseObj = Object.assign(new ListReceiptsResponse(), response);
-        var expectedJson = JSON.stringify(listReceiptsResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        done();
-      });
-    });
-    describe('modifyReceipt', function() {
-      it('should call modifyReceipt successfully', function(done) {
-        var opts = { "modifyIssuedDocumentRequest":
-          {"data":{"subject":"ssss"}}
-        };
-        var response = instance.modifyReceipt(2, 12345, opts);
-        var responseObj = Object.assign(new ModifyReceiptResponse(), response);
-        var expectedJson = JSON.stringify(modifyReceiptResponseObj);
-        var actualJson = JSON.stringify(responseObj);
-        expect(actualJson).to.equal(expectedJson);
-        expect(modifyReceiptStub.getCall(0).args[2]).to.equal(opts);
-        done();
-      });
-    });
-  });
-
-}));
+  describe('ReceiptsApi', function () {
+    describe('createReceipt', function () {
+      it('should call createReceipt successfully', function (done) {
+        const opts = {
+          createReceiptRequest:
+          { data: { date: '2021-08-19', number: 6, numeration: 'rreccc', amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, use_gross_prices: true, type: 'sales_receipt', description: 'cassa 1', rc_center: '', payment_account: { id: 21, name: 'contanti' }, items_list: [{ id: 888, amount_net: 8.2, amount_vat: 1.8, amount_gross: 10, category: 'altro', vat: { id: 1409, value: 22, description: 'iva' } }] } }
+        }
+        const response = instance.createReceipt(2, opts)
+        const responseObj = Object.assign(new CreateReceiptResponse(), response)
+        const expectedJson = JSON.stringify(createReceiptResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        expect(createReceiptStub.getCall(0).args[1]).to.equal(opts)
+        done()
+      })
+    })
+    describe('deleteReceipt', function () {
+      it('should call deleteReceipt successfully', function (done) {
+        expect(1).to.equal(1)
+        done()
+      })
+    })
+    describe('getReceipt', function () {
+      it('should call getReceipt successfully', function (done) {
+        const response = instance.getReceipt()
+        const responseObj = Object.assign(new GetReceiptResponse(), response)
+        const expectedJson = JSON.stringify(getReceiptResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        done()
+      })
+    })
+    describe('getReceiptPreCreateInfo', function () {
+      it('should call getReceiptPreCreateInfo successfully', function (done) {
+        const response = instance.getReceiptPreCreateInfo()
+        const responseObj = Object.assign(new GetReceiptPreCreateInfoResponse(), response)
+        const expectedJson = JSON.stringify(getReceiptPreCreateInfoResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        done()
+      })
+    })
+    describe('getReceiptsMonthlyTotals', function () {
+      it('should call getReceiptsMonthlyTotals successfully', function (done) {
+        const response = instance.getReceiptsMonthlyTotals()
+        const responseObj = Object.assign(new GetReceiptsMonthlyTotalsResponse(), response)
+        const expectedJson = JSON.stringify(getReceiptsMonthlyTotalsResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        done()
+      })
+    })
+    describe('listReceipts', function () {
+      it('should call listReceipts successfully', function (done) {
+        const response = instance.listReceipts()
+        const responseObj = Object.assign(new ListReceiptsResponse(), response)
+        const expectedJson = JSON.stringify(listReceiptsResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        done()
+      })
+    })
+    describe('modifyReceipt', function () {
+      it('should call modifyReceipt successfully', function (done) {
+        const opts = {
+          modifyIssuedDocumentRequest:
+          { data: { subject: 'ssss' } }
+        }
+        const response = instance.modifyReceipt(2, 12345, opts)
+        const responseObj = Object.assign(new ModifyReceiptResponse(), response)
+        const expectedJson = JSON.stringify(modifyReceiptResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
+        expect(modifyReceiptStub.getCall(0).args[2]).to.equal(opts)
+        done()
+      })
+    })
+  })
+}))

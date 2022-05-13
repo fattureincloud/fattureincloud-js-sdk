@@ -11,43 +11,36 @@
  *
  */
 
-import ApiClient from '../ApiClient';
 /**
 * Enum class ShowTotalsMode.
 * @enum {}
 * @readonly
 */
 export default class ShowTotalsMode {
-    
-        /**
+  /**
          * value: "none"
          * @const
          */
-        "none" = "none";
+  'none' = 'none'
 
-    
-        /**
+  /**
          * value: "nets"
          * @const
          */
-        "nets" = "nets";
+  'nets' = 'nets'
 
-    
-        /**
+  /**
          * value: "all"
          * @const
          */
-        "all" = "all";
+  'all' = 'all'
 
-    
-
-    /**
+  /**
     * Returns a <code>ShowTotalsMode</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
     * @return {module:model/ShowTotalsMode} The enum <code>ShowTotalsMode</code> value.
     */
-    static constructFromObject(object) {
-        return object;
-    }
+  static constructFromObject (object) {
+    return object
+  }
 }
-

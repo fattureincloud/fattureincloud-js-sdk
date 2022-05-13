@@ -11,118 +11,110 @@
  *
  */
 
- (function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.CreateIssuedDocumentRequest();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.CreateIssuedDocumentRequest()
     instance.data = {
-      type : "invoice",
-      numeration : "rec123",
-      subject : "",
-      visible_subject : "",
-      amount_net : 68.18,
-      amount_vat : 6.82,
-      amount_gross : 75,
-      amount_due_discount : 0,
-      entity : {
-        id : 54321,
-        name : "Mary Red S.r.L.",
-        vat_number : "IT05432181211",
-        tax_code : "IT05432181211",
-        address_street : "Corso impero, 66",
-        address_postal_code : "20900",
-        address_city : "Milano",
-        address_province : "MI",
-        address_extra : "",
-        country : "Italia",
-        certified_email : "mary@pec.red.com",
-        ei_code : "ABCXCR1"
+      type: 'invoice',
+      numeration: 'rec123',
+      subject: '',
+      visible_subject: '',
+      amount_net: 68.18,
+      amount_vat: 6.82,
+      amount_gross: 75,
+      amount_due_discount: 0,
+      entity: {
+        id: 54321,
+        name: 'Mary Red S.r.L.',
+        vat_number: 'IT05432181211',
+        tax_code: 'IT05432181211',
+        address_street: 'Corso impero, 66',
+        address_postal_code: '20900',
+        address_city: 'Milano',
+        address_province: 'MI',
+        address_extra: '',
+        country: 'Italia',
+        certified_email: 'mary@pec.red.com',
+        ei_code: 'ABCXCR1'
       },
-      date : "2021-08-20",
-      number : 1,
-      next_due_date : "2021-12-31",
-      attachment_token : "ypbqqe4u8w8bdabcd5fd5b1a",
-      items_list : [
+      date: '2021-08-20',
+      number: 1,
+      next_due_date: '2021-12-31',
+      attachment_token: 'ypbqqe4u8w8bdabcd5fd5b1a',
+      items_list: [
         {
-          product_id : 333,
-          code : "SG3",
-          name : "Soggiorno",
-          measure : "",
-          net_price : 68.18182,
-          category : "",
-          id : 277875565,
-          gross_price : 75,
-          apply_withholding_taxes : true,
-          discount : 0,
-          discount_highlight : false,
-          in_dn : false,
-          qty : 1,
-          vat : {
-            id : 3,
-            value : 10,
-            description : ""
+          product_id: 333,
+          code: 'SG3',
+          name: 'Soggiorno',
+          measure: '',
+          net_price: 68.18182,
+          category: '',
+          id: 277875565,
+          gross_price: 75,
+          apply_withholding_taxes: true,
+          discount: 0,
+          discount_highlight: false,
+          in_dn: false,
+          qty: 1,
+          vat: {
+            id: 3,
+            value: 10,
+            description: ''
           },
-          stock : true,
-          description : "",
-          not_taxable : false
+          stock: true,
+          description: '',
+          not_taxable: false
         }
       ],
-      payments_list : [
+      payments_list: [
         {
-          amount : 75,
-          due_date : "2020-08-23",
-          paid_date : null,
-          id : 444,
-          payment_terms : {
-            days : 0,
-            type : "standard"
+          amount: 75,
+          due_date: '2020-08-23',
+          paid_date: null,
+          id: 444,
+          payment_terms: {
+            days: 0,
+            type: 'standard'
           },
-          status : "not_paid",
-          payment_account : null
+          status: 'not_paid',
+          payment_account: null
         }
       ]
     }
-  });
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('CreateIssuedDocumentRequest', function() {
-    it('should create an instance of CreateIssuedDocumentRequest', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.CreateIssuedDocumentRequest);
-    });
+  describe('CreateIssuedDocumentRequest', function () {
+    it('should create an instance of CreateIssuedDocumentRequest', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.CreateIssuedDocumentRequest)
+    })
 
-    it('should have the property data (base name: "data")', function() {
-      expect(typeof instance.data).to.be('object');
-    });
-
-  });
-
-}));
+    it('should have the property data (base name: "data")', function () {
+      expect(typeof instance.data).to.be('object')
+    })
+  })
+}))

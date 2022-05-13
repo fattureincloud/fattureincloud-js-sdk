@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Product from './Product';
+import Product from './Product'
 
 /**
  * The CreateProductRequest model module.
@@ -20,53 +19,44 @@ import Product from './Product';
  * @version 2.0.12
  */
 class CreateProductRequest {
-    /**
+  /**
      * Constructs a new <code>CreateProductRequest</code>.
      * @alias module:model/CreateProductRequest
      */
-    constructor() { 
-        
-        CreateProductRequest.initialize(this);
-    }
+  constructor () {
+    CreateProductRequest.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateProductRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateProductRequest} obj Optional instance to populate.
      * @return {module:model/CreateProductRequest} The populated <code>CreateProductRequest</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateProductRequest();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateProductRequest()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Product.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Product.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Product} data
  */
-CreateProductRequest.prototype['data'] = undefined;
+CreateProductRequest.prototype.data = undefined
 
-
-
-
-
-
-export default CreateProductRequest;
-
+export default CreateProductRequest

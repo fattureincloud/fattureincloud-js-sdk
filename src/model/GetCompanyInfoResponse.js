@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CompanyInfo from './CompanyInfo';
+import CompanyInfo from './CompanyInfo'
 
 /**
  * The GetCompanyInfoResponse model module.
@@ -20,54 +19,45 @@ import CompanyInfo from './CompanyInfo';
  * @version 2.0.12
  */
 class GetCompanyInfoResponse {
-    /**
+  /**
      * Constructs a new <code>GetCompanyInfoResponse</code>.
-     * 
+     *
      * @alias module:model/GetCompanyInfoResponse
      */
-    constructor() { 
-        
-        GetCompanyInfoResponse.initialize(this);
-    }
+  constructor () {
+    GetCompanyInfoResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>GetCompanyInfoResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/GetCompanyInfoResponse} obj Optional instance to populate.
      * @return {module:model/GetCompanyInfoResponse} The populated <code>GetCompanyInfoResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new GetCompanyInfoResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new GetCompanyInfoResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = CompanyInfo.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = CompanyInfo.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/CompanyInfo} data
  */
-GetCompanyInfoResponse.prototype['data'] = undefined;
+GetCompanyInfoResponse.prototype.data = undefined
 
-
-
-
-
-
-export default GetCompanyInfoResponse;
-
+export default GetCompanyInfoResponse

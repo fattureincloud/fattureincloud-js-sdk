@@ -11,78 +11,70 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.ControlledCompany();
-    instance.id = 12345;
-    instance.name = "Studio Commercialista";
-    instance.tax_code = "ABCSFN94T17A794K";
-    instance.type = "accountant";
-    instance.access_token = "4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95";
-    instance.connection_id = 94566;
-    instance.access_token = "ergaegwergq53wh65je5j";
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.ControlledCompany()
+    instance.id = 12345
+    instance.name = 'Studio Commercialista'
+    instance.tax_code = 'ABCSFN94T17A794K'
+    instance.type = 'accountant'
+    instance.access_token = '4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95'
+    instance.connection_id = 94566
+    instance.access_token = 'ergaegwergq53wh65je5j'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('ControlledCompany', function() {
-    it('should create an instance of ControlledCompany', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.ControlledCompany);
-    });
+  describe('ControlledCompany', function () {
+    it('should create an instance of ControlledCompany', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.ControlledCompany)
+    })
 
-    it('should have the property id (base name: "id")', function() {
-      expect(typeof instance.id).to.be('number');
-    });
+    it('should have the property id (base name: "id")', function () {
+      expect(typeof instance.id).to.be('number')
+    })
 
-    it('should have the property name (base name: "name")', function() {
-      expect(typeof instance.name).to.be('string');
-    });
+    it('should have the property name (base name: "name")', function () {
+      expect(typeof instance.name).to.be('string')
+    })
 
-    it('should have the property type (base name: "type")', function() {
-      expect(typeof instance.type).to.be('string');
-    });
+    it('should have the property type (base name: "type")', function () {
+      expect(typeof instance.type).to.be('string')
+    })
 
-    it('should have the property accessToken (base name: "access_token")', function() {
-      expect(typeof instance.access_token).to.be('string');
-    });
+    it('should have the property accessToken (base name: "access_token")', function () {
+      expect(typeof instance.access_token).to.be('string')
+    })
 
-    it('should have the property connectionId (base name: "connection_id")', function() {
-      expect(typeof instance.connection_id).to.be('number');
-    });
+    it('should have the property connectionId (base name: "connection_id")', function () {
+      expect(typeof instance.connection_id).to.be('number')
+    })
 
-    it('should have the property taxCode (base name: "tax_code")', function() {
-      expect(typeof instance.tax_code).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property taxCode (base name: "tax_code")', function () {
+      expect(typeof instance.tax_code).to.be('string')
+    })
+  })
+}))

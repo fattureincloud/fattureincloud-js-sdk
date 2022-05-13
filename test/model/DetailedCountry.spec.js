@@ -11,72 +11,64 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
-  'use strict';
+}(this, function (expect, fattureInCloudSdk) {
+  'use strict'
 
-  var instance;
+  let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.DetailedCountry();
-    instance.name = "Italia";
-    instance.settings_name = "Italia";
-    instance.iso = "IT";
-    instance.fiscal_iso = "IT";
-    instance.uic = "086";
-  });
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.DetailedCountry()
+    instance.name = 'Italia'
+    instance.settings_name = 'Italia'
+    instance.iso = 'IT'
+    instance.fiscal_iso = 'IT'
+    instance.uic = '086'
+  })
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
-  describe('DetailedCountry', function() {
-    it('should create an instance of DetailedCountry', function() {
-      expect(instance).to.be.a(fattureInCloudSdk.DetailedCountry);
-    });
+  describe('DetailedCountry', function () {
+    it('should create an instance of DetailedCountry', function () {
+      expect(instance).to.be.a(fattureInCloudSdk.DetailedCountry)
+    })
 
-    it('should have the property name (base name: "name")', function() {
-      expect(typeof instance.name).to.be('string');
-    });
+    it('should have the property name (base name: "name")', function () {
+      expect(typeof instance.name).to.be('string')
+    })
 
-    it('should have the property settingsName (base name: "settings_name")', function() {
-      expect(typeof instance.settings_name).to.be('string');
-    });
+    it('should have the property settingsName (base name: "settings_name")', function () {
+      expect(typeof instance.settings_name).to.be('string')
+    })
 
-    it('should have the property iso (base name: "iso")', function() {
-      expect(typeof instance.iso).to.be('string');
-    });
+    it('should have the property iso (base name: "iso")', function () {
+      expect(typeof instance.iso).to.be('string')
+    })
 
-    it('should have the property fiscalIso (base name: "fiscal_iso")', function() {
-      expect(typeof instance.fiscal_iso).to.be('string');
-    });
+    it('should have the property fiscalIso (base name: "fiscal_iso")', function () {
+      expect(typeof instance.fiscal_iso).to.be('string')
+    })
 
-    it('should have the property uic (base name: "uic")', function() {
-      expect(typeof instance.uic).to.be('string');
-    });
-
-  });
-
-}));
+    it('should have the property uic (base name: "uic")', function () {
+      expect(typeof instance.uic).to.be('string')
+    })
+  })
+}))

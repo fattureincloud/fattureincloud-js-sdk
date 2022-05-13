@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Product from './Product';
+import Product from './Product'
 
 /**
  * The CreateProductResponse model module.
@@ -20,53 +19,44 @@ import Product from './Product';
  * @version 2.0.12
  */
 class CreateProductResponse {
-    /**
+  /**
      * Constructs a new <code>CreateProductResponse</code>.
      * @alias module:model/CreateProductResponse
      */
-    constructor() { 
-        
-        CreateProductResponse.initialize(this);
-    }
+  constructor () {
+    CreateProductResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateProductResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateProductResponse} obj Optional instance to populate.
      * @return {module:model/CreateProductResponse} The populated <code>CreateProductResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateProductResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateProductResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Product.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = Product.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/Product} data
  */
-CreateProductResponse.prototype['data'] = undefined;
+CreateProductResponse.prototype.data = undefined
 
-
-
-
-
-
-export default CreateProductResponse;
-
+export default CreateProductResponse

@@ -11,8 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import IssuedDocument from './IssuedDocument';
+import IssuedDocument from './IssuedDocument'
 
 /**
  * The CreateIssuedDocumentResponse model module.
@@ -20,53 +19,44 @@ import IssuedDocument from './IssuedDocument';
  * @version 2.0.12
  */
 class CreateIssuedDocumentResponse {
-    /**
+  /**
      * Constructs a new <code>CreateIssuedDocumentResponse</code>.
      * @alias module:model/CreateIssuedDocumentResponse
      */
-    constructor() { 
-        
-        CreateIssuedDocumentResponse.initialize(this);
-    }
+  constructor () {
+    CreateIssuedDocumentResponse.initialize(this)
+  }
 
-    /**
+  /**
      * Initializes the fields of this object.
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
-    }
+  static initialize (obj) {
+  }
 
-    /**
+  /**
      * Constructs a <code>CreateIssuedDocumentResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
      * @param {module:model/CreateIssuedDocumentResponse} obj Optional instance to populate.
      * @return {module:model/CreateIssuedDocumentResponse} The populated <code>CreateIssuedDocumentResponse</code> instance.
      */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new CreateIssuedDocumentResponse();
+  static constructFromObject (data, obj) {
+    if (data) {
+      obj = obj || new CreateIssuedDocumentResponse()
 
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = IssuedDocument.constructFromObject(data['data']);
-            }
-        }
-        return obj;
+      if (data.hasOwnProperty('data')) {
+        obj.data = IssuedDocument.constructFromObject(data.data)
+      }
     }
-
-
+    return obj
+  }
 }
 
 /**
  * @member {module:model/IssuedDocument} data
  */
-CreateIssuedDocumentResponse.prototype['data'] = undefined;
+CreateIssuedDocumentResponse.prototype.data = undefined
 
-
-
-
-
-
-export default CreateIssuedDocumentResponse;
-
+export default CreateIssuedDocumentResponse
