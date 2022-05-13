@@ -1,6 +1,6 @@
 {
   "name": "@fattureincloud/fattureincloud-js-sdk",
-  "version": "2.0.12",
+  "version": "5.0.0",
   "description": "JavaScript SDK for the Fatture in Cloud API",
   "license": "MIT",
   "main": "dist/index.js",
@@ -37,14 +37,16 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "eslint": "^8.14.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "expect.js": "^0.3.1",
     "mocha": "^8.0.1",
+    "sinon": "^7.2.0",
     "nyc": "^15.1.0",
-    "sinon": "^7.2.0"
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0"
   },
   "files": [
     "dist"
