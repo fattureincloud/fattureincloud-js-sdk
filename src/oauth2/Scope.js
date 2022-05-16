@@ -1,6 +1,6 @@
 /**
  * The Scope oauth module.
- * @module oauth2/Scope
+ * @module oauth/Scope
  */
 export default class Scope {
   /**
@@ -124,13 +124,13 @@ export default class Scope {
   static ISSUED_DOCUMENTS_DELIVERY_NOTES_ALL = 'issued_documents.delivery_notes:a'
 
   /**
-     * Read permission to the issued Received Documents
+     * Read permission to the Received Documents
      * @member {String} RECEIVED_DOCUMENTS_READ
      */
   static RECEIVED_DOCUMENTS_READ = 'received_documents:r'
 
   /**
-     * Write permission to the issued Received Documents
+     * Write permission to the Received Documents
      * @member {String} RECEIVED_DOCUMENTS_ALL
      */
   static RECEIVED_DOCUMENTS_ALL = 'received_documents:a'
