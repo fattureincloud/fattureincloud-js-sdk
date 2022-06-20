@@ -21,4 +21,8 @@
 
 * `supplier_order` (value: `"supplier_order"`)
 
+* `self_own_invoice` (value: `"self_own_invoice"`)
+
+* `self_supplier_invoice` (value: `"self_supplier_invoice"`)
+
 
