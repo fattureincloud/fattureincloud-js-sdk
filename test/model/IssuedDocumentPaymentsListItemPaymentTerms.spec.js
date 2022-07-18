@@ -43,7 +43,7 @@
   //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
   // }
 
-  describe('IssuedDocumentEiData', function () {
+  describe('IssuedDocumentPaymentsListItemPaymentTerms', function () {
     it('should create an instance of IssuedDocumentPaymentsListItemPaymentTerms', function () {
       expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentPaymentsListItemPaymentTerms)
     })
