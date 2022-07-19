@@ -98,6 +98,7 @@ docs/IssuedDocumentExtraData.md
 docs/IssuedDocumentItemsListItem.md
 docs/IssuedDocumentOptions.md
 docs/IssuedDocumentPaymentsListItem.md
+docs/IssuedDocumentPaymentsListItemPaymentTerms.md
 docs/IssuedDocumentPreCreateInfo.md
 docs/IssuedDocumentPreCreateInfoDefaultValues.md
 docs/IssuedDocumentPreCreateInfoExtraDataDefaultValues.md
@@ -335,6 +336,7 @@ src/model/IssuedDocumentExtraData.js
 src/model/IssuedDocumentItemsListItem.js
 src/model/IssuedDocumentOptions.js
 src/model/IssuedDocumentPaymentsListItem.js
+src/model/IssuedDocumentPaymentsListItemPaymentTerms.js
 src/model/IssuedDocumentPreCreateInfo.js
 src/model/IssuedDocumentPreCreateInfoDefaultValues.js
 src/model/IssuedDocumentPreCreateInfoExtraDataDefaultValues.js

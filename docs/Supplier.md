@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **phone** | **String** | Supplier phone. | [optional] 
 **fax** | **String** | Supplier fax. | [optional] 
 **notes** | **String** | Supplier extra notes. | [optional] 
+**bankIban** | **String** | Supplier bank IBAN. | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 
