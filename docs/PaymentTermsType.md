@@ -1,4 +1,4 @@
-# fattureInCloudSdk.DefaultPaymentTermsType
+# fattureInCloudSdk.PaymentTermsType
 
 ## Enum
 

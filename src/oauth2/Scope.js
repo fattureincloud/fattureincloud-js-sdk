@@ -82,6 +82,24 @@ export default class Scope {
   static ISSUED_DOCUMENTS_DELIVERY_NOTES_READ = 'issued_documents.delivery_notes:r'
 
   /**
+     * Read permission to the issued Work Reports
+     * @member {String} ISSUED_DOCUMENTS_WORK_REPORTS_READ
+     */
+  static ISSUED_DOCUMENTS_WORK_REPORTS_READ = 'issued_documents.work_reports:r'
+
+  /**
+     * Read permission to the issued Supplier Orders
+     * @member {String} ISSUED_DOCUMENTS_SUPPLIER_ORDERS_READ
+     */
+  static ISSUED_DOCUMENTS_SUPPLIER_ORDERS_READ = 'issued_documents.supplier_orders:r'
+
+  /**
+     * Read permission to the issued Self Invoices
+     * @member {String} ISSUED_DOCUMENTS_SELF_INVOICES_READ
+     */
+  static ISSUED_DOCUMENTS_SELF_INVOICES_READ = 'issued_documents.self_invoices:r'
+
+  /**
      * Write permission to the issued Invoices
      * @member {String} ISSUED_DOCUMENTS_INVOICES_ALL
      */
@@ -122,6 +140,24 @@ export default class Scope {
      * @member {String} ISSUED_DOCUMENTS_DELIVERY_NOTES_ALL
      */
   static ISSUED_DOCUMENTS_DELIVERY_NOTES_ALL = 'issued_documents.delivery_notes:a'
+
+  /**
+     * Write permission to the issued Work Reports
+     * @member {String} ISSUED_DOCUMENTS_WORK_REPORTS_ALL
+     */
+  static ISSUED_DOCUMENTS_WORK_REPORTS_ALL = 'issued_documents.work_reports:a'
+
+  /**
+     * Write permission to the issued Supplier Orders
+     * @member {String} ISSUED_DOCUMENTS_SUPPLIER_ORDERS_ALL
+     */
+  static ISSUED_DOCUMENTS_SUPPLIER_ORDERS_ALL = 'issued_documents.supplier_orders:a'
+
+  /**
+     * Write permission to the issued Self Invoices
+     * @member {String} ISSUED_DOCUMENTS_SELF_INVOICES_ALL
+     */
+  static ISSUED_DOCUMENTS_SELF_INVOICES_ALL = 'issued_documents.self_invoices:a'
 
   /**
      * Read permission to the Received Documents

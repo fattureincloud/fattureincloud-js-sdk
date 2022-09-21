@@ -48,7 +48,6 @@ docs/CreateSupplierResponse.md
 docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
 docs/Currency.md
-docs/DefaultPaymentTermsType.md
 docs/DetailedCountry.md
 docs/DocumentTemplate.md
 docs/EInvoiceRejectionReason.md
@@ -178,6 +177,7 @@ docs/PaymentAccountType.md
 docs/PaymentMethod.md
 docs/PaymentMethodDetails.md
 docs/PaymentMethodType.md
+docs/PaymentTermsType.md
 docs/PermissionLevel.md
 docs/Permissions.md
 docs/PermissionsFicIssuedDocumentsDetailed.md
@@ -287,7 +287,6 @@ src/model/CreateSupplierResponse.js
 src/model/CreateVatTypeRequest.js
 src/model/CreateVatTypeResponse.js
 src/model/Currency.js
-src/model/DefaultPaymentTermsType.js
 src/model/DetailedCountry.js
 src/model/DocumentTemplate.js
 src/model/EInvoiceRejectionReason.js
@@ -414,6 +413,7 @@ src/model/PaymentAccountType.js
 src/model/PaymentMethod.js
 src/model/PaymentMethodDetails.js
 src/model/PaymentMethodType.js
+src/model/PaymentTermsType.js
 src/model/PermissionLevel.js
 src/model/Permissions.js
 src/model/PermissionsFicIssuedDocumentsDetailed.js
@@ -455,3 +455,4 @@ src/model/VerifyEInvoiceXmlErrorResponseError.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
+test/model/PaymentTermsType.spec.js
