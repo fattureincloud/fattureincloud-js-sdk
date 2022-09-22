@@ -42,8 +42,8 @@
   //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
   // }
 
-  describe('DefaultPaymentTermsType', function () {
-    it('should create an instance of DefaultPaymentTermsType', function () {
+  describe('PaymentTermsType', function () {
+    it('should create an instance of PaymentTermsType', function () {
       expect(instance.default_payment_terms_type).to.be.a('string')
     })
   })
