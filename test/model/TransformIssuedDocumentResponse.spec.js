@@ -56,7 +56,7 @@
     })
 
     it('should have the property options (base name: "options")', function () {
-      expect(typeof instance.data).to.be('object');
+      expect(typeof instance.options).to.be('object');
     })
   })
 }))
