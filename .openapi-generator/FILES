@@ -51,10 +51,15 @@ docs/Currency.md
 docs/DetailedCountry.md
 docs/DocumentTemplate.md
 docs/EInvoiceRejectionReason.md
+docs/Email.md
+docs/EmailAttachment.md
 docs/EmailData.md
 docs/EmailDataDefaultSenderEmail.md
+docs/EmailRecipientStatus.md
 docs/EmailSchedule.md
 docs/EmailScheduleInclude.md
+docs/EmailStatus.md
+docs/EmailsApi.md
 docs/Entity.md
 docs/EntityType.md
 docs/F24.md
@@ -107,6 +112,7 @@ docs/IssuedDocumentTotals.md
 docs/IssuedDocumentType.md
 docs/IssuedDocumentsApi.md
 docs/IssuedEInvoicesApi.md
+docs/JoinIssuedDocumentsResponse.md
 docs/Language.md
 docs/ListArchiveCategoriesResponse.md
 docs/ListArchiveDocumentsResponse.md
@@ -120,6 +126,8 @@ docs/ListCountriesResponse.md
 docs/ListCurrenciesResponse.md
 docs/ListDeliveryNotesDefaultCausalsResponse.md
 docs/ListDetailedCountriesResponse.md
+docs/ListEmailsResponse.md
+docs/ListEmailsResponsePage.md
 docs/ListF24Response.md
 docs/ListF24ResponseAggregatedData.md
 docs/ListF24ResponseAggregation.md
@@ -211,6 +219,7 @@ docs/Supplier.md
 docs/SupplierType.md
 docs/SuppliersApi.md
 docs/TaxesApi.md
+docs/TransformIssuedDocumentResponse.md
 docs/UploadArchiveAttachmentResponse.md
 docs/UploadF24AttachmentResponse.md
 docs/UploadIssuedDocumentAttachmentResponse.md
@@ -223,6 +232,7 @@ docs/VatKind.md
 docs/VatType.md
 docs/VerifyEInvoiceXmlErrorResponse.md
 docs/VerifyEInvoiceXmlErrorResponseError.md
+docs/VerifyEInvoiceXmlErrorResponseErrorValidationResult.md
 docs/VerifyEInvoiceXmlErrorResponseExtra.md
 docs/VerifyEInvoiceXmlResponse.md
 docs/VerifyEInvoiceXmlResponseData.md
@@ -233,6 +243,7 @@ src/api/ArchiveApi.js
 src/api/CashbookApi.js
 src/api/ClientsApi.js
 src/api/CompaniesApi.js
+src/api/EmailsApi.js
 src/api/InfoApi.js
 src/api/IssuedDocumentsApi.js
 src/api/IssuedEInvoicesApi.js
@@ -290,10 +301,14 @@ src/model/Currency.js
 src/model/DetailedCountry.js
 src/model/DocumentTemplate.js
 src/model/EInvoiceRejectionReason.js
+src/model/Email.js
+src/model/EmailAttachment.js
 src/model/EmailData.js
 src/model/EmailDataDefaultSenderEmail.js
+src/model/EmailRecipientStatus.js
 src/model/EmailSchedule.js
 src/model/EmailScheduleInclude.js
+src/model/EmailStatus.js
 src/model/Entity.js
 src/model/EntityType.js
 src/model/F24.js
@@ -343,6 +358,7 @@ src/model/IssuedDocumentPreCreateInfoItemsDefaultValues.js
 src/model/IssuedDocumentStatus.js
 src/model/IssuedDocumentTotals.js
 src/model/IssuedDocumentType.js
+src/model/JoinIssuedDocumentsResponse.js
 src/model/Language.js
 src/model/ListArchiveCategoriesResponse.js
 src/model/ListArchiveDocumentsResponse.js
@@ -356,6 +372,8 @@ src/model/ListCountriesResponse.js
 src/model/ListCurrenciesResponse.js
 src/model/ListDeliveryNotesDefaultCausalsResponse.js
 src/model/ListDetailedCountriesResponse.js
+src/model/ListEmailsResponse.js
+src/model/ListEmailsResponsePage.js
 src/model/ListF24Response.js
 src/model/ListF24ResponseAggregatedData.js
 src/model/ListF24ResponseAggregation.js
@@ -441,6 +459,7 @@ src/model/SenderEmail.js
 src/model/ShowTotalsMode.js
 src/model/Supplier.js
 src/model/SupplierType.js
+src/model/TransformIssuedDocumentResponse.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
 src/model/UploadIssuedDocumentAttachmentResponse.js
@@ -452,7 +471,17 @@ src/model/VatKind.js
 src/model/VatType.js
 src/model/VerifyEInvoiceXmlErrorResponse.js
 src/model/VerifyEInvoiceXmlErrorResponseError.js
+src/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/PaymentTermsType.spec.js
+test/api/EmailsApi.spec.js
+test/model/Email.spec.js
+test/model/EmailAttachment.spec.js
+test/model/EmailRecipientStatus.spec.js
+test/model/EmailStatus.spec.js
+test/model/JoinIssuedDocumentsResponse.spec.js
+test/model/ListEmailsResponse.spec.js
+test/model/ListEmailsResponsePage.spec.js
+test/model/TransformIssuedDocumentResponse.spec.js
+test/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.spec.js
