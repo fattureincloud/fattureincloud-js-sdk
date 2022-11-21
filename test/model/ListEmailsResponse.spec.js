@@ -29,95 +29,118 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.ListEmailsResponse()
+      let e1 = new fattureInCloudSdk.Email()
+      e1.id = 1
+      e1.status = "sent"
+      e1.sent_date = new Date(2022, 7, 17, 13, 53, 12)
+      e1.errors_count = 0
+      e1.error_log = ""
+      e1.from_email = "test@mail.it"
+      e1.from_name = "Test mail"
+      e1.to_email = "mail@test.it"
+      e1.to_name = "Mario"
+      e1.subject = "Test"
+      e1.content = "Test send email"
+      e1.copy_to = ""
+      e1.recipient_status = "unknown"
+      e1.recipient_date = new Date(2022, 7, 17, 13, 53, 12)
+      e1.kind = "Fatture"
+      e1.attachments = []
+      let e2 = new fattureInCloudSdk.Email()
+      e2.id = 2
+      e2.status = "sent"
+      e2.sent_date = new Date(2022, 7, 17, 13, 53, 12)
+      e2.errors_count = 0
+      e2.error_log = ""
+      e2.from_email = "test@mail.it"
+      e2.from_name = "Test mail"
+      e2.to_email = "mail@test.it"
+      e2.to_name = "Mario"
+      e2.subject = "Test"
+      e2.content = "Test send email"
+      e2.copy_to = ""
+      e2.recipient_status = "unknown"
+      e2.recipient_date = new Date(2022, 7, 17, 13, 53, 12)
+      e2.kind = "Fatture"
+      e2.attachments = []
+    instance.current_page = 2
+    instance.first_page_url = "page=1"
+    instance.from = 1
+    instance.last_page = 3
+    instance.last_page_url = "page=3"
+    instance.next_page_url = "page=3"
+    instance.path = "/archive"
+    instance.per_page = 50
+    instance.prev_page_url = "page=1"
+    instance.to = 3
+    instance.total = 155
+    instance.data = [
+      e1,
+      e2
+    ]
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('ListEmailsResponse', function () {
     it('should create an instance of ListEmailsResponse', function () {
-      // uncomment below and update the code to test ListEmailsResponse
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be.a(fattureInCloudSdk.ListEmailsResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.ListEmailsResponse);
     })
 
     it('should have the property currentPage (base name: "current_page")', function () {
-      // uncomment below and update the code to test the property currentPage
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.current_page).to.be('number')
     })
 
     it('should have the property firstPageUrl (base name: "first_page_url")', function () {
-      // uncomment below and update the code to test the property firstPageUrl
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.first_page_url).to.be('string')
     })
 
     it('should have the property from (base name: "from")', function () {
-      // uncomment below and update the code to test the property from
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.from).to.be('number')
     })
 
     it('should have the property lastPage (base name: "last_page")', function () {
-      // uncomment below and update the code to test the property lastPage
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.last_page).to.be('number')
     })
 
     it('should have the property lastPageUrl (base name: "last_page_url")', function () {
-      // uncomment below and update the code to test the property lastPageUrl
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.last_page_url).to.be('string')
     })
 
     it('should have the property nextPageUrl (base name: "next_page_url")', function () {
-      // uncomment below and update the code to test the property nextPageUrl
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.next_page_url).to.be('string')
     })
 
     it('should have the property path (base name: "path")', function () {
-      // uncomment below and update the code to test the property path
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.path).to.be('string')
     })
 
     it('should have the property perPage (base name: "per_page")', function () {
-      // uncomment below and update the code to test the property perPage
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.per_page).to.be('number')
     })
 
     it('should have the property prevPageUrl (base name: "prev_page_url")', function () {
-      // uncomment below and update the code to test the property prevPageUrl
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.prev_page_url).to.be('string')
     })
 
     it('should have the property to (base name: "to")', function () {
-      // uncomment below and update the code to test the property to
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.to).to.be('number')
     })
 
     it('should have the property total (base name: "total")', function () {
-      // uncomment below and update the code to test the property total
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.total).to.be('number')
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.ListEmailsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.data).to.be('object')
     })
   })
 }))

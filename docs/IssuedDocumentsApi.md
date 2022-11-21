@@ -682,7 +682,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.IssuedDocumentsApi();
 let companyId = 12345; // Number | The ID of the company.
-let originalDocumentId = "originalDocumentId_example"; // String | Original document id.
+let originalDocumentId = 54321; // Number | Original document id.
 let newType = "newType_example"; // String | New document type.
 let opts = {
   'eInvoice': 56, // Number | New document e_invoice.
@@ -702,7 +702,7 @@ apiInstance.transformIssuedDocument(companyId, originalDocumentId, newType, opts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **originalDocumentId** | **String**| Original document id. | 
+ **originalDocumentId** | **Number**| Original document id. | 
  **newType** | **String**| New document type. | 
  **eInvoice** | **Number**| New document e_invoice. | [optional] 
  **transformKeepCopy** | **Number**| Keep the old document. | [optional] 

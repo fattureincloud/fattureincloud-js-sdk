@@ -29,35 +29,34 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.JoinIssuedDocumentsResponse()
+    instance.data = new fattureInCloudSdk.IssuedDocument()
+    instance.data.type = new fattureInCloudSdk.IssuedDocumentType().invoice
+    instance.options = new fattureInCloudSdk.IssuedDocumentOptions()
+    instance.options.create_from = ["12345", "54321"]
+    instance.options.keep_copy = true
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('JoinIssuedDocumentsResponse', function () {
     it('should create an instance of JoinIssuedDocumentsResponse', function () {
-      // uncomment below and update the code to test JoinIssuedDocumentsResponse
-      // var instance = new fattureInCloudSdk.JoinIssuedDocumentsResponse();
-      // expect(instance).to.be.a(fattureInCloudSdk.JoinIssuedDocumentsResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.JoinIssuedDocumentsResponse);
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.JoinIssuedDocumentsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     })
 
     it('should have the property options (base name: "options")', function () {
-      // uncomment below and update the code to test the property options
-      // var instance = new fattureInCloudSdk.JoinIssuedDocumentsResponse();
-      // expect(instance).to.be();
+      expect(typeof instance.options).to.be('object');
     })
   })
 }))

@@ -30,21 +30,21 @@
   beforeEach(function () {
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EmailStatus', function () {
     it('should create an instance of EmailStatus', function () {
-      // uncomment below and update the code to test EmailStatus
-      // var instance = new fattureInCloudSdk.EmailStatus();
-      // expect(instance).to.be.a(fattureInCloudSdk.EmailStatus);
+      expect(new fattureInCloudSdk.EmailStatus().sending).to.equal('sending')
+      expect(new fattureInCloudSdk.EmailStatus().pending).to.equal('pending')
+      expect(new fattureInCloudSdk.EmailStatus().sent).to.equal('sent')
     })
   })
 }))

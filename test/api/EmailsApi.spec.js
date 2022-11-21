@@ -11,6 +11,8 @@
  *
  */
 
+import ListEmailsResponse from '../../src/model/ListEmailsResponse'
+
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
@@ -25,30 +27,34 @@
 }(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
-  let instance
+  const sandbox = require('sinon').createSandbox()
+
+  const instance = new fattureInCloudSdk.EmailsApi()
+
+  const listEmailsResponseObj = {"current_page":1,"data":[{"id":1,"status":"sent","sent_date":"2022-07-17 13:53:12","errors_count":0,"error_log":"","from_email":"test@mail.it","from_name":"Test mail","to_email":"mail@test.it","to_name":"Mario","subject":"Test","content":"Test send email","copy_to":"","recipient_status":"unknown","recipient_date":null,"kind":"Fatture","attachments":[]},{"id":2,"status":"sent","sent_date":"2022-07-18 13:53:12","errors_count":0,"error_log":"","from_email":"test@mail.it","from_name":"Test mail","to_email":"mail@test.it","to_name":"Maria","subject":"Test","content":"Test send email","copy_to":"","recipient_status":"unknown","recipient_date":null,"kind":"Fatture","attachments":[]}],"first_page_url":"emails?page=1","next_page_url":"emails?page=1","from":1,"last_page":1,"last_page_url":"emails?page=1","path":"emails","per_page":50,"prev_page_url":"emails?page=1","to":2,"total":2}
+  sandbox.stub(instance, 'listEmails').returns(listEmailsResponseObj)
 
   beforeEach(function () {
-    instance = new fattureInCloudSdk.EmailsApi()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EmailsApi', function () {
     describe('listEmails', function () {
       it('should call listEmails successfully', function (done) {
-        // uncomment below and update the code to test listEmails
-        // instance.listEmails(function(error) {
-        //  if (error) throw error;
-        // expect().to.be();
-        // });
+        const response = instance.listEmails()
+        const responseObj = Object.assign(new ListEmailsResponse(), response)
+        const expectedJson = JSON.stringify(listEmailsResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
         done()
       })
     })

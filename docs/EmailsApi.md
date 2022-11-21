@@ -26,7 +26,7 @@ let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2Authenti
 OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.EmailsApi();
-let companyId = "companyId_example"; // String | 
+let companyId = 12345;
 apiInstance.listEmails(companyId).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
 }, (error) => {
@@ -40,7 +40,7 @@ apiInstance.listEmails(companyId).then((result) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
+ **companyId** | **Number**|  | 
 
 ### Return type
 

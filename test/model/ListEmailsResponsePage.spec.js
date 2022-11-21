@@ -29,29 +29,63 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.ListEmailsResponsePage()
+    let e1 = new fattureInCloudSdk.Email()
+    e1.id = 1
+    e1.status = "sent"
+    e1.sent_date = new Date(2022, 7, 17, 13, 53, 12)
+    e1.errors_count = 0
+    e1.error_log = ""
+    e1.from_email = "test@mail.it"
+    e1.from_name = "Test mail"
+    e1.to_email = "mail@test.it"
+    e1.to_name = "Mario"
+    e1.subject = "Test"
+    e1.content = "Test send email"
+    e1.copy_to = ""
+    e1.recipient_status = "unknown"
+    e1.recipient_date = new Date(2022, 7, 17, 13, 53, 12)
+    e1.kind = "Fatture"
+    e1.attachments = []
+    let e2 = new fattureInCloudSdk.Email()
+    e2.id = 1
+    e2.status = "sent"
+    e2.sent_date = new Date(2022, 7, 17, 13, 53, 12)
+    e2.errors_count = 0
+    e2.error_log = ""
+    e2.from_email = "test@mail.it"
+    e2.from_name = "Test mail"
+    e2.to_email = "mail@test.it"
+    e2.to_name = "Mario"
+    e2.subject = "Test"
+    e2.content = "Test send email"
+    e2.copy_to = ""
+    e2.recipient_status = "unknown"
+    e2.recipient_date = new Date(2022, 7, 17, 13, 53, 12)
+    e2.kind = "Fatture"
+    e2.attachments = []
+    instance.data = [
+      e1,
+      e2
+    ]
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('ListEmailsResponsePage', function () {
     it('should create an instance of ListEmailsResponsePage', function () {
-      // uncomment below and update the code to test ListEmailsResponsePage
-      // var instance = new fattureInCloudSdk.ListEmailsResponsePage();
-      // expect(instance).to.be.a(fattureInCloudSdk.ListEmailsResponsePage);
+      expect(instance).to.be.a(fattureInCloudSdk.ListEmailsResponsePage);
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.ListEmailsResponsePage();
-      // expect(instance).to.be();
+      expect(typeof instance.data).to.be('object');
     })
   })
 }))

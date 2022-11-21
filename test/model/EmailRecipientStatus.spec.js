@@ -30,21 +30,21 @@
   beforeEach(function () {
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EmailRecipientStatus', function () {
     it('should create an instance of EmailRecipientStatus', function () {
-      // uncomment below and update the code to test EmailRecipientStatus
-      // var instance = new fattureInCloudSdk.EmailRecipientStatus();
-      // expect(instance).to.be.a(fattureInCloudSdk.EmailRecipientStatus);
+      expect(new fattureInCloudSdk.EmailRecipientStatus().unknown).to.equal('unknown')
+      expect(new fattureInCloudSdk.EmailRecipientStatus().document_opened).to.equal('document_opened')
+      expect(new fattureInCloudSdk.EmailRecipientStatus().email_opened).to.equal('email_opened')
     })
   })
 }))

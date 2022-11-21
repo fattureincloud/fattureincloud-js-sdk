@@ -743,7 +743,7 @@ export default class IssuedDocumentsApi {
      * Transform issued document
      * Transforms the document.
      * @param {Number} companyId The ID of the company.
-     * @param {String} originalDocumentId Original document id.
+     * @param {Number} originalDocumentId Original document id.
      * @param {String} newType New document type.
      * @param {Object} opts Optional parameters
      * @param {module:model/Number} opts.eInvoice New document e_invoice.
@@ -795,7 +795,7 @@ export default class IssuedDocumentsApi {
      * Transform issued document
      * Transforms the document.
      * @param {Number} companyId The ID of the company.
-     * @param {String} originalDocumentId Original document id.
+     * @param {Number} originalDocumentId Original document id.
      * @param {String} newType New document type.
      * @param {Object} opts Optional parameters
      * @param {module:model/Number} opts.eInvoice New document e_invoice.

@@ -29,35 +29,31 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.EmailAttachment()
+    instance.filename = "say my name"
+    instance.url = "www.jjj.com"
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EmailAttachment', function () {
     it('should create an instance of EmailAttachment', function () {
-      // uncomment below and update the code to test EmailAttachment
-      // var instance = new fattureInCloudSdk.EmailAttachment();
-      // expect(instance).to.be.a(fattureInCloudSdk.EmailAttachment);
+      expect(instance).to.be.a(fattureInCloudSdk.EmailAttachment);
     })
 
     it('should have the property filename (base name: "filename")', function () {
-      // uncomment below and update the code to test the property filename
-      // var instance = new fattureInCloudSdk.EmailAttachment();
-      // expect(instance).to.be();
+      expect(typeof instance.filename).to.be('string');
     })
 
     it('should have the property url (base name: "url")', function () {
-      // uncomment below and update the code to test the property url
-      // var instance = new fattureInCloudSdk.EmailAttachment();
-      // expect(instance).to.be();
+      expect(typeof instance.url).to.be('string');
     })
   })
 }))

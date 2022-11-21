@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult()
+    instance.xml_errors = ["err", "or"]
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('VerifyEInvoiceXmlErrorResponseErrorValidationResult', function () {
     it('should create an instance of VerifyEInvoiceXmlErrorResponseErrorValidationResult', function () {
-      // uncomment below and update the code to test VerifyEInvoiceXmlErrorResponseErrorValidationResult
-      // var instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult();
-      // expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult);
+      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult);
     })
 
     it('should have the property xmlErrors (base name: "xml_errors")', function () {
-      // uncomment below and update the code to test the property xmlErrors
-      // var instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult();
-      // expect(instance).to.be();
+      expect(typeof instance.xml_errors).to.be('object');
     })
   })
 }))

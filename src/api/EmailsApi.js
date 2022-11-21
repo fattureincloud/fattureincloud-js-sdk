@@ -34,7 +34,7 @@ export default class EmailsApi {
   /**
      * List emails
      * List Emails.
-     * @param {String} companyId
+     * @param {Number} companyId
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ListEmailsResponse} and HTTP response
      */
   listEmailsWithHttpInfo (companyId) {
@@ -68,7 +68,7 @@ export default class EmailsApi {
   /**
      * List emails
      * List Emails.
-     * @param {String} companyId
+     * @param {Number} companyId
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ListEmailsResponse}
      */
   listEmails (companyId) {

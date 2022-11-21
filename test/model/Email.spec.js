@@ -29,119 +29,101 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.Email()
+    instance.id = 1
+    instance.status = "sent"
+    instance.sent_date = new Date(2022, 7, 17, 13, 53, 12)
+    instance.errors_count = 0
+    instance.error_log = ""
+    instance.from_email = "test@mail.it"
+    instance.from_name = "Test mail"
+    instance.to_email = "mail@test.it"
+    instance.to_name = "Mario"
+    instance.subject = "Test"
+    instance.content = "Test send email"
+    instance.copy_to = ""
+    instance.recipient_status = "unknown"
+    instance.recipient_date = new Date(2022, 7, 17, 13, 53, 12)
+    instance.kind = "Fatture"
+    instance.attachments = []
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('Email', function () {
     it('should create an instance of Email', function () {
-      // uncomment below and update the code to test Email
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be.a(fattureInCloudSdk.Email);
+      expect(instance).to.be.a(fattureInCloudSdk.Email);
     })
 
     it('should have the property id (base name: "id")', function () {
-      // uncomment below and update the code to test the property id
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.id).to.be('number');
     })
 
     it('should have the property status (base name: "status")', function () {
-      // uncomment below and update the code to test the property status
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.status).to.be('string');
     })
 
     it('should have the property sentDate (base name: "sent_date")', function () {
-      // uncomment below and update the code to test the property sentDate
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.sent_date).to.be('object');
     })
 
     it('should have the property errorsCount (base name: "errors_count")', function () {
-      // uncomment below and update the code to test the property errorsCount
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.errors_count).to.be('number');
     })
 
     it('should have the property errorLog (base name: "error_log")', function () {
-      // uncomment below and update the code to test the property errorLog
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.error_log).to.be('string');
     })
 
     it('should have the property fromEmail (base name: "from_email")', function () {
-      // uncomment below and update the code to test the property fromEmail
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.from_email).to.be('string');
     })
 
     it('should have the property fromName (base name: "from_name")', function () {
-      // uncomment below and update the code to test the property fromName
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.from_name).to.be('string');
     })
 
     it('should have the property toEmail (base name: "to_email")', function () {
-      // uncomment below and update the code to test the property toEmail
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.to_email).to.be('string');
     })
 
     it('should have the property toName (base name: "to_name")', function () {
-      // uncomment below and update the code to test the property toName
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.to_name).to.be('string');
     })
 
     it('should have the property subject (base name: "subject")', function () {
-      // uncomment below and update the code to test the property subject
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.subject).to.be('string');
     })
 
     it('should have the property content (base name: "content")', function () {
-      // uncomment below and update the code to test the property content
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.content).to.be('string');
     })
 
     it('should have the property copyTo (base name: "copy_to")', function () {
-      // uncomment below and update the code to test the property copyTo
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.copy_to).to.be('string');
     })
 
     it('should have the property recipientStatus (base name: "recipient_status")', function () {
-      // uncomment below and update the code to test the property recipientStatus
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.recipient_status).to.be('string');
     })
 
     it('should have the property recipientDate (base name: "recipient_date")', function () {
-      // uncomment below and update the code to test the property recipientDate
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.recipient_date).to.be('object');
     })
 
     it('should have the property kind (base name: "kind")', function () {
-      // uncomment below and update the code to test the property kind
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.kind).to.be('string');
     })
 
     it('should have the property attachments (base name: "attachments")', function () {
-      // uncomment below and update the code to test the property attachments
-      // var instance = new fattureInCloudSdk.Email();
-      // expect(instance).to.be();
+      expect(typeof instance.attachments).to.be('object');
     })
   })
 }))
