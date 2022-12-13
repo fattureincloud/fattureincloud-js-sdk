@@ -29,8 +29,8 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.EmailAttachment()
-    instance.filename = "say my name"
-    instance.url = "www.jjj.com"
+    instance.filename = 'say my name'
+    instance.url = 'www.jjj.com'
   })
 
   // const getProperty = function (object, getter, property) {
@@ -45,15 +45,15 @@
 
   describe('EmailAttachment', function () {
     it('should create an instance of EmailAttachment', function () {
-      expect(instance).to.be.a(fattureInCloudSdk.EmailAttachment);
+      expect(instance).to.be.a(fattureInCloudSdk.EmailAttachment)
     })
 
     it('should have the property filename (base name: "filename")', function () {
-      expect(typeof instance.filename).to.be('string');
+      expect(typeof instance.filename).to.be('string')
     })
 
     it('should have the property url (base name: "url")', function () {
-      expect(typeof instance.url).to.be('string');
+      expect(typeof instance.url).to.be('string')
     })
   })
 }))
