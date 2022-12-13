@@ -682,7 +682,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.IssuedDocumentsApi();
 let companyId = 12345; // Number | The ID of the company.
-let originalDocumentId = 54321; // Number | Original document id.
+let originalDocumentId = 56; // Number | Original document id.
 let newType = "newType_example"; // String | New document type.
 let opts = {
   'eInvoice': 56, // Number | New document e_invoice.

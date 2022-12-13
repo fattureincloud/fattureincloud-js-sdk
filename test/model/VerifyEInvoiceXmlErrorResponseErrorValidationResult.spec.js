@@ -29,7 +29,7 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult()
-    instance.xml_errors = ["err", "or"]
+    instance.xml_errors = ['err', 'or']
   })
 
   // const getProperty = function (object, getter, property) {
@@ -44,11 +44,11 @@
 
   describe('VerifyEInvoiceXmlErrorResponseErrorValidationResult', function () {
     it('should create an instance of VerifyEInvoiceXmlErrorResponseErrorValidationResult', function () {
-      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult);
+      expect(instance).to.be.a(fattureInCloudSdk.VerifyEInvoiceXmlErrorResponseErrorValidationResult)
     })
 
     it('should have the property xmlErrors (base name: "xml_errors")', function () {
-      expect(typeof instance.xml_errors).to.be('object');
+      expect(typeof instance.xml_errors).to.be('object')
     })
   })
 }))

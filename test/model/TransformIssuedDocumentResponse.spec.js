@@ -32,7 +32,7 @@
     instance.data = new fattureInCloudSdk.IssuedDocument()
     instance.data.type = new fattureInCloudSdk.IssuedDocumentType().invoice
     instance.options = new fattureInCloudSdk.IssuedDocumentOptions()
-    instance.options.create_from = ["12345", "54321"]
+    instance.options.create_from = ['12345', '54321']
     instance.options.transform = true
   })
 
@@ -48,15 +48,15 @@
 
   describe('TransformIssuedDocumentResponse', function () {
     it('should create an instance of TransformIssuedDocumentResponse', function () {
-      expect(instance).to.be.a(fattureInCloudSdk.TransformIssuedDocumentResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.TransformIssuedDocumentResponse)
     })
 
     it('should have the property data (base name: "data")', function () {
-      expect(typeof instance.data).to.be('object');
+      expect(typeof instance.data).to.be('object')
     })
 
     it('should have the property options (base name: "options")', function () {
-      expect(typeof instance.options).to.be('object');
+      expect(typeof instance.options).to.be('object')
     })
   })
 }))
