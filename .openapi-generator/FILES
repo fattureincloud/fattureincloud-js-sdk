@@ -475,13 +475,3 @@ src/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/api/EmailsApi.spec.js
-test/model/Email.spec.js
-test/model/EmailAttachment.spec.js
-test/model/EmailRecipientStatus.spec.js
-test/model/EmailStatus.spec.js
-test/model/JoinIssuedDocumentsResponse.spec.js
-test/model/ListEmailsResponse.spec.js
-test/model/ListEmailsResponsePage.spec.js
-test/model/TransformIssuedDocumentResponse.spec.js
-test/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.spec.js

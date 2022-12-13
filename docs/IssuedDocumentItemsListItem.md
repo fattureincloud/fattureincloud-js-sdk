@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **applyWithholdingTaxes** | **Boolean** | Apply withholding taxes, rivalsa and cassa. | [optional] 
 **discount** | **Number** | Discount percentual value. | [optional] 
 **discountHighlight** | **Boolean** |  | [optional] 
-**inDdt** | **Boolean** |  | [optional] 
+**inDn** | **Boolean** |  | [optional] 
 **stock** | **Boolean** |  | [optional] 
 **eiRaw** | **Object** | Advanced raw attributes for e-invoices. | [optional] 
 
