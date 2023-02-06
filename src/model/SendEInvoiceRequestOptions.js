@@ -11,20 +11,20 @@
  *
  */
 
-import PaymentAccount from './PaymentAccount'
+import ApiClient from '../ApiClient'
 
 /**
- * The CreatePaymentAccountResponse model module.
- * @module model/CreatePaymentAccountResponse
+ * The SendEInvoiceRequestOptions model module.
+ * @module model/SendEInvoiceRequestOptions
  * @version 2.0.19
  */
-class CreatePaymentAccountResponse {
+class SendEInvoiceRequestOptions {
   /**
-     * Constructs a new <code>CreatePaymentAccountResponse</code>.
-     * @alias module:model/CreatePaymentAccountResponse
+     * Constructs a new <code>SendEInvoiceRequestOptions</code>.
+     * @alias module:model/SendEInvoiceRequestOptions
      */
   constructor () {
-    CreatePaymentAccountResponse.initialize(this)
+    SendEInvoiceRequestOptions.initialize(this)
   }
 
   /**
@@ -36,41 +36,37 @@ class CreatePaymentAccountResponse {
   }
 
   /**
-     * Constructs a <code>CreatePaymentAccountResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SendEInvoiceRequestOptions</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CreatePaymentAccountResponse} obj Optional instance to populate.
-     * @return {module:model/CreatePaymentAccountResponse} The populated <code>CreatePaymentAccountResponse</code> instance.
+     * @param {module:model/SendEInvoiceRequestOptions} obj Optional instance to populate.
+     * @return {module:model/SendEInvoiceRequestOptions} The populated <code>SendEInvoiceRequestOptions</code> instance.
      */
   static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new CreatePaymentAccountResponse()
+      obj = obj || new SendEInvoiceRequestOptions()
 
-      if (data.hasOwnProperty('data')) {
-        obj.data = PaymentAccount.constructFromObject(data.data)
+      if (data.hasOwnProperty('dry_run')) {
+        obj.dry_run = ApiClient.convertToType(data.dry_run, 'Boolean')
       }
     }
     return obj
   }
 
   /**
-     * Validates the JSON data with respect to <code>CreatePaymentAccountResponse</code>.
+     * Validates the JSON data with respect to <code>SendEInvoiceRequestOptions</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreatePaymentAccountResponse</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SendEInvoiceRequestOptions</code>.
      */
   static validateJSON (data) {
-    // validate the optional field `data`
-    if (data.data) { // data not null
-      PaymentAccount.validateJSON(data.data)
-    }
-
     return true
   }
 }
 
 /**
- * @member {module:model/PaymentAccount} data
+ * If set to true the e-invoice will not be sent to the SDI.
+ * @member {Boolean} dry_run
  */
-CreatePaymentAccountResponse.prototype.data = undefined
+SendEInvoiceRequestOptions.prototype.dry_run = undefined
 
-export default CreatePaymentAccountResponse
+export default SendEInvoiceRequestOptions

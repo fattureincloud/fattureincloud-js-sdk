@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **paymentsList** | [**[ReceivedDocumentPaymentsListItem]**](ReceivedDocumentPaymentsListItem.md) |  | [optional] 
 **attachmentUrl** | **String** | [Temporary] [Read Only]  Public url of the attached file. Authomatically set if a valid attachment token is passed via POST /received_documents or PUT /received_documents/{documentId}. | [optional] [readonly] 
 **attachmentPreviewUrl** | **String** | [Temporary] [Read Only]  Attachment preview url. | [optional] [readonly] 
+**autoCalculate** | **Boolean** | If set to false total items amount and total payments amount can be different. | [optional] 
 **attachmentToken** | **String** | Uploaded attachement token. | [optional] 
 **createdAt** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
