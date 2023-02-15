@@ -210,6 +210,7 @@ docs/ReceivedDocumentsApi.md
 docs/ScheduleEmailRequest.md
 docs/SendEInvoiceRequest.md
 docs/SendEInvoiceRequestData.md
+docs/SendEInvoiceRequestOptions.md
 docs/SendEInvoiceResponse.md
 docs/SendEInvoiceResponseData.md
 docs/SenderEmail.md
@@ -453,6 +454,7 @@ src/model/ReceivedDocumentType.js
 src/model/ScheduleEmailRequest.js
 src/model/SendEInvoiceRequest.js
 src/model/SendEInvoiceRequestData.js
+src/model/SendEInvoiceRequestOptions.js
 src/model/SendEInvoiceResponse.js
 src/model/SendEInvoiceResponseData.js
 src/model/SenderEmail.js
@@ -475,3 +477,4 @@ src/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
+test/model/SendEInvoiceRequestOptions.spec.js

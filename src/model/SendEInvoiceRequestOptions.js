@@ -11,20 +11,20 @@
  *
  */
 
-import Product from './Product'
+import ApiClient from '../ApiClient'
 
 /**
- * The CreateProductRequest model module.
- * @module model/CreateProductRequest
+ * The SendEInvoiceRequestOptions model module.
+ * @module model/SendEInvoiceRequestOptions
  * @version 2.0.19
  */
-class CreateProductRequest {
+class SendEInvoiceRequestOptions {
   /**
-     * Constructs a new <code>CreateProductRequest</code>.
-     * @alias module:model/CreateProductRequest
+     * Constructs a new <code>SendEInvoiceRequestOptions</code>.
+     * @alias module:model/SendEInvoiceRequestOptions
      */
   constructor () {
-    CreateProductRequest.initialize(this)
+    SendEInvoiceRequestOptions.initialize(this)
   }
 
   /**
@@ -36,41 +36,37 @@ class CreateProductRequest {
   }
 
   /**
-     * Constructs a <code>CreateProductRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SendEInvoiceRequestOptions</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CreateProductRequest} obj Optional instance to populate.
-     * @return {module:model/CreateProductRequest} The populated <code>CreateProductRequest</code> instance.
+     * @param {module:model/SendEInvoiceRequestOptions} obj Optional instance to populate.
+     * @return {module:model/SendEInvoiceRequestOptions} The populated <code>SendEInvoiceRequestOptions</code> instance.
      */
   static constructFromObject (data, obj) {
     if (data) {
-      obj = obj || new CreateProductRequest()
+      obj = obj || new SendEInvoiceRequestOptions()
 
-      if (data.hasOwnProperty('data')) {
-        obj.data = Product.constructFromObject(data.data)
+      if (data.hasOwnProperty('dry_run')) {
+        obj.dry_run = ApiClient.convertToType(data.dry_run, 'Boolean')
       }
     }
     return obj
   }
 
   /**
-     * Validates the JSON data with respect to <code>CreateProductRequest</code>.
+     * Validates the JSON data with respect to <code>SendEInvoiceRequestOptions</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateProductRequest</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SendEInvoiceRequestOptions</code>.
      */
   static validateJSON (data) {
-    // validate the optional field `data`
-    if (data.data) { // data not null
-      Product.validateJSON(data.data)
-    }
-
     return true
   }
 }
 
 /**
- * @member {module:model/Product} data
+ * If set to true the e-invoice will not be sent to the SDI.
+ * @member {Boolean} dry_run
  */
-CreateProductRequest.prototype.data = undefined
+SendEInvoiceRequestOptions.prototype.dry_run = undefined
 
-export default CreateProductRequest
+export default SendEInvoiceRequestOptions
