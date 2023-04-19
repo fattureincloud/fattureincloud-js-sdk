@@ -66,10 +66,10 @@ export default class EventType {
   'issued_documents.proformas.update' = 'it.fattureincloud.issued_documents.proformas.update'
 
   /**
-         * value: "it.fattureincloud.issued_documents.proformas.create"
+         * value: "it.fattureincloud.issued_documents.proformas.delete"
          * @const
          */
-  'issued_documents.proformas.create' = 'it.fattureincloud.issued_documents.proformas.create'
+  'issued_documents.proformas.delete' = 'it.fattureincloud.issued_documents.proformas.delete'
 
   /**
          * value: "it.fattureincloud.issued_documents.receipts.create"
