@@ -19,7 +19,7 @@
 
 * `issued_documents.proformas.update` (value: `"it.fattureincloud.issued_documents.proformas.update"`)
 
-* `issued_documents.proformas.create` (value: `"it.fattureincloud.issued_documents.proformas.create"`)
+* `issued_documents.proformas.delete` (value: `"it.fattureincloud.issued_documents.proformas.delete"`)
 
 * `issued_documents.receipts.create` (value: `"it.fattureincloud.issued_documents.receipts.create"`)
 
