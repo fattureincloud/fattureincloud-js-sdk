@@ -25,26 +25,24 @@
 }(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
-  let instance
+  const instance = new fattureInCloudSdk.EventType('it.fattureincloud.cashbook.create')
 
   beforeEach(function () {
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EventType', function () {
     it('should create an instance of EventType', function () {
-      // uncomment below and update the code to test EventType
-      // var instance = new fattureInCloudSdk.EventType();
-      // expect(instance).to.be.a(fattureInCloudSdk.EventType);
+      expect(instance).to.be.a(fattureInCloudSdk.EventType)
     })
   })
 }))

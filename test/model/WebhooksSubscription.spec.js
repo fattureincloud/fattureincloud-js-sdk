@@ -29,47 +29,41 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.WebhooksSubscription()
+    instance.id = 'SUB123'
+    instance.sink = 'https://endpoint.test'
+    instance.verified = true
+    instance.types = ['it.fattureincloud.cashbook.create']
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('WebhooksSubscription', function () {
     it('should create an instance of WebhooksSubscription', function () {
-      // uncomment below and update the code to test WebhooksSubscription
-      // var instance = new fattureInCloudSdk.WebhooksSubscription();
-      // expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscription);
+      expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscription)
     })
 
     it('should have the property id (base name: "id")', function () {
-      // uncomment below and update the code to test the property id
-      // var instance = new fattureInCloudSdk.WebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.id).to.be('string')
     })
 
     it('should have the property sink (base name: "sink")', function () {
-      // uncomment below and update the code to test the property sink
-      // var instance = new fattureInCloudSdk.WebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.sink).to.be('string')
     })
 
     it('should have the property verified (base name: "verified")', function () {
-      // uncomment below and update the code to test the property verified
-      // var instance = new fattureInCloudSdk.WebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.verified).to.be('boolean')
     })
 
     it('should have the property types (base name: "types")', function () {
-      // uncomment below and update the code to test the property types
-      // var instance = new fattureInCloudSdk.WebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.types).to.be('object')
     })
   })
 }))

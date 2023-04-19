@@ -29,29 +29,32 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.ModifyWebhooksSubscriptionRequest()
+    instance.data = {
+      id: 'SUB123',
+      sink: 'https://endpoint.test',
+      verified: true,
+      types: ['it.fattureincloud.cashbook.create']
+    }
+    instance.warnings = ['error']
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('ModifyWebhooksSubscriptionRequest', function () {
     it('should create an instance of ModifyWebhooksSubscriptionRequest', function () {
-      // uncomment below and update the code to test ModifyWebhooksSubscriptionRequest
-      // var instance = new fattureInCloudSdk.ModifyWebhooksSubscriptionRequest();
-      // expect(instance).to.be.a(fattureInCloudSdk.ModifyWebhooksSubscriptionRequest);
+      expect(instance).to.be.a(fattureInCloudSdk.ModifyWebhooksSubscriptionRequest)
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.ModifyWebhooksSubscriptionRequest();
-      // expect(instance).to.be();
+      expect(typeof instance.data).to.be('object')
     })
   })
 }))
