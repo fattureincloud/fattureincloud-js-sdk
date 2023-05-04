@@ -47,6 +47,8 @@ docs/CreateSupplierRequest.md
 docs/CreateSupplierResponse.md
 docs/CreateVatTypeRequest.md
 docs/CreateVatTypeResponse.md
+docs/CreateWebhooksSubscriptionRequest.md
+docs/CreateWebhooksSubscriptionResponse.md
 docs/Currency.md
 docs/DetailedCountry.md
 docs/DocumentTemplate.md
@@ -62,6 +64,7 @@ docs/EmailStatus.md
 docs/EmailsApi.md
 docs/Entity.md
 docs/EntityType.md
+docs/EventType.md
 docs/F24.md
 docs/F24Status.md
 docs/FunctionStatus.md
@@ -95,6 +98,7 @@ docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
 docs/GetVatTypeResponse.md
+docs/GetWebhooksSubscriptionResponse.md
 docs/InfoApi.md
 docs/IssuedDocument.md
 docs/IssuedDocumentEiData.md
@@ -153,6 +157,7 @@ docs/ListUnitsOfMeasureResponse.md
 docs/ListUserCompaniesResponse.md
 docs/ListUserCompaniesResponseData.md
 docs/ListVatTypesResponse.md
+docs/ListWebhooksSubscriptionsResponse.md
 docs/ModifyArchiveDocumentRequest.md
 docs/ModifyArchiveDocumentResponse.md
 docs/ModifyCashbookEntryRequest.md
@@ -177,6 +182,8 @@ docs/ModifySupplierRequest.md
 docs/ModifySupplierResponse.md
 docs/ModifyVatTypeRequest.md
 docs/ModifyVatTypeResponse.md
+docs/ModifyWebhooksSubscriptionRequest.md
+docs/ModifyWebhooksSubscriptionResponse.md
 docs/MonthlyTotal.md
 docs/OriginalDocumentType.md
 docs/Pagination.md
@@ -197,7 +204,6 @@ docs/ReceiptPreCreateInfo.md
 docs/ReceiptType.md
 docs/ReceiptsApi.md
 docs/ReceivedDocument.md
-docs/ReceivedDocumentEntity.md
 docs/ReceivedDocumentInfo.md
 docs/ReceivedDocumentInfoDefaultValues.md
 docs/ReceivedDocumentInfoItemsDefaultValues.md
@@ -237,6 +243,8 @@ docs/VerifyEInvoiceXmlErrorResponseErrorValidationResult.md
 docs/VerifyEInvoiceXmlErrorResponseExtra.md
 docs/VerifyEInvoiceXmlResponse.md
 docs/VerifyEInvoiceXmlResponseData.md
+docs/WebhooksApi.md
+docs/WebhooksSubscription.md
 mocha.opts
 package.json
 src/ApiClient.js
@@ -255,6 +263,7 @@ src/api/SettingsApi.js
 src/api/SuppliersApi.js
 src/api/TaxesApi.js
 src/api/UserApi.js
+src/api/WebhooksApi.js
 src/index.js
 src/model/ArchiveDocument.js
 src/model/AttachmentData.js
@@ -298,6 +307,8 @@ src/model/CreateSupplierRequest.js
 src/model/CreateSupplierResponse.js
 src/model/CreateVatTypeRequest.js
 src/model/CreateVatTypeResponse.js
+src/model/CreateWebhooksSubscriptionRequest.js
+src/model/CreateWebhooksSubscriptionResponse.js
 src/model/Currency.js
 src/model/DetailedCountry.js
 src/model/DocumentTemplate.js
@@ -312,6 +323,7 @@ src/model/EmailScheduleInclude.js
 src/model/EmailStatus.js
 src/model/Entity.js
 src/model/EntityType.js
+src/model/EventType.js
 src/model/F24.js
 src/model/F24Status.js
 src/model/FunctionStatus.js
@@ -345,6 +357,7 @@ src/model/GetUserInfoResponse.js
 src/model/GetUserInfoResponseEmailConfirmationState.js
 src/model/GetUserInfoResponseInfo.js
 src/model/GetVatTypeResponse.js
+src/model/GetWebhooksSubscriptionResponse.js
 src/model/IssuedDocument.js
 src/model/IssuedDocumentEiData.js
 src/model/IssuedDocumentExtraData.js
@@ -400,6 +413,7 @@ src/model/ListUnitsOfMeasureResponse.js
 src/model/ListUserCompaniesResponse.js
 src/model/ListUserCompaniesResponseData.js
 src/model/ListVatTypesResponse.js
+src/model/ListWebhooksSubscriptionsResponse.js
 src/model/ModifyArchiveDocumentRequest.js
 src/model/ModifyArchiveDocumentResponse.js
 src/model/ModifyCashbookEntryRequest.js
@@ -424,6 +438,8 @@ src/model/ModifySupplierRequest.js
 src/model/ModifySupplierResponse.js
 src/model/ModifyVatTypeRequest.js
 src/model/ModifyVatTypeResponse.js
+src/model/ModifyWebhooksSubscriptionRequest.js
+src/model/ModifyWebhooksSubscriptionResponse.js
 src/model/MonthlyTotal.js
 src/model/OriginalDocumentType.js
 src/model/Pagination.js
@@ -442,7 +458,6 @@ src/model/ReceiptItemsListItem.js
 src/model/ReceiptPreCreateInfo.js
 src/model/ReceiptType.js
 src/model/ReceivedDocument.js
-src/model/ReceivedDocumentEntity.js
 src/model/ReceivedDocumentInfo.js
 src/model/ReceivedDocumentInfoDefaultValues.js
 src/model/ReceivedDocumentInfoItemsDefaultValues.js
@@ -477,4 +492,13 @@ src/model/VerifyEInvoiceXmlErrorResponseErrorValidationResult.js
 src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
-test/model/SendEInvoiceRequestOptions.spec.js
+src/model/WebhooksSubscription.js
+test/api/WebhooksApi.spec.js
+test/model/CreateWebhooksSubscriptionRequest.spec.js
+test/model/CreateWebhooksSubscriptionResponse.spec.js
+test/model/EventType.spec.js
+test/model/GetWebhooksSubscriptionResponse.spec.js
+test/model/ListWebhooksSubscriptionsResponse.spec.js
+test/model/ModifyWebhooksSubscriptionRequest.spec.js
+test/model/ModifyWebhooksSubscriptionResponse.spec.js
+test/model/WebhooksSubscription.spec.js

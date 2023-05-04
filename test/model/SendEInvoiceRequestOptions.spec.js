@@ -44,11 +44,11 @@
 
   describe('SendEInvoiceRequestOptions', function () {
     it('should create an instance of SendEInvoiceRequestOptions', function () {
-      expect(instance).to.be.a(fattureInCloudSdk.SendEInvoiceRequestOptions);
+      expect(instance).to.be.a(fattureInCloudSdk.SendEInvoiceRequestOptions)
     })
 
     it('should have the property dryRun (base name: "dry_run")', function () {
-      expect(typeof instance.dry_run).to.be('boolean');
+      expect(typeof instance.dry_run).to.be('boolean')
     })
   })
 }))
