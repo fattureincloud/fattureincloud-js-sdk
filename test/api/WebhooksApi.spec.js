@@ -34,19 +34,19 @@ import ModifyWebhooksSubscriptionResponse from '../../src/model/ModifyWebhooksSu
 
   const instance = new fattureInCloudSdk.WebhooksApi()
 
-  const createWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+  const createWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, warnings: ['error'] }
   const createWebhooksSubscriptionStub = sandbox.stub(instance, 'createWebhooksSubscription').returns(createWebhooksSubscriptionResponseObj)
 
   const deleteWebhooksSubscriptionResponseObj = {}
   sandbox.stub(instance, 'deleteWebhooksSubscription').returns(deleteWebhooksSubscriptionResponseObj)
 
-  const getWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] } }
+  const getWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] } }
   sandbox.stub(instance, 'getWebhooksSubscription').returns(getWebhooksSubscriptionResponseObj)
 
-  const listWebhooksSubscriptionsResponseObj = { data: [{ id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, { id: 'SUB1234', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.update'] }] }
+  const listWebhooksSubscriptionsResponseObj = { data: [{ id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, { id: 'SUB1234', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.update'] }] }
   sandbox.stub(instance, 'listWebhooksSubscriptions').returns(listWebhooksSubscriptionsResponseObj)
 
-  const modifyWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.cashbook.create'] }, warnings: ['error'] }
+  const modifyWebhooksSubscriptionResponseObj = { data: { id: 'SUB123', sink: 'https://endpoint.test', verified: true, types: ['it.fattureincloud.webhooks.cashbook.create'] }, warnings: ['error'] }
   const modifyWebhooksSubscriptionStub = sandbox.stub(instance, 'modifyWebhooksSubscription').returns(modifyWebhooksSubscriptionResponseObj)
 
   beforeEach(function () {
@@ -68,7 +68,7 @@ import ModifyWebhooksSubscriptionResponse from '../../src/model/ModifyWebhooksSu
       it('should call createWebhooksSubscription successfully', function (done) {
         const opts = {
           createWebhooksSubscriptionRequest:
-          { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.cashbook.create'] } }
+          { data: { sink: 'https://endpoint.test', types: ['it.fattureincloud.webhooks.cashbook.create'] } }
         }
         const response = instance.createWebhooksSubscription(2, opts)
         const responseObj = Object.assign(new CreateWebhooksSubscriptionResponse(), response)

@@ -32,7 +32,7 @@
     instance.id = 'SUB123'
     instance.sink = 'https://endpoint.test'
     instance.verified = true
-    instance.types = ['it.fattureincloud.cashbook.create']
+    instance.types = ['it.fattureincloud.webhooks.cashbook.create']
   })
 
   // const getProperty = function (object, getter, property) {
