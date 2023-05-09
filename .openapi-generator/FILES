@@ -493,12 +493,3 @@ src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
 src/model/WebhooksSubscription.js
-test/api/WebhooksApi.spec.js
-test/model/CreateWebhooksSubscriptionRequest.spec.js
-test/model/CreateWebhooksSubscriptionResponse.spec.js
-test/model/EventType.spec.js
-test/model/GetWebhooksSubscriptionResponse.spec.js
-test/model/ListWebhooksSubscriptionsResponse.spec.js
-test/model/ModifyWebhooksSubscriptionRequest.spec.js
-test/model/ModifyWebhooksSubscriptionResponse.spec.js
-test/model/WebhooksSubscription.spec.js
