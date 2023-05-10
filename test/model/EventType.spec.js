@@ -25,7 +25,7 @@
 }(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
-  const instance = new fattureInCloudSdk.EventType('it.fattureincloud.cashbook.create')
+  const instance = new fattureInCloudSdk.EventType('it.fattureincloud.webhooks.cashbook.create')
 
   beforeEach(function () {
   })

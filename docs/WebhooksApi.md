@@ -32,7 +32,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.WebhooksApi();
 let companyId = 12345; // Number | The ID of the company.
 let opts = {
-  'createWebhooksSubscriptionRequest': {"data":{"sink":"http://www.test.com","types":["it.fattureincloud.entities.create","it.fattureincloud.issued_documents.create"]}} // CreateWebhooksSubscriptionRequest | 
+  'createWebhooksSubscriptionRequest': {"data":{"sink":"http://www.test.com","types":["it.fattureincloud.webhooks.entities.create","it.fattureincloud.webhooks.issued_documents.create"]}} // CreateWebhooksSubscriptionRequest | 
 };
 apiInstance.createWebhooksSubscription(companyId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
