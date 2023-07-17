@@ -41,7 +41,6 @@
     instance.ts_sent_date = '2020-10-10'
     instance.ts_full_amount = true
     instance.imported_by = 'jss'
-    instance.ts_single_sending = false
   })
 
   // const getProperty = function (object, getter, property) {
@@ -105,10 +104,6 @@
 
     it('should have the property importedBy (base name: "imported_by")', function () {
       expect(typeof instance.imported_by).to.be('string')
-    })
-
-    it('should have the property tsSingleSending (base name: "ts_single_sending")', function () {
-      expect(typeof instance.ts_single_sending).to.be('boolean')
     })
   })
 }))
