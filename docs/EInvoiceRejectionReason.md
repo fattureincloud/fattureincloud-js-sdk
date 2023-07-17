@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reason** | **String** | Rejection reason. | [optional] 
-**eiStatus** | **String** | E-invoice status. | [optional] 
+**reason** | **String** | E-invoice rejection reason | [optional] 
+**eiStatus** | **String** | E-invoice status | [optional] 
 **solution** | **String** | Error solution. | [optional] 
-**code** | **String** | Error code. | [optional] 
-**date** | **Date** | Rejection date. | [optional] 
+**code** | **String** | E-invoice rejection error code | [optional] 
+**date** | **Date** | E-invoice rejection date | [optional] 
 
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** | Company unique identifier. | [optional] 
-**name** | **String** | Company name. | [optional] 
+**id** | **Number** | Controlled company id | [optional] 
+**name** | **String** | Controlled company id | [optional] 
 **type** | [**CompanyType**](CompanyType.md) |  | [optional] 
-**accessToken** | **String** | CompanyAuthentication token for this company. [Only if type&#x3D;company] | [optional] 
-**connectionId** | **Number** | Company connection id. | [optional] 
-**taxCode** | **String** | Tax code. | [optional] 
+**accessToken** | **String** | Controlled company access token Only if type&#x3D;company] | [optional] 
+**connectionId** | **Number** | Controlled company connection id | [optional] 
+**taxCode** | **String** | Controlled company tax code | [optional] 
 
 

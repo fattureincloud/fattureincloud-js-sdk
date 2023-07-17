@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vat** | **Number** | Default vat value. | [optional] 
+**vat** | **Number** | Vat default value | [optional] 
 
 

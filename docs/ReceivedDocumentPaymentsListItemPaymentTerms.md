@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**days** | **Number** | Number of days. | [optional] 
-**type** | **String** |  | [optional] 
+**days** | **Number** | Received document payment number of days by which the payment must be made | [optional] 
+**type** | [**PaymentTermsType**](PaymentTermsType.md) |  | [optional] 
 
 
