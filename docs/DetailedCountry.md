@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | Country name. | [optional] 
-**settingsName** | **String** |  | [optional] 
-**iso** | **String** | Country iso. | [optional] 
-**fiscalIso** | **String** |  | [optional] 
-**uic** | **String** | Country uic. | [optional] 
+**name** | **String** | Country name | [optional] 
+**settingsName** | **String** | Country settings name | [optional] 
+**iso** | **String** | Country iso code | [optional] 
+**fiscalIso** | **String** | Country fiscal iso code | [optional] 
+**uic** | **String** | Country uic | [optional] 
 
 

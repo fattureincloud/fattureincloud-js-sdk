@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **numerations** | **{String: Object}** |  | [optional] 
-**numerationsList** | **[String]** | List of series used in the past. | [optional] 
-**rcCentersList** | **[String]** | List of revenue centers used in the past. | [optional] 
-**paymentAccountsList** | [**[PaymentAccount]**](PaymentAccount.md) | User payment accounts list. | [optional] 
-**categoriesList** | **[String]** | List of categories used in the past. | [optional] 
-**vatTypesList** | [**[VatType]**](VatType.md) | List of user vat types with the default 22%, 10%, 4% and 0% vats. | [optional] 
+**numerationsList** | **[String]** | Receipt used numerations list | [optional] 
+**rcCentersList** | **[String]** | Receipt used revenue centers list | [optional] 
+**paymentAccountsList** | [**[PaymentAccount]**](PaymentAccount.md) | Payment accounts list | [optional] 
+**categoriesList** | **[String]** | Receipt categories list | [optional] 
+**vatTypesList** | [**[VatType]**](VatType.md) | Vat types list | [optional] 
 
 

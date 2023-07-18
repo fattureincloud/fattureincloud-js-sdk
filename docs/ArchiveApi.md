@@ -307,8 +307,8 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.ArchiveApi();
 let companyId = 12345; // Number | The ID of the company.
 let opts = {
-  'filename': "filename_example", // String | Name of the file.
-  'attachment': "/path/to/file" // File | Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx
+  'filename': "filename_example", // String | Attachment file name
+  'attachment': "/path/to/file" // File | Attachment file [.png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx]
 };
 apiInstance.uploadArchiveDocumentAttachment(companyId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -324,8 +324,8 @@ apiInstance.uploadArchiveDocumentAttachment(companyId, opts).then((result) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **filename** | **String**| Name of the file. | [optional] 
- **attachment** | **File**| Valid format: .png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx | [optional] 
+ **filename** | **String**| Attachment file name | [optional] 
+ **attachment** | **File**| Attachment file [.png, .jpg, .gif, .pdf, .zip, .xls, .xlsx, .doc, .docx] | [optional] 
 
 ### Return type
 

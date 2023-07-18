@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amountNet** | **Number** |  | [optional] 
-**amountVat** | **Number** |  | [optional] 
+**amountNet** | **Number** | Vat item net amount | [optional] 
+**amountVat** | **Number** | Vat item vat amount | [optional] 
 
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** | Unique identifier | [optional] 
-**value** | **Number** | [Read Only] Percentual value. | [optional] 
-**description** | **String** | Short description. | [optional] 
-**notes** | **String** | Long description and notes shown in documents. | [optional] 
-**eInvoice** | **Boolean** | Usable for e-invoices. | [optional] 
-**eiType** | **String** | E-invoice type (natura). | [optional] 
-**eiDescription** | **String** | E-invoice description. | [optional] 
-**editable** | **Boolean** | [Read Only] Determine if this vat type is editable. | [optional] [readonly] 
-**isDisabled** | **Boolean** | Determine if the vat type is disabled. | [optional] 
+**id** | **Number** | Vat type id | [optional] 
+**value** | **Number** | [Read Only] Vat type percentual value | [optional] 
+**description** | **String** | Vat type short description | [optional] 
+**notes** | **String** | Vat type notes shown in documents | [optional] 
+**eInvoice** | **Boolean** | Vat type is usable for e-invoices | [optional] 
+**eiType** | **String** | Vat type e-invoice type (natura) | [optional] 
+**eiDescription** | **String** | Vat type e-invoice description | [optional] 
+**editable** | **Boolean** | [Read Only] Is the vat type is editable. | [optional] [readonly] 
+**isDisabled** | **Boolean** | Is the vat type disabled | [optional] 
 
 
