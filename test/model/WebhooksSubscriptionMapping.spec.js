@@ -25,26 +25,24 @@
 }(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
-  let instance
+  const instance = new fattureInCloudSdk.WebhooksSubscriptionMapping('binary')
 
   beforeEach(function () {
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('WebhooksSubscriptionMapping', function () {
     it('should create an instance of WebhooksSubscriptionMapping', function () {
-      // uncomment below and update the code to test WebhooksSubscriptionMapping
-      // var instance = new fattureInCloudSdk.WebhooksSubscriptionMapping();
-      // expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionMapping);
+      expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionMapping)
     })
   })
 }))

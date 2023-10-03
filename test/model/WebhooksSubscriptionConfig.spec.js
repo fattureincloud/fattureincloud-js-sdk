@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.WebhooksSubscriptionConfig()
+    instance.mapping = new fattureInCloudSdk.WebhooksSubscriptionMapping('binary')
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('WebhooksSubscriptionConfig', function () {
     it('should create an instance of WebhooksSubscriptionConfig', function () {
-      // uncomment below and update the code to test WebhooksSubscriptionConfig
-      // var instance = new fattureInCloudSdk.WebhooksSubscriptionConfig();
-      // expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionConfig);
+      expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionConfig)
     })
 
     it('should have the property mapping (base name: "mapping")', function () {
-      // uncomment below and update the code to test the property mapping
-      // var instance = new fattureInCloudSdk.WebhooksSubscriptionConfig();
-      // expect(instance).to.be();
+      expect(typeof instance.mapping).to.be('object')
     })
   })
 }))
