@@ -4,10 +4,10 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEInvoiceRejectionReason**](IssuedEInvoicesApi.md#getEInvoiceRejectionReason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get e-invoice rejection reason
-[**getEInvoiceXml**](IssuedEInvoicesApi.md#getEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml | Get e-invoice XML
-[**sendEInvoice**](IssuedEInvoicesApi.md#sendEInvoice) | **POST** /c/{company_id}/issued_documents/{document_id}/e_invoice/send | Send the e-invoice
-[**verifyEInvoiceXml**](IssuedEInvoicesApi.md#verifyEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify e-invoice XML
+[**getEInvoiceRejectionReason**](IssuedEInvoicesApi.md#getEInvoiceRejectionReason) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/error_reason | Get E-Invoice Rejection Reason
+[**getEInvoiceXml**](IssuedEInvoicesApi.md#getEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml | Get E-Invoice XML
+[**sendEInvoice**](IssuedEInvoicesApi.md#sendEInvoice) | **POST** /c/{company_id}/issued_documents/{document_id}/e_invoice/send | Send E-Invoice
+[**verifyEInvoiceXml**](IssuedEInvoicesApi.md#verifyEInvoiceXml) | **GET** /c/{company_id}/issued_documents/{document_id}/e_invoice/xml_verify | Verify E-Invoice XML
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > GetEInvoiceRejectionReasonResponse getEInvoiceRejectionReason(companyId, documentId)
 
-Get e-invoice rejection reason
+Get E-Invoice Rejection Reason
 
 Get e-invoice rejection reason
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 > String getEInvoiceXml(companyId, documentId, opts)
 
-Get e-invoice XML
+Get E-Invoice XML
 
 Downloads the e-invoice in XML format.
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 > SendEInvoiceResponse sendEInvoice(companyId, documentId, opts)
 
-Send the e-invoice
+Send E-Invoice
 
 Sends the e-invoice to SDI.
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 > VerifyEInvoiceXmlResponse verifyEInvoiceXml(companyId, documentId)
 
-Verify e-invoice XML
+Verify E-Invoice XML
 
 Verifies the e-invoice XML format. Checks if all of the mandatory fields are filled and compliant to the right format.
 

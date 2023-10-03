@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **attachmentPreviewUrl** | **String** | [Temporary] [Read Only] Received document url of the attachment preview | [optional] [readonly] 
 **autoCalculate** | **Boolean** | Received document total items amount and total payments amount can differ if this field is set to false | [optional] 
 **attachmentToken** | **String** | [Write Only] Received document attachment token returned by POST /received_documents/attachment | [optional] 
+**locked** | **Boolean** | Received Document can&#39;t be edited | [optional] 
 **createdAt** | **String** | Received document creation date | [optional] 
 **updatedAt** | **String** | Received document last update date | [optional] 
 

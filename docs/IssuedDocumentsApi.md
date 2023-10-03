@@ -10,13 +10,13 @@ Method | HTTP request | Description
 [**getEmailData**](IssuedDocumentsApi.md#getEmailData) | **GET** /c/{company_id}/issued_documents/{document_id}/email | Get Email Data
 [**getExistingIssuedDocumentTotals**](IssuedDocumentsApi.md#getExistingIssuedDocumentTotals) | **POST** /c/{company_id}/issued_documents/{document_id}/totals | Get Existing Issued Document Totals
 [**getIssuedDocument**](IssuedDocumentsApi.md#getIssuedDocument) | **GET** /c/{company_id}/issued_documents/{document_id} | Get Issued Document
-[**getIssuedDocumentPreCreateInfo**](IssuedDocumentsApi.md#getIssuedDocumentPreCreateInfo) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-create info
+[**getIssuedDocumentPreCreateInfo**](IssuedDocumentsApi.md#getIssuedDocumentPreCreateInfo) | **GET** /c/{company_id}/issued_documents/info | Get Issued Document Pre-Create Info
 [**getNewIssuedDocumentTotals**](IssuedDocumentsApi.md#getNewIssuedDocumentTotals) | **POST** /c/{company_id}/issued_documents/totals | Get New Issued Document Totals
-[**joinIssuedDocuments**](IssuedDocumentsApi.md#joinIssuedDocuments) | **GET** /c/{company_id}/issued_documents/join | Join issued documents
+[**joinIssuedDocuments**](IssuedDocumentsApi.md#joinIssuedDocuments) | **GET** /c/{company_id}/issued_documents/join | Join Issued Documents
 [**listIssuedDocuments**](IssuedDocumentsApi.md#listIssuedDocuments) | **GET** /c/{company_id}/issued_documents | List Issued Documents
 [**modifyIssuedDocument**](IssuedDocumentsApi.md#modifyIssuedDocument) | **PUT** /c/{company_id}/issued_documents/{document_id} | Modify Issued Document
 [**scheduleEmail**](IssuedDocumentsApi.md#scheduleEmail) | **POST** /c/{company_id}/issued_documents/{document_id}/email | Schedule Email
-[**transformIssuedDocument**](IssuedDocumentsApi.md#transformIssuedDocument) | **GET** /c/{company_id}/issued_documents/transform | Transform issued document
+[**transformIssuedDocument**](IssuedDocumentsApi.md#transformIssuedDocument) | **GET** /c/{company_id}/issued_documents/transform | Transform Issued Document
 [**uploadIssuedDocumentAttachment**](IssuedDocumentsApi.md#uploadIssuedDocumentAttachment) | **POST** /c/{company_id}/issued_documents/attachment | Upload Issued Document Attachment
 
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > GetIssuedDocumentPreCreateInfoResponse getIssuedDocumentPreCreateInfo(companyId, type)
 
-Get Issued Document Pre-create info
+Get Issued Document Pre-Create Info
 
 Retrieves the information useful while creating a new document.
 
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 > JoinIssuedDocumentsResponse joinIssuedDocuments(companyId, ids, opts)
 
-Join issued documents
+Join Issued Documents
 
 Joins issued documents.
 
@@ -669,7 +669,7 @@ null (empty response body)
 
 > TransformIssuedDocumentResponse transformIssuedDocument(companyId, originalDocumentId, newType, opts)
 
-Transform issued document
+Transform Issued Document
 
 Transforms the document.
 
