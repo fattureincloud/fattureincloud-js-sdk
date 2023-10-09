@@ -245,6 +245,8 @@ docs/VerifyEInvoiceXmlResponse.md
 docs/VerifyEInvoiceXmlResponseData.md
 docs/WebhooksApi.md
 docs/WebhooksSubscription.md
+docs/WebhooksSubscriptionConfig.md
+docs/WebhooksSubscriptionMapping.md
 mocha.opts
 package.json
 src/ApiClient.js
@@ -493,3 +495,7 @@ src/model/VerifyEInvoiceXmlErrorResponseExtra.js
 src/model/VerifyEInvoiceXmlResponse.js
 src/model/VerifyEInvoiceXmlResponseData.js
 src/model/WebhooksSubscription.js
+src/model/WebhooksSubscriptionConfig.js
+src/model/WebhooksSubscriptionMapping.js
+test/model/WebhooksSubscriptionConfig.spec.js
+test/model/WebhooksSubscriptionMapping.spec.js

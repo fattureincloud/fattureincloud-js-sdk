@@ -33,6 +33,9 @@
     instance.sink = 'https://endpoint.test'
     instance.verified = true
     instance.types = ['it.fattureincloud.webhooks.cashbook.create']
+    instance.config = {
+      mapping: 'binary'
+    }
   })
 
   // const getProperty = function (object, getter, property) {

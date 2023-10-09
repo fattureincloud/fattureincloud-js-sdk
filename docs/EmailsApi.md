@@ -4,7 +4,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listEmails**](EmailsApi.md#listEmails) | **GET** /c/{company_id}/emails | List emails
+[**listEmails**](EmailsApi.md#listEmails) | **GET** /c/{company_id}/emails | List Emails
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > ListEmailsResponse listEmails(companyId)
 
-List emails
+List Emails
 
 List Emails.
 

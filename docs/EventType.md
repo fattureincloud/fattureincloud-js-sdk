@@ -99,6 +99,8 @@
 
 * `products.delete` (value: `"it.fattureincloud.webhooks.products.delete"`)
 
+* `products.stock_update` (value: `"it.fattureincloud.webhooks.products.stock_update"`)
+
 * `entities.clients.create` (value: `"it.fattureincloud.webhooks.entities.clients.create"`)
 
 * `entities.clients.update` (value: `"it.fattureincloud.webhooks.entities.clients.update"`)
@@ -117,8 +119,8 @@
 
 * `entities.all.delete` (value: `"it.fattureincloud.webhooks.entities.all.delete"`)
 
-* `issued_documents.e_invoices` (value: `"it.fattureincloud.webhooks.issued_documents.e_invoices"`)
+* `issued_documents.e_invoices.status_update` (value: `"it.fattureincloud.webhooks.issued_documents.e_invoices.status_update"`)
 
-* `received_documents.e_invoices` (value: `"it.fattureincloud.webhooks.received_documents.e_invoices"`)
+* `received_documents.e_invoices.status_update` (value: `"it.fattureincloud.webhooks.received_documents.e_invoices.status_update"`)
 
 
