@@ -65,6 +65,11 @@ export default class OAuth2AuthorizationCodeManager {
     return `${authorizationUri}?${query}`
   }
 
+  /**
+   * Extracts parameters from a URL and returns an OAuth2AuthorizationCodeParams object.
+   * @param {string} url - The URL containing the parameters.
+   * @returns {OAuth2AuthorizationCodeParams} - The OAuth2AuthorizationCodeParams object containing the extracted parameters.
+   */
   getParamsFromUrl (url) {
     const query = url.split('?')[1]
     const params = new URLSearchParams(query)
@@ -72,6 +77,11 @@ export default class OAuth2AuthorizationCodeManager {
     return new OAuth2AuthorizationCodeParams(params.get('code'), params.get('state'))
   }
 
+  /**
+   * Fetches the token using the provided authorization code.
+   * @param {string} code - The authorization code.
+   * @returns {Promise} - A promise that resolves with the token response.
+   */
   fetchToken (code) {
     const tokenUri = `${this.baseUri}/oauth/token`
 
@@ -83,10 +93,14 @@ export default class OAuth2AuthorizationCodeManager {
       code
     }
 
-    const res = this.tokenRequest(tokenUri, data)
-    return res
+    return this.tokenRequest(tokenUri, data)
   }
 
+  /**
+   * Refreshes the access token using the provided refresh token.
+   * @param {string} refreshToken - The refresh token to use for token refresh.
+   * @returns {Promise} - A promise that resolves with the refreshed access token.
+   */
   refreshToken (refreshToken) {
     const tokenUri = `${this.baseUri}/oauth/token`
 
@@ -97,14 +111,13 @@ export default class OAuth2AuthorizationCodeManager {
       refresh_token: refreshToken
     }
 
-    const res = this.tokenRequest(tokenUri, data)
-    return new OAuth2AuthorizationCodeTokenResponse(res.token_type, res.access_token, res.refresh_token, res.expires_in)
+    return this.tokenRequest(tokenUri, data)
   }
 
   tokenRequest (uri, data) {
     return superagent.post(uri).send(data)
-      .then(d => {
-        return d.body
+      .then(({ body }) => {
+        return new OAuth2AuthorizationCodeTokenResponse(body.token_type, body.access_token, body.refresh_token, body.expires_in)
       })
       .catch(e => {
         throw new Error(e.response.text)

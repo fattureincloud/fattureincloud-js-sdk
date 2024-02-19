@@ -19,7 +19,7 @@ export default class OAuth2AuthorizationCodeTokenResponse {
      * The redirect uri.
      * @member {String} refreshToken
      */
-  redirectUri
+  refreshToken
 
   /**
      * The expire time.
