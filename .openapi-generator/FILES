@@ -21,6 +21,7 @@ docs/CompanyInfoPlanInfo.md
 docs/CompanyInfoPlanInfoFunctions.md
 docs/CompanyInfoPlanInfoFunctionsStatus.md
 docs/CompanyInfoPlanInfoLimits.md
+docs/CompanyPlanUsage.md
 docs/CompanyType.md
 docs/ControlledCompany.md
 docs/CreateArchiveDocumentRequest.md
@@ -67,11 +68,13 @@ docs/EntityType.md
 docs/EventType.md
 docs/F24.md
 docs/F24Status.md
+docs/FattureInCloudPlanType.md
 docs/FunctionStatus.md
 docs/GetArchiveDocumentResponse.md
 docs/GetCashbookEntryResponse.md
 docs/GetClientResponse.md
 docs/GetCompanyInfoResponse.md
+docs/GetCompanyPlanUsageResponse.md
 docs/GetEInvoiceRejectionReasonResponse.md
 docs/GetEmailDataResponse.md
 docs/GetExistingIssuedDocumentTotalsRequest.md
@@ -283,6 +286,7 @@ src/model/CompanyInfoPlanInfo.js
 src/model/CompanyInfoPlanInfoFunctions.js
 src/model/CompanyInfoPlanInfoFunctionsStatus.js
 src/model/CompanyInfoPlanInfoLimits.js
+src/model/CompanyPlanUsage.js
 src/model/CompanyType.js
 src/model/ControlledCompany.js
 src/model/CreateArchiveDocumentRequest.js
@@ -328,11 +332,13 @@ src/model/EntityType.js
 src/model/EventType.js
 src/model/F24.js
 src/model/F24Status.js
+src/model/FattureInCloudPlanType.js
 src/model/FunctionStatus.js
 src/model/GetArchiveDocumentResponse.js
 src/model/GetCashbookEntryResponse.js
 src/model/GetClientResponse.js
 src/model/GetCompanyInfoResponse.js
+src/model/GetCompanyPlanUsageResponse.js
 src/model/GetEInvoiceRejectionReasonResponse.js
 src/model/GetEmailDataResponse.js
 src/model/GetExistingIssuedDocumentTotalsRequest.js
@@ -497,3 +503,6 @@ src/model/VerifyEInvoiceXmlResponseData.js
 src/model/WebhooksSubscription.js
 src/model/WebhooksSubscriptionConfig.js
 src/model/WebhooksSubscriptionMapping.js
+test/model/CompanyPlanUsage.spec.js
+test/model/FattureInCloudPlanType.spec.js
+test/model/GetCompanyPlanUsageResponse.spec.js
