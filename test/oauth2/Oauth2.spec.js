@@ -105,8 +105,14 @@
       expect(params.deviceCode).to.equal('mango')
       params.userCode = 'teddy'
       expect(params.userCode).to.equal('teddy')
-      params.scope = {}
-      expect(params.scope).to.equal({})
+      params.scope = {
+        situation: 'a',
+        settings: 'r'
+      }
+      expect(params.scope).to.equal({
+        situation: 'a',
+        settings: 'r'
+      })
       params.interval = 10
       expect(params.interval).to.equal(10)
       params.expiresIn = 86401
