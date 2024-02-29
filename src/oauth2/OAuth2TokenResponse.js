@@ -28,7 +28,7 @@ export default class OAuth2TokenResponse {
   expiresIn
 
   /**
-     * Constructs a new <code>OAuth2AuthorizationCodeTokenResponse</code>.
+     * Constructs a new <code>OAuth2TokenResponse</code>.
      * @param {String} tokenType The token type.
      * @param {String} accessToken The access token.
      * @param {String} refreshToken The refresh token.
