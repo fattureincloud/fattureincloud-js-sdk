@@ -36,6 +36,8 @@
     instance.access_token = '4ff5f0fe5abcd1d7157fa13ca72ab62b6183db0667a576a0e19164801c18c4f7362a848fa32dbb8c3a3f94c34f3df95'
     instance.connection_id = 94566
     instance.access_token = 'ergaegwergq53wh65je5j'
+    instance.fic_license_expire = '2024-10-10'
+    instance.fic_plan = 'standard'
     instance.controlled_companies = [
       {
         id: 12246,
@@ -145,6 +147,14 @@
 
     it('should have the property taxCode (base name: "tax_code")', function () {
       expect(typeof instance.tax_code).to.be('string')
+    })
+
+    it('should have the property connectionId (base name: "fic_license_expire")', function () {
+      expect(typeof instance.fic_license_expire).to.be('string')
+    })
+
+    it('should have the property taxCode (base name: "fic_plan")', function () {
+      expect(typeof instance.fic_plan).to.be('string')
     })
   })
 }))
