@@ -43,21 +43,15 @@
 
   describe('CompanyPlanUsage', function () {
     it('should create an instance of CompanyPlanUsage', function () {
-      // uncomment below and update the code to test CompanyPlanUsage
-      // var instance = new fattureInCloudSdk.CompanyPlanUsage();
-      // expect(instance).to.be.a(fattureInCloudSdk.CompanyPlanUsage);
+      expect(typeof instance.connection_id).to.be(fattureInCloudSdk.CompanyPlanUsage)
     })
 
     it('should have the property limit (base name: "limit")', function () {
-      // uncomment below and update the code to test the property limit
-      // var instance = new fattureInCloudSdk.CompanyPlanUsage();
-      // expect(instance).to.be();
+      expect(instance.limit).to.be.a('number')
     })
 
     it('should have the property usage (base name: "usage")', function () {
-      // uncomment below and update the code to test the property usage
-      // var instance = new fattureInCloudSdk.CompanyPlanUsage();
-      // expect(instance).to.be();
+      expect(instance.usage).to.be.a('number')
     })
   })
 }))
