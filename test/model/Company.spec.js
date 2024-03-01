@@ -149,11 +149,11 @@
       expect(typeof instance.tax_code).to.be('string')
     })
 
-    it('should have the property connectionId (base name: "fic_license_expire")', function () {
+    it('should have the property fic_license_expire (base name: "fic_license_expire")', function () {
       expect(typeof instance.fic_license_expire).to.be('string')
     })
 
-    it('should have the property taxCode (base name: "fic_plan")', function () {
+    it('should have the property fic_plan (base name: "fic_plan")', function () {
       expect(typeof instance.fic_plan).to.be('string')
     })
   })
