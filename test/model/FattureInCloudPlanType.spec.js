@@ -28,23 +28,23 @@
   let instance
 
   beforeEach(function () {
+    instance = new fattureInCloudSdk.Company()
+    instance.fic_plan = 'standard'
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('FattureInCloudPlanType', function () {
     it('should create an instance of FattureInCloudPlanType', function () {
-      // uncomment below and update the code to test FattureInCloudPlanType
-      // var instance = new fattureInCloudSdk.FattureInCloudPlanType();
-      // expect(instance).to.be.a(fattureInCloudSdk.FattureInCloudPlanType);
+      expect(instance.fic_plan).to.be.a('string')
     })
   })
 }))
