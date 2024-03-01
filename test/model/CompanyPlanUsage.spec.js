@@ -29,21 +29,23 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.CompanyPlanUsage()
+    instance.limit = 5
+    instance.usage = 7
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('CompanyPlanUsage', function () {
     it('should create an instance of CompanyPlanUsage', function () {
-      expect(typeof instance.connection_id).to.be(fattureInCloudSdk.CompanyPlanUsage)
+      expect(instance).to.be.a(fattureInCloudSdk.CompanyPlanUsage)
     })
 
     it('should have the property limit (base name: "limit")', function () {
