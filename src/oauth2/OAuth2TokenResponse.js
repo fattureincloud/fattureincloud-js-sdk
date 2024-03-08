@@ -1,22 +1,22 @@
 /**
- * The OAuth2AuthorizationCodeTokenResponse oauth module.
- * @module oauth2/OAuth2AuthorizationCodeTokenResponse
+ * The OAuth2TokenResponse oauth module.
+ * @module oauth2/OAuth2TokenResponse
  */
-export default class OAuth2AuthorizationCodeTokenResponse {
+export default class OAuth2TokenResponse {
   /**
-     * The client id.
+     * The token type.
      * @member {String} tokenType
      */
   tokenType
 
   /**
-     * The client secret.
+     * The access token.
      * @member {String} accessToken
      */
   accessToken
 
   /**
-     * The redirect uri.
+     * The refresh token.
      * @member {String} refreshToken
      */
   refreshToken
@@ -28,7 +28,7 @@ export default class OAuth2AuthorizationCodeTokenResponse {
   expiresIn
 
   /**
-     * Constructs a new <code>OAuth2AuthorizationCodeTokenResponse</code>.
+     * Constructs a new <code>OAuth2TokenResponse</code>.
      * @param {String} tokenType The token type.
      * @param {String} accessToken The access token.
      * @param {String} refreshToken The refresh token.
