@@ -40,6 +40,8 @@
       expect(fattureInCloudSdk.Operator.IS_NOT).to.equal('is not')
       expect(fattureInCloudSdk.Operator.LIKE).to.equal('like')
       expect(fattureInCloudSdk.Operator.CONTAINS).to.equal('contains')
+      expect(fattureInCloudSdk.Operator.NOT_LIKE).to.equal('not like')
+      expect(fattureInCloudSdk.Operator.NOT_CONTAINS).to.equal('not contains')
       expect(fattureInCloudSdk.Operator.STARTS_WITH).to.equal('starts with')
       expect(fattureInCloudSdk.Operator.ENDS_WITH).to.equal('ends with')
     })
