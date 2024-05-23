@@ -83,7 +83,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.WebhooksApi();
 let companyId = 12345; // Number | The ID of the company.
-let subscriptionId = SUB123; // String | The ID of the subscription.
+let subscriptionId = "SUB123"; // String | The ID of the subscription.
 apiInstance.deleteWebhooksSubscription(companyId, subscriptionId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -133,7 +133,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.WebhooksApi();
 let companyId = 12345; // Number | The ID of the company.
-let subscriptionId = SUB123; // String | The ID of the subscription.
+let subscriptionId = "SUB123"; // String | The ID of the subscription.
 apiInstance.getWebhooksSubscription(companyId, subscriptionId).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
 }, (error) => {
@@ -231,7 +231,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.WebhooksApi();
 let companyId = 12345; // Number | The ID of the company.
-let subscriptionId = SUB123; // String | The ID of the subscription.
+let subscriptionId = "SUB123"; // String | The ID of the subscription.
 let opts = {
   'modifyWebhooksSubscriptionRequest': new fattureInCloudSdk.ModifyWebhooksSubscriptionRequest() // ModifyWebhooksSubscriptionRequest | 
 };
