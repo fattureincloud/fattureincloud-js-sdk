@@ -503,6 +503,3 @@ src/model/VerifyEInvoiceXmlResponseData.js
 src/model/WebhooksSubscription.js
 src/model/WebhooksSubscriptionConfig.js
 src/model/WebhooksSubscriptionMapping.js
-test/model/CompanyPlanUsage.spec.js
-test/model/FattureInCloudPlanType.spec.js
-test/model/GetCompanyPlanUsageResponse.spec.js
