@@ -58,7 +58,6 @@
     instance.show_payment_method = false
     instance.show_payments = true
     instance.show_totals = 'all'
-    instance.show_paypal_button = true
     instance.show_notification_button = false
     instance.is_marked = false
     instance.date = '2021-08-20'
@@ -328,10 +327,6 @@
 
     it('should have the property vMargins (base name: "v_margins")', function () {
       expect(typeof instance.v_margins).to.be('number')
-    })
-
-    it('should have the property showPaypalButton (base name: "show_paypal_button")', function () {
-      expect(typeof instance.show_paypal_button).to.be('boolean')
     })
 
     it('should have the property showNotificationButton (base name: "show_notification_button")', function () {

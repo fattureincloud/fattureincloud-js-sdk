@@ -29,7 +29,6 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.IssuedDocumentExtraData()
-    instance.show_sofort_button = true
     instance.multifatture_sent = 3
     instance.ts_communication = true
     instance.ts_flag_tipo_spesa = 1
@@ -56,10 +55,6 @@
   describe('IssuedDocumentExtraData', function () {
     it('should create an instance of IssuedDocumentExtraData', function () {
       expect(instance).to.be.a(fattureInCloudSdk.IssuedDocumentExtraData)
-    })
-
-    it('should have the property showSofortButton (base name: "show_sofort_button")', function () {
-      expect(typeof instance.show_sofort_button).to.be('boolean')
     })
 
     it('should have the property multifattureSent (base name: "multifatture_sent")', function () {
