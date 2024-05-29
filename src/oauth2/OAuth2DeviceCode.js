@@ -67,6 +67,6 @@ export default class OAuth2DeviceCodeManager extends OAuth2Manager {
   }
 
   mapToDeviceCodeResponse (body) {
-    return new OAuth2DeviceCodeResponse(body.device_code, body.user_code, body.scope, body.verification_uri, body.interval, body.expires_in)
+    return new OAuth2DeviceCodeResponse(body.data.device_code, body.data.user_code, body.data.scope, body.data.verification_uri, body.data.interval, body.data.expires_in)
   }
 }
