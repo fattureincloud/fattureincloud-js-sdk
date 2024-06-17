@@ -63,17 +63,17 @@ export default class Operator {
      */
   static CONTAINS = 'contains'
 
-   /**
+  /**
     * Not Like operator.
     * @member {String} NOT_LIKE
     */
-   static NOT_LIKE = 'not like'
+  static NOT_LIKE = 'not like'
 
-   /**
+  /**
        * Not Contains operator.
        * @member {String} NOT_CONTAINS
        */
-   static NOT_CONTAINS = 'not contains'
+  static NOT_CONTAINS = 'not contains'
 
   /**
      * Starts With operator.
