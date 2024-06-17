@@ -269,9 +269,11 @@ import Conjunction from './filter/Conjunction'
 import Disjunction from './filter/Disjunction'
 import Operator from './filter/Operator'
 
-import OAuth2AuthorizationCodeManager from './oauth2/OAuth2'
-import OAuth2AuthorizationCodeTokenResponse from './oauth2/OAuth2AuthorizationCodeTokenResponse'
+import OAuth2AuthorizationCodeManager from './oauth2/OAuth2AuthorizationCode'
 import OAuth2AuthorizationCodeParams from './oauth2/OAuth2AuthorizationCodeParams'
+import OAuth2DeviceCodeManager from './oauth2/OAuth2DeviceCode'
+import OAuth2DeviceCodeResponse from './oauth2/OAuth2DeviceCodeResponse'
+import OAuth2TokenResponse from './oauth2/OAuth2TokenResponse'
 import Scope from './oauth2/Scope'
 
 /**
@@ -350,16 +352,28 @@ export {
   OAuth2AuthorizationCodeManager,
 
   /**
+    * The OAuth2DeviceCodeManager service constructor.
+    * @property {module:api/OAuth2DeviceCodeManager}
+    */
+  OAuth2DeviceCodeManager,
+
+  /**
     * The Scope service constructor.
     * @property {module:api/Scope}
     */
   Scope,
 
   /**
-    * The OAuth2AuthorizationCodeTokenResponse service constructor.
-    * @property {module:api/OAuth2AuthorizationCodeTokenResponse}
+    * The OAuth2TokenResponse service constructor.
+    * @property {module:api/OAuth2TokenResponse}
     */
-  OAuth2AuthorizationCodeTokenResponse,
+  OAuth2TokenResponse,
+
+  /**
+    * The OAuth2DeviceCodeResponse service constructor.
+    * @property {module:api/OAuth2DeviceCodeResponse}
+    */
+  OAuth2DeviceCodeResponse,
 
   /**
     * The OAuth2AuthorizationCodeParams service constructor.
