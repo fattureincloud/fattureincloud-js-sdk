@@ -97,6 +97,7 @@ docs/GetReceiptsMonthlyTotalsResponse.md
 docs/GetReceivedDocumentPreCreateInfoResponse.md
 docs/GetReceivedDocumentResponse.md
 docs/GetSupplierResponse.md
+docs/GetTaxProfileResponse.md
 docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
@@ -228,6 +229,7 @@ docs/ShowTotalsMode.md
 docs/Supplier.md
 docs/SupplierType.md
 docs/SuppliersApi.md
+docs/TaxProfile.md
 docs/TaxesApi.md
 docs/TransformIssuedDocumentResponse.md
 docs/UploadArchiveAttachmentResponse.md
@@ -361,6 +363,7 @@ src/model/GetReceiptsMonthlyTotalsResponse.js
 src/model/GetReceivedDocumentPreCreateInfoResponse.js
 src/model/GetReceivedDocumentResponse.js
 src/model/GetSupplierResponse.js
+src/model/GetTaxProfileResponse.js
 src/model/GetUserInfoResponse.js
 src/model/GetUserInfoResponseEmailConfirmationState.js
 src/model/GetUserInfoResponseInfo.js
@@ -484,6 +487,7 @@ src/model/SenderEmail.js
 src/model/ShowTotalsMode.js
 src/model/Supplier.js
 src/model/SupplierType.js
+src/model/TaxProfile.js
 src/model/TransformIssuedDocumentResponse.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
@@ -503,3 +507,5 @@ src/model/VerifyEInvoiceXmlResponseData.js
 src/model/WebhooksSubscription.js
 src/model/WebhooksSubscriptionConfig.js
 src/model/WebhooksSubscriptionMapping.js
+test/model/GetTaxProfileResponse.spec.js
+test/model/TaxProfile.spec.js
