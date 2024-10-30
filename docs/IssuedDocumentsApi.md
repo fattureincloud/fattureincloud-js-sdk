@@ -457,7 +457,7 @@ let companyId = 12345; // Number | The ID of the company.
 let ids = "1,2,3,4"; // String | Ids of the documents.
 let opts = {
   'group': 56, // Number | Group items.
-  'eInvoice': 56 // Number | New document e_invoice.
+  'type': "delivery_notes, orders, quotes, work_reports" // String | Type of the documents to be joined
 };
 apiInstance.joinIssuedDocuments(companyId, ids, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
  **companyId** | **Number**| The ID of the company. | 
  **ids** | **String**| Ids of the documents. | 
  **group** | **Number**| Group items. | [optional] 
- **eInvoice** | **Number**| New document e_invoice. | [optional] 
+ **type** | **String**| Type of the documents to be joined | [optional] 
 
 ### Return type
 
@@ -687,6 +687,7 @@ let companyId = 12345; // Number | The ID of the company.
 let originalDocumentId = 56; // Number | Original document id.
 let newType = "newType_example"; // String | New document type.
 let opts = {
+  'type': "type_example", // String | Current document type.
   'eInvoice': 56, // Number | New document e_invoice.
   'transformKeepCopy': 56 // Number | Keep the old document.
 };
@@ -706,6 +707,7 @@ Name | Type | Description  | Notes
  **companyId** | **Number**| The ID of the company. | 
  **originalDocumentId** | **Number**| Original document id. | 
  **newType** | **String**| New document type. | 
+ **type** | **String**| Current document type. | [optional] 
  **eInvoice** | **Number**| New document e_invoice. | [optional] 
  **transformKeepCopy** | **Number**| Keep the old document. | [optional] 
 

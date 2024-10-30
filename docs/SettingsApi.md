@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**deleteVatType**](SettingsApi.md#deleteVatType) | **DELETE** /c/{company_id}/settings/vat_types/{vat_type_id} | Delete Vat Type
 [**getPaymentAccount**](SettingsApi.md#getPaymentAccount) | **GET** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Get Payment Account
 [**getPaymentMethod**](SettingsApi.md#getPaymentMethod) | **GET** /c/{company_id}/settings/payment_methods/{payment_method_id} | Get Payment Method
+[**getTaxProfile**](SettingsApi.md#getTaxProfile) | **GET** /c/{company_id}/settings/tax_profile | Get Tax Profile
 [**getVatType**](SettingsApi.md#getVatType) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type
 [**modifyPaymentAccount**](SettingsApi.md#modifyPaymentAccount) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account
 [**modifyPaymentMethod**](SettingsApi.md#modifyPaymentMethod) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method
@@ -426,6 +427,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetPaymentMethodResponse**](GetPaymentMethodResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getTaxProfile
+
+> GetTaxProfileResponse getTaxProfile(companyId)
+
+Get Tax Profile
+
+Gets the Tax Profile
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+apiInstance.getTaxProfile(companyId).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+
+### Return type
+
+[**GetTaxProfileResponse**](GetTaxProfileResponse.md)
 
 ### Authorization
 

@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **eiDescription** | **String** | Vat type e-invoice description | [optional] 
 **editable** | **Boolean** | [Read Only] Is the vat type is editable. | [optional] [readonly] 
 **isDisabled** | **Boolean** | Is the vat type disabled | [optional] 
+**_default** | **Boolean** | If the vat type is default | [optional] 
 
 
