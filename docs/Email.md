@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Email id | [optional] 
 **status** | [**EmailStatus**](EmailStatus.md) |  | [optional] 
-**sentDate** | **Date** | Email sent date | [optional] 
+**sentDate** | **String** | Email sent date | [optional] 
 **errorsCount** | **Number** | Email errors count | [optional] 
 **errorLog** | **String** | Email errors log | [optional] 
 **fromEmail** | **String** | Email sender email | [optional] 
