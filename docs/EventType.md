@@ -129,4 +129,26 @@
 
 * `received_documents.e_invoices.receive` (value: `"it.fattureincloud.webhooks.received_documents.e_invoices.receive"`)
 
+* `issued_documents.invoices.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.invoices.email_sent"`)
+
+* `issued_documents.quotes.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.quotes.email_sent"`)
+
+* `issued_documents.proformas.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.proformas.email_sent"`)
+
+* `issued_documents.receipts.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.receipts.email_sent"`)
+
+* `issued_documents.delivery_notes.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.delivery_notes.email_sent"`)
+
+* `issued_documents.credit_notes.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.credit_notes.email_sent"`)
+
+* `issued_documents.orders.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.orders.email_sent"`)
+
+* `issued_documents.work_reports.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.work_reports.email_sent"`)
+
+* `issued_documents.supplier_orders.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.supplier_orders.email_sent"`)
+
+* `issued_documents.self_invoices.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.self_invoices.email_sent"`)
+
+* `issued_documents.all.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.all.email_sent"`)
+
 
