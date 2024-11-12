@@ -199,8 +199,8 @@ import GetVatTypeResponse from '../../src/model/GetVatTypeResponse'
         done()
       })
     })
-    describe('deletePaymentMethod', function () {
-      it('should call deletePaymentMethod successfully', function (done) {
+    describe('deleteVatType', function () {
+      it('should call deleteVatType successfully', function (done) {
         expect(1).to.equal(1)
         done()
       })
