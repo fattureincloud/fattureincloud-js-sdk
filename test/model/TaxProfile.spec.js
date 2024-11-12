@@ -31,6 +31,7 @@
     instance = new fattureInCloudSdk.TaxProfile()
     instance.company_type = 'individual'
     instance.company_subtype = 'artigiani'
+    instance.profession = 'test',
     instance.regime = 'forfettario_5'
     instance.rivalsa_name = ''
     instance.default_rivalsa = 0
@@ -79,6 +80,10 @@
 
     it('should have the property companyType (base name: "company_type")', function () {
       expect(typeof instance.company_type).to.be('string')
+    })
+
+    it('should have the property profession (base name: "profession")', function () {
+      expect(typeof instance.profession).to.be('string')
     })
 
     it('should have the property companySubtype (base name: "company_subtype")', function () {
