@@ -100,6 +100,7 @@
     })
 
     it('should have the property defaultRivalsa (base name: "default_rivalsa")', function () {
+      expect(typeof instance.default_rivalsa).to.be('number')
     })
 
     it('should have the property cassaName (base name: "cassa_name")', function () {
