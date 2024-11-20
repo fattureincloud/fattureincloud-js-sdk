@@ -45,8 +45,9 @@
     instance.default_withholding_tax_taxable = 100
     instance.default_other_withholding_tax = 0
     instance.enasarco = false
-    instance.enasarco_type = null
+    instance.enasarco_type = 'test'
     instance.contributions_percentage = 0
+    instance.profit_coefficient = 0
     instance.med = false
     instance.default_vat = {
       id: 66,
@@ -90,6 +91,10 @@
       expect(typeof instance.company_subtype).to.be('string')
     })
 
+    it('should have the property profession (base name: "profession")', function () {
+      expect(typeof instance.profession).to.be('string')
+    })
+
     it('should have the property regime (base name: "regime")', function () {
       expect(typeof instance.regime).to.be('string')
     })
@@ -127,6 +132,7 @@
 
     it('should have the property defaultWithholdingTax (base name: "default_withholding_tax")', function () {
       expect(typeof instance.default_withholding_tax).to.be('number')
+    })
 
     it('should have the property defaultWithholdingTaxTaxable (base name: "default_withholding_tax_taxable")', function () {
       expect(typeof instance.default_withholding_tax_taxable).to.be('number')
@@ -148,6 +154,10 @@
       expect(typeof instance.contributions_percentage).to.be('number')
     })
 
+    it('should have the property profitCoefficient (base name: "profit_coefficient")', function () {
+      expect(typeof instance.profit_coefficient).to.be('number')
+    })
+
     it('should have the property med (base name: "med")', function () {
       expect(typeof instance.med).to.be('boolean')
     })
@@ -156,8 +166,4 @@
       expect(typeof instance.default_vat).to.be('object')
     })
   })
-}
-)
-}
-)
-)
+}))
