@@ -29,149 +29,138 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.TaxProfile()
+    instance.company_type = 'individual'
+    instance.company_subtype = 'artigiani'
+    instance.profession = 'test',
+    instance.regime = 'forfettario_5'
+    instance.rivalsa_name = ''
+    instance.default_rivalsa = 0
+    instance.cassa_name = ''
+    instance.default_cassa = 0
+    instance.default_cassa_taxable = 100
+    instance.cassa2_name = ''
+    instance.default_cassa2 = 0
+    instance.default_cassa2_taxable = 0
+    instance.default_withholding_tax = 0
+    instance.default_withholding_tax_taxable = 100
+    instance.default_other_withholding_tax = 0
+    instance.enasarco = false
+    instance.enasarco_type = 'test'
+    instance.contributions_percentage = 0
+    instance.profit_coefficient = 0
+    instance.med = false
+    instance.default_vat = {
+      id: 66,
+      value: 0,
+      description: "Contribuenti forfettari",
+      notes: "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190\/2014 e succ. modifiche\/integrazioni",
+      e_invoice: true,
+      ei_type: 2.2,
+      ei_description: "Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni",
+      editable: false,
+      is_disabled: false,
+      default: true
+    }
+    
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('TaxProfile', function () {
     it('should create an instance of TaxProfile', function () {
-      // uncomment below and update the code to test TaxProfile
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be.a(fattureInCloudSdk.TaxProfile);
+      expect(instance).to.be.a(fattureInCloudSdk.TaxProfile)
     })
 
     it('should have the property companyType (base name: "company_type")', function () {
-      // uncomment below and update the code to test the property companyType
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.company_type).to.be('string')
     })
 
     it('should have the property companySubtype (base name: "company_subtype")', function () {
-      // uncomment below and update the code to test the property companySubtype
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.company_subtype).to.be('string')
     })
 
     it('should have the property profession (base name: "profession")', function () {
-      // uncomment below and update the code to test the property profession
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.profession).to.be('string')
     })
 
     it('should have the property regime (base name: "regime")', function () {
-      // uncomment below and update the code to test the property regime
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.regime).to.be('string')
     })
 
     it('should have the property rivalsaName (base name: "rivalsa_name")', function () {
-      // uncomment below and update the code to test the property rivalsaName
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.rivalsa_name).to.be('string')
     })
 
     it('should have the property defaultRivalsa (base name: "default_rivalsa")', function () {
-      // uncomment below and update the code to test the property defaultRivalsa
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_rivalsa).to.be('number')
     })
 
     it('should have the property cassaName (base name: "cassa_name")', function () {
-      // uncomment below and update the code to test the property cassaName
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.cassa_name).to.be('string')
     })
 
     it('should have the property defaultCassa (base name: "default_cassa")', function () {
-      // uncomment below and update the code to test the property defaultCassa
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_cassa).to.be('number')
     })
 
     it('should have the property defaultCassaTaxable (base name: "default_cassa_taxable")', function () {
-      // uncomment below and update the code to test the property defaultCassaTaxable
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_cassa_taxable).to.be('number')
     })
 
     it('should have the property cassa2Name (base name: "cassa2_name")', function () {
-      // uncomment below and update the code to test the property cassa2Name
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.cassa2_name).to.be('string')
     })
 
     it('should have the property defaultCassa2 (base name: "default_cassa2")', function () {
-      // uncomment below and update the code to test the property defaultCassa2
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_cassa2).to.be('number')
     })
 
     it('should have the property defaultCassa2Taxable (base name: "default_cassa2_taxable")', function () {
-      // uncomment below and update the code to test the property defaultCassa2Taxable
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_cassa2_taxable).to.be('number')
     })
 
     it('should have the property defaultWithholdingTax (base name: "default_withholding_tax")', function () {
-      // uncomment below and update the code to test the property defaultWithholdingTax
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_withholding_tax).to.be('number')
     })
 
     it('should have the property defaultWithholdingTaxTaxable (base name: "default_withholding_tax_taxable")', function () {
-      // uncomment below and update the code to test the property defaultWithholdingTaxTaxable
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_withholding_tax_taxable).to.be('number')
     })
 
     it('should have the property defaultOtherWithholdingTax (base name: "default_other_withholding_tax")', function () {
-      // uncomment below and update the code to test the property defaultOtherWithholdingTax
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_other_withholding_tax).to.be('number')
     })
 
     it('should have the property enasarco (base name: "enasarco")', function () {
-      // uncomment below and update the code to test the property enasarco
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.enasarco).to.be('boolean')
     })
 
     it('should have the property enasarcoType (base name: "enasarco_type")', function () {
-      // uncomment below and update the code to test the property enasarcoType
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.enasarco_type).to.be('string')
     })
 
     it('should have the property contributionsPercentage (base name: "contributions_percentage")', function () {
-      // uncomment below and update the code to test the property contributionsPercentage
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.contributions_percentage).to.be('number')
     })
 
     it('should have the property profitCoefficient (base name: "profit_coefficient")', function () {
-      // uncomment below and update the code to test the property profitCoefficient
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.profit_coefficient).to.be('number')
     })
 
     it('should have the property med (base name: "med")', function () {
-      // uncomment below and update the code to test the property med
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.med).to.be('boolean')
     })
 
     it('should have the property defaultVat (base name: "default_vat")', function () {
-      // uncomment below and update the code to test the property defaultVat
-      // var instance = new fattureInCloudSdk.TaxProfile();
-      // expect(instance).to.be();
+      expect(typeof instance.default_vat).to.be('object')
     })
   })
 }))
