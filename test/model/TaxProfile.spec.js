@@ -83,10 +83,6 @@
       expect(typeof instance.company_type).to.be('string')
     })
 
-    it('should have the property profession (base name: "profession")', function () {
-      expect(typeof instance.profession).to.be('string')
-    })
-
     it('should have the property companySubtype (base name: "company_subtype")', function () {
       expect(typeof instance.company_subtype).to.be('string')
     })
