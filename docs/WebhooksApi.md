@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getWebhooksSubscription**](WebhooksApi.md#getWebhooksSubscription) | **GET** /c/{company_id}/subscriptions/{subscription_id} | Get Webhooks Subscription
 [**listWebhooksSubscriptions**](WebhooksApi.md#listWebhooksSubscriptions) | **GET** /c/{company_id}/subscriptions | List Webhooks Subscriptions
 [**modifyWebhooksSubscription**](WebhooksApi.md#modifyWebhooksSubscription) | **PUT** /c/{company_id}/subscriptions/{subscription_id} | Modify Webhooks Subscription
+[**verifyWebhooksSubscription**](WebhooksApi.md#verifyWebhooksSubscription) | **POST** /c/{company_id}/subscriptions/{subscription_id}/verify | Verify Webhooks Subscription
 
 
 
@@ -32,7 +33,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new fattureInCloudSdk.WebhooksApi();
 let companyId = 12345; // Number | The ID of the company.
 let opts = {
-  'createWebhooksSubscriptionRequest': {"data":{"sink":"http://www.test.com","types":["it.fattureincloud.webhooks.entities.create","it.fattureincloud.webhooks.issued_documents.create"]}} // CreateWebhooksSubscriptionRequest | 
+  'createWebhooksSubscriptionRequest': {"data":{"sink":"http://www.test.com","types":["it.fattureincloud.webhooks.entities.create","it.fattureincloud.webhooks.issued_documents.create"],"verification_method":"header"}} // CreateWebhooksSubscriptionRequest | 
 };
 apiInstance.createWebhooksSubscription(companyId, opts).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
@@ -264,4 +265,58 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## verifyWebhooksSubscription
+
+> verifyWebhooksSubscription(companyId, subscriptionId, opts)
+
+Verify Webhooks Subscription
+
+Verify a webhook subscription.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.WebhooksApi();
+let companyId = 12345; // Number | The ID of the company.
+let subscriptionId = "SUB123"; // String | The ID of the subscription.
+let opts = {
+  'verifyWebhooksSubscriptionRequest': new fattureInCloudSdk.VerifyWebhooksSubscriptionRequest() // VerifyWebhooksSubscriptionRequest | 
+};
+apiInstance.verifyWebhooksSubscription(companyId, subscriptionId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **subscriptionId** | **String**| The ID of the subscription. | 
+ **verifyWebhooksSubscriptionRequest** | [**VerifyWebhooksSubscriptionRequest**](VerifyWebhooksSubscriptionRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
 

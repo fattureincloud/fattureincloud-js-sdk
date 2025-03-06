@@ -196,6 +196,18 @@ export default class Scope {
   static RECEIPTS_ALL = 'receipts:a'
 
   /**
+     * Read permission to the Calendar
+     * @member {String} CALENDAR_READ
+     */
+  static CALENDAR_READ = 'calendar:r'
+
+  /**
+     * Write permission to the Calendar
+     * @member {String} CALENDAR_ALL
+     */
+  static CALENDAR_ALL = 'calendar:a'
+
+  /**
      * Read permission to the Taxes
      * @member {String} TAXES_READ
      */
@@ -218,6 +230,12 @@ export default class Scope {
      * @member {String} ARCHIVE_ALL
      */
   static ARCHIVE_ALL = 'archive:a'
+
+  /**
+     * Read permission to the Emails
+     * @member {String} EMAILS_READ
+     */
+  static EMAILS_READ = 'emails:r'
 
   /**
      * Read permission to the Cashbook
