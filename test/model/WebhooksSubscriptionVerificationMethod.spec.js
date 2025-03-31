@@ -28,23 +28,22 @@
   let instance
 
   beforeEach(function () {
+    instance = new fattureInCloudSdk.WebhooksSubscriptionVerificationMethod()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('WebhooksSubscriptionVerificationMethod', function () {
     it('should create an instance of WebhooksSubscriptionVerificationMethod', function () {
-      // uncomment below and update the code to test WebhooksSubscriptionVerificationMethod
-      // var instance = new fattureInCloudSdk.WebhooksSubscriptionVerificationMethod();
-      // expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionVerificationMethod);
+      expect(instance).to.be.a(fattureInCloudSdk.WebhooksSubscriptionVerificationMethod)
     })
   })
 }))

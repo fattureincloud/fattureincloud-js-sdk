@@ -29,65 +29,104 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.EntityClientPreCreateInfo()
+    instance.countries_list = ['Italy']
+    instance.payments_methods_list = [
+      {
+        id: 555,
+        name: 'Rimessa diretta',
+        is_default: false,
+        details: [],
+        bank_iban: null,
+        bank_name: null,
+        bank_beneficiary: null,
+        ei_payment_method: null
+      }
+    ]
+    instance.payment_accounts_list = [
+      {
+        id: 0,
+        name: 'Conto Banca Intesa',
+        type: 'standard',
+        iban: 'string',
+        sia: 'string',
+        cuc: 'string',
+        virtual: true
+      }
+    ]
+    instance.vat_types_list = [
+      {
+        id: 0,
+        value: 22,
+        description: 'Iva 22%',
+        notes: 'string',
+        is_disabled: false
+      }
+    ]
+    instance.price_lists = [
+      {
+        id: '10',
+        name: 'listino',
+        prices_type: 'net',
+        is_default: true,
+        valid_from: '2025-01-01',
+        valid_to: '2025-12-01',
+        type: 'sell'
+      },
+      {
+        id: '11',
+        name: 'listino-test',
+        prices_type: 'gross',
+        is_default: true,
+        valid_from: '2025-01-01',
+        valid_to: '2025-01-01',
+        type: 'purchase'
+      }
+    ]
+    instance.limit = 10
+    instance.usage = 10
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('EntityClientPreCreateInfo', function () {
     it('should create an instance of EntityClientPreCreateInfo', function () {
-      // uncomment below and update the code to test EntityClientPreCreateInfo
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be.a(fattureInCloudSdk.EntityClientPreCreateInfo);
+      expect(instance).to.be.a(fattureInCloudSdk.EntityClientPreCreateInfo)
     })
 
     it('should have the property countriesList (base name: "countries_list")', function () {
-      // uncomment below and update the code to test the property countriesList
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.countries_list).to.be('object')
     })
 
     it('should have the property paymentMethodsList (base name: "payment_methods_list")', function () {
-      // uncomment below and update the code to test the property paymentMethodsList
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.payments_methods_list).to.be('object')
     })
 
     it('should have the property paymentAccountsList (base name: "payment_accounts_list")', function () {
-      // uncomment below and update the code to test the property paymentAccountsList
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.payment_accounts_list).to.be('object')
     })
 
     it('should have the property vatTypesList (base name: "vat_types_list")', function () {
-      // uncomment below and update the code to test the property vatTypesList
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.vat_types_list).to.be('object')
     })
 
     it('should have the property priceLists (base name: "price_lists")', function () {
-      // uncomment below and update the code to test the property priceLists
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.price_lists).to.be('object')
     })
 
     it('should have the property limit (base name: "limit")', function () {
-      // uncomment below and update the code to test the property limit
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.limit).to.be('number')
     })
 
     it('should have the property usage (base name: "usage")', function () {
-      // uncomment below and update the code to test the property usage
-      // var instance = new fattureInCloudSdk.EntityClientPreCreateInfo();
-      // expect(instance).to.be();
+      expect(typeof instance.usage).to.be('number')
     })
   })
 }))

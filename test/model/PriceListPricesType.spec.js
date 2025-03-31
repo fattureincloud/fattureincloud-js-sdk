@@ -28,23 +28,22 @@
   let instance
 
   beforeEach(function () {
+    instance = new fattureInCloudSdk.PriceListPricesType()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PriceListPricesType', function () {
     it('should create an instance of PriceListPricesType', function () {
-      // uncomment below and update the code to test PriceListPricesType
-      // var instance = new fattureInCloudSdk.PriceListPricesType();
-      // expect(instance).to.be.a(fattureInCloudSdk.PriceListPricesType);
+      expect(instance).to.be.a(fattureInCloudSdk.PriceListPricesType);
     })
   })
 }))

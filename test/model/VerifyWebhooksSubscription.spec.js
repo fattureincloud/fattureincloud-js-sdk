@@ -29,35 +29,31 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.VerifyWebhooksSubscription()
+    instance.id = '12345'
+    instance.verificationMethod = 'header'
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('VerifyWebhooksSubscription', function () {
     it('should create an instance of VerifyWebhooksSubscription', function () {
-      // uncomment below and update the code to test VerifyWebhooksSubscription
-      // var instance = new fattureInCloudSdk.VerifyWebhooksSubscription();
-      // expect(instance).to.be.a(fattureInCloudSdk.VerifyWebhooksSubscription);
+      expect(instance).to.be.a(fattureInCloudSdk.VerifyWebhooksSubscription)
     })
 
     it('should have the property id (base name: "id")', function () {
-      // uncomment below and update the code to test the property id
-      // var instance = new fattureInCloudSdk.VerifyWebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.id).to.be('string')
     })
 
     it('should have the property verificationMethod (base name: "verification_method")', function () {
-      // uncomment below and update the code to test the property verificationMethod
-      // var instance = new fattureInCloudSdk.VerifyWebhooksSubscription();
-      // expect(instance).to.be();
+      expect(typeof instance.verificationMethod).to.be('string')
     })
   })
 }))
