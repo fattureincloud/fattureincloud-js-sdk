@@ -53,7 +53,7 @@ import { GetPriceListItemsResponse, ListPriceListsResponse } from '../../src'
   describe('PriceListsApi', function () {
     describe('getPriceListItems', function () {
       it('should call getPriceListItems successfully', function (done) {
-        const response = instance.getPriceListItems()
+        const response = instance.getPriceListItems(2, '10')
         const responseObj = Object.assign(new GetPriceListItemsResponse(), response)
         const expectedJson = JSON.stringify(getPriceListItemsResponseObj)
         const actualJson = JSON.stringify(responseObj)
@@ -63,7 +63,7 @@ import { GetPriceListItemsResponse, ListPriceListsResponse } from '../../src'
     })
     describe('getPriceLists', function () {
       it('should call getPriceLists successfully', function (done) {
-        const response = instance.getPriceLists()
+        const response = instance.getPriceLists(2)
         const responseObj = Object.assign(new ListPriceListsResponse(), response)
         const expectedJson = JSON.stringify(getPriceListsResponseObj)
         const actualJson = JSON.stringify(responseObj)
