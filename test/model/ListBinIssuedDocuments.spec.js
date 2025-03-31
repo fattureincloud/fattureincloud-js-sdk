@@ -29,29 +29,89 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.ListBinIssuedDocuments()
+    instance.data = [
+      {
+        id: 12345,
+        type: 'receipt',
+        numeration: 'rec123',
+        subject: '',
+        visible_subject: '',
+        amount_net: 68.18,
+        amount_vat: 6.82,
+        amount_gross: 75,
+        amount_due_discount: 0,
+        entity: {
+          id: 54321,
+          name: 'Mary Red S.r.L.',
+          vat_number: 'IT05432181211',
+          tax_code: 'IT05432181211',
+          address_street: 'Via Italia, 66',
+          address_postal_code: '20900',
+          address_city: 'Milano',
+          address_province: 'MI',
+          address_extra: '',
+          country: 'Italia',
+          certified_email: 'mary@pec.red.com',
+          ei_code: 'ABCXCR1'
+        },
+        date: '2021-08-20',
+        number: 1,
+        next_due_date: '2021-12-31',
+        url: 'ypbqqe4u8w8bdabcd5fd5b1a4gtqhlof.pdf',
+        items_list: null,
+        payments_list: null
+      },
+      {
+        id: 12346,
+        type: 'receipt',
+        numeration: 'rec124',
+        subject: '',
+        visible_subject: '',
+        amount_net: 168.18,
+        amount_vat: 16.82,
+        amount_gross: 175,
+        amount_due_discount: 0,
+        entity: {
+          id: 54321,
+          name: 'Mary Red S.r.L.',
+          vat_number: 'IT05432181211',
+          tax_code: 'IT05432181211',
+          address_street: 'Via Italia, 66',
+          address_postal_code: '20900',
+          address_city: 'Milano',
+          address_province: 'MI',
+          address_extra: '',
+          country: 'Italia',
+          certified_email: 'mary@pec.red.com',
+          ei_code: 'ABCXCR1'
+        },
+        date: '2021-08-28',
+        number: 1,
+        next_due_date: '2021-12-31',
+        url: 'qwertye4u8w8bdaqrt5fd5b1a4gtqhlof.pdf',
+        items_list: null,
+        payments_list: null
+      }
+    ]
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('ListBinIssuedDocuments', function () {
     it('should create an instance of ListBinIssuedDocuments', function () {
-      // uncomment below and update the code to test ListBinIssuedDocuments
-      // var instance = new fattureInCloudSdk.ListBinIssuedDocuments();
-      // expect(instance).to.be.a(fattureInCloudSdk.ListBinIssuedDocuments);
+      expect(instance).to.be.a(fattureInCloudSdk.ListBinIssuedDocuments)
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.ListBinIssuedDocuments();
-      // expect(instance).to.be();
+      expect(typeof instance).to.be('object')
     })
   })
 }))

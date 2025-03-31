@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PriceListItem()
+    instance.price = 10.0
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PriceListItem', function () {
     it('should create an instance of PriceListItem', function () {
-      // uncomment below and update the code to test PriceListItem
-      // var instance = new fattureInCloudSdk.PriceListItem();
-      // expect(instance).to.be.a(fattureInCloudSdk.PriceListItem);
+      expect(instance).to.be.a(fattureInCloudSdk.PriceListItem)
     })
 
     it('should have the property price (base name: "price")', function () {
-      // uncomment below and update the code to test the property price
-      // var instance = new fattureInCloudSdk.PriceListItem();
-      // expect(instance).to.be();
+      expect(typeof instance.price).to.be('number')
     })
   })
 }))

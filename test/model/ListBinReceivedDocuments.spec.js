@@ -29,29 +29,133 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.ListBinReceivedDocuments()
+    instance.data = [
+      {
+        id: 12345,
+        type: 'expense',
+        description: 'Soggiorno di lavoro',
+        amortization: 1,
+        rc_center: '',
+        invoice_number: '',
+        is_marked: false,
+        is_detailed: false,
+        e_invoice: false,
+        created_at: '2021-08-15 14:02:02',
+        updated_at: '2021-08-15 14:02:02',
+        entity: {
+          id: 111,
+          name: 'Hotel Rubino Palace'
+        },
+        date: '2021-08-15',
+        next_due_date: '2021-08-15',
+        currency: {
+          id: 'EUR',
+          exchange_rate: '1.00000',
+          symbol: '€'
+        },
+        amount_net: 592,
+        amount_vat: 0,
+        amount_gross: 592,
+        amount_withholding_tax: 0,
+        amount_other_withholding_tax: 0,
+        tax_deductibility: 50,
+        vat_deductibility: 100,
+        items_list: null,
+        payments_list: [
+          {
+            amount: 592,
+            due_date: '2021-08-15',
+            paid_date: '2021-08-15',
+            id: 777,
+            payment_terms: {
+              days: 0,
+              type: 'standard'
+            },
+            status: 'paid',
+            payment_account: {
+              id: 222,
+              name: 'Contanti',
+              virtual: false
+            }
+          }
+        ],
+        attachment_url: 'spesa_ger5i783t45hu6ti.pdf',
+        attachment_preview_url: null,
+        extra_data: null
+      },
+      {
+        id: 12346,
+        type: 'expense',
+        description: 'Assicurazione RCA',
+        iamortization: 1,
+        rc_center: '',
+        invoice_number: '',
+        is_marked: false,
+        is_detailed: false,
+        e_invoice: false,
+        created_at: '2021-08-09 14:02:02',
+        updated_at: '2021-08-09 14:02:02',
+        entity: {
+          id: 89,
+          name: 'Indesa Assicurazioni S.P.A.'
+        },
+        date: '2021-08-08',
+        next_due_date: '2021-08-08',
+        currency: {
+          id: 'EUR',
+          exchange_rate: '1.00000',
+          symbol: '€'
+        },
+        amount_net: 645.69,
+        amount_vat: 0,
+        amount_gross: 645.69,
+        amount_withholding_tax: 0,
+        amount_other_withholding_tax: 0,
+        tax_deductibility: 50,
+        vat_deductibility: 100,
+        items_list: null,
+        payments_list: [
+          {
+            amount: 645.69,
+            due_date: '2021-08-08',
+            paid_date: '2021-08-08',
+            id: 999,
+            payment_terms: {
+              days: 0,
+              type: 'standard'
+            },
+            status: 'paid',
+            payment_account: {
+              id: 333,
+              name: 'Carta conto',
+              virtual: false
+            }
+          }
+        ],
+        attachment_url: 'spesa_gjsd567e5hu6ti.pdf',
+        attachment_preview_url: null,
+        extra_data: null
+      }
+    ]
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('ListBinReceivedDocuments', function () {
     it('should create an instance of ListBinReceivedDocuments', function () {
-      // uncomment below and update the code to test ListBinReceivedDocuments
-      // var instance = new fattureInCloudSdk.ListBinReceivedDocuments();
-      // expect(instance).to.be.a(fattureInCloudSdk.ListBinReceivedDocuments);
+      expect(instance).to.be.a(fattureInCloudSdk.ListBinReceivedDocuments)
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.ListBinReceivedDocuments();
-      // expect(instance).to.be();
+      expect(typeof instance.data).to.be('object')
     })
   })
 }))

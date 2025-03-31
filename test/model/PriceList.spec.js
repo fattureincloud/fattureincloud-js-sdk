@@ -29,65 +29,56 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PriceList()
+    instance.id = '10'
+    instance.name = 'Listino 1'
+    instance.price_type = 'net'
+    instance.is_default = true
+    instance.valid_from = '2021-01-01'
+    instance.valid_to = '2021-12-31'
+    instance.type = 'sell'
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PriceList', function () {
     it('should create an instance of PriceList', function () {
-      // uncomment below and update the code to test PriceList
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be.a(fattureInCloudSdk.PriceList);
+      expect(instance).to.be.a(fattureInCloudSdk.PriceList)
     })
 
     it('should have the property id (base name: "id")', function () {
-      // uncomment below and update the code to test the property id
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.id).to.be('string')
     })
 
     it('should have the property name (base name: "name")', function () {
-      // uncomment below and update the code to test the property name
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.name).to.be('string')
     })
 
     it('should have the property pricesType (base name: "prices_type")', function () {
-      // uncomment below and update the code to test the property pricesType
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.price_type).to.be('string')
     })
 
     it('should have the property isDefault (base name: "is_default")', function () {
-      // uncomment below and update the code to test the property isDefault
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.is_default).to.be('boolean')
     })
 
     it('should have the property validFrom (base name: "valid_from")', function () {
-      // uncomment below and update the code to test the property validFrom
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.valid_from).to.be('string')
     })
 
     it('should have the property validTo (base name: "valid_to")', function () {
-      // uncomment below and update the code to test the property validTo
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.valid_to).to.be('string')
     })
 
     it('should have the property type (base name: "type")', function () {
-      // uncomment below and update the code to test the property type
-      // var instance = new fattureInCloudSdk.PriceList();
-      // expect(instance).to.be();
+      expect(typeof instance.type).to.be('string')
     })
   })
 }))
