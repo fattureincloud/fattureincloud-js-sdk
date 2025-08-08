@@ -11,6 +11,9 @@
  *
  */
 
+import ListReceiptsResponse from '../../src/model/ListReceiptsResponse'
+import { GetPriceListItemsResponse, ListPriceListsResponse } from '../../src'
+
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
@@ -25,40 +28,46 @@
 }(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
-  let instance
+  const sandbox = require('sinon').createSandbox()
+  const instance = new fattureInCloudSdk.PriceListsApi()
+
+  const getPriceListsResponseObj = { data: [{ id: '10', name: 'listino', prices_type: 'net', is_default: true, valid_from: '2025-01-01', valid_to: '2025-12-01', type: 'sell' }, { id: '11', name: 'listino-test', prices_type: 'gross', is_default: true, valid_from: '2025-01-01', valid_to: '2025-01-01', type: 'purchase' }] }
+  sandbox.stub(instance, 'getPriceLists').returns(getPriceListsResponseObj)
+
+  const getPriceListItemsResponseObj = { data: { 1: { price: 3.5 }, 2: { price: 5 } } }
+  sandbox.stub(instance, 'getPriceListItems').returns(getPriceListItemsResponseObj)
 
   beforeEach(function () {
-    instance = new fattureInCloudSdk.PriceListsApi()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
-
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
+  //
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PriceListsApi', function () {
     describe('getPriceListItems', function () {
       it('should call getPriceListItems successfully', function (done) {
-        // uncomment below and update the code to test getPriceListItems
-        // instance.getPriceListItems(function(error) {
-        //  if (error) throw error;
-        // expect().to.be();
-        // });
+        const response = instance.getPriceListItems(2, '10')
+        const responseObj = Object.assign(new GetPriceListItemsResponse(), response)
+        const expectedJson = JSON.stringify(getPriceListItemsResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
         done()
       })
     })
     describe('getPriceLists', function () {
       it('should call getPriceLists successfully', function (done) {
-        // uncomment below and update the code to test getPriceLists
-        // instance.getPriceLists(function(error) {
-        //  if (error) throw error;
-        // expect().to.be();
-        // });
+        const response = instance.getPriceLists(2)
+        const responseObj = Object.assign(new ListPriceListsResponse(), response)
+        const expectedJson = JSON.stringify(getPriceListsResponseObj)
+        const actualJson = JSON.stringify(responseObj)
+        expect(actualJson).to.equal(expectedJson)
         done()
       })
     })

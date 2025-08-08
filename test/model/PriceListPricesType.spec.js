@@ -43,7 +43,7 @@
 
   describe('PriceListPricesType', function () {
     it('should create an instance of PriceListPricesType', function () {
-      expect(instance).to.be.a(fattureInCloudSdk.PriceListPricesType);
+      expect(instance).to.be.a(fattureInCloudSdk.PriceListPricesType)
     })
   })
 }))

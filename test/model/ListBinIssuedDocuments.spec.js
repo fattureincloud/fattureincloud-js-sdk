@@ -111,7 +111,7 @@
     })
 
     it('should have the property data (base name: "data")', function () {
-      expect(typeof instance).to.be('object')
+      expect(typeof instance.data).to.be('object')
     })
   })
 }))
