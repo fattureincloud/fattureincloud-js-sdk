@@ -11,35 +11,35 @@
  *
  */
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index'], factory)
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'))
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.fattureInCloudSdk);
+    factory(root.expect, root.fattureInCloudSdk)
   }
-}(this, function(expect, fattureInCloudSdk) {
+}(this, function (expect, fattureInCloudSdk) {
   'use strict'
 
   let instance
 
-  beforeEach(function() {
-    instance = new fattureInCloudSdk.GetTaxProfileResponse();
+  beforeEach(function () {
+    instance = new fattureInCloudSdk.GetTaxProfileResponse()
     instance.data = {
-      company_type: "individual",
-      company_subtype: "artigiani",
+      company_type: 'individual',
+      company_subtype: 'artigiani',
       profession: null,
-      regime: "forfettario_5",
-      rivalsa_name: "",
+      regime: 'forfettario_5',
+      rivalsa_name: '',
       default_rivalsa: 0,
-      cassa_name: "",
+      cassa_name: '',
       default_cassa: 0,
       default_cassa_taxable: 100,
-      cassa2_name: "",
+      cassa2_name: '',
       default_cassa2: 0,
       default_cassa2_taxable: 0,
       default_withholding_tax: 0,
@@ -52,11 +52,11 @@
       default_vat: {
         id: 66,
         value: 0,
-        description: "Contribuenti forfettari",
+        description: 'Contribuenti forfettari',
         notes: "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190\/2014 e succ. modifiche\/integrazioni",
         e_invoice: true,
         ei_type: 2.2,
-        ei_description: "Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni",
+        ei_description: 'Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni',
         editable: false,
         is_disabled: false,
         default: true
@@ -80,15 +80,13 @@
   //     object[property] = value;
   // }
 
-  describe('GetTaxProfileResponse', function() {
-    it('should create an instance of GetTaxProfileResponse', function() {
+  describe('GetTaxProfileResponse', function () {
+    it('should create an instance of GetTaxProfileResponse', function () {
       expect(instance).to.be.a(fattureInCloudSdk.GetTaxProfileResponse)
     })
 
-    it('should have the property data (base name: "data")', function() {
+    it('should have the property data (base name: "data")', function () {
       expect(typeof instance.data).to.be('object')
     })
-
-  });
-
-}));
+  })
+}))

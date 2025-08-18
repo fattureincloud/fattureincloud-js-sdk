@@ -5,14 +5,18 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createReceivedDocument**](ReceivedDocumentsApi.md#createReceivedDocument) | **POST** /c/{company_id}/received_documents | Create Received Document
+[**deleteBinReceivedDocument**](ReceivedDocumentsApi.md#deleteBinReceivedDocument) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | 
 [**deleteReceivedDocument**](ReceivedDocumentsApi.md#deleteReceivedDocument) | **DELETE** /c/{company_id}/received_documents/{document_id} | Delete Received Document
 [**deleteReceivedDocumentAttachment**](ReceivedDocumentsApi.md#deleteReceivedDocumentAttachment) | **DELETE** /c/{company_id}/received_documents/{document_id}/attachment | Delete Received Document Attachment
+[**getBinReceivedDocument**](ReceivedDocumentsApi.md#getBinReceivedDocument) | **GET** /c/{company_id}/bin/received_documents/{document_id} | Get Bin Received Documents List
 [**getExistingReceivedDocumentTotals**](ReceivedDocumentsApi.md#getExistingReceivedDocumentTotals) | **POST** /c/{company_id}/received_documents/{document_id}/totals | Get Existing Received Document Totals
 [**getNewReceivedDocumentTotals**](ReceivedDocumentsApi.md#getNewReceivedDocumentTotals) | **POST** /c/{company_id}/received_documents/totals | Get New Received Document Totals
 [**getReceivedDocument**](ReceivedDocumentsApi.md#getReceivedDocument) | **GET** /c/{company_id}/received_documents/{document_id} | Get Received Document
 [**getReceivedDocumentPreCreateInfo**](ReceivedDocumentsApi.md#getReceivedDocumentPreCreateInfo) | **GET** /c/{company_id}/received_documents/info | Get Received Document Pre-Create Info
+[**listBinReceivedDocuments**](ReceivedDocumentsApi.md#listBinReceivedDocuments) | **GET** /c/{company_id}/bin/received_documents | Get Bin Received Documents List
 [**listReceivedDocuments**](ReceivedDocumentsApi.md#listReceivedDocuments) | **GET** /c/{company_id}/received_documents | List Received Documents
 [**modifyReceivedDocument**](ReceivedDocumentsApi.md#modifyReceivedDocument) | **PUT** /c/{company_id}/received_documents/{document_id} | Modify Received Document
+[**recoverBinReceivedDocument**](ReceivedDocumentsApi.md#recoverBinReceivedDocument) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | 
 [**uploadReceivedDocumentAttachment**](ReceivedDocumentsApi.md#uploadReceivedDocumentAttachment) | **POST** /c/{company_id}/received_documents/attachment | Upload Received Document Attachment
 
 
@@ -67,6 +71,56 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## deleteBinReceivedDocument
+
+> deleteBinReceivedDocument(companyId, documentId)
+
+
+
+Delete Bin Received Document
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+let documentId = 56; // Number | The ID of the document.
+apiInstance.deleteBinReceivedDocument(companyId, documentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **documentId** | **Number**| The ID of the document. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## deleteReceivedDocument
@@ -167,6 +221,56 @@ null (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+
+## getBinReceivedDocument
+
+> GetBinIssuedDocumentResponse getBinReceivedDocument(companyId, documentId)
+
+Get Bin Received Documents List
+
+Get bin issued documents detail
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+let documentId = 56; // Number | The ID of the document.
+apiInstance.getBinReceivedDocument(companyId, documentId).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **documentId** | **Number**| The ID of the document. | 
+
+### Return type
+
+[**GetBinIssuedDocumentResponse**](GetBinIssuedDocumentResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## getExistingReceivedDocumentTotals
@@ -381,6 +485,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## listBinReceivedDocuments
+
+> ListBinReceivedDocuments listBinReceivedDocuments(companyId)
+
+Get Bin Received Documents List
+
+Get bin Received documents list
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+apiInstance.listBinReceivedDocuments(companyId).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+
+### Return type
+
+[**ListBinReceivedDocuments**](ListBinReceivedDocuments.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listReceivedDocuments
 
 > ListReceivedDocumentsResponse listReceivedDocuments(companyId, type, opts)
@@ -497,6 +649,56 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## recoverBinReceivedDocument
+
+> recoverBinReceivedDocument(companyId, documentId)
+
+
+
+Recover Received Document From The Bin
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+let documentId = 56; // Number | The ID of the document.
+apiInstance.recoverBinReceivedDocument(companyId, documentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **documentId** | **Number**| The ID of the document. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## uploadReceivedDocumentAttachment

@@ -16,7 +16,7 @@ import CreatePaymentMethodResponse from '../../src/model/CreatePaymentMethodResp
 import GetPaymentAccountResponse from '../../src//model/GetPaymentAccountResponse'
 import GetPaymentMethodResponse from '../../src/model/GetPaymentMethodResponse'
 import ModifyPaymentAccountResponse from '../../src/model/ModifyPaymentAccountResponse'
-import ModifyPaymentMethodResponse from '../../src/model/ModifyPaymentMethodResponse';
+import ModifyPaymentMethodResponse from '../../src/model/ModifyPaymentMethodResponse'
 import GetTaxProfileResponse from '../../src/model/GetTaxProfileResponse'
 import GetVatTypeResponse from '../../src/model/GetVatTypeResponse'
 
@@ -62,15 +62,14 @@ import GetVatTypeResponse from '../../src/model/GetVatTypeResponse'
   const modifyPaymentMethodResponseObj = { data: { id: 386683, name: 'Bonifico bancario', is_default: true, type: 'standard', details: [{ title: 'Banca', description: 'Sao Paulo' }], default_payment_account: { id: 12345, name: 'conto banca SP' } } }
   const modifyPaymentMethodStub = sandbox.stub(instance, 'modifyPaymentMethod').returns(modifyPaymentMethodResponseObj)
 
-  const getTaxProfile = { data: {company_type: "individual",company_subtype: "artigiani",profession: null,regime: "forfettario_5",rivalsa_name: "",default_rivalsa: 0,cassa_name: "",default_cassa: 0,default_cassa_taxable: 100,cassa2_name: "",default_cassa2: 0,default_cassa2_taxable: 0,default_withholding_tax: 0,default_withholding_tax_taxable: 100, default_other_withholding_tax: 0,enasarco: false,enasarco_type: null, contributions_percentage: 0,med: false,default_vat: {id: 66,value: 0,description: "Contribuenti forfettari",notes: "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190\/2014 e succ. modifiche\/integrazioni",e_invoice: true,ei_type: 2.2,ei_description: "Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni",editable: false,is_disabled: false,default: true}} }
+  const getTaxProfile = { data: { company_type: 'individual', company_subtype: 'artigiani', profession: null, regime: 'forfettario_5', rivalsa_name: '', default_rivalsa: 0, cassa_name: '', default_cassa: 0, default_cassa_taxable: 100, cassa2_name: '', default_cassa2: 0, default_cassa2_taxable: 0, default_withholding_tax: 0, default_withholding_tax_taxable: 100, default_other_withholding_tax: 0, enasarco: false, enasarco_type: null, contributions_percentage: 0, med: false, default_vat: { id: 66, value: 0, description: 'Contribuenti forfettari', notes: "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190\/2014 e succ. modifiche\/integrazioni", e_invoice: true, ei_type: 2.2, ei_description: 'Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni', editable: false, is_disabled: false, default: true } } }
   sandbox.stub(instance, 'getTaxProfile').returns(getTaxProfile)
 
-  const getVatType = { data: {id: 0,value: 22,description: "Non imponibile art. 123",notes: "IVA non imponibile ai sensi dell'articolo 123, comma 2",e_invoice: true,ei_type: 2,ei_description: "string",editable: true,is_disabled: true}}
+  const getVatType = { data: { id: 0, value: 22, description: 'Non imponibile art. 123', notes: "IVA non imponibile ai sensi dell'articolo 123, comma 2", e_invoice: true, ei_type: 2, ei_description: 'string', editable: true, is_disabled: true } }
   sandbox.stub(instance, 'getVatType').returns(getVatType)
 
   const deleteVatType = {}
   sandbox.stub(instance, 'deleteVatType').returns(deleteVatType)
-
 
   beforeEach(function () {
 

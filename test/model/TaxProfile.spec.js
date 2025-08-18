@@ -31,7 +31,7 @@
     instance = new fattureInCloudSdk.TaxProfile()
     instance.company_type = 'individual'
     instance.company_subtype = 'artigiani'
-    instance.profession = 'test',
+    instance.profession = 'test'
     instance.regime = 'forfettario_5'
     instance.rivalsa_name = ''
     instance.default_rivalsa = 0
@@ -52,16 +52,15 @@
     instance.default_vat = {
       id: 66,
       value: 0,
-      description: "Contribuenti forfettari",
+      description: 'Contribuenti forfettari',
       notes: "Operazione non soggetta a IVA ai sensi dell'art. 1, commi 54-89, Legge n. 190\/2014 e succ. modifiche\/integrazioni",
       e_invoice: true,
       ei_type: 2.2,
-      ei_description: "Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni",
+      ei_description: 'Non soggetta art. 1\/54-89 L. 190\/2014 e succ. modifiche\/integrazioni',
       editable: false,
       is_disabled: false,
       default: true
     }
-    
   })
 
   // const getProperty = function (object, getter, property) {
