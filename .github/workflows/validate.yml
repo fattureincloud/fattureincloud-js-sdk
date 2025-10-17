@@ -5,11 +5,10 @@ name: JS SDK Validation
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   validate:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,13 +17,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      
-    - run: yarn
-    
-    - run: yarn run build
-    
-    - run: yarn run test
+      - uses: actions/checkout@v5
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+
+      - run: yarn
+
+      - run: yarn run build
+
+      - run: yarn run test
