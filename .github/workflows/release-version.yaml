@@ -1,14 +1,17 @@
 name: Release JavaScript SDK version
 on: [workflow_dispatch]
-    
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
   release-version:
     runs-on: ubuntu-latest
-    steps: 
-
+    steps:
       - id: checkout
         name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.FATTUREINCLOUD_BOT_TOKEN }}
 
@@ -17,16 +20,18 @@ jobs:
         run: |
           git config --global user.email "info@fattureincloud.it"
           git config --global user.name "fattureincloud-bot"
-      
+
       - id: setup-node
         name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
 
       - id: setup-libraries
         name: Install libraries
         run: |
+          npm install -g npm@latest
           npm install -g yarn
           yarn global add standard-version
           wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
@@ -66,7 +71,7 @@ jobs:
       - id: create-tag
         name: Create tag
         if: ${{ !env.ACT }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ github.token }}
           script: |
@@ -80,7 +85,5 @@ jobs:
       - id: publish-to-npm
         name: Publish JavaScript SDK to NPM
         if: ${{ !env.ACT }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
           yarn publish --access public --new-version ${{ env.sdk_version }}
