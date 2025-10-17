@@ -53,7 +53,7 @@ export default class Operator {
 
   /**
      * Like operator.
-     * @member {String} GTE
+     * @member {String} LIKE
      */
   static LIKE = 'like'
 
@@ -62,6 +62,18 @@ export default class Operator {
      * @member {String} CONTAINS
      */
   static CONTAINS = 'contains'
+
+  /**
+    * Not Like operator.
+    * @member {String} NOT_LIKE
+    */
+  static NOT_LIKE = 'not like'
+
+  /**
+       * Not Contains operator.
+       * @member {String} NOT_CONTAINS
+       */
+  static NOT_CONTAINS = 'not contains'
 
   /**
      * Starts With operator.

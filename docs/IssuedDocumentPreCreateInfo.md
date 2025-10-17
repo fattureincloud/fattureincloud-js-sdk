@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **paymentAccountsList** | [**[PaymentAccount]**](PaymentAccount.md) | Payment accounts list | [optional] 
 **vatTypesList** | [**[VatType]**](VatType.md) | Vat types list | [optional] 
 **languagesList** | [**[Language]**](Language.md) | Languages list | [optional] 
+**priceLists** | [**[PriceList]**](PriceList.md) | Price lists | [optional] 
 
 

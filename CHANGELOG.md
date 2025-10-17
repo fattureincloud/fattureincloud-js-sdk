@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.1.2 (2025-08-19)
+
+### 2.1.2 (2025-08-18)
+
+### 2.1.1 (2024-10-31)
+
+## 2.1.0 (2024-06-17)
+
+
+### Features
+
+* added device code manager ([790f374](https://github.com/fattureincloud/fattureincloud-js-sdk/commit/790f37403bfde71ae525403c172ec7271b508896))
+
+### 2.0.26 (2024-05-27)
+
+### 2.0.25 (2024-03-06)
+
 ### 2.0.24 (2023-12-18)
 
 ### 2.0.23 (2023-10-09)
