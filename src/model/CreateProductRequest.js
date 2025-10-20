@@ -16,7 +16,7 @@ import Product from './Product'
 /**
  * The CreateProductRequest model module.
  * @module model/CreateProductRequest
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CreateProductRequest {
   /**

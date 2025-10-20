@@ -324,7 +324,7 @@ import Scope from './oauth2/Scope'
 * </pre>
 * </p>
 * @module index
-* @version 2.1.2
+* @version 2.1.3
 */
 export {
 

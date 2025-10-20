@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The IssuedDocumentPreCreateInfoExtraDataDefaultValues model module.
  * @module model/IssuedDocumentPreCreateInfoExtraDataDefaultValues
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocumentPreCreateInfoExtraDataDefaultValues {
   /**

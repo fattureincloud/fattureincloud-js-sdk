@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The ListCostCentersResponse model module.
  * @module model/ListCostCentersResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListCostCentersResponse {
   /**

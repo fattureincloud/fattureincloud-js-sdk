@@ -21,7 +21,7 @@ import ModifyClientResponse from '../model/ModifyClientResponse'
 /**
 * Clients service.
 * @module api/ClientsApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class ClientsApi {
   /**

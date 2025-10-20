@@ -17,7 +17,7 @@ import VatType from './VatType'
 /**
  * The ReceiptItemsListItem model module.
  * @module model/ReceiptItemsListItem
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ReceiptItemsListItem {
   /**

@@ -20,7 +20,7 @@ import ModifyCashbookEntryResponse from '../model/ModifyCashbookEntryResponse'
 /**
 * Cashbook service.
 * @module api/CashbookApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class CashbookApi {
   /**

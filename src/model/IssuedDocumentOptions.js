@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The IssuedDocumentOptions model module.
  * @module model/IssuedDocumentOptions
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocumentOptions {
   /**

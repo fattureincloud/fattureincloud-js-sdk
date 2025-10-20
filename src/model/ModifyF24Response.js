@@ -16,7 +16,7 @@ import F24 from './F24'
 /**
  * The ModifyF24Response model module.
  * @module model/ModifyF24Response
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ModifyF24Response {
   /**

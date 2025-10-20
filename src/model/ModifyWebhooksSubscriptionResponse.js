@@ -17,7 +17,7 @@ import WebhooksSubscription from './WebhooksSubscription'
 /**
  * The ModifyWebhooksSubscriptionResponse model module.
  * @module model/ModifyWebhooksSubscriptionResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ModifyWebhooksSubscriptionResponse {
   /**

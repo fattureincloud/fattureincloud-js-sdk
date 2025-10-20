@@ -16,7 +16,7 @@ import EmailData from './EmailData'
 /**
  * The GetEmailDataResponse model module.
  * @module model/GetEmailDataResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetEmailDataResponse {
   /**

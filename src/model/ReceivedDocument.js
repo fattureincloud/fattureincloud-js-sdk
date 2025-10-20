@@ -21,7 +21,7 @@ import ReceivedDocumentType from './ReceivedDocumentType'
 /**
  * The ReceivedDocument model module.
  * @module model/ReceivedDocument
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ReceivedDocument {
   /**

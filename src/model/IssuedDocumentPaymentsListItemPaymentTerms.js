@@ -17,7 +17,7 @@ import PaymentTermsType from './PaymentTermsType'
 /**
  * The IssuedDocumentPaymentsListItemPaymentTerms model module.
  * @module model/IssuedDocumentPaymentsListItemPaymentTerms
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocumentPaymentsListItemPaymentTerms {
   /**

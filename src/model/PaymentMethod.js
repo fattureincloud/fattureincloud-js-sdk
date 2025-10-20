@@ -19,7 +19,7 @@ import PaymentMethodType from './PaymentMethodType'
 /**
  * The PaymentMethod model module.
  * @module model/PaymentMethod
- * @version 2.1.2
+ * @version 2.1.3
  */
 class PaymentMethod {
   /**

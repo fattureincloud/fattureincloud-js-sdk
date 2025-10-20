@@ -18,7 +18,7 @@ import FattureInCloudPlanType from './FattureInCloudPlanType'
 /**
  * The ControlledCompany model module.
  * @module model/ControlledCompany
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ControlledCompany {
   /**

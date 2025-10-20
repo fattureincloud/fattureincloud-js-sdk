@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The EmailDataDefaultSenderEmail model module.
  * @module model/EmailDataDefaultSenderEmail
- * @version 2.1.2
+ * @version 2.1.3
  */
 class EmailDataDefaultSenderEmail {
   /**

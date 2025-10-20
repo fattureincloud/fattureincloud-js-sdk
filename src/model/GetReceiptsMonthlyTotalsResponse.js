@@ -17,7 +17,7 @@ import MonthlyTotal from './MonthlyTotal'
 /**
  * The GetReceiptsMonthlyTotalsResponse model module.
  * @module model/GetReceiptsMonthlyTotalsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetReceiptsMonthlyTotalsResponse {
   /**

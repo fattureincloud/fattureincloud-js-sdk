@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The VatItem model module.
  * @module model/VatItem
- * @version 2.1.2
+ * @version 2.1.3
  */
 class VatItem {
   /**

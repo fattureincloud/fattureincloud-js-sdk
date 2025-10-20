@@ -11,7 +11,6 @@
  *
  */
 
-import ListReceiptsResponse from '../../src/model/ListReceiptsResponse'
 import { GetPriceListItemsResponse, ListPriceListsResponse } from '../../src'
 
 (function (root, factory) {

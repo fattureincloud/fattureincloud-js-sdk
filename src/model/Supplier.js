@@ -17,7 +17,7 @@ import SupplierType from './SupplierType'
 /**
  * The Supplier model module.
  * @module model/Supplier
- * @version 2.1.2
+ * @version 2.1.3
  */
 class Supplier {
   /**

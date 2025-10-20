@@ -29,7 +29,7 @@ import UploadIssuedDocumentAttachmentResponse from '../model/UploadIssuedDocumen
 /**
 * IssuedDocuments service.
 * @module api/IssuedDocumentsApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class IssuedDocumentsApi {
   /**
@@ -96,7 +96,7 @@ export default class IssuedDocumentsApi {
   }
 
   /**
-     *
+     * Delete Bin Issued Document
      * Delete Bin Issued Document
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -136,7 +136,7 @@ export default class IssuedDocumentsApi {
   }
 
   /**
-     *
+     * Delete Bin Issued Document
      * Delete Bin Issued Document
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -841,7 +841,7 @@ export default class IssuedDocumentsApi {
   }
 
   /**
-     *
+     * Recover Issued Document From The Bin
      * Recover Issued Document From The Bin
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -881,7 +881,7 @@ export default class IssuedDocumentsApi {
   }
 
   /**
-     *
+     * Recover Issued Document From The Bin
      * Recover Issued Document From The Bin
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.

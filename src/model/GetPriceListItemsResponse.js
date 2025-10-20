@@ -17,7 +17,7 @@ import PriceListItem from './PriceListItem'
 /**
  * The GetPriceListItemsResponse model module.
  * @module model/GetPriceListItemsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetPriceListItemsResponse {
   /**

@@ -17,7 +17,7 @@ import ListEmailsResponse from '../model/ListEmailsResponse'
 /**
 * Emails service.
 * @module api/EmailsApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class EmailsApi {
   /**

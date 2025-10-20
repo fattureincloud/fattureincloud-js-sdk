@@ -16,7 +16,7 @@ import IssuedDocumentPreCreateInfo from './IssuedDocumentPreCreateInfo'
 /**
  * The GetIssuedDocumentPreCreateInfoResponse model module.
  * @module model/GetIssuedDocumentPreCreateInfoResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetIssuedDocumentPreCreateInfoResponse {
   /**

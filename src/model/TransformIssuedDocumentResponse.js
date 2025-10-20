@@ -17,7 +17,7 @@ import IssuedDocumentOptions from './IssuedDocumentOptions'
 /**
  * The TransformIssuedDocumentResponse model module.
  * @module model/TransformIssuedDocumentResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class TransformIssuedDocumentResponse {
   /**

@@ -16,7 +16,7 @@ import Client from './Client'
 /**
  * The ModifyClientResponse model module.
  * @module model/ModifyClientResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ModifyClientResponse {
   /**

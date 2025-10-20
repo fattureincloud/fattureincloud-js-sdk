@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The CashbookEntryDocument model module.
  * @module model/CashbookEntryDocument
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CashbookEntryDocument {
   /**

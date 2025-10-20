@@ -16,7 +16,7 @@ import PermissionLevel from './PermissionLevel'
 /**
  * The PermissionsFicIssuedDocumentsDetailed model module.
  * @module model/PermissionsFicIssuedDocumentsDetailed
- * @version 2.1.2
+ * @version 2.1.3
  */
 class PermissionsFicIssuedDocumentsDetailed {
   /**

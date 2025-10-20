@@ -16,7 +16,7 @@ import WebhooksSubscriptionMapping from './WebhooksSubscriptionMapping'
 /**
  * The WebhooksSubscriptionConfig model module.
  * @module model/WebhooksSubscriptionConfig
- * @version 2.1.2
+ * @version 2.1.3
  */
 class WebhooksSubscriptionConfig {
   /**

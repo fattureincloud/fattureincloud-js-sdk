@@ -20,7 +20,7 @@ import ModifySupplierResponse from '../model/ModifySupplierResponse'
 /**
 * Suppliers service.
 * @module api/SuppliersApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class SuppliersApi {
   /**

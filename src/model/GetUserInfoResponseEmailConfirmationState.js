@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The GetUserInfoResponseEmailConfirmationState model module.
  * @module model/GetUserInfoResponseEmailConfirmationState
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetUserInfoResponseEmailConfirmationState {
   /**

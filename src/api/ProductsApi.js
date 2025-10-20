@@ -20,7 +20,7 @@ import ModifyProductResponse from '../model/ModifyProductResponse'
 /**
 * Products service.
 * @module api/ProductsApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class ProductsApi {
   /**

@@ -18,7 +18,7 @@ import ReceivedDocumentPaymentsListItemPaymentTerms from './ReceivedDocumentPaym
 /**
  * The ReceivedDocumentPaymentsListItem model module.
  * @module model/ReceivedDocumentPaymentsListItem
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ReceivedDocumentPaymentsListItem {
   /**

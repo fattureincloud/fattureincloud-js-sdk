@@ -20,7 +20,7 @@ import VatType from './VatType'
 /**
  * The Entity model module.
  * @module model/Entity
- * @version 2.1.2
+ * @version 2.1.3
  */
 class Entity {
   /**

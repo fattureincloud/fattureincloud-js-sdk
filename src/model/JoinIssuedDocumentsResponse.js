@@ -17,7 +17,7 @@ import IssuedDocumentOptions from './IssuedDocumentOptions'
 /**
  * The JoinIssuedDocumentsResponse model module.
  * @module model/JoinIssuedDocumentsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class JoinIssuedDocumentsResponse {
   /**

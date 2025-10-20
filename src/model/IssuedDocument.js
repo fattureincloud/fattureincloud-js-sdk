@@ -27,7 +27,7 @@ import ShowTotalsMode from './ShowTotalsMode'
 /**
  * The IssuedDocument model module.
  * @module model/IssuedDocument
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocument {
   /**

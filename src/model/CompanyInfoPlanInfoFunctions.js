@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The CompanyInfoPlanInfoFunctions model module.
  * @module model/CompanyInfoPlanInfoFunctions
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CompanyInfoPlanInfoFunctions {
   /**
@@ -79,9 +79,6 @@ class CompanyInfoPlanInfoFunctions {
       }
       if (data.hasOwnProperty('smtp')) {
         obj.smtp = ApiClient.convertToType(data.smtp, 'Boolean')
-      }
-      if (data.hasOwnProperty('sofort')) {
-        obj.sofort = ApiClient.convertToType(data.sofort, 'Boolean')
       }
       if (data.hasOwnProperty('stock')) {
         obj.stock = ApiClient.convertToType(data.stock, 'Boolean')
@@ -169,11 +166,6 @@ CompanyInfoPlanInfoFunctions.prototype.recurring = undefined
  * @member {Boolean} smtp
  */
 CompanyInfoPlanInfoFunctions.prototype.smtp = undefined
-
-/**
- * @member {Boolean} sofort
- */
-CompanyInfoPlanInfoFunctions.prototype.sofort = undefined
 
 /**
  * @member {Boolean} stock

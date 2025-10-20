@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The CompanyPlanUsage model module.
  * @module model/CompanyPlanUsage
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CompanyPlanUsage {
   /**

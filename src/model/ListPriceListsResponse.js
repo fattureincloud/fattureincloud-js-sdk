@@ -17,7 +17,7 @@ import PriceList from './PriceList'
 /**
  * The ListPriceListsResponse model module.
  * @module model/ListPriceListsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListPriceListsResponse {
   /**

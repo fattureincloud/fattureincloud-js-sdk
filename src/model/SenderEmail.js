@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The SenderEmail model module.
  * @module model/SenderEmail
- * @version 2.1.2
+ * @version 2.1.3
  */
 class SenderEmail {
   /**

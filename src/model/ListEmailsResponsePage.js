@@ -17,7 +17,7 @@ import Email from './Email'
 /**
  * The ListEmailsResponsePage model module.
  * @module model/ListEmailsResponsePage
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListEmailsResponsePage {
   /**

@@ -16,7 +16,7 @@ import EntityClientPreCreateInfo from './EntityClientPreCreateInfo'
 /**
  * The GetEntityClientPreCreateInfoResponse model module.
  * @module model/GetEntityClientPreCreateInfoResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetEntityClientPreCreateInfoResponse {
   /**

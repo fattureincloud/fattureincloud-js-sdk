@@ -19,7 +19,7 @@ import Pagination from './Pagination'
 /**
  * The ListEmailsResponse model module.
  * @module model/ListEmailsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListEmailsResponse {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The VerifyEInvoiceXmlErrorResponseErrorValidationResult model module.
  * @module model/VerifyEInvoiceXmlErrorResponseErrorValidationResult
- * @version 2.1.2
+ * @version 2.1.3
  */
 class VerifyEInvoiceXmlErrorResponseErrorValidationResult {
   /**

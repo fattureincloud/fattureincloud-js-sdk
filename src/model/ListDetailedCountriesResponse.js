@@ -17,7 +17,7 @@ import DetailedCountry from './DetailedCountry'
 /**
  * The ListDetailedCountriesResponse model module.
  * @module model/ListDetailedCountriesResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListDetailedCountriesResponse {
   /**

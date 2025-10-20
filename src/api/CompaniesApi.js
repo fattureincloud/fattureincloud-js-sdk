@@ -18,7 +18,7 @@ import GetCompanyPlanUsageResponse from '../model/GetCompanyPlanUsageResponse'
 /**
 * Companies service.
 * @module api/CompaniesApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class CompaniesApi {
   /**

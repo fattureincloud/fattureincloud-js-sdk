@@ -16,7 +16,7 @@ import VatType from './VatType'
 /**
  * The IssuedDocumentPreCreateInfoItemsDefaultValues model module.
  * @module model/IssuedDocumentPreCreateInfoItemsDefaultValues
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocumentPreCreateInfoItemsDefaultValues {
   /**

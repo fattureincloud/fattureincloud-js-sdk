@@ -16,7 +16,7 @@ import VatType from './VatType'
 /**
  * The CreateVatTypeResponse model module.
  * @module model/CreateVatTypeResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CreateVatTypeResponse {
   /**

@@ -16,7 +16,7 @@ import VerifyWebhooksSubscription from './VerifyWebhooksSubscription'
 /**
  * The VerifyWebhooksSubscriptionRequest model module.
  * @module model/VerifyWebhooksSubscriptionRequest
- * @version 2.1.2
+ * @version 2.1.3
  */
 class VerifyWebhooksSubscriptionRequest {
   /**

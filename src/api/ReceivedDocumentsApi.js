@@ -26,7 +26,7 @@ import UploadReceivedDocumentAttachmentResponse from '../model/UploadReceivedDoc
 /**
 * ReceivedDocuments service.
 * @module api/ReceivedDocumentsApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class ReceivedDocumentsApi {
   /**
@@ -93,7 +93,7 @@ export default class ReceivedDocumentsApi {
   }
 
   /**
-     *
+     * Delete Bin Received Document
      * Delete Bin Received Document
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -133,7 +133,7 @@ export default class ReceivedDocumentsApi {
   }
 
   /**
-     *
+     * Delete Bin Received Document
      * Delete Bin Received Document
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -718,7 +718,7 @@ export default class ReceivedDocumentsApi {
   }
 
   /**
-     *
+     * Recover Received Document From The Bin
      * Recover Received Document From The Bin
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.
@@ -758,7 +758,7 @@ export default class ReceivedDocumentsApi {
   }
 
   /**
-     *
+     * Recover Received Document From The Bin
      * Recover Received Document From The Bin
      * @param {Number} companyId The ID of the company.
      * @param {Number} documentId The ID of the document.

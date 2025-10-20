@@ -18,7 +18,7 @@ import VatType from './VatType'
 /**
  * The ReceiptPreCreateInfo model module.
  * @module model/ReceiptPreCreateInfo
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ReceiptPreCreateInfo {
   /**

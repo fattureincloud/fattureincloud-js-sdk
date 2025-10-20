@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The SendEInvoiceRequestOptions model module.
  * @module model/SendEInvoiceRequestOptions
- * @version 2.1.2
+ * @version 2.1.3
  */
 class SendEInvoiceRequestOptions {
   /**

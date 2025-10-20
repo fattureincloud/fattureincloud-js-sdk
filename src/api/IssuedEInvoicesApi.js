@@ -19,7 +19,7 @@ import VerifyEInvoiceXmlResponse from '../model/VerifyEInvoiceXmlResponse'
 /**
 * IssuedEInvoices service.
 * @module api/IssuedEInvoicesApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class IssuedEInvoicesApi {
   /**

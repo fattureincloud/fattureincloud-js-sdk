@@ -20,7 +20,7 @@ import VatType from './VatType'
 /**
  * The EntityClientPreCreateInfo model module.
  * @module model/EntityClientPreCreateInfo
- * @version 2.1.2
+ * @version 2.1.3
  */
 class EntityClientPreCreateInfo {
   /**

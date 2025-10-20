@@ -17,7 +17,7 @@ import PaymentAccount from './PaymentAccount'
 /**
  * The ListPaymentAccountsResponse model module.
  * @module model/ListPaymentAccountsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListPaymentAccountsResponse {
   /**

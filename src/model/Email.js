@@ -19,7 +19,7 @@ import EmailStatus from './EmailStatus'
 /**
  * The Email model module.
  * @module model/Email
- * @version 2.1.2
+ * @version 2.1.3
  */
 class Email {
   /**

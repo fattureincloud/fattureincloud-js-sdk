@@ -18,7 +18,7 @@ import PaymentAccount from './PaymentAccount'
 /**
  * The F24 model module.
  * @module model/F24
- * @version 2.1.2
+ * @version 2.1.3
  */
 class F24 {
   /**

@@ -17,7 +17,7 @@ import VatItem from './VatItem'
 /**
  * The IssuedDocumentTotals model module.
  * @module model/IssuedDocumentTotals
- * @version 2.1.2
+ * @version 2.1.3
  */
 class IssuedDocumentTotals {
   /**

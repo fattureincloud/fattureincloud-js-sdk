@@ -17,7 +17,7 @@ import SendEInvoiceRequestOptions from './SendEInvoiceRequestOptions'
 /**
  * The SendEInvoiceRequest model module.
  * @module model/SendEInvoiceRequest
- * @version 2.1.2
+ * @version 2.1.3
  */
 class SendEInvoiceRequest {
   /**

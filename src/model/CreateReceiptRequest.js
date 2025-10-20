@@ -17,7 +17,7 @@ import Receipt from './Receipt'
 /**
  * The CreateReceiptRequest model module.
  * @module model/CreateReceiptRequest
- * @version 2.1.2
+ * @version 2.1.3
  */
 class CreateReceiptRequest {
   /**

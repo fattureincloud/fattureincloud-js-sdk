@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The ReceivedDocumentInfoDefaultValues model module.
  * @module model/ReceivedDocumentInfoDefaultValues
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ReceivedDocumentInfoDefaultValues {
   /**

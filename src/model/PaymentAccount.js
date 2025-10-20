@@ -17,7 +17,7 @@ import PaymentAccountType from './PaymentAccountType'
 /**
  * The PaymentAccount model module.
  * @module model/PaymentAccount
- * @version 2.1.2
+ * @version 2.1.3
  */
 class PaymentAccount {
   /**

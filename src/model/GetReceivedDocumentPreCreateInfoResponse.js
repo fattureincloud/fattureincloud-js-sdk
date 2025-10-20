@@ -16,7 +16,7 @@ import ReceivedDocumentInfo from './ReceivedDocumentInfo'
 /**
  * The GetReceivedDocumentPreCreateInfoResponse model module.
  * @module model/GetReceivedDocumentPreCreateInfoResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetReceivedDocumentPreCreateInfoResponse {
   /**

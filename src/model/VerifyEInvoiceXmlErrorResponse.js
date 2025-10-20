@@ -17,7 +17,7 @@ import VerifyEInvoiceXmlErrorResponseExtra from './VerifyEInvoiceXmlErrorRespons
 /**
  * The VerifyEInvoiceXmlErrorResponse model module.
  * @module model/VerifyEInvoiceXmlErrorResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class VerifyEInvoiceXmlErrorResponse {
   /**

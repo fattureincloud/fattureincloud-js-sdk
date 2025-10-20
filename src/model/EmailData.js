@@ -18,7 +18,7 @@ import SenderEmail from './SenderEmail'
 /**
  * The EmailData model module.
  * @module model/EmailData
- * @version 2.1.2
+ * @version 2.1.3
  */
 class EmailData {
   /**

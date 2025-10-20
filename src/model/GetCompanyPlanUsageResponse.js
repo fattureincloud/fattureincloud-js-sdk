@@ -16,7 +16,7 @@ import CompanyPlanUsage from './CompanyPlanUsage'
 /**
  * The GetCompanyPlanUsageResponse model module.
  * @module model/GetCompanyPlanUsageResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetCompanyPlanUsageResponse {
   /**

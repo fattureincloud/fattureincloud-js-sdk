@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The ListArchiveCategoriesResponse model module.
  * @module model/ListArchiveCategoriesResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListArchiveCategoriesResponse {
   /**

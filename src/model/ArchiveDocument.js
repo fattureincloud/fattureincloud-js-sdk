@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The ArchiveDocument model module.
  * @module model/ArchiveDocument
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ArchiveDocument {
   /**

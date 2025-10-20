@@ -17,7 +17,7 @@ import IssuedDocument from './IssuedDocument'
 /**
  * The ListBinIssuedDocuments model module.
  * @module model/ListBinIssuedDocuments
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListBinIssuedDocuments {
   /**

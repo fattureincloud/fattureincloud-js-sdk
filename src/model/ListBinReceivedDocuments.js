@@ -17,7 +17,7 @@ import ReceivedDocument from './ReceivedDocument'
 /**
  * The ListBinReceivedDocuments model module.
  * @module model/ListBinReceivedDocuments
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListBinReceivedDocuments {
   /**

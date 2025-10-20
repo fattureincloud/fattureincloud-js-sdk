@@ -16,7 +16,7 @@ import TaxProfile from './TaxProfile'
 /**
  * The GetTaxProfileResponse model module.
  * @module model/GetTaxProfileResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetTaxProfileResponse {
   /**

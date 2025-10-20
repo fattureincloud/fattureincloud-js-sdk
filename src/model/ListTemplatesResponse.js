@@ -17,7 +17,7 @@ import DocumentTemplate from './DocumentTemplate'
 /**
  * The ListTemplatesResponse model module.
  * @module model/ListTemplatesResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ListTemplatesResponse {
   /**

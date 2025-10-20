@@ -17,7 +17,7 @@ import IssuedDocumentOptions from './IssuedDocumentOptions'
 /**
  * The ModifyIssuedDocumentRequest model module.
  * @module model/ModifyIssuedDocumentRequest
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ModifyIssuedDocumentRequest {
   /**

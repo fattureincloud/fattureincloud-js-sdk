@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient'
 /**
  * The EmailScheduleInclude model module.
  * @module model/EmailScheduleInclude
- * @version 2.1.2
+ * @version 2.1.3
  */
 class EmailScheduleInclude {
   /**

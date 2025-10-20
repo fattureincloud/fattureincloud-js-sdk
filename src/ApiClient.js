@@ -15,7 +15,7 @@ import superagent from 'superagent'
 
 /**
 * @module ApiClient
-* @version 2.1.2
+* @version 2.1.3
 */
 
 /**
@@ -53,7 +53,7 @@ class ApiClient {
          * @default {}
          */
     this.defaultHeaders = {
-      'User-Agent': 'FattureInCloud/2.1.2/JavaScript-SDK'
+      'User-Agent': 'FattureInCloud/2.1.3/JavaScript-SDK'
     }
 
     /**

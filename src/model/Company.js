@@ -19,7 +19,7 @@ import FattureInCloudPlanType from './FattureInCloudPlanType'
 /**
  * The Company model module.
  * @module model/Company
- * @version 2.1.2
+ * @version 2.1.3
  */
 class Company {
   /**

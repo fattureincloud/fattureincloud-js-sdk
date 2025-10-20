@@ -16,7 +16,7 @@ import IssuedDocumentTotals from './IssuedDocumentTotals'
 /**
  * The GetNewIssuedDocumentTotalsResponse model module.
  * @module model/GetNewIssuedDocumentTotalsResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetNewIssuedDocumentTotalsResponse {
   /**

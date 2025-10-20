@@ -20,7 +20,7 @@ import ModifyWebhooksSubscriptionResponse from '../model/ModifyWebhooksSubscript
 /**
 * Webhooks service.
 * @module api/WebhooksApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class WebhooksApi {
   /**

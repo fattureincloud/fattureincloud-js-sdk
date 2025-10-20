@@ -18,7 +18,7 @@ import PriceListType from './PriceListType'
 /**
  * The PriceList model module.
  * @module model/PriceList
- * @version 2.1.2
+ * @version 2.1.3
  */
 class PriceList {
   /**

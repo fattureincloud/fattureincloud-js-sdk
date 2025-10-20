@@ -16,7 +16,7 @@ import Receipt from './Receipt'
 /**
  * The ModifyReceiptResponse model module.
  * @module model/ModifyReceiptResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class ModifyReceiptResponse {
   /**

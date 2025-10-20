@@ -16,7 +16,7 @@ import VerifyEInvoiceXmlResponseData from './VerifyEInvoiceXmlResponseData'
 /**
  * The VerifyEInvoiceXmlResponse model module.
  * @module model/VerifyEInvoiceXmlResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class VerifyEInvoiceXmlResponse {
   /**

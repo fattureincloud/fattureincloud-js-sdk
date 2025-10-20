@@ -16,7 +16,7 @@ import ReceivedDocument from './ReceivedDocument'
 /**
  * The GetReceivedDocumentResponse model module.
  * @module model/GetReceivedDocumentResponse
- * @version 2.1.2
+ * @version 2.1.3
  */
 class GetReceivedDocumentResponse {
   /**

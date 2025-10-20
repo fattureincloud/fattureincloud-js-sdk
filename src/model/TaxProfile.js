@@ -17,7 +17,7 @@ import VatType from './VatType'
 /**
  * The TaxProfile model module.
  * @module model/TaxProfile
- * @version 2.1.2
+ * @version 2.1.3
  */
 class TaxProfile {
   /**

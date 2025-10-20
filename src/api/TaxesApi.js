@@ -21,7 +21,7 @@ import UploadF24AttachmentResponse from '../model/UploadF24AttachmentResponse'
 /**
 * Taxes service.
 * @module api/TaxesApi
-* @version 2.1.2
+* @version 2.1.3
 */
 export default class TaxesApi {
   /**
