@@ -5,7 +5,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createReceivedDocument**](ReceivedDocumentsApi.md#createReceivedDocument) | **POST** /c/{company_id}/received_documents | Create Received Document
-[**deleteBinReceivedDocument**](ReceivedDocumentsApi.md#deleteBinReceivedDocument) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | 
+[**deleteBinReceivedDocument**](ReceivedDocumentsApi.md#deleteBinReceivedDocument) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | Delete Bin Received Document
 [**deleteReceivedDocument**](ReceivedDocumentsApi.md#deleteReceivedDocument) | **DELETE** /c/{company_id}/received_documents/{document_id} | Delete Received Document
 [**deleteReceivedDocumentAttachment**](ReceivedDocumentsApi.md#deleteReceivedDocumentAttachment) | **DELETE** /c/{company_id}/received_documents/{document_id}/attachment | Delete Received Document Attachment
 [**getBinReceivedDocument**](ReceivedDocumentsApi.md#getBinReceivedDocument) | **GET** /c/{company_id}/bin/received_documents/{document_id} | Get Bin Received Documents List
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**listBinReceivedDocuments**](ReceivedDocumentsApi.md#listBinReceivedDocuments) | **GET** /c/{company_id}/bin/received_documents | Get Bin Received Documents List
 [**listReceivedDocuments**](ReceivedDocumentsApi.md#listReceivedDocuments) | **GET** /c/{company_id}/received_documents | List Received Documents
 [**modifyReceivedDocument**](ReceivedDocumentsApi.md#modifyReceivedDocument) | **PUT** /c/{company_id}/received_documents/{document_id} | Modify Received Document
-[**recoverBinReceivedDocument**](ReceivedDocumentsApi.md#recoverBinReceivedDocument) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | 
+[**recoverBinReceivedDocument**](ReceivedDocumentsApi.md#recoverBinReceivedDocument) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | Recover Received Document From The Bin
 [**uploadReceivedDocumentAttachment**](ReceivedDocumentsApi.md#uploadReceivedDocumentAttachment) | **POST** /c/{company_id}/received_documents/attachment | Upload Received Document Attachment
 
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 > deleteBinReceivedDocument(companyId, documentId)
 
-
+Delete Bin Received Document
 
 Delete Bin Received Document
 
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 
 > recoverBinReceivedDocument(companyId, documentId)
 
-
+Recover Received Document From The Bin
 
 Recover Received Document From The Bin
 
