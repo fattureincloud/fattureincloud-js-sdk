@@ -1,6 +1,6 @@
 {
   "name": "@fattureincloud/fattureincloud-js-sdk",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "JavaScript SDK for the Fatture in Cloud API",
   "license": "MIT",
   "main": "dist/index.js",
