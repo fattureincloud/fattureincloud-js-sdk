@@ -28,7 +28,7 @@ OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new fattureInCloudSdk.PriceListsApi();
 let companyId = 12345; // Number | The ID of the company.
-let priceListId = "priceListId_example"; // String | 
+let priceListId = "priceListId_example"; // String | The ID of the price
 apiInstance.getPriceListItems(companyId, priceListId).then((result) => {
   console.log('API called successfully. Returned result: ' + JSON.stringify(result));
 }, (error) => {
@@ -43,7 +43,7 @@ apiInstance.getPriceListItems(companyId, priceListId).then((result) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**| The ID of the company. | 
- **priceListId** | **String**|  | 
+ **priceListId** | **String**| The ID of the price | 
 
 ### Return type
 

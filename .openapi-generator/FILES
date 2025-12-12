@@ -103,6 +103,7 @@ docs/GetReceivedDocumentPreCreateInfoResponse.md
 docs/GetReceivedDocumentResponse.md
 docs/GetSupplierResponse.md
 docs/GetTaxProfileResponse.md
+docs/GetTemplatesResponse.md
 docs/GetUserInfoResponse.md
 docs/GetUserInfoResponseEmailConfirmationState.md
 docs/GetUserInfoResponseInfo.md
@@ -244,6 +245,7 @@ docs/SupplierType.md
 docs/SuppliersApi.md
 docs/TaxProfile.md
 docs/TaxesApi.md
+docs/TemplateType.md
 docs/TransformIssuedDocumentResponse.md
 docs/UploadArchiveAttachmentResponse.md
 docs/UploadF24AttachmentResponse.md
@@ -386,6 +388,7 @@ src/model/GetReceivedDocumentPreCreateInfoResponse.js
 src/model/GetReceivedDocumentResponse.js
 src/model/GetSupplierResponse.js
 src/model/GetTaxProfileResponse.js
+src/model/GetTemplatesResponse.js
 src/model/GetUserInfoResponse.js
 src/model/GetUserInfoResponseEmailConfirmationState.js
 src/model/GetUserInfoResponseInfo.js
@@ -517,6 +520,7 @@ src/model/ShowTotalsMode.js
 src/model/Supplier.js
 src/model/SupplierType.js
 src/model/TaxProfile.js
+src/model/TemplateType.js
 src/model/TransformIssuedDocumentResponse.js
 src/model/UploadArchiveAttachmentResponse.js
 src/model/UploadF24AttachmentResponse.js
@@ -539,19 +543,5 @@ src/model/WebhooksSubscription.js
 src/model/WebhooksSubscriptionConfig.js
 src/model/WebhooksSubscriptionMapping.js
 src/model/WebhooksSubscriptionVerificationMethod.js
-test/api/PriceListsApi.spec.js
-test/model/EntityClientPreCreateInfo.spec.js
-test/model/GetBinIssuedDocumentResponse.spec.js
-test/model/GetBinReceivedDocumentResponse.spec.js
-test/model/GetEntityClientPreCreateInfoResponse.spec.js
-test/model/GetPriceListItemsResponse.spec.js
-test/model/ListBinIssuedDocuments.spec.js
-test/model/ListBinReceivedDocuments.spec.js
-test/model/ListPriceListsResponse.spec.js
-test/model/PriceList.spec.js
-test/model/PriceListItem.spec.js
-test/model/PriceListPricesType.spec.js
-test/model/PriceListType.spec.js
-test/model/VerifyWebhooksSubscription.spec.js
-test/model/VerifyWebhooksSubscriptionRequest.spec.js
-test/model/WebhooksSubscriptionVerificationMethod.spec.js
+test/model/GetTemplatesResponse.spec.js
+test/model/TemplateType.spec.js

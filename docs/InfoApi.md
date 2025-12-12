@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**listCostCenters**](InfoApi.md#listCostCenters) | **GET** /c/{company_id}/info/cost_centers | List Cost Centers
 [**listCountries**](InfoApi.md#listCountries) | **GET** /info/countries | List Countries
 [**listCurrencies**](InfoApi.md#listCurrencies) | **GET** /info/currencies | List Currencies
+[**listDefaultTemplates**](InfoApi.md#listDefaultTemplates) | **GET** /info/templates | List Default Templates
 [**listDeliveryNotesDefaultCausals**](InfoApi.md#listDeliveryNotesDefaultCausals) | **GET** /info/dn_causals | List Delivery Notes Default Causals
 [**listDetailedCountries**](InfoApi.md#listDetailedCountries) | **GET** /info/detailed_countries | List Detailed Countries
 [**listLanguages**](InfoApi.md#listLanguages) | **GET** /info/languages | List Languages
@@ -17,7 +18,6 @@ Method | HTTP request | Description
 [**listProductCategories**](InfoApi.md#listProductCategories) | **GET** /c/{company_id}/info/product_categories | List Product Categories
 [**listReceivedDocumentCategories**](InfoApi.md#listReceivedDocumentCategories) | **GET** /c/{company_id}/info/received_document_categories | List Received Document Categories
 [**listRevenueCenters**](InfoApi.md#listRevenueCenters) | **GET** /c/{company_id}/info/revenue_centers | List Revenue Centers
-[**listTemplates**](InfoApi.md#listTemplates) | **GET** /info/templates | List Templates
 [**listUnitsOfMeasure**](InfoApi.md#listUnitsOfMeasure) | **GET** /info/measures | List Units of Measure
 [**listVatTypes**](InfoApi.md#listVatTypes) | **GET** /c/{company_id}/info/vat_types | List Vat Types
 
@@ -248,6 +248,58 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ListCurrenciesResponse**](ListCurrenciesResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listDefaultTemplates
+
+> ListTemplatesResponse listDefaultTemplates(opts)
+
+List Default Templates
+
+Lists the default available templates.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.InfoApi();
+let opts = {
+  'type': "'all'", // String | Type of the templates.
+  'byType': false // Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
+};
+apiInstance.listDefaultTemplates(opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**| Type of the templates. | [optional] [default to &#39;all&#39;]
+ **byType** | **Boolean**| [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional] [default to false]
+
+### Return type
+
+[**ListTemplatesResponse**](ListTemplatesResponse.md)
 
 ### Authorization
 
@@ -638,58 +690,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListRevenueCentersResponse**](ListRevenueCentersResponse.md)
-
-### Authorization
-
-[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## listTemplates
-
-> ListTemplatesResponse listTemplates(opts)
-
-List Templates
-
-Lists the available templates.
-
-### Example
-
-```javascript
-import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
-let defaultClient = fattureInCloudSdk.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
-let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
-OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
-
-let apiInstance = new fattureInCloudSdk.InfoApi();
-let opts = {
-  'type': "'all'", // String | Type of the templates.
-  'byType': false // Boolean | [Only if type=all] If true, splits the list in objects, grouping templates by type.
-};
-apiInstance.listTemplates(opts).then((result) => {
-  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **type** | **String**| Type of the templates. | [optional] [default to &#39;all&#39;]
- **byType** | **Boolean**| [Only if type&#x3D;all] If true, splits the list in objects, grouping templates by type. | [optional] [default to false]
-
-### Return type
-
-[**ListTemplatesResponse**](ListTemplatesResponse.md)
 
 ### Authorization
 

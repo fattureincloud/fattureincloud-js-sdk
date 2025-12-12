@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**getPaymentAccount**](SettingsApi.md#getPaymentAccount) | **GET** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Get Payment Account
 [**getPaymentMethod**](SettingsApi.md#getPaymentMethod) | **GET** /c/{company_id}/settings/payment_methods/{payment_method_id} | Get Payment Method
 [**getTaxProfile**](SettingsApi.md#getTaxProfile) | **GET** /c/{company_id}/settings/tax_profile | Get Tax Profile
+[**getTemplate**](SettingsApi.md#getTemplate) | **GET** /c/{company_id}/settings/templates/{template_id} | Get Template
 [**getVatType**](SettingsApi.md#getVatType) | **GET** /c/{company_id}/settings/vat_types/{vat_type_id} | Get Vat Type
+[**listTemplates**](SettingsApi.md#listTemplates) | **GET** /c/{company_id}/settings/templates | List Templates
 [**modifyPaymentAccount**](SettingsApi.md#modifyPaymentAccount) | **PUT** /c/{company_id}/settings/payment_accounts/{payment_account_id} | Modify Payment Account
 [**modifyPaymentMethod**](SettingsApi.md#modifyPaymentMethod) | **PUT** /c/{company_id}/settings/payment_methods/{payment_method_id} | Modify Payment Method
 [**modifyVatType**](SettingsApi.md#modifyVatType) | **PUT** /c/{company_id}/settings/vat_types/{vat_type_id} | Modify Vat Type
@@ -486,6 +488,62 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getTemplate
+
+> GetTemplatesResponse getTemplate(companyId, templateId, opts)
+
+Get Template
+
+Gets a specified template.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let templateId = 56; // Number | The Referred Template Id.
+let opts = {
+  'fields': "fields_example", // String | List of comma-separated fields.
+  'fieldset': "fieldset_example" // String | Name of the fieldset.
+};
+apiInstance.getTemplate(companyId, templateId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **templateId** | **Number**| The Referred Template Id. | 
+ **fields** | **String**| List of comma-separated fields. | [optional] 
+ **fieldset** | **String**| Name of the fieldset. | [optional] 
+
+### Return type
+
+[**GetTemplatesResponse**](GetTemplatesResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getVatType
 
 > GetVatTypeResponse getVatType(companyId, vatTypeId)
@@ -525,6 +583,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetVatTypeResponse**](GetVatTypeResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listTemplates
+
+> ListTemplatesResponse listTemplates(companyId, opts)
+
+List Templates
+
+Gets all the standard and private templates.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.SettingsApi();
+let companyId = 12345; // Number | The ID of the company.
+let opts = {
+  'fields': "fields_example", // String | List of comma-separated fields.
+  'fieldset': "fieldset_example" // String | Name of the fieldset.
+};
+apiInstance.listTemplates(companyId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **fields** | **String**| List of comma-separated fields. | [optional] 
+ **fieldset** | **String**| Name of the fieldset. | [optional] 
+
+### Return type
+
+[**ListTemplatesResponse**](ListTemplatesResponse.md)
 
 ### Authorization
 
