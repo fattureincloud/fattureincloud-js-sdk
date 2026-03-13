@@ -5,18 +5,20 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createReceivedDocument**](ReceivedDocumentsApi.md#createReceivedDocument) | **POST** /c/{company_id}/received_documents | Create Received Document
-[**deleteBinReceivedDocument**](ReceivedDocumentsApi.md#deleteBinReceivedDocument) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | 
+[**deleteBinReceivedDocument**](ReceivedDocumentsApi.md#deleteBinReceivedDocument) | **DELETE** /c/{company_id}/bin/received_documents/{document_id} | Delete Bin Received Document
 [**deleteReceivedDocument**](ReceivedDocumentsApi.md#deleteReceivedDocument) | **DELETE** /c/{company_id}/received_documents/{document_id} | Delete Received Document
 [**deleteReceivedDocumentAttachment**](ReceivedDocumentsApi.md#deleteReceivedDocumentAttachment) | **DELETE** /c/{company_id}/received_documents/{document_id}/attachment | Delete Received Document Attachment
 [**getBinReceivedDocument**](ReceivedDocumentsApi.md#getBinReceivedDocument) | **GET** /c/{company_id}/bin/received_documents/{document_id} | Get Bin Received Documents List
 [**getExistingReceivedDocumentTotals**](ReceivedDocumentsApi.md#getExistingReceivedDocumentTotals) | **POST** /c/{company_id}/received_documents/{document_id}/totals | Get Existing Received Document Totals
 [**getNewReceivedDocumentTotals**](ReceivedDocumentsApi.md#getNewReceivedDocumentTotals) | **POST** /c/{company_id}/received_documents/totals | Get New Received Document Totals
+[**getPendingReceivedDocument**](ReceivedDocumentsApi.md#getPendingReceivedDocument) | **GET** /c/{company_id}/received_documents/pending/{document_id} | Get Pending Received Document
 [**getReceivedDocument**](ReceivedDocumentsApi.md#getReceivedDocument) | **GET** /c/{company_id}/received_documents/{document_id} | Get Received Document
 [**getReceivedDocumentPreCreateInfo**](ReceivedDocumentsApi.md#getReceivedDocumentPreCreateInfo) | **GET** /c/{company_id}/received_documents/info | Get Received Document Pre-Create Info
 [**listBinReceivedDocuments**](ReceivedDocumentsApi.md#listBinReceivedDocuments) | **GET** /c/{company_id}/bin/received_documents | Get Bin Received Documents List
+[**listPendingReceivedDocuments**](ReceivedDocumentsApi.md#listPendingReceivedDocuments) | **GET** /c/{company_id}/received_documents/pending | List Pending Received Documents
 [**listReceivedDocuments**](ReceivedDocumentsApi.md#listReceivedDocuments) | **GET** /c/{company_id}/received_documents | List Received Documents
 [**modifyReceivedDocument**](ReceivedDocumentsApi.md#modifyReceivedDocument) | **PUT** /c/{company_id}/received_documents/{document_id} | Modify Received Document
-[**recoverBinReceivedDocument**](ReceivedDocumentsApi.md#recoverBinReceivedDocument) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | 
+[**recoverBinReceivedDocument**](ReceivedDocumentsApi.md#recoverBinReceivedDocument) | **POST** /c/{company_id}/bin/received_documents/{document_id}/recover | Recover Received Document From The Bin
 [**uploadReceivedDocumentAttachment**](ReceivedDocumentsApi.md#uploadReceivedDocumentAttachment) | **POST** /c/{company_id}/received_documents/attachment | Upload Received Document Attachment
 
 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 
 > deleteBinReceivedDocument(companyId, documentId)
 
-
+Delete Bin Received Document
 
 Delete Bin Received Document
 
@@ -120,7 +122,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## deleteReceivedDocument
@@ -170,7 +172,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## deleteReceivedDocumentAttachment
@@ -220,12 +222,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## getBinReceivedDocument
 
-> GetBinIssuedDocumentResponse getBinReceivedDocument(companyId, documentId)
+> GetBinReceivedDocumentResponse getBinReceivedDocument(companyId, documentId)
 
 Get Bin Received Documents List
 
@@ -261,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBinIssuedDocumentResponse**](GetBinIssuedDocumentResponse.md)
+[**GetBinReceivedDocumentResponse**](GetBinReceivedDocumentResponse.md)
 
 ### Authorization
 
@@ -376,6 +378,62 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getPendingReceivedDocument
+
+> GetPendingReceivedDocumentResponse getPendingReceivedDocument(companyId, documentId, opts)
+
+Get Pending Received Document
+
+Gets the specified pending received document.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+let documentId = 56; // Number | The ID of the document.
+let opts = {
+  'fields': "fields_example", // String | List of comma-separated fields.
+  'fieldset': "fieldset_example" // String | Name of the fieldset.
+};
+apiInstance.getPendingReceivedDocument(companyId, documentId, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **documentId** | **Number**| The ID of the document. | 
+ **fields** | **String**| List of comma-separated fields. | [optional] 
+ **fieldset** | **String**| Name of the fieldset. | [optional] 
+
+### Return type
+
+[**GetPendingReceivedDocumentResponse**](GetPendingReceivedDocumentResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -533,6 +591,70 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## listPendingReceivedDocuments
+
+> ListPendingReceivedDocumentsResponse listPendingReceivedDocuments(companyId, type, opts)
+
+List Pending Received Documents
+
+Lists the pending received documents.
+
+### Example
+
+```javascript
+import fattureInCloudSdk from '@fattureincloud/fattureincloud-js-sdk';
+let defaultClient = fattureInCloudSdk.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2AuthenticationCodeFlow
+let OAuth2AuthenticationCodeFlow = defaultClient.authentications['OAuth2AuthenticationCodeFlow'];
+OAuth2AuthenticationCodeFlow.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new fattureInCloudSdk.ReceivedDocumentsApi();
+let companyId = 12345; // Number | The ID of the company.
+let type = "type_example"; // String | The type of the pending received document.
+let opts = {
+  'fields': "fields_example", // String | List of comma-separated fields.
+  'fieldset': "fieldset_example", // String | Name of the fieldset.
+  'sort': "sort_example", // String | List of comma-separated fields for result sorting (minus for desc sorting).
+  'page': 1, // Number | The page to retrieve.
+  'perPage': 5, // Number | The size of the page.
+  'q': "q_example" // String | Query for filtering the results.
+};
+apiInstance.listPendingReceivedDocuments(companyId, type, opts).then((result) => {
+  console.log('API called successfully. Returned result: ' + JSON.stringify(result));
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| The ID of the company. | 
+ **type** | **String**| The type of the pending received document. | 
+ **fields** | **String**| List of comma-separated fields. | [optional] 
+ **fieldset** | **String**| Name of the fieldset. | [optional] 
+ **sort** | **String**| List of comma-separated fields for result sorting (minus for desc sorting). | [optional] 
+ **page** | **Number**| The page to retrieve. | [optional] [default to 1]
+ **perPage** | **Number**| The size of the page. | [optional] [default to 5]
+ **q** | **String**| Query for filtering the results. | [optional] 
+
+### Return type
+
+[**ListPendingReceivedDocumentsResponse**](ListPendingReceivedDocumentsResponse.md)
+
+### Authorization
+
+[OAuth2AuthenticationCodeFlow](../README.md#OAuth2AuthenticationCodeFlow)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listReceivedDocuments
 
 > ListReceivedDocumentsResponse listReceivedDocuments(companyId, type, opts)
@@ -655,7 +777,7 @@ Name | Type | Description  | Notes
 
 > recoverBinReceivedDocument(companyId, documentId)
 
-
+Recover Received Document From The Bin
 
 Recover Received Document From The Bin
 
@@ -698,7 +820,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## uploadReceivedDocumentAttachment
