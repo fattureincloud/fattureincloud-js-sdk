@@ -57,11 +57,17 @@
 
 * `it.fattureincloud.webhooks.issued_documents.supplier_orders.delete` (value: `"it.fattureincloud.webhooks.issued_documents.supplier_orders.delete"`)
 
-* `it.fattureincloud.webhooks.issued_documents.self_invoices.create` (value: `"it.fattureincloud.webhooks.issued_documents.self_invoices.create"`)
+* `it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.create` (value: `"it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.create"`)
 
-* `it.fattureincloud.webhooks.issued_documents.self_invoices.update` (value: `"it.fattureincloud.webhooks.issued_documents.self_invoices.update"`)
+* `it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.update` (value: `"it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.update"`)
 
-* `it.fattureincloud.webhooks.issued_documents.self_invoices.delete` (value: `"it.fattureincloud.webhooks.issued_documents.self_invoices.delete"`)
+* `it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.delete` (value: `"it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.delete"`)
+
+* `it.fattureincloud.webhooks.issued_documents.self_own_invoices.create` (value: `"it.fattureincloud.webhooks.issued_documents.self_own_invoices.create"`)
+
+* `it.fattureincloud.webhooks.issued_documents.self_own_invoices.update` (value: `"it.fattureincloud.webhooks.issued_documents.self_own_invoices.update"`)
+
+* `it.fattureincloud.webhooks.issued_documents.self_own_invoices.delete` (value: `"it.fattureincloud.webhooks.issued_documents.self_own_invoices.delete"`)
 
 * `it.fattureincloud.webhooks.issued_documents.all.create` (value: `"it.fattureincloud.webhooks.issued_documents.all.create"`)
 
@@ -147,7 +153,9 @@
 
 * `it.fattureincloud.webhooks.issued_documents.supplier_orders.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.supplier_orders.email_sent"`)
 
-* `it.fattureincloud.webhooks.issued_documents.self_invoices.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.self_invoices.email_sent"`)
+* `it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.self_supplier_invoices.email_sent"`)
+
+* `it.fattureincloud.webhooks.issued_documents.self_own_invoices.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.self_own_invoices.email_sent"`)
 
 * `it.fattureincloud.webhooks.issued_documents.all.email_sent` (value: `"it.fattureincloud.webhooks.issued_documents.all.email_sent"`)
 

@@ -86,7 +86,7 @@ import ListVatTypesResponse from '../../src/model/ListVatTypesResponse';
   sandbox.stub(instance, 'listRevenueCenters').returns(listRevenueCentersResponseObj)
 
   const listTemplatesResponseObj = { data: [{ id: 10, name: 'New Standard S1' }, { id: 106, name: 'Minimalist' }] }
-  sandbox.stub(instance, 'listTemplates').returns(listTemplatesResponseObj)
+  sandbox.stub(instance, 'listDefaultTemplates').returns(listTemplatesResponseObj)
 
   const listUnitsOfMeasureResponseObj = { data: ['pezzi', 'kg', 'litri', 'ore', 'giorni', 'km', 'mesi'] }
   sandbox.stub(instance, 'listUnitsOfMeasure').returns(listUnitsOfMeasureResponseObj)
@@ -241,7 +241,7 @@ import ListVatTypesResponse from '../../src/model/ListVatTypesResponse';
     })
     describe('listTemplates', function () {
       it('should call listTemplates successfully', function (done) {
-        const response = instance.listTemplates()
+        const response = instance.listDefaultTemplates()
         const responseObj = Object.assign(new ListTemplatesResponse(), response)
         const expectedJson = JSON.stringify(listTemplatesResponseObj)
         const actualJson = JSON.stringify(responseObj)
