@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining()
+    instance.save_entity = true
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocumentExtractedDataMining', function () {
     it('should create an instance of PendingReceivedDocumentExtractedDataMining', function () {
-      // uncomment below and update the code to test PendingReceivedDocumentExtractedDataMining
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining)
     })
 
     it('should have the property saveEntity (base name: "save_entity")', function () {
-      // uncomment below and update the code to test the property saveEntity
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining();
-      // expect(instance).to.be();
+      expect(typeof instance.save_entity).to.be('boolean')
     })
   })
 }))

@@ -29,35 +29,31 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms()
+    instance.days = 30
+    instance.type = new fattureInCloudSdk.PaymentTermsType()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocumentPaymentsListItemPaymentTerms', function () {
     it('should create an instance of PendingReceivedDocumentPaymentsListItemPaymentTerms', function () {
-      // uncomment below and update the code to test PendingReceivedDocumentPaymentsListItemPaymentTerms
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms)
     })
 
     it('should have the property days (base name: "days")', function () {
-      // uncomment below and update the code to test the property days
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms();
-      // expect(instance).to.be();
+      expect(typeof instance.days).to.be('number')
     })
 
     it('should have the property type (base name: "type")', function () {
-      // uncomment below and update the code to test the property type
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms();
-      // expect(instance).to.be();
+      expect(instance.type).to.be.a(fattureInCloudSdk.PaymentTermsType)
     })
   })
 }))

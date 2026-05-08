@@ -29,35 +29,31 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.Attachment()
+    instance.filename = 'test.pdf'
+    instance.attachment = new File(['content'], 'test.pdf')
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('Attachment', function () {
     it('should create an instance of Attachment', function () {
-      // uncomment below and update the code to test Attachment
-      // var instance = new fattureInCloudSdk.Attachment();
-      // expect(instance).to.be.a(fattureInCloudSdk.Attachment);
+      expect(instance).to.be.a(fattureInCloudSdk.Attachment)
     })
 
     it('should have the property filename (base name: "filename")', function () {
-      // uncomment below and update the code to test the property filename
-      // var instance = new fattureInCloudSdk.Attachment();
-      // expect(instance).to.be();
+      expect(typeof instance.filename).to.be('string')
     })
 
     it('should have the property attachment (base name: "attachment")', function () {
-      // uncomment below and update the code to test the property attachment
-      // var instance = new fattureInCloudSdk.Attachment();
-      // expect(instance).to.be();
+      expect(instance.attachment).to.be.a(File)
     })
   })
 }))

@@ -28,23 +28,22 @@
   let instance
 
   beforeEach(function () {
+    instance = new fattureInCloudSdk.PendingReceivedDocumentType()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocumentType', function () {
     it('should create an instance of PendingReceivedDocumentType', function () {
-      // uncomment below and update the code to test PendingReceivedDocumentType
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentType();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentType);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentType)
     })
   })
 }))

@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.GetTemplatesResponse()
+    instance.data = new fattureInCloudSdk.DocumentTemplate()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('GetTemplatesResponse', function () {
     it('should create an instance of GetTemplatesResponse', function () {
-      // uncomment below and update the code to test GetTemplatesResponse
-      // var instance = new fattureInCloudSdk.GetTemplatesResponse();
-      // expect(instance).to.be.a(fattureInCloudSdk.GetTemplatesResponse);
+      expect(instance).to.be.a(fattureInCloudSdk.GetTemplatesResponse)
     })
 
     it('should have the property data (base name: "data")', function () {
-      // uncomment below and update the code to test the property data
-      // var instance = new fattureInCloudSdk.GetTemplatesResponse();
-      // expect(instance).to.be();
+      expect(instance.data).to.be.a(fattureInCloudSdk.DocumentTemplate)
     })
   })
 }))

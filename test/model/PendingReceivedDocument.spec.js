@@ -29,137 +29,118 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PendingReceivedDocument()
+    instance.id = 12345
+    instance.date = new Date('2021-08-20')
+    instance.subject = 'Test subject'
+    instance.filename = 'doc.pdf'
+    instance.type = new fattureInCloudSdk.PendingReceivedDocumentType()
+    instance.attachment_url = 'https://example.com/doc.pdf'
+    instance.amount_gross = 100.0
+    instance.currency = new fattureInCloudSdk.Currency()
+    instance.document_type = new fattureInCloudSdk.ReceivedDocumentType()
+    instance.supplier_name = 'Test Supplier'
+    instance.cost_center = 'CC1'
+    instance.category = 'Test Category'
+    instance.other_attachments = [new fattureInCloudSdk.Attachment()]
+    instance.emssion_date = new Date('2021-08-20')
+    instance.payments_list = [new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem()]
+    instance.amount_net = 82.0
+    instance.amount_vat = 18.0
+    instance.import_error = null
+    instance.extracted_data = new fattureInCloudSdk.PendingReceivedDocumentExtractedData()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocument', function () {
     it('should create an instance of PendingReceivedDocument', function () {
-      // uncomment below and update the code to test PendingReceivedDocument
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocument);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocument)
     })
 
     it('should have the property id (base name: "id")', function () {
-      // uncomment below and update the code to test the property id
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.id).to.be('number')
     })
 
     it('should have the property date (base name: "date")', function () {
-      // uncomment below and update the code to test the property date
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.date).to.be.a(Date)
     })
 
     it('should have the property subject (base name: "subject")', function () {
-      // uncomment below and update the code to test the property subject
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.subject).to.be('string')
     })
 
     it('should have the property filename (base name: "filename")', function () {
-      // uncomment below and update the code to test the property filename
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.filename).to.be('string')
     })
 
     it('should have the property type (base name: "type")', function () {
-      // uncomment below and update the code to test the property type
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.type).to.be.a(fattureInCloudSdk.PendingReceivedDocumentType)
     })
 
     it('should have the property attachmentUrl (base name: "attachment_url")', function () {
-      // uncomment below and update the code to test the property attachmentUrl
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.attachment_url).to.be('string')
     })
 
     it('should have the property amountGross (base name: "amount_gross")', function () {
-      // uncomment below and update the code to test the property amountGross
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.amount_gross).to.be('number')
     })
 
     it('should have the property currency (base name: "currency")', function () {
-      // uncomment below and update the code to test the property currency
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.currency).to.be.a(fattureInCloudSdk.Currency)
     })
 
     it('should have the property documentType (base name: "document_type")', function () {
-      // uncomment below and update the code to test the property documentType
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.document_type).to.be.a(fattureInCloudSdk.ReceivedDocumentType)
     })
 
     it('should have the property supplierName (base name: "supplier_name")', function () {
-      // uncomment below and update the code to test the property supplierName
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.supplier_name).to.be('string')
     })
 
     it('should have the property costCenter (base name: "cost_center")', function () {
-      // uncomment below and update the code to test the property costCenter
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.cost_center).to.be('string')
     })
 
     it('should have the property category (base name: "category")', function () {
-      // uncomment below and update the code to test the property category
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.category).to.be('string')
     })
 
     it('should have the property otherAttachments (base name: "other_attachments")', function () {
-      // uncomment below and update the code to test the property otherAttachments
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.other_attachments).to.be.an('array')
+      expect(instance.other_attachments[0]).to.be.a(fattureInCloudSdk.Attachment)
     })
 
     it('should have the property emssionDate (base name: "emssion_date")', function () {
-      // uncomment below and update the code to test the property emssionDate
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.emssion_date).to.be.a(Date)
     })
 
     it('should have the property paymentsList (base name: "payments_list")', function () {
-      // uncomment below and update the code to test the property paymentsList
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.payments_list).to.be.an('array')
+      expect(instance.payments_list[0]).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem)
     })
 
     it('should have the property amountNet (base name: "amount_net")', function () {
-      // uncomment below and update the code to test the property amountNet
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.amount_net).to.be('number')
     })
 
     it('should have the property amountVat (base name: "amount_vat")', function () {
-      // uncomment below and update the code to test the property amountVat
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(typeof instance.amount_vat).to.be('number')
     })
 
     it('should have the property importError (base name: "import_error")', function () {
-      // uncomment below and update the code to test the property importError
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.import_error).to.be(null)
     })
 
     it('should have the property extractedData (base name: "extracted_data")', function () {
-      // uncomment below and update the code to test the property extractedData
-      // var instance = new fattureInCloudSdk.PendingReceivedDocument();
-      // expect(instance).to.be();
+      expect(instance.extracted_data).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedData)
     })
   })
 }))

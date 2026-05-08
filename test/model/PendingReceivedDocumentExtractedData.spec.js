@@ -29,29 +29,26 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedData()
+    instance.mining = new fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocumentExtractedData', function () {
     it('should create an instance of PendingReceivedDocumentExtractedData', function () {
-      // uncomment below and update the code to test PendingReceivedDocumentExtractedData
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedData();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedData);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedData)
     })
 
     it('should have the property mining (base name: "mining")', function () {
-      // uncomment below and update the code to test the property mining
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentExtractedData();
-      // expect(instance).to.be();
+      expect(instance.mining).to.be.a(fattureInCloudSdk.PendingReceivedDocumentExtractedDataMining)
     })
   })
 }))

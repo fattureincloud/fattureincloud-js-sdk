@@ -29,65 +29,56 @@
 
   beforeEach(function () {
     instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem()
+    instance.amount = 100.0
+    instance.due_date = new Date('2021-08-20')
+    instance.paid_date = new Date('2021-08-20')
+    instance.payment_terms = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms()
+    instance.status = 'not_paid'
+    instance.paid_with_ts_pay = false
+    instance.payment_account = new fattureInCloudSdk.PaymentAccount()
   })
 
-  const getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-  }
+  // const getProperty = function (object, getter, property) {
+  //   // Use getter method if present; otherwise, get the property directly.
+  //   if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
+  // }
 
-  const setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-  }
+  // const setProperty = function (object, setter, property, value) {
+  //   // Use setter method if present; otherwise, set the property directly.
+  //   if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
+  // }
 
   describe('PendingReceivedDocumentPaymentsListItem', function () {
     it('should create an instance of PendingReceivedDocumentPaymentsListItem', function () {
-      // uncomment below and update the code to test PendingReceivedDocumentPaymentsListItem
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem);
+      expect(instance).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem)
     })
 
     it('should have the property amount (base name: "amount")', function () {
-      // uncomment below and update the code to test the property amount
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(typeof instance.amount).to.be('number')
     })
 
     it('should have the property dueDate (base name: "due_date")', function () {
-      // uncomment below and update the code to test the property dueDate
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(instance.due_date).to.be.a(Date)
     })
 
     it('should have the property paidDate (base name: "paid_date")', function () {
-      // uncomment below and update the code to test the property paidDate
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(instance.paid_date).to.be.a(Date)
     })
 
     it('should have the property paymentTerms (base name: "payment_terms")', function () {
-      // uncomment below and update the code to test the property paymentTerms
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(instance.payment_terms).to.be.a(fattureInCloudSdk.PendingReceivedDocumentPaymentsListItemPaymentTerms)
     })
 
     it('should have the property status (base name: "status")', function () {
-      // uncomment below and update the code to test the property status
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(typeof instance.status).to.be('string')
     })
 
     it('should have the property paidWithTsPay (base name: "paid_with_ts_pay")', function () {
-      // uncomment below and update the code to test the property paidWithTsPay
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(typeof instance.paid_with_ts_pay).to.be('boolean')
     })
 
     it('should have the property paymentAccount (base name: "payment_account")', function () {
-      // uncomment below and update the code to test the property paymentAccount
-      // var instance = new fattureInCloudSdk.PendingReceivedDocumentPaymentsListItem();
-      // expect(instance).to.be();
+      expect(instance.payment_account).to.be.a(fattureInCloudSdk.PaymentAccount)
     })
   })
 }))
