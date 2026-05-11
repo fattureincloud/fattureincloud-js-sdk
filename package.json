@@ -4,6 +4,10 @@
   "description": "JavaScript SDK for the Fatture in Cloud API",
   "license": "MIT",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fattureincloud/fattureincloud-js-sdk.git"
+  },
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",
