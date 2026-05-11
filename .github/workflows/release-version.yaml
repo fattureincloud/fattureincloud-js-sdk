@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 
 permissions:
   id-token: write # Required for OIDC
-  contents: read
+  contents: write # Required to push commits and tags to the repository
 
 jobs:
   release-version:
