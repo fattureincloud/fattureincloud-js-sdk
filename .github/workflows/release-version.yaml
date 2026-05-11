@@ -87,5 +87,4 @@ jobs:
         name: Publish JavaScript SDK to NPM
         if: ${{ !env.ACT }}
         run: |
-          npm version ${{ env.sdk_version }}
           npm publish --access public
