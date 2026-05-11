@@ -13,4 +13,6 @@
 
 * `receipt` (value: `"receipt"`)
 
+* `ts_pay` (value: `"ts_pay"`)
+
 

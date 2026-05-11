@@ -5,7 +5,7 @@ All URIs are relative to *https://api-v2.fattureincloud.it*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createIssuedDocument**](IssuedDocumentsApi.md#createIssuedDocument) | **POST** /c/{company_id}/issued_documents | Create Issued Document
-[**deleteBinIssuedDocument**](IssuedDocumentsApi.md#deleteBinIssuedDocument) | **DELETE** /c/{company_id}/bin/issued_documents/{document_id} | 
+[**deleteBinIssuedDocument**](IssuedDocumentsApi.md#deleteBinIssuedDocument) | **DELETE** /c/{company_id}/bin/issued_documents/{document_id} | Delete Bin Issued Document
 [**deleteIssuedDocument**](IssuedDocumentsApi.md#deleteIssuedDocument) | **DELETE** /c/{company_id}/issued_documents/{document_id} | Delete Issued Document
 [**deleteIssuedDocumentAttachment**](IssuedDocumentsApi.md#deleteIssuedDocumentAttachment) | **DELETE** /c/{company_id}/issued_documents/{document_id}/attachment | Delete Issued Document Attachment
 [**getBinIssuedDocument**](IssuedDocumentsApi.md#getBinIssuedDocument) | **GET** /c/{company_id}/bin/issued_documents/{document_id} | Get Bin Issued Documents List
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**listBinIssuedDocuments**](IssuedDocumentsApi.md#listBinIssuedDocuments) | **GET** /c/{company_id}/bin/issued_documents | Get Bin Issued Documents List
 [**listIssuedDocuments**](IssuedDocumentsApi.md#listIssuedDocuments) | **GET** /c/{company_id}/issued_documents | List Issued Documents
 [**modifyIssuedDocument**](IssuedDocumentsApi.md#modifyIssuedDocument) | **PUT** /c/{company_id}/issued_documents/{document_id} | Modify Issued Document
-[**recoverBinIssuedDocument**](IssuedDocumentsApi.md#recoverBinIssuedDocument) | **POST** /c/{company_id}/bin/issued_documents/{document_id}/recover | 
+[**recoverBinIssuedDocument**](IssuedDocumentsApi.md#recoverBinIssuedDocument) | **POST** /c/{company_id}/bin/issued_documents/{document_id}/recover | Recover Issued Document From The Bin
 [**scheduleEmail**](IssuedDocumentsApi.md#scheduleEmail) | **POST** /c/{company_id}/issued_documents/{document_id}/email | Schedule Email
 [**transformIssuedDocument**](IssuedDocumentsApi.md#transformIssuedDocument) | **GET** /c/{company_id}/issued_documents/transform | Transform Issued Document
 [**uploadIssuedDocumentAttachment**](IssuedDocumentsApi.md#uploadIssuedDocumentAttachment) | **POST** /c/{company_id}/issued_documents/attachment | Upload Issued Document Attachment
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 > deleteBinIssuedDocument(companyId, documentId)
 
-
+Delete Bin Issued Document
 
 Delete Bin Issued Document
 
@@ -124,7 +124,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## deleteIssuedDocument
@@ -174,7 +174,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## deleteIssuedDocumentAttachment
@@ -224,7 +224,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## getBinIssuedDocument
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 
 > recoverBinIssuedDocument(companyId, documentId)
 
-
+Recover Issued Document From The Bin
 
 Recover Issued Document From The Bin
 
@@ -810,7 +810,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## scheduleEmail
@@ -864,7 +864,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## transformIssuedDocument
