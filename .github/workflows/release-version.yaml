@@ -11,7 +11,7 @@ jobs:
     steps:
       - id: checkout
         name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.FATTUREINCLOUD_BOT_TOKEN }}
 
@@ -23,7 +23,7 @@ jobs:
 
       - id: setup-node
         name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
@@ -72,7 +72,7 @@ jobs:
       - id: create-tag
         name: Create tag
         if: ${{ !env.ACT }}
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           github-token: ${{ github.token }}
           script: |

@@ -12,7 +12,7 @@ jobs:
         name: Checkout OpenAPI repo
         env:
           GIT_OPENAPI_REPO_PATH: "${{ env.GIT_USER_ID }}/${{ env.GIT_OPENAPI_REPO_ID }}"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           path: ./openapi
           ref: master
